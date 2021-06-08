@@ -1,8 +1,3 @@
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from matplotlib.figure import Figure
-
-# Personnal modules
-import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 class DraggablePoint:
     lock = None

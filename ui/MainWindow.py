@@ -1,4 +1,5 @@
 from typing import List
+import sys
 from PyQt5 import QtCore, QtWidgets, QtGui
 from PyQt5.QtWidgets import QAction, QPushButton, QCheckBox, QComboBox, QFileDialog, QHeaderView, QLabel, QMainWindow, QMenu, QMenuBar, QDialog, QSplitter, \
     QTableWidget, QTableWidgetItem, QTabWidget, QVBoxLayout, QWidget
@@ -30,8 +31,7 @@ class GalacticMap(QWidget):
         self.__planetsScatter = None
         self.list_points = []
         self.plotDraggablePoints()
-        # self.galacticMap.mpl_connect('pick_event', self.__planetSelect)
-        # self.galacticMap.mpl_connect('motion_notify_event', self.__planetHover)
+
     def plotDraggablePoints(self, size=10.05):
 
         """Plot and define the 2 draggable points of the baseline"""
@@ -218,7 +218,7 @@ class MainUIWindow:
         #self.__saveAction.triggered.connect(self.__saveFile)
 
         self.__quitAction: QAction = QAction("Quit", self.main_window)
-        #self.__quitAction.triggered.connect(self.__quit)
+        self.__quitAction.triggered.connect(sys.exit)
         
         self.__optionsMenu.addAction(self.__openAutoConnectionSettingsAction)
         

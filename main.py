@@ -14,6 +14,16 @@ class Config:
         if not self.dataPath:
             self.dataPath = os.getcwd()
 
+class EaWModTool:
+    def __init__(self, config, MainWindow) -> None:
+        self.config = config
+        self.ui = MainWindow
+        #self.gameObjectRepository = GameObjectRepository()
+        self.init_repository()
+    def init_repository(self) -> None:
+        return None
+
+
 config = Config()
 numArgs = len(sys.argv)
 
@@ -28,7 +38,6 @@ app = QApplication(sys.argv)
 
 MainWindow = MainUIWindow()
 
-# GameObjectRepository = GameObjectRepository()
-
+#EaWModToolApp = EaWModTool(config, MainWindow)
 
 sys.exit(app.exec_())
