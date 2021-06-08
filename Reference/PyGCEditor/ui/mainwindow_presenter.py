@@ -1,8 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import List, Set, Dict
 
-import numpy as np
-from numpy import ndarray as NumPyArray
 
 from config import Config
 from gameObjects.gameObjectRepository import GameObjectRepository
@@ -84,7 +82,7 @@ class MainWindowPresenter:
         self.__mainWindow: MainWindow = mainWindow
         self.__plot: GalacticPlot = self.__mainWindow.makeGalacticPlot()
 
-        self.__xmlWriter: XMLWriter = XMLWriter()
+        self.__xmlWriter: XMLWriter = XMLWriter() 
 
         self.__repository = repository
         self.__repositoryCreator = RepositoryCreator()

@@ -5,25 +5,23 @@ from matplotlib.backends.backend_qt5agg import FigureCanvas, \
 from matplotlib.figure import Axes, Figure
 
 
-class QtGalacticPlot(QWidget):
-    '''Class for plotting the galaxy'''
-    #signal to send to main window presenter when a planet is selected in the plot
+class GalacticMap(QWidget):
     planetSelectedSignal = pyqtSignal(list)
 
     def __init__(self, parent: QWidget = None):
-        super(QtGalacticPlot, self).__init__()
-        self.__galacticPlotWidget: QWidget = QWidget(parent)
-        self.__galacticPlotWidget.setLayout(QVBoxLayout())
+        super(GalacticMap, self).__init__()
+        self.mapWidget: QWidget = QWidget(parent)
+        self.mapWidget.setLayout(QVBoxLayout())
 
-        self.__galacticPlotCanvas: FigureCanvas = FigureCanvas(Figure())
+        self.mapCanvas: FigureCanvas = FigureCanvas(Figure())
 
-        self.__galacticPlotCanvas.mpl_connect('pick_event', self.__planetSelect)
-        self.__galacticPlotCanvas.mpl_connect('motion_notify_event', self.__planetHover)
+        self.mapCanvas.mpl_connect('pick_event', self.__planetSelect)
+        self.mapCanvas.mpl_connect('motion_notify_event', self.__planetHover)
 
-        self.__galacticPlotNavBar: NavigationToolbar = NavigationToolbar(self.__galacticPlotCanvas, self.__galacticPlotWidget)
-        self.__galacticPlotWidget.layout().addWidget(self.__galacticPlotNavBar)
-        self.__galacticPlotWidget.layout().addWidget(self.__galacticPlotCanvas)
-        self.__axes: Axes = self.__galacticPlotCanvas.figure.add_subplot(111, aspect = "equal")
+        self.__galacticPlotNavBar: NavigationToolbar = NavigationToolbar(self.mapCanvas, self.mapWidget)
+        self.mapWidget.layout().addWidget(self.__galacticPlotNavBar)
+        self.mapWidget.layout().addWidget(self.mapCanvas)
+        self.__axes: Axes = self.mapCanvas.figure.add_subplot(111, aspect = "equal")
 
         self.__annotate = self.__axes.annotate("", xy = (0,0), xytext = (10, 10), textcoords = "offset points", bbox = dict(boxstyle="round", fc="w"), arrowprops = dict(arrowstyle="->"))
         self.__annotate.set_visible(False)
@@ -83,12 +81,12 @@ class QtGalacticPlot(QWidget):
 
         self.__axes.scatter(x, y, c = 'b')
 
-        self.__galacticPlotCanvas.draw_idle()
+        self.mapCanvas.draw_idle()
 
 
     def getWidget(self) -> QWidget:
         '''Returns the plot widget'''
-        return self.__galacticPlotWidget
+        return self.mapWidget
 
     def __planetSelect(self, event) -> None:
         '''Event handler for selecting a planet on the map'''
@@ -105,11 +103,11 @@ class QtGalacticPlot(QWidget):
             if contains:
                 self.__update_annotation(ind)
                 self.__annotate.set_visible(True)
-                self.__galacticPlotCanvas.draw_idle()
+                self.mapCanvas.draw_idle()
             else:
                 if visible:
                     self.__annotate.set_visible(False)
-                    self.__galacticPlotCanvas.draw_idle()
+                    self.mapCanvas.draw_idle()
 
     def __update_annotation(self, ind) -> None:
         '''Updates annotation parameters'''

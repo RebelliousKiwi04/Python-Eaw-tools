@@ -15,7 +15,7 @@ from RepositoryCreator import RepositoryCreator
 config: Config = Config()
 
 numArgs = len(sys.argv)
-
+ 
 if numArgs > 1:
     path = sys.argv[1]
 else:
