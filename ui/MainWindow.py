@@ -1,34 +1,93 @@
 from typing import List
-from PyQt5 import QtCore
+from PyQt5 import QtCore, QtWidgets, QtGui
 from PyQt5.QtWidgets import QAction, QPushButton, QCheckBox, QComboBox, QFileDialog, QHeaderView, QLabel, QMainWindow, QMenu, QMenuBar, QDialog, QSplitter, \
     QTableWidget, QTableWidgetItem, QTabWidget, QVBoxLayout, QWidget
 from ui.Utilities import PyQtUtil
-from matplotlib.backends.backend_qt5agg import FigureCanvas, \
-    NavigationToolbar2QT as NavigationToolbar
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Axes, Figure
+from ui.DraggablePoint import DraggablePoint
 
-
-class GalacticMap(QWidget):
-    planetSelectedSignal = QtCore.pyqtSignal(list)
+class MapWidget(QWidget):
+    planetSelectedSignal = pyqtSignal(list)
 
     def __init__(self, parent: QWidget = None):
-        super(GalacticMap, self).__init__()
-        self.mapWidget: QWidget = QWidget(parent)
-        self.mapWidget.setLayout(QVBoxLayout())
+        super(MapWidget, self).__init__()
+        self.widget: QWidget = QWidget(parent)
+        self.widget.setLayout(QVBoxLayout())
 
-        self.galacticMap= FigureCanvas(Figure())
+        self.mapCanvas: FigureCanvas = FigureCanvas(Figure())
 
-        self.galacticMap.mpl_connect('pick_event', self.__planetSelect)
-        self.galacticMap.mpl_connect('motion_notify_event', self.__planetHover)
+        self.mapCanvas.mpl_connect('pick_event', self.__planetSelect)
+        self.mapCanvas.mpl_connect('motion_notify_event', self.__planetHover)
 
-        self.mapWidget.layout().addWidget(self.galacticMap)
-        self.mapAxis = self.galacticMap.figure.add_subplot(111, aspect = "equal")
+        self.__galacticPlotNavBar: NavigationToolbar = NavigationToolbar(self.mapCanvas, self.widget)
+        self.widget.layout().addWidget(self.__galacticPlotNavBar)
+        self.widget.layout().addWidget(self.mapCanvas)
+        self.__axes: Axes = self.mapCanvas.figure.add_subplot(111, aspect = "equal")
 
-        self.__annotate = self.mapAxis.annotate("", xy = (0,0), xytext = (10, 10), textcoords = "offset points", bbox = dict(boxstyle="round", fc="w"), arrowprops = dict(arrowstyle="->"))
+        self.__annotate = self.__axes.annotate("", xy = (0,0), xytext = (10, 10), textcoords = "offset points", bbox = dict(boxstyle="round", fc="w"), arrowprops = dict(arrowstyle="->"))
         self.__annotate.set_visible(False)
         self.__planetNames = []
         self.__planetsScatter = None
 
+class GalacticMap(FigureCanvas):
+    planetSelectedSignal = QtCore.pyqtSignal(list)
+
+    def __init__(self, parent = None):
+        super(GalacticMap, self).__init__()
+        self.setLayout(QVBoxLayout())
+        self.fig = Figure()
+        self.axes = self.fig.add_subplot(111, aspect = "equal")
+        self.annotate = self.axes.annotate("", xy = (0,0), xytext = (10, 10), textcoords = "offset points", bbox = dict(boxstyle="round", fc="w"), arrowprops = dict(arrowstyle="->"))
+        self.annotate.set_visible(False)
+        self.axes.grid(True)
+
+        FigureCanvas.__init__(self, self.fig)
+        self.setParent(parent)
+
+        FigureCanvas.setSizePolicy(self,
+                                   QtWidgets.QSizePolicy.Expanding,
+                                   QtWidgets.QSizePolicy.Expanding)
+        FigureCanvas.updateGeometry(self)
+
+        # To store the 2 draggable points
+        self.list_points = []
+
+
+        self.show()
+        self.plotDraggablePoints()
+
+        # self.galacticMap.mpl_connect('pick_event', self.__planetSelect)
+        # self.galacticMap.mpl_connect('motion_notify_event', self.__planetHover)
+    def plotDraggablePoints(self, size=0.05):
+
+        """Plot and define the 2 draggable points of the baseline"""
+  
+        # del(self.list_points[:])
+        self.list_points.append(DraggablePoint(self, 10, 0.1, size))
+        self.list_points.append(DraggablePoint(self, 0.2, 0.2, size))
+        self.list_points.append(DraggablePoint(self, 20.5, 0.5, size))
+        self.list_points.append(DraggablePoint(self, 0.6, 0.5, size))
+        self.list_points.append(DraggablePoint(self, 0.7, 0.5, size))
+
+        self.updateFigure()
+
+
+    def clearFigure(self):
+
+        """Clear the graph"""
+
+        self.axes.clear()
+        self.axes.grid(True)
+        del(self.list_points[:])
+        self.updateFigure()
+
+
+    def updateFigure(self):
+
+        """Update the graph. Necessary, to call after each plot"""
+
+        self.draw()
     def plotGalaxy(self, planets, tradeRoutes, allPlanets, autoPlanetConnectionDistance: int = 0) -> None:
         '''Plots all planets as alpha = 0.1, then overlays all selected planets and trade routes'''
         self.mapAxis.clear()
@@ -73,6 +132,8 @@ class GalacticMap(QWidget):
                     if dist < autoPlanetConnectionDistance:
                         self.mapAxis.plot([p1.x, p2.x], [p1.y, p2.y], 'k-', alpha=0.1)
 
+
+
         x = []
         y = []
 
@@ -85,9 +146,9 @@ class GalacticMap(QWidget):
         self.galacticMap.draw_idle()
 
 
-    def getWidget(self) -> QWidget:
+    def getWidget(self):
         '''Returns the plot widget'''
-        return self.mapWidget
+        return self
 
     def __planetSelect(self, event) -> None:
         '''Event handler for selecting a planet on the map'''
@@ -154,7 +215,7 @@ class MainUIWindow:
 
         #Left pane, Forces tab
         self.__planetComboBox: QComboBox = QComboBox()
-
+        self.add_unit_to_planet= QPushButton("Add Unit...")
         self.__forcesListWidget = self.QtUtil.construct_table_widget(["Unit", "Power"], 2)        
 
 
@@ -228,8 +289,10 @@ class MainUIWindow:
 
 
         self.__startingForces.layout().addWidget(self.__planetComboBox)
+        self.__startingForces.layout().addWidget(self.add_unit_to_planet)
         self.__startingForces.layout().addWidget(self.__forcesListWidget)
-        plot = GalacticMap(self.window_splitter)
+        mapWidget = MapWidget(self.window_splitter)
+        plot = GalacticMap()
         self.window_splitter.addWidget(plot.getWidget())
         self.main_window.show()
     
