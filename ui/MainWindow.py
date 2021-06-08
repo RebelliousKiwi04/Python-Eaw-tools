@@ -7,69 +7,41 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Axes, Figure
 from ui.DraggablePoint import DraggablePoint
 
-class MapWidget(QWidget):
-    planetSelectedSignal = pyqtSignal(list)
-
-    def __init__(self, parent: QWidget = None):
-        super(MapWidget, self).__init__()
-        self.widget: QWidget = QWidget(parent)
-        self.widget.setLayout(QVBoxLayout())
-
-        self.mapCanvas: FigureCanvas = FigureCanvas(Figure())
-
-        self.mapCanvas.mpl_connect('pick_event', self.__planetSelect)
-        self.mapCanvas.mpl_connect('motion_notify_event', self.__planetHover)
-
-        self.__galacticPlotNavBar: NavigationToolbar = NavigationToolbar(self.mapCanvas, self.widget)
-        self.widget.layout().addWidget(self.__galacticPlotNavBar)
-        self.widget.layout().addWidget(self.mapCanvas)
-        self.__axes: Axes = self.mapCanvas.figure.add_subplot(111, aspect = "equal")
-
-        self.__annotate = self.__axes.annotate("", xy = (0,0), xytext = (10, 10), textcoords = "offset points", bbox = dict(boxstyle="round", fc="w"), arrowprops = dict(arrowstyle="->"))
-        self.__annotate.set_visible(False)
-        self.__planetNames = []
-        self.__planetsScatter = None
-
-class GalacticMap(FigureCanvas):
+class GalacticMap(QWidget):
     planetSelectedSignal = QtCore.pyqtSignal(list)
 
     def __init__(self, parent = None):
         super(GalacticMap, self).__init__()
-        self.setLayout(QVBoxLayout())
-        self.fig = Figure()
-        self.axes = self.fig.add_subplot(111, aspect = "equal")
-        self.annotate = self.axes.annotate("", xy = (0,0), xytext = (10, 10), textcoords = "offset points", bbox = dict(boxstyle="round", fc="w"), arrowprops = dict(arrowstyle="->"))
-        self.annotate.set_visible(False)
-        self.axes.grid(True)
+        self.mapWidget: QWidget = QWidget(parent)
+        self.mapWidget.setLayout(QVBoxLayout())
 
-        FigureCanvas.__init__(self, self.fig)
-        self.setParent(parent)
+        self.mapCanvas: FigureCanvas = FigureCanvas(Figure())
 
-        FigureCanvas.setSizePolicy(self,
-                                   QtWidgets.QSizePolicy.Expanding,
-                                   QtWidgets.QSizePolicy.Expanding)
-        FigureCanvas.updateGeometry(self)
+        # self.mapCanvas.mpl_connect('pick_event', self.__planetSelect)
+        # self.mapCanvas.mpl_connect('motion_notify_event', self.__planetHover)
 
-        # To store the 2 draggable points
+        self.mapWidget.layout().addWidget(self.mapCanvas)
+        self.__axes: Axes = self.mapCanvas.figure.add_subplot(111, aspect = "equal")
+        self.__axes.set_xlim(0,500)
+        self.__axes.set_ylim(0,500)
+        self.__annotate = self.__axes.annotate("", xy = (0,0), xytext = (10, 10), textcoords = "offset points", bbox = dict(boxstyle="round", fc="w"), arrowprops = dict(arrowstyle="->"))
+        self.__annotate.set_visible(False)
+        self.__planetNames = []
+        self.__planetsScatter = None
         self.list_points = []
-
-
-        self.show()
         self.plotDraggablePoints()
-
         # self.galacticMap.mpl_connect('pick_event', self.__planetSelect)
         # self.galacticMap.mpl_connect('motion_notify_event', self.__planetHover)
-    def plotDraggablePoints(self, size=0.05):
+    def plotDraggablePoints(self, size=10.05):
 
         """Plot and define the 2 draggable points of the baseline"""
   
         # del(self.list_points[:])
-        self.list_points.append(DraggablePoint(self, 10, 0.1, size))
-        self.list_points.append(DraggablePoint(self, 0.2, 0.2, size))
-        self.list_points.append(DraggablePoint(self, 20.5, 0.5, size))
-        self.list_points.append(DraggablePoint(self, 0.6, 0.5, size))
-        self.list_points.append(DraggablePoint(self, 0.7, 0.5, size))
-
+        self.list_points.append(DraggablePoint(self, 415, 221, size))
+        self.list_points.append(DraggablePoint(self, 318, 321, size))
+        self.list_points.append(DraggablePoint(self, 120.5, 421.5, size))
+        self.list_points.append(DraggablePoint(self, 125.6, 300.5, size))
+        self.list_points.append(DraggablePoint(self, 12.7, 491.5, size))
         self.updateFigure()
 
 
@@ -87,7 +59,7 @@ class GalacticMap(FigureCanvas):
 
         """Update the graph. Necessary, to call after each plot"""
 
-        self.draw()
+        self.mapCanvas.draw()
     def plotGalaxy(self, planets, tradeRoutes, allPlanets, autoPlanetConnectionDistance: int = 0) -> None:
         '''Plots all planets as alpha = 0.1, then overlays all selected planets and trade routes'''
         self.mapAxis.clear()
@@ -143,12 +115,12 @@ class GalacticMap(FigureCanvas):
 
         self.mapAxis.scatter(x, y, c = 'b')
 
-        self.galacticMap.draw_idle()
+        self.mapCanvas.draw_idle()
 
 
     def getWidget(self):
         '''Returns the plot widget'''
-        return self
+        return self.mapWidget
 
     def __planetSelect(self, event) -> None:
         '''Event handler for selecting a planet on the map'''
@@ -291,8 +263,8 @@ class MainUIWindow:
         self.__startingForces.layout().addWidget(self.__planetComboBox)
         self.__startingForces.layout().addWidget(self.add_unit_to_planet)
         self.__startingForces.layout().addWidget(self.__forcesListWidget)
-        mapWidget = MapWidget(self.window_splitter)
-        plot = GalacticMap()
-        self.window_splitter.addWidget(plot.getWidget())
+        mapWidget = GalacticMap(self.window_splitter)
+        #plot = GalacticMap()
+        self.window_splitter.addWidget(mapWidget.mapWidget)
         self.main_window.show()
     

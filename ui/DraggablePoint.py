@@ -12,7 +12,8 @@ class DraggablePoint:
         self.point = patches.Ellipse((x, y), size, size, fc='r', alpha=0.5, edgecolor='r')
         self.x = x
         self.y = y
-        parent.fig.axes[0].add_patch(self.point)
+
+        parent.mapCanvas.figure.axes[0].add_patch(self.point)
         self.press = None
         self.background = None
         self.connect()
@@ -84,7 +85,8 @@ class DraggablePoint:
 
         self.x = self.point.center[0]
         self.y = self.point.center[1]
-
+        print(self.x)
+        print(self.y)
     def disconnect(self):
 
         'disconnect all the stored connection ids'
