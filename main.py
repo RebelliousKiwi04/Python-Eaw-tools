@@ -21,45 +21,30 @@ class EaWModTool:
         self.config = config
         self.ui = MainWindow
         #self.gameObjectRepository = GameObjectRepository()
-        self.all_mod_files = []
-        self.mod_dict = {
-            "file_name": 'absolute_path'
-        }
+        self.game_object_files = []
         self.originalPath = originalPath
         self.listAllModFile()
+        
+
     def init_repository(self) -> None:
         return None
     def listAllModFile(self):
-            if os.path.isdir(self.config.dataPath + '/xml'):
-                modPath = self.config.dataPath + '/xml/'
-            else:
-                modPath = self.config.dataPath + '/XML/'
-            os.chdir(modPath)
-            basedir = os.listdir()
-            pathsToIterate = []
-            for file in basedir:
-                if os.path.isfile(file):
-                    print(os.path.abspath(file))
-                    self.all_mod_files.append(os.path.abspath(file))
-                elif os.path.isdir(file):
-                    if file.upper() != 'AI' and file.upper() != 'ENUM':
-                        subdir = modPath+ file
-                        pathsToIterate.append(subdir)
-            for path in pathsToIterate:
-                currentPath = path
-                print(path)
-                os.chdir(path)
-                subdirectory = os.listdir()
-                for file in subdirectory:
-                    if os.path.isfile(file):
-                        print(os.path.abspath(file))
-                        self.all_mod_files.append(os.path.abspath(file))
-                    elif os.path.isdir(file):
-                        path = currentPath + "\\"+file
-                        pathsToIterate.append(path)
-                os.chdir(self.originalPath)
+        if os.path.isdir('xml'):
+            xmlPath = '/xml/'
+        else:
+            xmlPath = '/XML/'
+        gameObjectFiles = et.parse(os.getcwd()+xmlPath+'/gameobjectfiles.xml')
+        print(gameObjectFiles.getroot())
+        for child in gameObjectFiles.getroot():
+            if child.tag == 'File':
+                self.game_object_files.append(os.getcwd()+xmlPath+child.text)
+                print(child.tag, child.text)
+        for i in self.game_object_files:
+            print(i)
+
 
 config = Config()
+os.chdir(config.dataPath)
 numArgs = len(sys.argv)
 
 if numArgs > 1:
