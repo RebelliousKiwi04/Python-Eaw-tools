@@ -23,8 +23,8 @@ class GalacticMap(QWidget):
 
         self.mapWidget.layout().addWidget(self.mapCanvas)
         self.__axes: Axes = self.mapCanvas.figure.add_subplot(111, aspect = "equal")
-        self.__axes.set_xlim(0,500)
-        self.__axes.set_ylim(0,500)
+        self.__axes.set_xlim(-500,500)
+        self.__axes.set_ylim(-500,500)
         self.__annotate = self.__axes.annotate("", xy = (0,0), xytext = (10, 10), textcoords = "offset points", bbox = dict(boxstyle="round", fc="w"), arrowprops = dict(arrowstyle="->"))
         self.__annotate.set_visible(False)
         self.__planetNames = []
@@ -32,7 +32,7 @@ class GalacticMap(QWidget):
         self.list_points = []
         self.plotDraggablePoints()
 
-    def plotDraggablePoints(self, size=10.05):
+    def plotDraggablePoints(self, size=20.05):
 
         """Plot and define the 2 draggable points of the baseline"""
   
@@ -42,6 +42,7 @@ class GalacticMap(QWidget):
         self.list_points.append(DraggablePoint(self, 120.5, 421.5, size))
         self.list_points.append(DraggablePoint(self, 125.6, 300.5, size))
         self.list_points.append(DraggablePoint(self, 12.7, 491.5, size))
+        self.list_points.append(DraggablePoint(self, 0, 0, size))
         self.updateFigure()
 
 
