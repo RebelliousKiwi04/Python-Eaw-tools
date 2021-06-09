@@ -15,7 +15,6 @@ class GalacticMap(QWidget):
         super(GalacticMap, self).__init__()
         self.mapWidget: QWidget = QWidget(parent)
         self.mapWidget.setLayout(QVBoxLayout())
-
         self.mapCanvas: FigureCanvas = FigureCanvas(Figure())
         self.mapCanvas.mpl_connect('pick_event', self.__planetSelect)
         self.mapCanvas.mpl_connect('motion_notify_event', self.__planetHover)
@@ -103,7 +102,6 @@ class GalacticMap(QWidget):
             y.append(p.y)
 
         self.axes.scatter(x, y, c = 'b')
-
         self.mapCanvas.draw_idle()
 
 
@@ -258,4 +256,14 @@ class MainUIWindow:
         #plot = GalacticMap()
         self.window_splitter.addWidget(self.map.mapWidget)
         self.main_window.show()
+    def update_selected_planets(self, planets,allPlanets):
+        # rowCount = self.planet_list.rowCount()
+        # for row in range(rowCount):
+        #     self.planet_list.item(row, 0).setCheckState(QtCore.Qt.Unchecked)
+
+        selectedPlanets = []
+        for p in planets:
+            selectedPlanets.append([x.name for x in allPlanets].index(p.name))
+        for p in selectedPlanets:
+            self.planet_list.item(p, 0).setCheckState(QtCore.Qt.Checked)
     

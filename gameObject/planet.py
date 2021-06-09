@@ -27,7 +27,6 @@ class Planet:
                 entry = child.text     
                 entry = entry.replace(',',' ')
                 entry = entry.split()
-                print(entry)
                 return float(entry[0]), float(entry[1])
 
 

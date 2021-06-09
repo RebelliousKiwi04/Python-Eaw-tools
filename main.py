@@ -24,22 +24,15 @@ class EaWModTool:
         self.repository = ModRepository(config.dataPath)
         self.repository.update_ui(self.ui)
 
-def loadFile(file):
-    file = open(file, 'rb')
-    obj = marshal.load(file)
-    file.close()
-    return obj
-checkedPlanets = loadFile('''C:/Users/Christopher/Desktop/Python EaW tool/checkedplanets''')
-planets = loadFile('''C:/Users/Christopher/Desktop/Python EaW tool/planets''')
 config = Config()
 numArgs = len(sys.argv)
-print(checkedPlanets)
+
 if numArgs > 1:
     path = sys.argv[1]
 else:
     path = config.dataPath
 
-file = open('''C:/Program Files (x86)/Steam/SteamApps/common/Star Wars Empire at War/corruption/Mods/Rise-Of-The-Sith-Lords/Data/testFile.py''', 'w')
+
 
 
 
@@ -51,14 +44,16 @@ EaWModToolApp = EaWModTool(config, MainWindow, originalPath)
 
 def selectedPlanet(table):
     for i in table:
-        for name, campaign in EaWModToolApp.repository.campaigns.items():
-            if EaWModToolApp.repository.planets[i] not in campaign.planets:
-                campaign.planets.append(EaWModToolApp.repository.planets[i])
-            else:
-                campaign.planets.remove(EaWModToolApp.repository.planets[i])
-            MainWindow.map.plotGalaxy(campaign.planets, [], EaWModToolApp.repository.planets)
+        print(MainWindow.select_GC.currentText())
+        campaign = EaWModToolApp.repository.campaigns[MainWindow.select_GC.currentText()]
+        if EaWModToolApp.repository.planets[i] not in campaign.planets:
+            campaign.planets.append(EaWModToolApp.repository.planets[i])
+        else:
+            campaign.planets.remove(EaWModToolApp.repository.planets[i])
+        MainWindow.map.plotGalaxy(campaign.planets, [], EaWModToolApp.repository.planets)
+        MainWindow.update_selected_planets(campaign.planets, EaWModToolApp.repository.planets)
 MainWindow.map.planetSelectedSignal.connect(selectedPlanet)
-
+MainWindow.planet_list.itemChanged.connect(EaWModToolApp.repository.onCellChanged)
 
 
 sys.exit(app.exec_())
