@@ -83,8 +83,6 @@ class ModRepository:
             ui.select_GC.addItem(name)
             ui.map.plotGalaxy(campaign.planets, [], self.planets)
         for planet in self.planets:
-            if planet.name == 'Lehon':
-                self.__planetsScatter = ui.map.axes.scatter([planet.x], [planet.y], c = 'b', alpha = 0.1)
             rowCount = ui.planet_list.rowCount()
             ui.planet_list.setRowCount(rowCount + 1)
             item= QTableWidgetItem(planet.name)
@@ -92,3 +90,5 @@ class ModRepository:
             item.setCheckState(QtCore.Qt.Unchecked)
             ui.planet_list.setItem(rowCount, 0, item)
         
+    #    for p in planets:
+    #         self.planet_list.item(p, 0).setCheckState(QtCore.Qt.Checked)

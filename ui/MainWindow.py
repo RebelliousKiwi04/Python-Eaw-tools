@@ -3,8 +3,6 @@ import sys
 from PyQt5 import QtCore, QtWidgets, QtGui
 from PyQt5.QtWidgets import QAction, QPushButton, QCheckBox, QComboBox, QFileDialog, QHeaderView, QLabel, QMainWindow, QMenu, QMenuBar, QDialog, QSplitter, \
     QTableWidget, QTableWidgetItem, QTabWidget, QVBoxLayout, QWidget
-from matplotlib.backends.backend_qt5agg import FigureCanvas, \
-    NavigationToolbar2QT as NavigationToolbar
 from ui.Utilities import PyQtUtil
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Axes, Figure
@@ -21,8 +19,6 @@ class GalacticMap(QWidget):
         self.mapCanvas: FigureCanvas = FigureCanvas(Figure())
         self.mapCanvas.mpl_connect('pick_event', self.__planetSelect)
         self.mapCanvas.mpl_connect('motion_notify_event', self.__planetHover)
-        self.__galacticPlotNavBar: NavigationToolbar = NavigationToolbar(self.mapCanvas, self.mapWidget)
-        self.mapWidget.layout().addWidget(self.__galacticPlotNavBar)
         self.mapWidget.layout().addWidget(self.mapCanvas)
         self.axes: Axes = self.mapCanvas.figure.add_subplot(111, aspect = "equal")
         self.axes.set_xlim(-600,700)
