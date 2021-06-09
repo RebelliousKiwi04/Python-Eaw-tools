@@ -20,3 +20,5 @@ class ModRepository:
         self.units = {}
         self.campaigns = {}
         self.tradeRoutes = {}
+    def init_repository(self):
+        return None

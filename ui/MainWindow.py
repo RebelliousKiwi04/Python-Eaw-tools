@@ -17,7 +17,6 @@ class GalacticMap(QWidget):
         self.mapWidget.setLayout(QVBoxLayout())
 
         self.mapCanvas: FigureCanvas = FigureCanvas(Figure())
-
         # self.mapCanvas.mpl_connect('pick_event', self.__planetSelect)
         # self.mapCanvas.mpl_connect('motion_notify_event', self.__planetHover)
 
@@ -25,6 +24,7 @@ class GalacticMap(QWidget):
         self.__axes: Axes = self.mapCanvas.figure.add_subplot(111, aspect = "equal")
         self.__axes.set_xlim(-500,500)
         self.__axes.set_ylim(-500,500)
+        self.__axes.grid(True)
         self.__annotate = self.__axes.annotate("", xy = (0,0), xytext = (10, 10), textcoords = "offset points", bbox = dict(boxstyle="round", fc="w"), arrowprops = dict(arrowstyle="->"))
         self.__annotate.set_visible(False)
         self.__planetNames = []
