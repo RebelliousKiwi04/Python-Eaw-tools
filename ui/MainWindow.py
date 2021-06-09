@@ -3,6 +3,8 @@ import sys
 from PyQt5 import QtCore, QtWidgets, QtGui
 from PyQt5.QtWidgets import QAction, QPushButton, QCheckBox, QComboBox, QFileDialog, QHeaderView, QLabel, QMainWindow, QMenu, QMenuBar, QDialog, QSplitter, \
     QTableWidget, QTableWidgetItem, QTabWidget, QVBoxLayout, QWidget
+from matplotlib.backends.backend_qt5agg import FigureCanvas, \
+    NavigationToolbar2QT as NavigationToolbar
 from ui.Utilities import PyQtUtil
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Axes, Figure
@@ -17,20 +19,21 @@ class GalacticMap(QWidget):
         self.mapWidget.setLayout(QVBoxLayout())
 
         self.mapCanvas: FigureCanvas = FigureCanvas(Figure())
-        # self.mapCanvas.mpl_connect('pick_event', self.__planetSelect)
-        # self.mapCanvas.mpl_connect('motion_notify_event', self.__planetHover)
-
+        self.mapCanvas.mpl_connect('pick_event', self.__planetSelect)
+        self.mapCanvas.mpl_connect('motion_notify_event', self.__planetHover)
+        self.__galacticPlotNavBar: NavigationToolbar = NavigationToolbar(self.mapCanvas, self.mapWidget)
+        self.mapWidget.layout().addWidget(self.__galacticPlotNavBar)
         self.mapWidget.layout().addWidget(self.mapCanvas)
-        self.__axes: Axes = self.mapCanvas.figure.add_subplot(111, aspect = "equal")
-        self.__axes.set_xlim(-500,500)
-        self.__axes.set_ylim(-500,500)
-        self.__axes.grid(True)
-        self.__annotate = self.__axes.annotate("", xy = (0,0), xytext = (10, 10), textcoords = "offset points", bbox = dict(boxstyle="round", fc="w"), arrowprops = dict(arrowstyle="->"))
+        self.axes: Axes = self.mapCanvas.figure.add_subplot(111, aspect = "equal")
+        self.axes.set_xlim(-600,700)
+        self.axes.set_ylim(-600,850)
+        self.axes.grid(True)
+        self.__annotate = self.axes.annotate("", xy = (0,0), xytext = (10, 10), textcoords = "offset points", bbox = dict(boxstyle="round", fc="w"), arrowprops = dict(arrowstyle="->"))
         self.__annotate.set_visible(False)
         self.__planetNames = []
         self.__planetsScatter = None
         self.list_points = []
-        self.plotDraggablePoints()
+        #self.plotDraggablePoints()
 
     def plotDraggablePoints(self, size=20.05):
 
@@ -45,17 +48,6 @@ class GalacticMap(QWidget):
         self.list_points.append(DraggablePoint(self, 0, 0, size))
         self.updateFigure()
 
-
-    def clearFigure(self):
-
-        """Clear the graph"""
-
-        self.axes.clear()
-        self.axes.grid(True)
-        del(self.list_points[:])
-        self.updateFigure()
-
-
     def updateFigure(self):
 
         """Update the graph. Necessary, to call after each plot"""
@@ -63,10 +55,10 @@ class GalacticMap(QWidget):
         self.mapCanvas.draw()
     def plotGalaxy(self, planets, tradeRoutes, allPlanets, autoPlanetConnectionDistance: int = 0) -> None:
         '''Plots all planets as alpha = 0.1, then overlays all selected planets and trade routes'''
-        self.mapAxis.clear()
+        self.axes.clear()
 
         #Has to be set again here for the planet hover labels to work
-        self.__annotate = self.mapAxis.annotate("", xy = (0,0), xytext = (10, 10), textcoords = "offset points", bbox = dict(boxstyle="round", fc="w"), arrowprops = dict(arrowstyle="->"))
+        self.__annotate = self.axes.annotate("", xy = (0,0), xytext = (10, 10), textcoords = "offset points", bbox = dict(boxstyle="round", fc="w"), arrowprops = dict(arrowstyle="->"))
         self.__annotate.set_visible(False)
 
         self.__planetNames = []
@@ -74,36 +66,36 @@ class GalacticMap(QWidget):
         x = []
         y = []
 
-        for p in allPlanets:
-            x.append(p.x)
-            y.append(p.y)
-            self.__planetNames.append(p.name)
+        for planet in allPlanets:
+            #print(p.x,p.y)
+            x.append(planet.x)
+            y.append(planet.y)
+            self.__planetNames.append(planet.name)
 
-        self.__planetsScatter = self.mapAxis.scatter(x, y, c = 'b', alpha = 0.1, picker = 5)
+        self.__planetsScatter = self.axes.scatter(x, y, c = 'b', alpha = 0.1,picker = 5)
+        # x1 = 0        
+        # y1 = 0
+        # x2 = 0
+        # y2 = 0
 
-        x1 = 0        
-        y1 = 0
-        x2 = 0
-        y2 = 0
-
-        # loop through routes
-        for t in tradeRoutes:
-            x1 = t.start.x
-            y1 = t.start.y
-            x2 = t.end.x
-            y2 = t.end.y
-            # plot each route (start, end)            
-            self.mapAxis.plot([x1, x2], [y1, y2], 'k-', alpha=0.4)
+        # # loop through routes
+        # for t in tradeRoutes:
+        #     x1 = t.start.x
+        #     y1 = t.start.y
+        #     x2 = t.end.x
+        #     y2 = t.end.y
+        #     # plot each route (start, end)            
+        #     self.axes.plot([x1, x2], [y1, y2], 'k-', alpha=0.4)
         
-        #Create automatic connections between planets
-        if autoPlanetConnectionDistance > 0:
-            for p1 in planets:
-                for p2 in planets:
-                    if p1 == p2:
-                        break
-                    dist: float = p1.distanceTo(p2)
-                    if dist < autoPlanetConnectionDistance:
-                        self.mapAxis.plot([p1.x, p2.x], [p1.y, p2.y], 'k-', alpha=0.1)
+        # #Create automatic connections between planets
+        # if autoPlanetConnectionDistance > 0:
+        #     for p1 in planets:
+        #         for p2 in planets:
+        #             if p1 == p2:
+        #                 break
+        #             dist: float = p1.distanceTo(p2)
+        #             if dist < autoPlanetConnectionDistance:
+        #                 self.axes.plot([p1.x, p2.x], [p1.y, p2.y], 'k-', alpha=0.1)
 
 
 
@@ -114,7 +106,7 @@ class GalacticMap(QWidget):
             x.append(p.x)
             y.append(p.y)
 
-        self.mapAxis.scatter(x, y, c = 'b')
+        self.axes.scatter(x, y, c = 'b')
 
         self.mapCanvas.draw_idle()
 
@@ -126,13 +118,15 @@ class GalacticMap(QWidget):
     def __planetSelect(self, event) -> None:
         '''Event handler for selecting a planet on the map'''
         planet_index = event.ind
+        print(event.ind)
+        print(event)
         self.planetSelectedSignal.emit(list(planet_index))
 
     def __planetHover(self, event) -> None:
         '''Handler for hovering on a planet in the plot'''
         visible = self.__annotate.get_visible()
 
-        if event.inaxes == self.mapAxis:
+        if event.inaxes == self.axes:
             contains, ind = self.__planetsScatter.contains(event)
 
             if contains:
@@ -141,11 +135,11 @@ class GalacticMap(QWidget):
                 text = "{}".format(" ".join([self.__planetNames[n] for n in ind["ind"]]))
                 self.__annotate.set_text(text)
                 self.__annotate.set_visible(True)
-                self.galacticMap.draw_idle()
+                self.mapCanvas.draw_idle()
             else:
                 if visible:
                     self.__annotate.set_visible(False)
-                    self.galacticMap.draw_idle()
+                    self.mapCanvas.draw_idle()
 
 class MainUIWindow:
     '''Qt based window'''
@@ -264,8 +258,8 @@ class MainUIWindow:
         self.__startingForces.layout().addWidget(self.__planetComboBox)
         self.__startingForces.layout().addWidget(self.add_unit_to_planet)
         self.__startingForces.layout().addWidget(self.__forcesListWidget)
-        mapWidget = GalacticMap(self.window_splitter)
+        self.map = GalacticMap(self.window_splitter)
         #plot = GalacticMap()
-        self.window_splitter.addWidget(mapWidget.mapWidget)
+        self.window_splitter.addWidget(self.map.mapWidget)
         self.main_window.show()
     

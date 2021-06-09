@@ -1,10 +1,11 @@
-import matplotlib.patches as patches
+from matplotlib.patches import Ellipse
+
 class DraggablePoint:
     lock = None
     def __init__(self, parent, x=0.1, y=0.1, size=0.1):
 
         self.parent = parent
-        self.point = patches.Ellipse((x, y), size, size, fc='r', alpha=0.5, edgecolor='r')
+        self.point = Ellipse((x, y), size, size, fc='r', alpha=0.5, edgecolor='r')
         self.x = x
         self.y = y
 
@@ -12,7 +13,8 @@ class DraggablePoint:
         self.press = None
         self.background = None
         self.connect()
-
+    def get_point(self):
+        return self.point
     def connect(self):
         self.cidpress = self.point.figure.canvas.mpl_connect('button_press_event', self.on_press)
         self.cidrelease = self.point.figure.canvas.mpl_connect('button_release_event', self.on_release)

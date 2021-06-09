@@ -1,44 +1,23 @@
 
 class Campaign:
-    def __init__(self, name: str):
-        self.__name: str = name
+    def __init__(self, xml_entry, planets):
+        self.entry = xml_entry
+        self.name = xml_entry.get('Name')
         self.__setName: str = "Empty"
-        self.__planets = []
+        self.planets = []
         self.__tradeRoutes= []
         self.__ai_players = []
+        for i in self.get_planets():
+            for j in planets:
+                if j.name == i:
+                    self.planets.append(j)
 
-    @property
-    def name(self) -> str:
-        return self.__name
+    def get_planets(self):
+        for item in self.entry:
+            if item.tag == 'Locations':
+                outputList = []
+                for text in item.text.split():
+                    newText = text.replace(',','')
+                    outputList.append(newText)
+                return outputList
 
-    @name.setter
-    def name(self, value: str) -> None:
-        if value:
-            self.__name = value
-
-    @property
-    def setName(self) -> str:
-        return self.__setName
-
-    @setName.setter
-    def setName(self, value: str) -> None:
-        if value:
-            self.__setName = value
-
-    @property
-    def planets(self) -> list:
-        return self.__planets
-
-    @planets.setter
-    def planets(self, value: list) -> None:
-        if value is not None:
-            self.__planets = value
-
-    @property
-    def tradeRoutes(self) -> list:
-        return self.__tradeRoutes
-
-    @tradeRoutes.setter
-    def tradeRoutes(self, value: list) -> None:
-        if value is not None:
-            self.__tradeRoutes = value
