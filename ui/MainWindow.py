@@ -68,19 +68,19 @@ class GalacticMap(QWidget):
             self.__planetNames.append(planet.name)
 
         self.__planetsScatter = self.axes.scatter(x, y, c = 'b', alpha = 0.1,picker = 5)
-        # x1 = 0        
-        # y1 = 0
-        # x2 = 0
-        # y2 = 0
+        x1 = 0        
+        y1 = 0
+        x2 = 0
+        y2 = 0
 
-        # # loop through routes
-        # for t in tradeRoutes:
-        #     x1 = t.start.x
-        #     y1 = t.start.y
-        #     x2 = t.end.x
-        #     y2 = t.end.y
-        #     # plot each route (start, end)            
-        #     self.axes.plot([x1, x2], [y1, y2], 'k-', alpha=0.4)
+        # loop through routes
+        for t in tradeRoutes:
+            x1 = t.points[0].x
+            y1 = t.points[0].y
+            x2 = t.points[1].x
+            y2 = t.points[1].y
+            # plot each route (start, end)            
+            self.axes.plot([x1, x2], [y1, y2], 'k-', alpha=0.4)
         
         # #Create automatic connections between planets
         # if autoPlanetConnectionDistance > 0:

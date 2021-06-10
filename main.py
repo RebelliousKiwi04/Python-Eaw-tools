@@ -28,16 +28,6 @@ class EaWModTool:
         self.repository.update_ui(self.ui)
 
 config = Config()
-numArgs = len(sys.argv)
-
-if numArgs > 1:
-    path = sys.argv[1]
-else:
-    path = config.dataPath
-
-
-
-
 
 app = QApplication(sys.argv)
 
@@ -56,11 +46,11 @@ def onPlanetSelection(table):
         else:
             campaign.planets.remove(planet)
             addingPlanet = False
-        MainWindow.map.plotGalaxy(campaign.planets, [], EaWModToolApp.repository.planets)
+        MainWindow.map.plotGalaxy(campaign.planets, campaign.trade_routes, EaWModToolApp.repository.planets)
         EaWModToolApp.repository.update_selected_planets()
 
 
-MainWindow.map.planetSelectedSignal.connect(onPlanetSelection)
+MainWindow.map.planetSelectedSignal.connect(EaWModToolApp.repository.onPlanetSelection)
 
 
 sys.exit(app.exec_())
