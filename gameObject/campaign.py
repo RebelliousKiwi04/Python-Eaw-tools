@@ -4,7 +4,7 @@ class Campaign:
         self.fileLocation = fileLocation
         self.entry = xml_entry
         self.name = xml_entry.get('Name')
-        self.__setName: str = "Empty"
+        self.setName: str = self.get_set_name()
         self.planets = []
         self.trade_routes= []
         self.__ai_players = []
@@ -16,6 +16,10 @@ class Campaign:
             for j in tradeRoutes:
                 if j.name == i:
                     self.trade_routes.append(j)
+    def get_set_name(self):
+        for item in self.entry:
+            if item.tag == 'Campaign_Set':
+                return item.text
     def get_planets(self):
         for item in self.entry:
             if item.tag == 'Locations':
