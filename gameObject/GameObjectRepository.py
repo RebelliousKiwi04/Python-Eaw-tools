@@ -4,8 +4,6 @@ from gameObject.traderoutes import TradeRoute
 import os, sys, lxml.etree as et, pickle, shutil
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore
-def serialize(gameObjectRepo):
-    '''some pickle stuff'''
 
 class ModRepository:
     def __init__(self, mod_directory, ui):
@@ -205,3 +203,11 @@ class ModRepository:
         self.update_seleceted_trade_routes()
         campaign = self.campaigns[index]
         self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)
+    def save(self):
+        openedFiles = {}
+        #for file in self.game_object_files:          
+        for file in self.campaign_files:
+            for name,campaign in self.campaigns.items():
+                if campaign.fileLocation == file:
+                    if campaign.fileLocation not in openedFiles.keys():
+                        openedFiles[file] = open(file, 'w')
