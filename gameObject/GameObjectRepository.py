@@ -8,13 +8,13 @@ def serialize(gameObjectRepo):
     '''some pickle stuff'''
 
 class ModRepository:
-    def __init__(self, mod_directory):
+    def __init__(self, mod_directory, ui):
         self.mod_dir = mod_directory
         self.game_object_files = self.get_game_object_files()
         self.campaign_files = self.get_galactic_conquests()
         self.hardpoint_files = self.get_hardpoint_files()
         self.tradeRoute_files = self.get_trade_routes()
-        self.ui = None
+        self.ui = ui
         self.planets = []
         self.units = {}
         self.hardpoints = {}
@@ -85,28 +85,27 @@ class ModRepository:
             for child in root:
                 if child.tag == 'Campaign':
                     self.campaigns[child.get('Name')] = Campaign(child, self.planets, self.trade_routes, file)
-    def update_ui(self, ui):
-        self.ui = ui
+    def update_ui(self):
         LastStateRole = QtCore.Qt.UserRole
         for planet in self.planets:
-            rowCount = ui.planet_list.rowCount()
-            ui.planet_list.setRowCount(rowCount + 1)
+            rowCount = self.ui.planet_list.rowCount()
+            self.ui.planet_list.setRowCount(rowCount + 1)
             item= QTableWidgetItem(planet.name)
             item.setFlags(QtCore.Qt.ItemIsUserCheckable | QtCore.Qt.ItemIsEnabled)
             item.setCheckState(QtCore.Qt.Unchecked)
             item.setData(LastStateRole, item.checkState())
-            ui.planet_list.setItem(rowCount, 0, item)
+            self.ui.planet_list.setItem(rowCount, 0, item)
         for route in self.trade_routes:
-            rowCount = ui.tradeRoute_list.rowCount()
-            ui.tradeRoute_list.setRowCount(rowCount + 1)
+            rowCount = self.ui.tradeRoute_list.rowCount()
+            self.ui.tradeRoute_list.setRowCount(rowCount + 1)
             item= QTableWidgetItem(route.name)
             item.setFlags(QtCore.Qt.ItemIsUserCheckable | QtCore.Qt.ItemIsEnabled)
             item.setCheckState(QtCore.Qt.Unchecked)
             item.setData(LastStateRole, item.checkState())
-            ui.tradeRoute_list.setItem(rowCount, 0, item)
+            self.ui.tradeRoute_list.setItem(rowCount, 0, item)
         for name, campaign in self.campaigns.items():
-            ui.select_GC.addItem(name)
-            ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)
+            self.ui.select_GC.addItem(name)
+            self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)
         self.ui.planet_list.itemChanged.connect(self.onCellChanged)
         self.ui.tradeRoute_list.itemChanged.connect(self.ontradeRouteCellChanged)
         self.update_selected_planets()
@@ -200,3 +199,9 @@ class ModRepository:
             addingPlanet = False
         self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)
         self.update_selected_planets()
+    def select_GC(self):
+        index = self.ui.select_GC.currentText()
+        self.update_selected_planets()
+        self.update_seleceted_trade_routes()
+        campaign = self.campaigns[index]
+        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)

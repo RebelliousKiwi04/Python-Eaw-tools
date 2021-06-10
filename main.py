@@ -24,9 +24,9 @@ class EaWModTool:
         self.config = config
         self.ui = MainWindow
         self.originalPath = originalPath
-        self.repository = ModRepository(config.dataPath)
-        self.repository.update_ui(self.ui)
-
+        self.repository = ModRepository(config.dataPath, self.ui)
+        self.repository.update_ui()
+        self.ui.select_GC.currentIndexChanged.connect(self.repository.select_GC)
 config = Config()
 
 app = QApplication(sys.argv)
@@ -34,21 +34,6 @@ app = QApplication(sys.argv)
 MainWindow = MainUIWindow()
 #MainWindow.map.plotGalaxy(checkedPlanets, [], planets)
 EaWModToolApp = EaWModTool(config, MainWindow, originalPath)
-
-def onPlanetSelection(table):
-        planet = EaWModToolApp.repository.planets[table[0]]
-        print(planet.name)
-        item = MainWindow.planet_list.item(table[0], 0)
-        campaign = EaWModToolApp.repository.campaigns[MainWindow.select_GC.currentText()]
-        if not planet in campaign.planets:
-            addingPlanet = True
-            campaign.planets.append(planet)
-        else:
-            campaign.planets.remove(planet)
-            addingPlanet = False
-        MainWindow.map.plotGalaxy(campaign.planets, campaign.trade_routes, EaWModToolApp.repository.planets)
-        EaWModToolApp.repository.update_selected_planets()
-
 
 MainWindow.map.planetSelectedSignal.connect(EaWModToolApp.repository.onPlanetSelection)
 
