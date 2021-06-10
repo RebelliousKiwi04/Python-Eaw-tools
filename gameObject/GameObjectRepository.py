@@ -93,29 +93,40 @@ class ModRepository:
             ui.map.plotGalaxy(campaign.planets, [], self.planets)
             ui.update_selected_planets(campaign.planets, self.planets)
 
-        
     def onCellChanged(self, item):
         LastStateRole = QtCore.Qt.UserRole
-        # item = self.ui.planet_list.item(row, column)
-        lastState = item.data(LastStateRole)
+        planet = self.planets[item.row()]
+        campaign = self.campaigns[self.ui.select_GC.currentText()]
+        if not planet in campaign.planets:
+            addingPlanet = True
+            campaign.planets.append(planet)
+        else:
+            campaign.planets.remove(planet)
+            addingPlanet = False
+
         currentState = item.checkState()
-        if currentState != lastState:
-            if currentState == QtCore.Qt.Checked:
-                campaign = self.campaigns[self.ui.select_GC.currentText()]
-                if self.planets[item.row()] not in campaign.planets:
-                    campaign.planets.append(self.planets[item.row()])
-                else:
-                    campaign.planets.remove(self.planets[item.row()])
-                 #print("checked", item.text())
-            else:
-                campaign = self.campaigns[self.ui.select_GC.currentText()]
-                if self.planets[item.row()] not in campaign.planets:
-                    print("Item Not Already Listed!")
-                else:
-                    campaign.planets.remove(self.planets[item.row()])
-                 #print("unchecked", item.text())
-            self.ui.map.plotGalaxy(campaign.planets, [], self.planets)
-            self.ui.update_selected_planets(campaign.planets, self.planets)
-            item.setData(LastStateRole, currentState)
-    #    for p in planets:
-    #         self.planet_list.item(p, 0).setCheckState(QtCore.Qt.Checked)
+        if currentState == QtCore.Qt.Unchecked:
+            if addingPlanet:
+                item.setCheckState(QtCore.Qt.Checked)
+        elif currentState == QtCore.Qt.Checked:
+            if not addingPlanet:
+                item.setCheckState(QtCore.Qt.Unchecked)
+        self.ui.map.plotGalaxy(campaign.planets, [], self.planets)
+    def onPlanetSelection(self, table):
+        planet = self.planets[table[0]]
+        print(planet.name)
+        item = self.ui.planet_list.item(table[0], 0)
+        campaign = self.campaigns[self.ui.select_GC.currentText()]
+        if not planet in campaign.planets:
+            addingPlanet = True
+            campaign.planets.append(planet)
+        else:
+            campaign.planets.remove(planet)
+            addingPlanet = False
+
+        currentState = item.checkState()
+        if currentState == QtCore.Qt.Unchecked and addingPlanet == True:
+            item.setCheckState(QtCore.Qt.Checked)
+        elif currentState == QtCore.Qt.Checked and addingPlanet == False:
+            item.setCheckState(QtCore.Qt.Unchecked)
+        self.ui.map.plotGalaxy(campaign.planets, [], self.planets)

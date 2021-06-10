@@ -1,9 +1,12 @@
 from PyQt5.QtWidgets import QApplication
 import sys, os
+from PyQt5 import QtCore
 import lxml.etree as et
 from gameObject.GameObjectRepository import ModRepository
 from ui.MainWindow import MainUIWindow
 import marshal
+sys.setrecursionlimit(10**6)
+
 originalPath = os.path.dirname(sys.argv[0])
 
 class Config:
@@ -42,17 +45,20 @@ MainWindow = MainUIWindow()
 #MainWindow.map.plotGalaxy(checkedPlanets, [], planets)
 EaWModToolApp = EaWModTool(config, MainWindow, originalPath)
 
-def selectedPlanet(table):
-    for i in table:
-        print(MainWindow.select_GC.currentText())
+def onPlanetSelection(table):
+        planet = EaWModToolApp.repository.planets[table[0]]
+        print(planet.name)
+        item = MainWindow.planet_list.item(table[0], 0)
         campaign = EaWModToolApp.repository.campaigns[MainWindow.select_GC.currentText()]
-        if EaWModToolApp.repository.planets[i] not in campaign.planets:
-            campaign.planets.append(EaWModToolApp.repository.planets[i])
+        if not planet in campaign.planets:
+            addingPlanet = True
+            campaign.planets.append(planet)
         else:
-            campaign.planets.remove(EaWModToolApp.repository.planets[i])
+            campaign.planets.remove(planet)
+            addingPlanet = False
         MainWindow.map.plotGalaxy(campaign.planets, [], EaWModToolApp.repository.planets)
-        MainWindow.update_selected_planets(campaign.planets, EaWModToolApp.repository.planets)
-MainWindow.map.planetSelectedSignal.connect(selectedPlanet)
+
+MainWindow.map.planetSelectedSignal.connect(onPlanetSelection)
 MainWindow.planet_list.itemChanged.connect(EaWModToolApp.repository.onCellChanged)
 
 

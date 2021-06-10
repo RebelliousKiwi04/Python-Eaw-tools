@@ -29,7 +29,7 @@ class GalacticMap(QWidget):
         self.__planetsScatter = None
         self.list_points = []
         #self.plotDraggablePoints()
-
+        self.times = 0
     def plotDraggablePoints(self, size=20.05):
 
         """Plot and define the 2 draggable points of the baseline"""
@@ -96,14 +96,15 @@ class GalacticMap(QWidget):
 
         x = []
         y = []
-
         for p in planets:
+            print(p.name)
             x.append(p.x)
             y.append(p.y)
 
         self.axes.scatter(x, y, c = 'b')
         self.mapCanvas.draw_idle()
-
+        self.times = self.times +1
+        print('Drawn Again!', self.times)
 
     def getWidget(self):
         '''Returns the plot widget'''
@@ -112,8 +113,6 @@ class GalacticMap(QWidget):
     def __planetSelect(self, event) -> None:
         '''Event handler for selecting a planet on the map'''
         planet_index = event.ind
-        print(event.ind)
-        print(event)
         self.planetSelectedSignal.emit(list(planet_index))
 
     def __planetHover(self, event) -> None:
@@ -265,5 +264,8 @@ class MainUIWindow:
         for p in planets:
             selectedPlanets.append([x.name for x in allPlanets].index(p.name))
         for p in selectedPlanets:
-            self.planet_list.item(p, 0).setCheckState(QtCore.Qt.Checked)
+            item = self.planet_list.item(p, 0)
+            currentState = item.checkState()
+            if currentState == QtCore.Qt.Unchecked:
+                item.setCheckState(QtCore.Qt.Checked)
     
