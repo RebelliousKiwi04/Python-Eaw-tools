@@ -7,7 +7,7 @@ from ui.Utilities import PyQtUtil
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Axes, Figure
 from ui.DraggablePoint import DraggablePoint
-
+import gc
 class GalacticMap(QWidget):
     planetSelectedSignal = QtCore.pyqtSignal(list)
 
@@ -255,17 +255,4 @@ class MainUIWindow:
         #plot = GalacticMap()
         self.window_splitter.addWidget(self.map.mapWidget)
         self.main_window.show()
-    def update_selected_planets(self, planets,allPlanets):
-        # rowCount = self.planet_list.rowCount()
-        # for row in range(rowCount):
-        #     self.planet_list.item(row, 0).setCheckState(QtCore.Qt.Unchecked)
-
-        selectedPlanets = []
-        for p in planets:
-            selectedPlanets.append([x.name for x in allPlanets].index(p.name))
-        for p in selectedPlanets:
-            item = self.planet_list.item(p, 0)
-            currentState = item.checkState()
-            if currentState == QtCore.Qt.Unchecked:
-                item.setCheckState(QtCore.Qt.Checked)
     

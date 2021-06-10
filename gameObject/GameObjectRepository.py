@@ -91,8 +91,23 @@ class ModRepository:
         for name, campaign in self.campaigns.items():
             ui.select_GC.addItem(name)
             ui.map.plotGalaxy(campaign.planets, [], self.planets)
-            ui.update_selected_planets(campaign.planets, self.planets)
-
+        self.ui.planet_list.itemChanged.connect(self.onCellChanged)
+        self.update_selected_planets()
+    def update_selected_planets(self):
+        self.ui.planet_list.itemChanged.disconnect(self.onCellChanged)
+        rowCount = self.ui.planet_list.rowCount()
+        for row in range(rowCount):
+            self.ui.planet_list.item(row, 0).setCheckState(QtCore.Qt.Unchecked)
+        selectedPlanets = []
+        planets = self.campaigns[self.ui.select_GC.currentText()].planets
+        for p in planets:
+            selectedPlanets.append([x.name for x in self.planets].index(p.name))
+        for p in selectedPlanets:
+            item = self.ui.planet_list.item(p, 0)
+            currentState = item.checkState()
+            if currentState == QtCore.Qt.Unchecked:
+                item.setCheckState(QtCore.Qt.Checked)
+        self.ui.planet_list.itemChanged.connect(self.onCellChanged)
     def onCellChanged(self, item):
         LastStateRole = QtCore.Qt.UserRole
         planet = self.planets[item.row()]

@@ -5,7 +5,7 @@ import lxml.etree as et
 from gameObject.GameObjectRepository import ModRepository
 from ui.MainWindow import MainUIWindow
 import marshal
-sys.setrecursionlimit(10**6)
+#sys.setrecursionlimit(10**6)
 
 originalPath = os.path.dirname(sys.argv[0])
 
@@ -57,9 +57,10 @@ def onPlanetSelection(table):
             campaign.planets.remove(planet)
             addingPlanet = False
         MainWindow.map.plotGalaxy(campaign.planets, [], EaWModToolApp.repository.planets)
+        EaWModToolApp.repository.update_selected_planets()
+
 
 MainWindow.map.planetSelectedSignal.connect(onPlanetSelection)
-MainWindow.planet_list.itemChanged.connect(EaWModToolApp.repository.onCellChanged)
 
 
 sys.exit(app.exec_())
