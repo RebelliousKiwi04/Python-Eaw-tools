@@ -2,7 +2,8 @@ from math import sqrt
 import lxml.etree as et
 
 class Planet:
-    def __init__(self, xml_entry):
+    def __init__(self, xml_entry, fileLocation):
+        self.fileLocation = fileLocation
         self.entry = xml_entry
         self.name = self.get_planet_name()
         self.__land_map = self.get_land_map()

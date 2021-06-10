@@ -174,7 +174,7 @@ class MainUIWindow:
         # self.deselect_all_tradeRoutes.clicked.connect(lambda: self.__selectAllTradeRoutesButtonClicked(self.tradeRoute_list, False))
 
         #Left pane, Forces tab
-        self.__planetComboBox: QComboBox = QComboBox()
+        self.planetComboBox: QComboBox = QComboBox()
         self.add_unit_to_planet= QPushButton("Add Unit...")
         self.__forcesListWidget = self.QtUtil.construct_table_widget(["Unit", "Power"], 2)        
 
@@ -248,7 +248,7 @@ class MainUIWindow:
         self.scriptingTab.layout().addWidget(self.scriptModeComboBox)
 
 
-        self.__startingForces.layout().addWidget(self.__planetComboBox)
+        self.__startingForces.layout().addWidget(self.planetComboBox)
         self.__startingForces.layout().addWidget(self.add_unit_to_planet)
         self.__startingForces.layout().addWidget(self.__forcesListWidget)
         self.map = GalacticMap(self.window_splitter)

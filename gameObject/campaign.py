@@ -1,6 +1,7 @@
 
 class Campaign:
-    def __init__(self, xml_entry, planets, tradeRoutes):
+    def __init__(self, xml_entry, planets, tradeRoutes, fileLocation):
+        self.fileLocation = fileLocation
         self.entry = xml_entry
         self.name = xml_entry.get('Name')
         self.__setName: str = "Empty"

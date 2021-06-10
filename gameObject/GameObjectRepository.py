@@ -72,19 +72,19 @@ class ModRepository:
             root = et.parse(file).getroot()
             for child in root:
                 if child.tag == 'Planet':
-                    self.planets.append(Planet(child))
+                    self.planets.append(Planet(child, file))
         for file in self.tradeRoute_files:
             root = et.parse(file).getroot()
             for child in root:
                 if child.tag == 'TradeRoute':
-                    route = TradeRoute(child)
+                    route = TradeRoute(child, file)
                     route.set_point_planets(self.planets)
                     self.trade_routes.append(route)
         for file in self.campaign_files:
             root = et.parse(file).getroot()
             for child in root:
                 if child.tag == 'Campaign':
-                    self.campaigns[child.get('Name')] = Campaign(child, self.planets, self.trade_routes)
+                    self.campaigns[child.get('Name')] = Campaign(child, self.planets, self.trade_routes, file)
     def update_ui(self, ui):
         self.ui = ui
         LastStateRole = QtCore.Qt.UserRole
@@ -158,7 +158,15 @@ class ModRepository:
             currentState = item.checkState()
             if currentState == QtCore.Qt.Unchecked:
                 item.setCheckState(QtCore.Qt.Checked)
+        self.update_forces_tab()
         self.ui.planet_list.itemChanged.connect(self.onCellChanged)
+    def update_forces_tab(self):
+        index = self.ui.planetComboBox.currentText()
+        self.ui.planetComboBox.clear()
+        for p in self.campaigns[self.ui.select_GC.currentText()].planets:
+            self.ui.planetComboBox.addItem(p.name)
+        if index in [x.name for x in self.campaigns[self.ui.select_GC.currentText()].planets]:
+            self.ui.planetComboBox.setCurrentText(index)
     def onCellChanged(self, item):
         LastStateRole = QtCore.Qt.UserRole
         planet = self.planets[item.row()]
@@ -177,6 +185,7 @@ class ModRepository:
         elif currentState == QtCore.Qt.Checked:
             if not addingPlanet:
                 item.setCheckState(QtCore.Qt.Unchecked)
+        self.update_forces_tab()
         self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)
     def onPlanetSelection(self, table):
         planet = self.planets[table[0]]

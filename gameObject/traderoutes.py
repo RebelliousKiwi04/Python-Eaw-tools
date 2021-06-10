@@ -1,7 +1,8 @@
 import lxml.etree as et
 
 class TradeRoute:
-    def __init__(self, xml_entry):
+    def __init__(self, xml_entry, fileLocation):
+        self.fileLocation = fileLocation
         self.entry = xml_entry
         self.name = self.get_name()
         self.point_A, self.point_B = self.get_points()
