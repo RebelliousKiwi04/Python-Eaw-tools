@@ -2,6 +2,7 @@ from gameObject.planet import Planet
 from gameObject.campaign import Campaign
 from gameObject.traderoutes import TradeRoute
 from gameObject.unit import Unit
+from gameObject.faction import Faction
 from ui.AddUnitWindow import AddUnitWindow
 import os, sys, lxml.etree as et, pickle, shutil
 from PyQt5.QtWidgets import *
@@ -14,16 +15,29 @@ class ModRepository:
         self.campaign_files = self.get_galactic_conquests()
         self.hardpoint_files = self.get_hardpoint_files()
         self.tradeRoute_files = self.get_trade_routes()
+        self.faction_files = self.get_faction_files()
         self.planetFiles = []
         self.ui = ui
         self.planets = []
         self.units = []
+        self.factions = []
         self.hardpoints = {}
         self.text = {}
         self.campaigns = {}
         self.trade_routes = []
         self.dir = mod_directory
         self.init_repo()
+    def get_faction_files(self):
+        faction_files = []
+        if os.path.isdir('xml'):
+            xmlPath = '/xml/'
+        else:
+            xmlPath = '/XML/'
+        factionfiles = et.parse(self.mod_dir+xmlPath+'/factionfiles.xml')
+        for child in factionfiles.getroot():
+            if child.tag == 'File':
+                faction_files.append(self.mod_dir+xmlPath+'/'+child.text)
+        return faction_files
     def get_trade_routes(self):
         tradeRoute_files = []
         if os.path.isdir('xml'):
@@ -33,7 +47,7 @@ class ModRepository:
         tradeRouteFiles = et.parse(self.mod_dir+xmlPath+'/traderoutefiles.xml')
         for child in tradeRouteFiles.getroot():
             if child.tag == 'File':
-                tradeRoute_files.append(self.mod_dir+xmlPath+child.text)
+                tradeRoute_files.append(self.mod_dir+xmlPath+'/'+child.text)
         return tradeRoute_files
     def get_hardpoint_files(self):
         hardPoint_files = []
@@ -44,18 +58,18 @@ class ModRepository:
         hardpointdatafiles = et.parse(self.mod_dir+xmlPath+'/hardpointdatafiles.xml')
         for child in hardpointdatafiles.getroot():
             if child.tag == 'File':
-                hardPoint_files.append(self.mod_dir+xmlPath+child.text)
+                hardPoint_files.append(self.mod_dir+xmlPath+'/'+child.text)
         return hardPoint_files
     def get_game_object_files(self):
         game_object_files = []
         if os.path.isdir('xml'):
-            xmlPath = '/xml/'
+            xmlPath = '/xml'
         else:
-            xmlPath = '/XML/'
+            xmlPath = '/XML'
         gameObjectFiles = et.parse(self.mod_dir+xmlPath+'/gameobjectfiles.xml')
         for child in gameObjectFiles.getroot():
             if child.tag == 'File':
-                game_object_files.append(self.mod_dir+xmlPath+child.text)
+                game_object_files.append(self.mod_dir+xmlPath+'/'+child.text)
         return game_object_files
     def get_galactic_conquests(self):
         campaign_files = []
@@ -66,9 +80,14 @@ class ModRepository:
         campaignFiles = et.parse(self.mod_dir+xmlPath+'/campaignfiles.xml')
         for child in campaignFiles.getroot():
             if child.tag == 'File':
-                campaign_files.append(self.mod_dir+xmlPath+child.text)
+                campaign_files.append(self.mod_dir+xmlPath+'/'+child.text)
         return campaign_files
     def init_repo(self):
+        for file in self.faction_files:
+            root = et.parse(file).getroot()
+            for child in root:
+                if child.tag == 'Faction':
+                    self.factions.append(Faction(child,file))
         for file in self.game_object_files:
             root = et.parse(file).getroot()
             if root.tag == 'Planets':
@@ -88,9 +107,11 @@ class ModRepository:
                     route.set_point_planets(self.planets)
                     self.trade_routes.append(route)
         for file in self.campaign_files:
+            print(file)
             root = et.parse(file).getroot()
             for child in root:
                 if child.tag == 'Campaign':
+                    print(child.get('Name'))
                     self.campaigns[child.get('Name')] = Campaign(child, self.planets, self.trade_routes, file)
     def update_ui(self):
         LastStateRole = QtCore.Qt.UserRole
@@ -113,6 +134,9 @@ class ModRepository:
             self.ui.tradeRoute_list.setItem(rowCount, 0, item)
         for name, campaign in self.campaigns.items():
             self.ui.select_GC.addItem(name)
+            print(name)
+        for faction in self.factions:
+            self.ui.ownerSelection.addItem(faction.name)
         campaign = self.campaigns[self.ui.select_GC.currentText()]
         self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)
         self.ui.planet_list.itemChanged.connect(self.onCellChanged)
@@ -121,6 +145,8 @@ class ModRepository:
         self.ui.planetComboBox.currentIndexChanged.connect(self.update_forces_table)
         self.update_selected_planets()
         self.update_seleceted_trade_routes()
+        self.update_forces_table()
+        self.update_forces_tab()
     def ontradeRouteCellChanged(self, item):
         tradeRoute = self.trade_routes[item.row()]
         campaign = self.campaigns[self.ui.select_GC.currentText()]
@@ -176,13 +202,14 @@ class ModRepository:
         self.ui.forcesListWidget.setHorizontalHeaderLabels(["Unit", "Power", "Tech"])
         campaign = self.campaigns[self.ui.select_GC.currentText()]
         planet_name = self.ui.planetComboBox.currentText()
+            
+        print(planet_name)
         if planet_name in [x.name for x in self.planets]:
             planet_index = [x.name for x in self.planets].index(planet_name)
         planet = self.planets[planet_index]
         starting_forces = planet.starting_forces[self.ui.select_GC.currentText()]
         for tech, forces_table in zip(list(range(1,len(starting_forces)+1)), starting_forces):
             for unit in forces_table:
-                print(unit.name)
                 rowCount = self.ui.forcesListWidget.rowCount()
                 self.ui.forcesListWidget.setRowCount(rowCount + 1)
                 item= QTableWidgetItem(unit.name)
@@ -236,6 +263,7 @@ class ModRepository:
         index = self.ui.select_GC.currentText()
         self.ui.main_window.setWindowTitle("EaW Mod Tool - " + index)
         self.update_selected_planets()
+        self.update_forces_tab()
         self.update_forces_table()
         self.update_seleceted_trade_routes()
         campaign = self.campaigns[index]
@@ -257,15 +285,12 @@ class ModRepository:
         planet_name = self.addUnitWindow.planet
         techLevel = self.addUnitWindow.TechLevel.value()
         quantity = self.addUnitWindow.Quantity.value()
-        owner = self.addUnitWindow.OwnerSelection.currentText()
         unit_name = self.addUnitWindow.UnitTypeSelection.currentText()
         
         if unit_name in [x.name for x in self.units]:
             unit_index = [x.name for x in self.units].index(unit_name)
-        print(unit_index)
         if planet_name in [x.name for x in self.planets]:
             planet_index = [x.name for x in self.planets].index(planet_name)
-        print(planet_index)
         unit = self.units[unit_index]
         planet = self.planets[planet_index]
         forces = planet.starting_forces[self.ui.select_GC.currentText()]
@@ -274,7 +299,6 @@ class ModRepository:
                 forces.append([])
         for i in range(1,quantity+1):
             forces[techLevel-1].append(unit)
-        print('finished func')
         self.addUnitWindow.OkCancelButtons.accepted.disconnect(self.addUnitToStartingForces)
 
 

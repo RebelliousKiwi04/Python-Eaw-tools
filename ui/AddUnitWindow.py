@@ -43,16 +43,7 @@ class AddUnitWindow:
         self.UnitTypeSelection.setLayoutDirection(Qt.LeftToRight)
         
 
-        self.ownerLayout = QHBoxLayout()
-        self.OwnerLabel = QLabel()
-        self.OwnerLabel.setObjectName(u"OwnerLabel")
-        self.OwnerLabel.setGeometry(QRect(10, 140, 81, 31))
-        self.OwnerLabel.setFont(font)
-        self.OwnerSelection = QComboBox()
-        self.OwnerSelection.addItem("")
-        self.OwnerSelection.setObjectName(u"OwnerSelection")
-        self.ownerLayout.addWidget(self.OwnerLabel)
-        self.ownerLayout.addWidget(self.OwnerSelection)
+
 
         self.buttonLayout = QHBoxLayout()
         self.OkCancelButtons = QDialogButtonBox()
@@ -61,15 +52,10 @@ class AddUnitWindow:
         self.OkCancelButtons.setStandardButtons(QDialogButtonBox.Cancel|QDialogButtonBox.Ok)
         self.buttonLayout.addWidget(self.OkCancelButtons)
 
-        
-
-
-        self.OwnerLabel.setText(QCoreApplication.translate("AddUnitWindow", u"Owner", None))
-        self.OwnerSelection.setItemText(0, QCoreApplication.translate("AddUnitWindow", u"Empire", None))
+    
 
         self.layout.addWidget(self.UnitTypeSelection)
         self.layout.addLayout(self.techLayout)
-        self.layout.addLayout(self.ownerLayout)
         self.layout.addLayout(self.QuantityLayout)
         self.layout.addLayout(self.buttonLayout)
         
@@ -85,7 +71,6 @@ class AddUnitWindow:
     def on_completion(self):
         techLevel = self.TechLevel.value()
         quantity = self.Quantity.value()
-        owner = self.OwnerSelection.currentText()
         unit_name = self.UnitTypeSelection.currentText()
-        self.signal.emit(list(techLevel, quantity, owner, unit_name, self.planet))
+        self.signal.emit(list(techLevel, quantity, unit_name, self.planet))
         

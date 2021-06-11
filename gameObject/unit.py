@@ -1,3 +1,4 @@
+import math
 
 class Unit:
     def __init__(self, xml_entry, file):
@@ -11,21 +12,21 @@ class Unit:
     def get_aicp(self) -> int:
         for item in self.entry:
             if item.tag == 'AI_Combat_Power':
-                print(item.text)
-                return int(item.text)
+                if item.text != None:
+                    return int(math.floor(float(item.text)))
         return 0
     def get_name(self) -> str:
         return self.entry.get('Name')
     def get_category_masks(self):
         for item in self.entry:
             if item.tag == 'CategoryMask':
-                outputList = []
-                for text in item.text.split():
-                    newText = text.replace('|','')
-                    if len(newText) > 3:
-                        outputList.append(newText)
-                        print(newText)
-                return outputList
+                outputList = [] 
+                if item.text != None:
+                    for text in item.text.split():
+                        newText = text.replace('|','')
+                        if len(newText) > 3:
+                            outputList.append(newText)
+                    return outputList
     def set_variant(self):
         for item in self.entry:
             if item.tag == 'Variant_Of_Existing_Type':

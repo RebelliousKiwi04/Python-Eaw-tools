@@ -1,8 +1,9 @@
 from typing import List
 import sys
 from PyQt5 import QtCore, QtWidgets, QtGui
-from PyQt5.QtWidgets import QAction, QPushButton, QCheckBox, QComboBox, QFileDialog, QHeaderView, QLabel, QMainWindow, QMenu, QMenuBar, QDialog, QSplitter, \
+from PyQt5.QtWidgets import QAction, QHBoxLayout, QPushButton, QCheckBox, QComboBox, QFileDialog, QHeaderView, QLabel, QMainWindow, QMenu, QMenuBar, QDialog, QSplitter, \
     QTableWidget, QTableWidgetItem, QTabWidget, QVBoxLayout, QWidget
+from PyQt5.QtGui import QFont
 from ui.Utilities import PyQtUtil
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Axes, Figure
@@ -175,6 +176,18 @@ class MainUIWindow:
         #Left pane, Forces tab
         self.planetComboBox: QComboBox = QComboBox()
         self.add_unit_to_planet= QPushButton("Add Unit...")
+
+        self.OwnerLayout = QHBoxLayout()
+        self.ownerLabel = QLabel()
+        self.ownerLabel.setObjectName(u"OwnerLabel")
+        font = QFont()
+        font.setPointSize(10)
+        self.ownerLabel.setFont(font)
+        self.OwnerLayout.addWidget(self.ownerLabel)
+        self.ownerLabel.setText('Planet Owner:')
+        self.ownerSelection = QComboBox()
+        self.OwnerLayout.addWidget(self.ownerSelection)
+
         self.forcesListWidget = self.QtUtil.construct_table_widget(["Unit", "Power", "Tech"], 3)        
         header = self.forcesListWidget.horizontalHeader()       
         header.setSectionResizeMode(0, QtWidgets.QHeaderView.Stretch)
@@ -200,8 +213,8 @@ class MainUIWindow:
         self.__newTradeRouteAction: QAction = QAction("Trade Route...", self.main_window)
         #self.__newTradeRouteAction.triggered.connect(self.__newTradeRoute)
 
-        self.__setDataFolderAction: QAction = QAction("Set Data Folder", self.main_window)
-        #self.__setDataFolderAction.triggered.connect(self.__openFolder)
+        self.setDataFolderAction: QAction = QAction("Set Data Folder", self.main_window)
+        #self.setDataFolderAction.triggered.connect(self.__openFolder)
 
         self.__saveAction: QAction = QAction("Save", self.main_window)
         #self.__saveAction.triggered.connect(self.__saveFile)
@@ -212,7 +225,7 @@ class MainUIWindow:
         self.__optionsMenu.addAction(self.__openAutoConnectionSettingsAction)
         
         self.__fileMenu.addAction(self.__saveAction)
-        self.__fileMenu.addAction(self.__setDataFolderAction)
+        self.__fileMenu.addAction(self.setDataFolderAction)
         self.__fileMenu.addAction(self.__quitAction)
 
         self.__addMenu.addAction(self.__newCampaignAction)
@@ -251,6 +264,7 @@ class MainUIWindow:
 
 
         self.__startingForces.layout().addWidget(self.planetComboBox)
+        self.__startingForces.layout().addLayout(self.OwnerLayout)
         self.__startingForces.layout().addWidget(self.add_unit_to_planet)
         self.__startingForces.layout().addWidget(self.forcesListWidget)
         self.map = GalacticMap(self.window_splitter)
