@@ -1,6 +1,8 @@
 from gameObject.planet import Planet
 from gameObject.campaign import Campaign
 from gameObject.traderoutes import TradeRoute
+from gameObject.unit import Unit
+from ui.AddUnitWindow import AddUnitWindow
 import os, sys, lxml.etree as et, pickle, shutil
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore
@@ -12,9 +14,10 @@ class ModRepository:
         self.campaign_files = self.get_galactic_conquests()
         self.hardpoint_files = self.get_hardpoint_files()
         self.tradeRoute_files = self.get_trade_routes()
+        self.planetFiles = []
         self.ui = ui
         self.planets = []
-        self.units = {}
+        self.units = []
         self.hardpoints = {}
         self.text = {}
         self.campaigns = {}
@@ -68,9 +71,15 @@ class ModRepository:
     def init_repo(self):
         for file in self.game_object_files:
             root = et.parse(file).getroot()
+            if root.tag == 'Planets':
+                self.planetFiles.append(file)
             for child in root:
                 if child.tag == 'Planet':
                     self.planets.append(Planet(child, file))
+                    if not file in self.planetFiles:
+                        self.planetFiles.append(file)
+                if child.tag == 'SpaceUnit' or child.tag == 'UniqueUnit' or child.tag == 'GroundInfantry' or child.tag == 'GroundVehicle' or child.tag == 'HeroUnit' or child.tag == 'GroundUnit' or child.tag == 'Squadron':
+                    self.units.append(Unit(child,file))
         for file in self.tradeRoute_files:
             root = et.parse(file).getroot()
             for child in root:
@@ -93,6 +102,7 @@ class ModRepository:
             item.setCheckState(QtCore.Qt.Unchecked)
             item.setData(LastStateRole, item.checkState())
             self.ui.planet_list.setItem(rowCount, 0, item)
+            planet.reset_starting_forces_table(self.campaigns)
         for route in self.trade_routes:
             rowCount = self.ui.tradeRoute_list.rowCount()
             self.ui.tradeRoute_list.setRowCount(rowCount + 1)
@@ -106,6 +116,7 @@ class ModRepository:
             self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)
         self.ui.planet_list.itemChanged.connect(self.onCellChanged)
         self.ui.tradeRoute_list.itemChanged.connect(self.ontradeRouteCellChanged)
+        self.ui.add_unit_to_planet.clicked.connect(self.add_unit)
         self.update_selected_planets()
         self.update_seleceted_trade_routes()
     def ontradeRouteCellChanged(self, item):
@@ -186,7 +197,6 @@ class ModRepository:
         self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)
     def onPlanetSelection(self, table):
         planet = self.planets[table[0]]
-        print(planet.name)
         item = self.ui.planet_list.item(table[0], 0)
         campaign = self.campaigns[self.ui.select_GC.currentText()]
         if not planet in campaign.planets:
@@ -199,6 +209,7 @@ class ModRepository:
         self.update_selected_planets()
     def select_GC(self):
         index = self.ui.select_GC.currentText()
+        self.ui.main_window.setWindowTitle("EaW Mod Tool - " + index)
         self.update_selected_planets()
         self.update_seleceted_trade_routes()
         campaign = self.campaigns[index]
@@ -211,3 +222,43 @@ class ModRepository:
                 if campaign.fileLocation == file:
                     if campaign.fileLocation not in openedFiles.keys():
                         openedFiles[file] = open(file, 'w')
+    def add_unit(self):
+        self.addUnitWindow = AddUnitWindow(self.ui.planetComboBox.currentText())
+        self.addUnitWindow.OkCancelButtons.accepted.connect(self.addUnitToStartingForces)
+        self.addUnitWindow.update_unit_box(self.units)
+        self.addUnitWindow.show()
+    def addUnitToStartingForces(self):
+        planet_name = self.addUnitWindow.planet
+        techLevel = self.addUnitWindow.TechLevel.value()
+        quantity = self.addUnitWindow.Quantity.value()
+        owner = self.addUnitWindow.OwnerSelection.currentText()
+        unit_name = self.addUnitWindow.UnitTypeSelection.currentText()
+        
+        if unit_name in [x.name for x in self.units]:
+            unit_index = [x.name for x in self.units].index(unit_name)
+        print(unit_index)
+        if planet_name in [x.name for x in self.planets]:
+            planet_index = [x.name for x in self.planets].index(planet_name)
+        print(planet_index)
+        unit = self.units[unit_index]
+        planet = self.planets[planet_index]
+        forces = planet.starting_forces[self.ui.select_GC.currentText()]
+        if techLevel > len(forces):
+            for i in range(1,(techLevel-len(forces)+1)):
+                forces.append([])
+        for i in range(1,quantity+1):
+            forces[techLevel-1].append(unit)
+        print('finished func')
+        self.addUnitWindow.OkCancelButtons.accepted.disconnect(self.addUnitToStartingForces)
+
+
+        for i in range(1,quantity+1):
+            rowCount = self.ui.forcesListWidget.rowCount()
+            self.ui.forcesListWidget.setRowCount(rowCount + 1)
+            item= QTableWidgetItem(unit.name)
+            self.ui.forcesListWidget.setItem(rowCount, 0, item)
+            item= QTableWidgetItem(str(unit.aicp))
+            self.ui.forcesListWidget.setItem(rowCount, 1, item)
+            item= QTableWidgetItem(str(techLevel))
+            self.ui.forcesListWidget.setItem(rowCount, 2, item)
+        self.addUnitWindow.dialogWindow.accept()

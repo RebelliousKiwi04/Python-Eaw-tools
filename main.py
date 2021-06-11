@@ -27,6 +27,7 @@ class EaWModTool:
         self.repository = ModRepository(config.dataPath, self.ui)
         self.repository.update_ui()
         self.ui.select_GC.currentIndexChanged.connect(self.repository.select_GC)
+        self.ui.main_window.setWindowTitle("EaW Mod Tool - " + self.ui.select_GC.currentText())
 config = Config()
 
 app = QApplication(sys.argv)

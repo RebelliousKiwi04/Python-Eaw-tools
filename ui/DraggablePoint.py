@@ -82,8 +82,7 @@ class DraggablePoint:
 
         self.x = self.point.center[0]
         self.y = self.point.center[1]
-        print(self.x)
-        print(self.y)
+
     def disconnect(self):
 
         'disconnect all the stored connection ids'

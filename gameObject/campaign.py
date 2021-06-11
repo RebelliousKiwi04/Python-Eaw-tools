@@ -1,3 +1,4 @@
+import lxml.etree as et
 
 class Campaign:
     def __init__(self, xml_entry, planets, tradeRoutes, fileLocation):
@@ -6,6 +7,7 @@ class Campaign:
         self.name = xml_entry.get('Name')
         self.setName: str = self.get_set_name()
         self.planets = []
+        self.max_tech_level = self.get_max_tech()
         self.trade_routes= []
         self.__ai_players = []
         for i in self.get_planets():
@@ -35,6 +37,21 @@ class Campaign:
                 for text in item.text.split():
                     newText = text.replace(',','')
                     outputList.append(newText)
-                    print(newText)
                 return outputList
+    def get_max_tech(self):
+        max_tech = []
+        for item in self.entry:
+            if item.tag == 'Max_Tech_Level':
+                outputList = []
+                for text in item.text.split():
+                    newText = text.replace(',','')
+                    outputList.append(newText)
+                max_tech.append(int(outputList[1]))
+        # self.using_deepcore = bool(et.parse('config.xml').getroot().find("Using_Deepcore").text)
+        # print(self.using_deepcore)
+        if len(max_tech) >0:
+            return max(max_tech)
+
+        return None
+
 

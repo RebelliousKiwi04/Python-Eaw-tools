@@ -97,7 +97,6 @@ class GalacticMap(QWidget):
         x = []
         y = []
         for p in planets:
-            print(p.name)
             x.append(p.x)
             y.append(p.y)
 
@@ -176,9 +175,11 @@ class MainUIWindow:
         #Left pane, Forces tab
         self.planetComboBox: QComboBox = QComboBox()
         self.add_unit_to_planet= QPushButton("Add Unit...")
-        self.__forcesListWidget = self.QtUtil.construct_table_widget(["Unit", "Power"], 2)        
-
-
+        self.forcesListWidget = self.QtUtil.construct_table_widget(["Unit", "Power", "Tech"], 3)        
+        header = self.forcesListWidget.horizontalHeader()       
+        header.setSectionResizeMode(0, QtWidgets.QHeaderView.Stretch)
+        header.setSectionResizeMode(1, QtWidgets.QHeaderView.ResizeToContents)
+        header.setSectionResizeMode(2, QtWidgets.QHeaderView.ResizeToContents)
         #Far Right tab
         self.scriptModeComboBox = QComboBox()
 
@@ -250,7 +251,7 @@ class MainUIWindow:
 
         self.__startingForces.layout().addWidget(self.planetComboBox)
         self.__startingForces.layout().addWidget(self.add_unit_to_planet)
-        self.__startingForces.layout().addWidget(self.__forcesListWidget)
+        self.__startingForces.layout().addWidget(self.forcesListWidget)
         self.map = GalacticMap(self.window_splitter)
         #plot = GalacticMap()
         self.window_splitter.addWidget(self.map.mapWidget)

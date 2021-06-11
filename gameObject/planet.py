@@ -8,7 +8,7 @@ class Planet:
         self.name = self.get_planet_name()
         self.__land_map = self.get_land_map()
         self.__space_map = self.get_space_map()
-        self.startingForces = {}
+        self.starting_forces = {}
         self.x, self.y = self.get_position()
     def distanceTo(self, target):
         return sqrt((self.x - target.x)**2 + (self.y - target.y)**2)
@@ -29,5 +29,13 @@ class Planet:
                 entry = entry.replace(',',' ')
                 entry = entry.split()
                 return float(entry[0]), float(entry[1])
+    def reset_starting_forces_table(self, campaigns):
+        self.starting_forces = {}
+        for name in campaigns.keys():
+            self.starting_forces[name] = []
+    def add_campaign_to_table(self, name):
+        self.starting_forces[name] = []
+
+
 
 
