@@ -220,6 +220,7 @@ class MainUIWindow:
         
         self.__menuBar.addMenu(self.__fileMenu)
         self.__menuBar.addMenu(self.__addMenu)
+        self.__menuBar.addMenu(self.__editMenu)
         self.__menuBar.addMenu(self.__optionsMenu)
         self.main_window.setMenuWidget(self.__menuBar)
 

@@ -113,10 +113,12 @@ class ModRepository:
             self.ui.tradeRoute_list.setItem(rowCount, 0, item)
         for name, campaign in self.campaigns.items():
             self.ui.select_GC.addItem(name)
-            self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)
+        campaign = self.campaigns[self.ui.select_GC.currentText()]
+        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)
         self.ui.planet_list.itemChanged.connect(self.onCellChanged)
         self.ui.tradeRoute_list.itemChanged.connect(self.ontradeRouteCellChanged)
         self.ui.add_unit_to_planet.clicked.connect(self.add_unit)
+        self.ui.planetComboBox.currentIndexChanged.connect(self.update_forces_table)
         self.update_selected_planets()
         self.update_seleceted_trade_routes()
     def ontradeRouteCellChanged(self, item):
@@ -168,13 +170,36 @@ class ModRepository:
                 item.setCheckState(QtCore.Qt.Checked)
         self.update_forces_tab()
         self.ui.planet_list.itemChanged.connect(self.onCellChanged)
+    def update_forces_table(self):
+        self.ui.forcesListWidget.clear()
+        self.ui.forcesListWidget.setRowCount(0)
+        self.ui.forcesListWidget.setHorizontalHeaderLabels(["Unit", "Power", "Tech"])
+        campaign = self.campaigns[self.ui.select_GC.currentText()]
+        planet_name = self.ui.planetComboBox.currentText()
+        if planet_name in [x.name for x in self.planets]:
+            planet_index = [x.name for x in self.planets].index(planet_name)
+        planet = self.planets[planet_index]
+        starting_forces = planet.starting_forces[self.ui.select_GC.currentText()]
+        for tech, forces_table in zip(list(range(1,len(starting_forces)+1)), starting_forces):
+            for unit in forces_table:
+                print(unit.name)
+                rowCount = self.ui.forcesListWidget.rowCount()
+                self.ui.forcesListWidget.setRowCount(rowCount + 1)
+                item= QTableWidgetItem(unit.name)
+                self.ui.forcesListWidget.setItem(rowCount, 0, item)
+                item= QTableWidgetItem(str(unit.aicp))
+                self.ui.forcesListWidget.setItem(rowCount, 1, item)
+                item= QTableWidgetItem(str(tech))
+                self.ui.forcesListWidget.setItem(rowCount, 2, item)
     def update_forces_tab(self):
+        self.ui.planetComboBox.currentIndexChanged.disconnect(self.update_forces_table)
         index = self.ui.planetComboBox.currentText()
         self.ui.planetComboBox.clear()
         for p in self.campaigns[self.ui.select_GC.currentText()].planets:
             self.ui.planetComboBox.addItem(p.name)
         if index in [x.name for x in self.campaigns[self.ui.select_GC.currentText()].planets]:
             self.ui.planetComboBox.setCurrentText(index)
+        self.ui.planetComboBox.currentIndexChanged.connect(self.update_forces_table)
     def onCellChanged(self, item):
         LastStateRole = QtCore.Qt.UserRole
         planet = self.planets[item.row()]
@@ -211,6 +236,7 @@ class ModRepository:
         index = self.ui.select_GC.currentText()
         self.ui.main_window.setWindowTitle("EaW Mod Tool - " + index)
         self.update_selected_planets()
+        self.update_forces_table()
         self.update_seleceted_trade_routes()
         campaign = self.campaigns[index]
         self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)

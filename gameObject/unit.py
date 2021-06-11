@@ -8,12 +8,13 @@ class Unit:
         self.category_masks = self.get_category_masks()
         self.variant = self.set_variant()
         self.type = self.entry.tag
-    def get_aicp(self):
+    def get_aicp(self) -> int:
         for item in self.entry:
             if item.tag == 'AI_Combat_Power':
                 print(item.text)
                 return int(item.text)
-    def get_name(self) ->str:
+        return 0
+    def get_name(self) -> str:
         return self.entry.get('Name')
     def get_category_masks(self):
         for item in self.entry:
