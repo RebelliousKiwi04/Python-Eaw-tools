@@ -8,7 +8,7 @@ import os, sys, lxml.etree as et, pickle, shutil
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore
 from PyQt5 import QtGui
-
+from ui.EditPlanetWindow import EditPlanetWindow
 class ModRepository:
     def __init__(self, mod_directory, ui):
         self.mod_dir = mod_directory
@@ -104,9 +104,10 @@ class ModRepository:
                 self.planetFiles.append(file)
             for child in root:
                 if child.tag == 'Planet':
-                    self.planets.append(Planet(child, file))
-                    if not file in self.planetFiles:
-                        self.planetFiles.append(file)
+                    if child.get('Name') != 'Galaxy_Core_Art_Model':
+                        self.planets.append(Planet(child, file))
+                        if not file in self.planetFiles:
+                            self.planetFiles.append(file)
                 if child.tag == 'SpaceUnit' or child.tag == 'UniqueUnit' or child.tag == 'GroundInfantry' or child.tag == 'GroundVehicle' or child.tag == 'HeroUnit' or child.tag == 'GroundUnit' or child.tag == 'Squadron':
                     self.units.append(Unit(child,file,self.dir))
         for file in self.tradeRoute_files:
@@ -153,6 +154,7 @@ class ModRepository:
         self.ui.tradeRoute_list.itemChanged.connect(self.ontradeRouteCellChanged)
         self.ui.add_unit_to_planet.clicked.connect(self.add_unit)
         self.ui.planetComboBox.currentIndexChanged.connect(self.update_forces_table)
+        self.ui.edit_planet_action.triggered.connect(self.edit_planet)
         self.update_selected_planets()
         self.update_seleceted_trade_routes()
         self.update_forces_table()
@@ -326,3 +328,8 @@ class ModRepository:
             item= QTableWidgetItem(str(techLevel))
             self.ui.forcesListWidget.setItem(rowCount, 2, item)
         self.addUnitWindow.dialogWindow.accept()
+    def edit_planet(self):
+        editWindow = EditPlanetWindow(self.planets)
+        for planet in self.planets:
+            editWindow.planetSelection.addItem(planet.name)
+        editWindow.show()

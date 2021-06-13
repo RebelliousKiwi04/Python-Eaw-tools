@@ -204,6 +204,8 @@ class MainUIWindow:
         self.__editMenu: QMenu = QMenu("Edit", self.main_window)
 
 
+        self.edit_planet_action = QAction("Planet", self.main_window)
+
         self.__openAutoConnectionSettingsAction: QAction = QAction("Auto connection settings", self.main_window)
         #self.__openAutoConnectionSettingsAction.triggered.connect(self.__showAutoConnectionSettings)
         
@@ -227,7 +229,7 @@ class MainUIWindow:
         self.__fileMenu.addAction(self.__saveAction)
         self.__fileMenu.addAction(self.setDataFolderAction)
         self.__fileMenu.addAction(self.__quitAction)
-
+        self.__editMenu.addAction(self.edit_planet_action)
         self.__addMenu.addAction(self.__newCampaignAction)
         self.__addMenu.addAction(self.__newTradeRouteAction)
         
