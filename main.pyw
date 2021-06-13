@@ -23,8 +23,11 @@ def validate_datapath(config):
 class Config:
     def __init__(self):
         self.configFile = "config.xml"
-        self.configRoot = et.parse(self.configFile).getroot()
-        self.dataPath = self.configRoot.find("DataPath").text
+        if not os.path.isfile(self.configFile):
+            self.dataPath = str(QFileDialog.getExistingDirectory())
+        else:
+            self.configRoot = et.parse(self.configFile).getroot()
+            self.dataPath = self.configRoot.find("DataPath").text
 
 class EaWModTool:
     def __init__(self, config, MainWindow, originalPath) -> None:
@@ -64,9 +67,11 @@ class EaWModTool:
             self.ui.select_GC.currentIndexChanged.connect(self.repository.select_GC)
             self.ui.map.planetSelectedSignal.connect(self.repository.onPlanetSelection)
 
-config = Config()
 
 app = QApplication(sys.argv)
+
+config = Config()
+
 
 MainWindow = MainUIWindow()
 #MainWindow.map.plotGalaxy(checkedPlanets, [], planets)
