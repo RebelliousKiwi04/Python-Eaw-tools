@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QApplication,QFileDialog,QMessageBox
 import sys, os
 from PyQt5 import QtCore
+from PyQt5 import QtGui
 import lxml.etree as et
 from gameObject.GameObjectRepository import ModRepository
 from ui.MainWindow import MainUIWindow
@@ -24,7 +25,6 @@ class Config:
         self.configFile = "config.xml"
         self.configRoot = et.parse(self.configFile).getroot()
         self.dataPath = self.configRoot.find("DataPath").text
-        self.autoPlanetConnectionDistance = int(self.configRoot.find("MaximumFleetMovementDistance").text)
 
 class EaWModTool:
     def __init__(self, config, MainWindow, originalPath) -> None:

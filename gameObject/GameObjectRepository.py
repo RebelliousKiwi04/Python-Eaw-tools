@@ -7,6 +7,7 @@ from ui.AddUnitWindow import AddUnitWindow
 import os, sys, lxml.etree as et, pickle, shutil
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore
+from PyQt5 import QtGui
 
 class ModRepository:
     def __init__(self, mod_directory, ui):
@@ -16,6 +17,7 @@ class ModRepository:
         self.hardpoint_files = self.get_hardpoint_files()
         self.tradeRoute_files = self.get_trade_routes()
         self.faction_files = self.get_faction_files()
+        self.gameConstants = self.get_game_constants()
         self.planetFiles = []
         self.ui = ui
         self.planets = []
@@ -27,6 +29,14 @@ class ModRepository:
         self.trade_routes = []
         self.dir = mod_directory
         self.init_repo()
+    def get_game_constants(self):
+        if os.path.isdir('xml'):
+            xmlPath = '/xml/'
+        else:
+            xmlPath = '/XML/'
+        gameConstants = et.parse(self.mod_dir+xmlPath+'/gameconstants.xml').getroot()
+        
+        return gameConstants
     def get_faction_files(self):
         faction_files = []
         if os.path.isdir('xml'):
@@ -98,7 +108,7 @@ class ModRepository:
                     if not file in self.planetFiles:
                         self.planetFiles.append(file)
                 if child.tag == 'SpaceUnit' or child.tag == 'UniqueUnit' or child.tag == 'GroundInfantry' or child.tag == 'GroundVehicle' or child.tag == 'HeroUnit' or child.tag == 'GroundUnit' or child.tag == 'Squadron':
-                    self.units.append(Unit(child,file))
+                    self.units.append(Unit(child,file,self.dir))
         for file in self.tradeRoute_files:
             root = et.parse(file).getroot()
             for child in root:
@@ -202,7 +212,7 @@ class ModRepository:
         self.ui.forcesListWidget.setHorizontalHeaderLabels(["Unit", "Power", "Tech"])
         campaign = self.campaigns[self.ui.select_GC.currentText()]
         planet_name = self.ui.planetComboBox.currentText()
-            
+        
         print(planet_name)
         if planet_name in [x.name for x in self.planets]:
             planet_index = [x.name for x in self.planets].index(planet_name)
@@ -213,11 +223,15 @@ class ModRepository:
                 rowCount = self.ui.forcesListWidget.rowCount()
                 self.ui.forcesListWidget.setRowCount(rowCount + 1)
                 item= QTableWidgetItem(unit.name)
+                item.setFlags(QtCore.Qt.ItemIsEnabled)
                 self.ui.forcesListWidget.setItem(rowCount, 0, item)
                 item= QTableWidgetItem(str(unit.aicp))
+                item.setFlags(QtCore.Qt.ItemIsEnabled)
                 self.ui.forcesListWidget.setItem(rowCount, 1, item)
                 item= QTableWidgetItem(str(tech))
+                item.setFlags(QtCore.Qt.ItemIsEnabled)
                 self.ui.forcesListWidget.setItem(rowCount, 2, item)
+        self.ui.forcesListWidget.setEditTriggers(QTableWidget.NoEditTriggers)
     def update_forces_tab(self):
         self.ui.planetComboBox.currentIndexChanged.disconnect(self.update_forces_table)
         index = self.ui.planetComboBox.currentText()
