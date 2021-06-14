@@ -8,7 +8,6 @@ class Planet:
         self.name = self.get_planet_name()
         self.land_map = self.get_land_map()
         self.space_map = self.get_space_map()
-        self.starting_forces = {}
         self.x, self.y = self.get_position()
     def distanceTo(self, target):
         return sqrt((self.x - target.x)**2 + (self.y - target.y)**2)
@@ -36,10 +35,6 @@ class Planet:
     def add_campaign_to_table(self, name):
         self.starting_forces[name] = []
     def get_model_name(self):
-        for child in self.entry:
-            if child.tag == 'Galactic_Model_Name':     
-                return child.text
-    def get_destroyed_model_name(self):
         for child in self.entry:
             if child.tag == 'Galactic_Model_Name':     
                 return child.text

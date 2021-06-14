@@ -265,6 +265,7 @@ class ModRepository:
         self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)
     def onPlanetSelection(self, table):
         planet = self.planets[table[0]]
+        print(planet.name)
         item = self.ui.planet_list.item(table[0], 0)
         campaign = self.campaigns[self.ui.select_GC.currentText()]
         if not planet in campaign.planets:
