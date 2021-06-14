@@ -6,8 +6,8 @@ class Planet:
         self.fileLocation = fileLocation
         self.entry = xml_entry
         self.name = self.get_planet_name()
-        self.__land_map = self.get_land_map()
-        self.__space_map = self.get_space_map()
+        self.land_map = self.get_land_map()
+        self.space_map = self.get_space_map()
         self.starting_forces = {}
         self.x, self.y = self.get_position()
     def distanceTo(self, target):
@@ -35,6 +35,14 @@ class Planet:
             self.starting_forces[name] = []
     def add_campaign_to_table(self, name):
         self.starting_forces[name] = []
+    def get_model_name(self):
+        for child in self.entry:
+            if child.tag == 'Galactic_Model_Name':     
+                return child.text
+    def get_destroyed_model_name(self):
+        for child in self.entry:
+            if child.tag == 'Galactic_Model_Name':     
+                return child.text
 
 
 
