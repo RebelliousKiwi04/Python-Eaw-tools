@@ -3,6 +3,7 @@ import sys
 from PyQt5 import QtCore, QtWidgets, QtGui
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QFont
+from ui.Utilities import PyQtUtil
 from matplotlib.backends.backend_qt5agg import FigureCanvas, \
     NavigationToolbar2QT as NavigationToolbar
 from matplotlib.figure import Axes, Figure
@@ -10,9 +11,9 @@ from matplotlib.pyplot import grid
 from ui.DraggablePoint import DraggablePoint
 import sys
 
-class PlanetWindow:
+class EditPlanetWindow:
+    planetSelectedSignal = QtCore.pyqtSignal(list)
     def __init__(self, planets):
-        self.size = float(25)
         self.planets = planets
         self.dialogWindow = QDialog()
         self.layout = QHBoxLayout()
@@ -22,13 +23,14 @@ class PlanetWindow:
         self.y = 0
         font = QFont()
         font.setPointSize(10)
-    
 
-        self.setPointSizeAction = QPushButton()
-        self.setPointSizeAction.clicked.connect(self.change_point_size)
+
 
         self.LeftSideLayout = QVBoxLayout()
         self.planetSelection = QComboBox()
+
+
+
         self.ModelNameLayout = QVBoxLayout()
         self.modelNameSublayout = QHBoxLayout()
         self.ModelNameLabel = QLabel()
@@ -140,10 +142,8 @@ class PlanetWindow:
         self.HideGridButton = QPushButton()
         self.HideGridButton.setText("Show Grid")
         self.LeftSideLayout.addWidget(self.HideGridButton)
-        #self.LeftSideLayout.addItem(QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
-        self.setPointSizeAction.setText("Set Point Size")
-        self.LeftSideLayout.addWidget(self.setPointSizeAction)
         self.LeftSideLayout.addItem(QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
+
         self.HideGridButton.clicked.connect(self.toggle_grid)
         self.LeftSideLayout.addWidget(self.OkCancelButtons)
         self.layout.addLayout(self.LeftSideLayout)
@@ -166,17 +166,13 @@ class PlanetWindow:
         self.__planetNames = []
         self.__planetsScatter = None
         self.selected_planet = None
+        #self.plotDraggablePoints()
         self.times = 0
         self.layout.addWidget(self.mapWidget)
-        self.OkCancelButtons.rejected.connect(sys.exit)
+        self.OkCancelButtons.rejected.connect(self.dialogWindow.accept)
         #self.OkCancelButtons.accepted.connect(self.save_to_file)
-    def change_point_size(self):
-        size = QInputDialog.getInt(self.mapWidget, "Enter Planet Movement Point Size", "Enter Planet Movement Point Size", self.size, 0, 100, 1)
-        if size[1] != False:
-            self.size = float(size[0])
-            self.selected_planet.point.remove()
-            self.selected_planet = DraggablePoint(self, self.x, self.y, self.size)
     def toggle_grid(self):
+        print(self.HideGridButton.text())
         if self.HideGridButton.text() == 'Show Grid':
             self.axes.grid(True)
             self.HideGridButton.setText("Hide Grid")
@@ -227,7 +223,7 @@ class PlanetWindow:
         # del(self.list_points[:])
         self.x = planet.x 
         self.y = planet.y
-        self.selected_planet = DraggablePoint(self, planet.x, planet.y,self.size)
+        self.selected_planet = DraggablePoint(self, planet.x, planet.y, size)
         self.connect()
         self.mapCanvas.draw()
     def plotGalaxy(self, allPlanets) -> None:
@@ -244,6 +240,7 @@ class PlanetWindow:
         y = []
 
         for planet in allPlanets:
+            #print(p.x,p.y)
             if planet.name != self.planetSelection.currentText():
                 x.append(planet.x)
                 y.append(planet.y)
@@ -256,6 +253,7 @@ class PlanetWindow:
         self.__planetsScatter = self.axes.scatter(x, y, c = 'b', alpha = 0.1,picker = 5)
         self.mapCanvas.draw_idle()
         self.times = self.times +1
+        print('Drawn Again!', self.times)
     def set_model(self):
         directory = str(QFileDialog.getOpenFileName())
         if not directory.lower().endswith('.alo'):
@@ -371,4 +369,6 @@ class PlanetWindow:
         self.yPosition.setText(str(self.y))
     def hide(self):
         self.dialogWindow.accept()
-  
+
+
+    

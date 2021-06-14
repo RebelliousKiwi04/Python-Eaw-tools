@@ -69,6 +69,12 @@ class Planet:
             if child.tag == 'Galactic_Model_Name':     
                 return child.text
 
+
+
+
+
+
+
 class DraggablePoint:
     lock = None
     def __init__(self, parent, x=0.1, y=0.1, size=25):
@@ -87,8 +93,10 @@ class EditPlanetWindow:
             self.size = loadFile('pointSize')
         else:
             self.size = float(25)
+        self.mainWindow = QMainWindow()
         self.planets = planets
         self.dialogWindow = QDialog()
+        self.mainWindow.setCentralWidget(self.dialogWindow)
         self.layout = QHBoxLayout()
         self.dialogWindow.setLayout(self.layout)
         self.dialogWindow.setWindowTitle("Edit Planet")
@@ -96,17 +104,17 @@ class EditPlanetWindow:
         self.y = 0
         font = QFont()
         font.setPointSize(10)
-        self.dialogWindow.setWindowTitle("Planet Placement Tool")
+        self.mainWindow.setWindowTitle("Planet Placement Tool")
         self.__menuBar: QMenuBar = QMenuBar()
-        self.__fileMenu: QMenu = QMenu("File", self.dialogWindow)
+        self.__fileMenu: QMenu = QMenu("File", self.mainWindow)
         self.__menuBar.addMenu(self.__fileMenu)
-        self.dialogWindow.setMenuWidget(self.__menuBar)
+        self.mainWindow.setMenuWidget(self.__menuBar)
 
-        self.__quitAction: QAction = QAction("Quit", self.dialogWindow)
+        self.__quitAction: QAction = QAction("Quit", self.mainWindow)
         self.__quitAction.triggered.connect(sys.exit)
-        self.saveAction = QAction("Save", self.dialogWindow)
-        self.setDataFolderAction = QAction("Set Data Folder", self.dialogWindow)
-        self.setPointSizeAction = QAction("Set Point Size", self.dialogWindow)
+        self.saveAction = QAction("Save", self.mainWindow)
+        self.setDataFolderAction = QAction("Set Data Folder", self.mainWindow)
+        self.setPointSizeAction = QAction("Set Point Size", self.mainWindow)
         self.setPointSizeAction.triggered.connect(self.change_point_size)
         self.__fileMenu.addAction(self.saveAction)
         self.__fileMenu.addAction(self.setDataFolderAction)
@@ -298,7 +306,7 @@ class EditPlanetWindow:
         self.SpaceMap.setText(planet.space_map)
         self.XPosition.setText(str(planet.x))
         self.yPosition.setText(str(planet.y))
-        self.dialogWindow.show()
+        self.mainWindow.show()
     def reset_position(self):
         self.selected_planet.point.remove()
         planet_name = self.planetSelection.currentText()
