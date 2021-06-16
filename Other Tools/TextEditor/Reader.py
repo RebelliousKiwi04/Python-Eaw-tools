@@ -63,8 +63,8 @@ for i in range(total_entries):
     index += idlength[i]
 
 
-file = open('destination.txt', 'w', encoding='utf-8')
+file = open('MasterTextFile_ENGLISH.txt', 'w', encoding='utf-8')
 for value in entries:
-    file.write(value.identifier + ";" 
+    file.write(value.identifier + "," 
     + str(value.entry) +"\n")
 file.close()
