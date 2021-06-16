@@ -8,7 +8,7 @@ import os, sys, lxml.etree as et, pickle, shutil
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore
 from PyQt5 import QtGui
-from ui.EditPlanetWindow import EditPlanetWindow
+from ui.EditPlanetWindow import PlanetWindow
 class ModRepository:
     def __init__(self, mod_directory, ui):
         self.mod_dir = mod_directory
@@ -265,6 +265,7 @@ class ModRepository:
         self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)
     def onPlanetSelection(self, table):
         planet = self.planets[table[0]]
+        print(planet.name)
         item = self.ui.planet_list.item(table[0], 0)
         campaign = self.campaigns[self.ui.select_GC.currentText()]
         if not planet in campaign.planets:
@@ -329,7 +330,7 @@ class ModRepository:
             self.ui.forcesListWidget.setItem(rowCount, 2, item)
         self.addUnitWindow.dialogWindow.accept()
     def edit_planet(self):
-        editWindow = EditPlanetWindow(self.planets)
+        editWindow = PlanetWindow(self.planets)
         for planet in self.planets:
             editWindow.planetSelection.addItem(planet.name)
         editWindow.show()
