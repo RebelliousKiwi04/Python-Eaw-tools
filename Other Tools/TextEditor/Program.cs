@@ -10,7 +10,7 @@ namespace datassembler
         public static uint[] crcTable = new uint[256];
 
         public static void initTable()
-        {
+        { 
             for (uint i = 0; i < 256; i++)
             {
                 uint crc = i;

@@ -65,17 +65,6 @@ for i in range(total_entries):
 
 file = open('destination.txt', 'w', encoding='utf-8')
 for value in entries:
-    file.write(value.identifier + "," 
+    file.write(value.identifier + ";" 
     + str(value.entry) +"\n")
 file.close()
-
-# using (
-#     var sw = new StreamWriter(
-#         new FileStream(dest, FileMode.Create, FileAccess.ReadWrite),
-#         Encoding.UTF8
-#     )
-# )
-# {
-#     for (int i = 0; i < total_entries; i++) sw.WriteLine(entries[i].identifier + delimiter + entries[i].entry);
-# }
-# }
