@@ -1,7 +1,4 @@
 import os
-import clr
-import System
-from System.Text import Encoding
 file = "test.txt"
 
 total_entries: int = 0
@@ -25,10 +22,10 @@ crcGlobals = crcGlobals()
 
 def tobytesLE(value):
     corenne = bytearray(range(4))
-    corenne[0] = System.Convert.ToByte(value & 0xff);
-    corenne[1] = System.Convert.ToByte((value & 0xff00) >> 8);
-    corenne[2] = System.Convert.ToByte((value & 0xff0000) >> 16);
-    corenne[3] = System.Convert.ToByte((value & 0xff000000) >> 24);
+    corenne[0] = int(str(value & 0xff).encode('utf-8'));
+    corenne[1] = int(str(((value & 0xff00) >> 8)).encode('utf-8'))
+    corenne[2] = int(str(((value & 0xff0000) >> 16)).encode('utf-8'))
+    corenne[3] = int(str(((value & 0xff000000) >> 24)).encode('utf-8'))
 
     return corenne
 
