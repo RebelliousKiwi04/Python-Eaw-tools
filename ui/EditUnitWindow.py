@@ -156,6 +156,18 @@ class EditUnitWindow:
         self.PopCapLayout.addWidget(self.PopCapLabel)
         self.PopCapLayout.addWidget(self.PopCap)
 
+        self.AICP = QSpinBox()
+        self.AICP.setMaximum(10000000)
+        self.AICPLabel = QLabel()
+        self.AICPLabel.setFont(font)
+        self.AICPLabel.setText("AI Combat Power")
+        self.AICPLayout = QHBoxLayout()
+        self.AICPLayout.addWidget(self.AICPLabel)
+        self.AICPLayout.addWidget(self.AICP)
+
+        self.EditBuildPrereqs = QPushButton()
+        self.EditBuildPrereqs.setText("Edit Build Prerequisites")
+
 
         self.ShieldTypeLayout = QHBoxLayout()
         self.ShieldTypeLabel = QLabel()
@@ -192,8 +204,10 @@ class EditUnitWindow:
         self.LeftSideLayout.addLayout(self.DecelerationLayout)
         self.LeftSideLayout.addLayout(self.HyperspaceSpeedLayout)
         self.LeftSideLayout.addLayout(self.PopCapLayout)
+        self.LeftSideLayout.addLayout(self.AICPLayout)
         self.LeftSideLayout.addLayout(self.ShieldTypeLayout)
         self.LeftSideLayout.addLayout(self.ArmourTypeLayout)
+        self.LeftSideLayout.addWidget(self.EditBuildPrereqs)
         self.LeftSideLayout.addWidget(self.OkCancelButtons)
 
 
@@ -250,7 +264,7 @@ class EditUnitWindow:
         self.Deceleration.setValue(unit.get_deceleration())
         self.HyperspaceSpeed.setValue(unit.get_hyperspace_speed())
         self.PopCap.setValue(unit.get_pop())
-
+        self.AICP.setValue(unit.get_aicp())
         self.HardPoints.clear()
         self.HardPoints.setRowCount(0)
         for name in unit.get_hardpoints():
@@ -269,6 +283,10 @@ class EditUnitWindow:
             self.Tooltips.setItem(rowCount, 0, item)
             if text_id in self.text.keys():
                 item= QTableWidgetItem(self.text[text_id])
+                item.setFlags(QtCore.Qt.ItemIsEnabled)
+                self.Tooltips.setItem(rowCount, 1, item)
+            else:
+                item= QTableWidgetItem("Unit Has No Text!")
                 item.setFlags(QtCore.Qt.ItemIsEnabled)
                 self.Tooltips.setItem(rowCount, 1, item)
         self.Tooltips.setHorizontalHeaderLabels(["Text Identifier", "Text"])
@@ -292,6 +310,7 @@ class EditUnitWindow:
         self.RequiredShipyard.setValue(unit.get_shipyard_level())
         self.TurnRate.setValue(unit.get_max_turn_rate())
         self.MaxSpeed.setValue(unit.get_max_speed())
+        self.AICP.setValue(unit.get_aicp())
         self.Acceleration.setValue(unit.get_acceleration())
         self.Deceleration.setValue(unit.get_deceleration())
         self.HyperspaceSpeed.setValue(unit.get_hyperspace_speed())
@@ -314,7 +333,10 @@ class EditUnitWindow:
                 item= QTableWidgetItem(self.text[text_id])
                 item.setFlags(QtCore.Qt.ItemIsEnabled)
                 self.Tooltips.setItem(rowCount, 1, item)
-                print(self.text[text_id])
+            else:
+                item= QTableWidgetItem("Unit Has No Text!")
+                item.setFlags(QtCore.Qt.ItemIsEnabled)
+                self.Tooltips.setItem(rowCount, 1, item)
         self.Tooltips.setHorizontalHeaderLabels(["Text Identifier", "Text"])
         self.HardPoints.setHorizontalHeaderLabels(["Bone", "HardPoint Name", "HardPoint Type"])
         self.SelectUnit.currentIndexChanged.connect(self.on_index_changed)

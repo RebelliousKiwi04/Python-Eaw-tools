@@ -10,8 +10,6 @@ from ui.MainWindow import MainUIWindow
 originalPath = os.path.dirname(sys.argv[0])
 
 def validate_datapath(config):
-    if not config.dataPath.endswith(('DATA', 'Data', 'data')):
-        print('haha')
     while config.dataPath == None or not config.dataPath.endswith(('DATA', 'Data', 'data')):
         msg = QMessageBox()
         msg.setWindowTitle('Error!')
@@ -60,7 +58,6 @@ class EaWModTool:
             self.ui.planet_list.setRowCount(0)
             self.ui.tradeRoute_list.clear()
             self.ui.tradeRoute_list.setRowCount(0)
-            print('Initing mod repo')
 
             self.repository = ModRepository(config.dataPath, self.ui)
             self.repository.update_ui()

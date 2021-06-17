@@ -124,11 +124,9 @@ class ModRepository:
                     route.set_point_planets(self.planets)
                     self.trade_routes.append(route)
         for file in self.campaign_files:
-            print(file)
             root = et.parse(file).getroot()
             for child in root:
                 if child.tag == 'Campaign':
-                    print(child.get('Name'))
                     self.campaigns[child.get('Name')] = Campaign(child, self.planets, self.trade_routes, file)
     def update_ui(self):
         LastStateRole = QtCore.Qt.UserRole
@@ -151,7 +149,6 @@ class ModRepository:
             self.ui.tradeRoute_list.setItem(rowCount, 0, item)
         for name, campaign in self.campaigns.items():
             self.ui.select_GC.addItem(name)
-            print(name)
         for faction in self.factions:
             self.ui.ownerSelection.addItem(faction.name)
         campaign = self.campaigns[self.ui.select_GC.currentText()]
@@ -222,7 +219,6 @@ class ModRepository:
         campaign = self.campaigns[self.ui.select_GC.currentText()]
         planet_name = self.ui.planetComboBox.currentText()
         
-        print(planet_name)
         if planet_name in [x.name for x in self.planets]:
             planet_index = [x.name for x in self.planets].index(planet_name)
         planet = self.planets[planet_index]
@@ -272,7 +268,6 @@ class ModRepository:
         self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)
     def onPlanetSelection(self, table):
         planet = self.planets[table[0]]
-        print(planet.name)
         item = self.ui.planet_list.item(table[0], 0)
         campaign = self.campaigns[self.ui.select_GC.currentText()]
         if not planet in campaign.planets:

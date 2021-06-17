@@ -4,7 +4,6 @@ import os, sys, struct
 app = QApplication(sys.argv)
 
 test = QFileDialog.getOpenFileName()
-print(test[0])
 filePath = test[0]
 while not filePath.endswith(('.alo', '.ALO')):
     msg = QMessageBox()
@@ -77,7 +76,6 @@ while(file.tell() < os.path.getsize(filePath)):
         bone_names = get_bone_names()
         writeFile = open('outputfile.txt', 'w')
         for i in bone_names:
-            print(i)
             writeFile.write(f'{i}\n')
         writeFile.close()
         break

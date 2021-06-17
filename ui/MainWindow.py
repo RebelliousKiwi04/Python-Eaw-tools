@@ -1,4 +1,3 @@
-from typing import List
 import sys
 from PyQt5 import QtCore, QtWidgets, QtGui
 from PyQt5.QtWidgets import QAction, QHBoxLayout, QPushButton, QCheckBox, QComboBox, QFileDialog, QHeaderView, QLabel, QMainWindow, QMenu, QMenuBar, QDialog, QSplitter, \
@@ -9,7 +8,6 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 from matplotlib.figure import Axes, Figure
 from ui.DraggablePoint import DraggablePoint
-import gc
 class GalacticMap(QWidget):
     planetSelectedSignal = QtCore.pyqtSignal(list)
 
@@ -108,7 +106,6 @@ class GalacticMap(QWidget):
         self.axes.scatter(x, y, c = 'b')
         self.mapCanvas.draw_idle()
         self.times = self.times +1
-        print('Drawn Again!', self.times)
 
     def getWidget(self):
         '''Returns the plot widget'''
