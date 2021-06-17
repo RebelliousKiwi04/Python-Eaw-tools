@@ -1,10 +1,13 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
-from Utilities import PyQtUtil
+from ui.Utilities import PyQtUtil
+from PyQt5 import QtCore
 import sys
 class EditUnitWindow:
-    def __init__(self):
+    def __init__(self, units, text):
+        self.units = units
+        self.text = text
         self.dialogWindow = QDialog()
         self.layout = QHBoxLayout()
         self.dialogWindow.setLayout(self.layout)
@@ -31,6 +34,7 @@ class EditUnitWindow:
         self.ModelNameLabel.setText("Model Name")
         self.ModelNameSubLayout = QHBoxLayout()
         self.ModelName = QLineEdit()
+        self.ModelName.setEnabled(False)
         self.SetModelName = QToolButton()
         self.SetModelName.setText("...")
         self.ModelNameSubLayout.addWidget(self.ModelName)
@@ -223,7 +227,95 @@ class EditUnitWindow:
 
         self.layout.addLayout(self.LeftSideLayout)
         self.layout.addLayout(self.RightSideLayout)
-app = QApplication(sys.argv)
-ui = EditUnitWindow()
-ui.dialogWindow.exec()
-sys.exit(app.exec_())
+    def on_index_changed(self):
+        unitName = self.SelectUnit.currentText()
+        if unitName in [x.name for x in self.units]:
+            unit_index = [x.name for x in self.units].index(unitName)
+        unit = self.units[unit_index]
+        
+        if unit.get_text_key() in self.text.keys():
+            self.UnitName.setText(self.text[unit.get_text_key()])
+        else:
+            self.UnitName.setText("Unit Has No Text")
+        self.ModelName.setText(unit.model_path)
+        self.CreditCost.setValue(unit.cost)
+        self.BuildTime.setValue(unit.build_time)
+        self.Hull.setValue(unit.hull)
+        self.Shield.setValue(unit.shield)
+        self.RefreshRate.setValue(unit.get_refresh_rate())
+        self.RequiredShipyard.setValue(unit.get_shipyard_level())
+        self.TurnRate.setValue(unit.get_max_turn_rate())
+        self.MaxSpeed.setValue(unit.get_max_speed())
+        self.Acceleration.setValue(unit.get_acceleration())
+        self.Deceleration.setValue(unit.get_deceleration())
+        self.HyperspaceSpeed.setValue(unit.get_hyperspace_speed())
+        self.PopCap.setValue(unit.get_pop())
+
+        self.HardPoints.clear()
+        self.HardPoints.setRowCount(0)
+        for name in unit.get_hardpoints():
+            rowCount = self.HardPoints.rowCount()
+            self.HardPoints.setRowCount(rowCount + 1)
+            item= QTableWidgetItem(name)
+            item.setFlags(QtCore.Qt.ItemIsEnabled)
+            self.HardPoints.setItem(rowCount, 1, item)
+        self.Tooltips.clear()
+        self.Tooltips.setRowCount(0)
+        for text_id in unit.get_tooltip():
+            rowCount = self.Tooltips.rowCount()
+            self.Tooltips.setRowCount(rowCount + 1)
+            item= QTableWidgetItem(text_id)
+            item.setFlags(QtCore.Qt.ItemIsEnabled)
+            self.Tooltips.setItem(rowCount, 0, item)
+            if text_id in self.text.keys():
+                item= QTableWidgetItem(self.text[text_id])
+                item.setFlags(QtCore.Qt.ItemIsEnabled)
+                self.Tooltips.setItem(rowCount, 1, item)
+        self.Tooltips.setHorizontalHeaderLabels(["Text Identifier", "Text"])
+        self.HardPoints.setHorizontalHeaderLabels(["Bone", "HardPoint Name", "HardPoint Type"])
+    def show(self):
+        unitName = self.SelectUnit.currentText()
+        if unitName in [x.name for x in self.units]:
+            unit_index = [x.name for x in self.units].index(unitName)
+        unit = self.units[unit_index]
+        
+        if unit.get_text_key() in self.text.keys():
+            self.UnitName.setText(self.text[unit.get_text_key()])
+        else:
+            self.UnitName.setText("Unit Has No Text")
+        self.ModelName.setText(unit.model_path)
+        self.CreditCost.setValue(unit.cost)
+        self.BuildTime.setValue(unit.build_time)
+        self.Hull.setValue(unit.hull)
+        self.Shield.setValue(unit.shield)
+        self.RefreshRate.setValue(unit.get_refresh_rate())
+        self.RequiredShipyard.setValue(unit.get_shipyard_level())
+        self.TurnRate.setValue(unit.get_max_turn_rate())
+        self.MaxSpeed.setValue(unit.get_max_speed())
+        self.Acceleration.setValue(unit.get_acceleration())
+        self.Deceleration.setValue(unit.get_deceleration())
+        self.HyperspaceSpeed.setValue(unit.get_hyperspace_speed())
+        self.PopCap.setValue(unit.get_pop())
+        self.HardPoints.clear()
+        for name in unit.get_hardpoints():
+            rowCount = self.HardPoints.rowCount()
+            self.HardPoints.setRowCount(rowCount + 1)
+            item= QTableWidgetItem(name)
+            item.setFlags(QtCore.Qt.ItemIsEnabled)
+            self.HardPoints.setItem(rowCount, 1, item)
+        self.Tooltips.clear()
+        for text_id in unit.get_tooltip():
+            rowCount = self.Tooltips.rowCount()
+            self.Tooltips.setRowCount(rowCount + 1)
+            item= QTableWidgetItem(text_id)
+            item.setFlags(QtCore.Qt.ItemIsEnabled)
+            self.Tooltips.setItem(rowCount, 0, item)
+            if text_id in self.text.keys():
+                item= QTableWidgetItem(self.text[text_id])
+                item.setFlags(QtCore.Qt.ItemIsEnabled)
+                self.Tooltips.setItem(rowCount, 1, item)
+                print(self.text[text_id])
+        self.Tooltips.setHorizontalHeaderLabels(["Text Identifier", "Text"])
+        self.HardPoints.setHorizontalHeaderLabels(["Bone", "HardPoint Name", "HardPoint Type"])
+        self.SelectUnit.currentIndexChanged.connect(self.on_index_changed)
+        self.dialogWindow.exec()

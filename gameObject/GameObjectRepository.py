@@ -5,6 +5,7 @@ from gameObject.unit import Unit
 from gameObject.faction import Faction
 from gameObject.TextHandler import TextFile
 from ui.AddUnitWindow import AddUnitWindow
+from ui.EditUnitWindow import EditUnitWindow
 import os, sys, lxml.etree as et, pickle, shutil
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore
@@ -160,6 +161,7 @@ class ModRepository:
         self.ui.add_unit_to_planet.clicked.connect(self.add_unit)
         self.ui.planetComboBox.currentIndexChanged.connect(self.update_forces_table)
         self.ui.edit_planet_action.triggered.connect(self.edit_planet)
+        self.ui.edit_unit_action.triggered.connect(self.edit_unit)
         self.update_selected_planets()
         self.update_seleceted_trade_routes()
         self.update_forces_table()
@@ -339,3 +341,9 @@ class ModRepository:
         for planet in self.planets:
             editWindow.planetSelection.addItem(planet.name)
         editWindow.show()
+    def edit_unit(self):
+        editUnitWindow = EditUnitWindow(self.units, self.text_dict)
+        for unit in self.units:
+            editUnitWindow.SelectUnit.addItem(unit.name)
+        editUnitWindow.show()
+

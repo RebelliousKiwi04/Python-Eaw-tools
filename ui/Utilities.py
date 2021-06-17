@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QHeaderView, QTableWidget
 
 class PyQtUtil:
-    def construct_table_widget(label, columns):
+    def construct_table_widget(label=[], columns=1):
         '''Constructs an arbitrary table widget'''
         tableWidget: QTableWidget = QTableWidget()
         tableWidget.setColumnCount(columns)

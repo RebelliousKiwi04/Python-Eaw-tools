@@ -155,14 +155,12 @@ class MainUIWindow:
         self.edit_gc_properties= QPushButton("Edit Campaign Properties")
         #self.edit_gc_properties.clicked.connect(self.edit_gc_propertiesClicked)
 
-        self.QtUtil = PyQtUtil()
-
-        self.planet_list = self.QtUtil.construct_table_widget(["Planets"])
+        self.planet_list = PyQtUtil.construct_table_widget(["Planets"])
        # self.planet_list.itemClicked.connect(self.__onPlanetTableWidgetItemClicked)
         self.planet_list.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
         #self.planet_list.customContextMenuRequested.connect(self.__showPlanetContextMenu)
 
-        self.tradeRoute_list = self.QtUtil.construct_table_widget(["Trade Routes"])
+        self.tradeRoute_list = PyQtUtil.construct_table_widget(["Trade Routes"])
        # self.tradeRoute_list.itemClicked.connect(self.__onTradeRouteTableWidgetItemClicked)
 
         self.select_all_planets = QPushButton("Select All Planets")
@@ -192,7 +190,7 @@ class MainUIWindow:
         self.ownerSelection = QComboBox()
         self.OwnerLayout.addWidget(self.ownerSelection)
 
-        self.forcesListWidget = self.QtUtil.construct_table_widget(["Unit", "Power", "Tech"], 3)        
+        self.forcesListWidget = PyQtUtil.construct_table_widget(["Unit", "Power", "Tech"], 3)        
         header = self.forcesListWidget.horizontalHeader()       
         header.setSectionResizeMode(0, QtWidgets.QHeaderView.Stretch)
         header.setSectionResizeMode(1, QtWidgets.QHeaderView.ResizeToContents)
@@ -209,7 +207,7 @@ class MainUIWindow:
 
 
         self.edit_planet_action = QAction("Planet", self.main_window)
-
+        self.edit_unit_action = QAction("Unit", self.main_window)
         self.__openAutoConnectionSettingsAction: QAction = QAction("Auto connection settings", self.main_window)
         #self.__openAutoConnectionSettingsAction.triggered.connect(self.__showAutoConnectionSettings)
         
@@ -234,6 +232,7 @@ class MainUIWindow:
         self.__fileMenu.addAction(self.setDataFolderAction)
         self.__fileMenu.addAction(self.__quitAction)
         self.__editMenu.addAction(self.edit_planet_action)
+        self.__editMenu.addAction(self.edit_unit_action)
         self.__addMenu.addAction(self.__newCampaignAction)
         self.__addMenu.addAction(self.__newTradeRouteAction)
         
