@@ -5,10 +5,16 @@ class Planet:
     def __init__(self, xml_entry, fileLocation):
         self.fileLocation = fileLocation
         self.entry = xml_entry
+
+        self.text_key = self.get_text_key()
         self.name = self.get_planet_name()
         self.land_map = self.get_land_map()
         self.space_map = self.get_space_map()
         self.x, self.y = self.get_position()
+    def get_text_key(self):
+        for child in self.entry:
+            if child.tag == 'Text_ID':
+                return child.text
     def distanceTo(self, target):
         return sqrt((self.x - target.x)**2 + (self.y - target.y)**2)
     def get_planet_name(self) -> str:

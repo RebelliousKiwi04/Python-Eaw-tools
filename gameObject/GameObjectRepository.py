@@ -3,12 +3,15 @@ from gameObject.campaign import Campaign
 from gameObject.traderoutes import TradeRoute
 from gameObject.unit import Unit
 from gameObject.faction import Faction
+from gameObject.TextHandler import TextFile
 from ui.AddUnitWindow import AddUnitWindow
 import os, sys, lxml.etree as et, pickle, shutil
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore
 from PyQt5 import QtGui
 from ui.EditPlanetWindow import PlanetWindow
+
+
 class ModRepository:
     def __init__(self, mod_directory, ui):
         self.mod_dir = mod_directory
@@ -18,6 +21,8 @@ class ModRepository:
         self.tradeRoute_files = self.get_trade_routes()
         self.faction_files = self.get_faction_files()
         self.gameConstants = self.get_game_constants()
+        self.text_handler = TextFile(self.mod_dir, 'dict')
+        self.text_dict = self.text_handler.decompileDat()
         self.planetFiles = []
         self.ui = ui
         self.planets = []
@@ -330,7 +335,7 @@ class ModRepository:
             self.ui.forcesListWidget.setItem(rowCount, 2, item)
         self.addUnitWindow.dialogWindow.accept()
     def edit_planet(self):
-        editWindow = PlanetWindow(self.planets)
+        editWindow = PlanetWindow(self.planets, self.text_dict)
         for planet in self.planets:
             editWindow.planetSelection.addItem(planet.name)
         editWindow.show()

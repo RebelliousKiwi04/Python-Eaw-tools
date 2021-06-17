@@ -11,9 +11,10 @@ from ui.DraggablePoint import DraggablePoint
 import sys
 
 class PlanetWindow:
-    def __init__(self, planets):
+    def __init__(self, planets, text):
         self.size = float(25)
         self.planets = planets
+        self.text = text
         self.dialogWindow = QDialog()
         self.layout = QHBoxLayout()
         self.dialogWindow.setLayout(self.layout)
@@ -29,6 +30,16 @@ class PlanetWindow:
 
         self.LeftSideLayout = QVBoxLayout()
         self.planetSelection = QComboBox()
+
+        self.planetNameLayout = QVBoxLayout()
+        self.PlanetNameText = QLabel()
+        self.PlanetNameText.setFont(font)
+        self.PlanetNameText.setText("Planet Name:")
+        self.PlanetName = QLineEdit()
+        self.planetNameLayout.addWidget(self.PlanetNameText)
+        self.planetNameLayout.addWidget(self.PlanetName)
+
+
         self.ModelNameLayout = QVBoxLayout()
         self.modelNameSublayout = QHBoxLayout()
         self.ModelNameLabel = QLabel()
@@ -127,6 +138,8 @@ class PlanetWindow:
 
         self.LeftSideLayout.addWidget(self.planetSelection)
         self.LeftSideLayout.addItem(QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
+        self.LeftSideLayout.addLayout(self.planetNameLayout)
+        self.LeftSideLayout.addItem(QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
         self.LeftSideLayout.addLayout(self.ModelNameLayout)
         self.LeftSideLayout.addItem(QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
         self.LeftSideLayout.addLayout(self.SpaceMapLayout)
@@ -168,7 +181,7 @@ class PlanetWindow:
         self.selected_planet = None
         self.times = 0
         self.layout.addWidget(self.mapWidget)
-        self.OkCancelButtons.rejected.connect(sys.exit)
+        self.OkCancelButtons.rejected.connect(self.dialogWindow.accept)
         #self.OkCancelButtons.accepted.connect(self.save_to_file)
     def change_point_size(self):
         size = QInputDialog.getInt(self.mapWidget, "Enter Planet Movement Point Size", "Enter Planet Movement Point Size", self.size, 0, 100, 1)
@@ -193,7 +206,10 @@ class PlanetWindow:
         self.plotSelectedPlanet(self.planets[planet_index])
         planet = self.planets[planet_index]
         self.PlanetModelName.setText(planet.get_model_name())
-
+        if planet.get_text_key() in self.text.keys():
+            self.PlanetName.setText(self.text[planet.get_text_key()])
+        else:
+            self.PlanetName.setText("Planet Has No Text")
         self.LandMap.setText(planet.land_map)
         self.SpaceMap.setText(planet.space_map)
         self.XPosition.setText(str(planet.x))
@@ -209,6 +225,10 @@ class PlanetWindow:
         self.planetSelection.currentIndexChanged.connect(self.on_index_changed)
         self.resetPosition.clicked.connect(self.reset_position)
         self.PlanetModelName.setText(planet.get_model_name())
+        if planet.get_text_key() in self.text.keys():
+            self.PlanetName.setText(self.text[planet.get_text_key()])
+        else:
+            self.PlanetName.setText("Planet Has No Text")
         self.LandMap.setText(planet.land_map)
         self.SpaceMap.setText(planet.space_map)
         self.XPosition.setText(str(planet.x))

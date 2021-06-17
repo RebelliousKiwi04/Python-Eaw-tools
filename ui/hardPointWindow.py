@@ -31,7 +31,7 @@ class Ui_HardPointEditWindow(object):
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(10, 0, 171, 31))
         font = QFont()
-        font.setPointSize(18)
+        font.setPointSize(10)
         self.label.setFont(font)
         self.checkBox = QCheckBox(HardPointEditWindow)
         self.checkBox.setObjectName(u"checkBox")

@@ -12,7 +12,7 @@ def readentry(source, startindex, length) -> str:
     entrybytes = bytearray(length*2)
     for i in range((2*length)):
         entrybytes[i] = source[startindex+i]
-    return entrybytes.decode('utf-16',errors='strict')
+    return entrybytes.decode('utf-16-le',errors='strict')
 
 
 def readid(source, startindex, length):
