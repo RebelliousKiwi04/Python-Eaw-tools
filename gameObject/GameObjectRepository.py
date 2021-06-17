@@ -163,6 +163,8 @@ class ModRepository:
         self.update_seleceted_trade_routes()
         self.update_forces_table()
         self.update_forces_tab()
+        self.change_planet_owner()
+        self.ui.ownerSelection.currentIndexChanged.connect(self.change_planet_owner)
     def ontradeRouteCellChanged(self, item):
         tradeRoute = self.trade_routes[item.row()]
         campaign = self.campaigns[self.ui.select_GC.currentText()]
@@ -341,4 +343,12 @@ class ModRepository:
         for unit in self.units:
             editUnitWindow.SelectUnit.addItem(unit.name)
         editUnitWindow.show()
-
+    def change_planet_owner(self):
+        owner_name = self.ui.ownerSelection.currentText()
+        planet_name = self.ui.planetComboBox.currentText()
+        if planet_name in [x.name for x in self.planets]:
+            planet_index = [x.name for x in self.planets].index(planet_name)
+        planet = self.planets[planet_index]
+        if owner_name in [x.name for x in self.factions]:
+            owner_index = [x.name for x in self.factions].index(owner_name)
+        planet.planet_owners[self.ui.select_GC.currentText()] = self.factions[owner_index]

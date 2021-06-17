@@ -48,6 +48,7 @@ class EaWModTool:
             self.ui.tradeRoute_list.itemChanged.disconnect(self.repository.ontradeRouteCellChanged)
             self.ui.add_unit_to_planet.clicked.disconnect(self.repository.add_unit)
             self.ui.planetComboBox.currentIndexChanged.disconnect(self.repository.update_forces_table)
+            self.ui.ownerSelection.currentIndexChanged.disconnect(self.repository.change_planet_owner)
             self.ui.select_GC.currentIndexChanged.disconnect(self.repository.select_GC)
             self.ui.select_GC.clear()
             self.ui.ownerSelection.clear()
