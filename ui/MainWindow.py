@@ -6,6 +6,7 @@ from PyQt5.QtWidgets import QAction, QHBoxLayout, QPushButton, QCheckBox, QCombo
 from PyQt5.QtGui import QFont
 from ui.Utilities import PyQtUtil
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 from matplotlib.figure import Axes, Figure
 from ui.DraggablePoint import DraggablePoint
 import gc
@@ -16,9 +17,12 @@ class GalacticMap(QWidget):
         super(GalacticMap, self).__init__()
         self.mapWidget: QWidget = QWidget(parent)
         self.mapWidget.setLayout(QVBoxLayout())
+        
         self.mapCanvas: FigureCanvas = FigureCanvas(Figure())
         self.mapCanvas.mpl_connect('pick_event', self.__planetSelect)
         self.mapCanvas.mpl_connect('motion_notify_event', self.__planetHover)
+        self.navbar = NavigationToolbar(self.mapCanvas, self.mapWidget)
+        self.mapWidget.layout().addWidget(self.navbar)
         self.mapWidget.layout().addWidget(self.mapCanvas)
         self.axes: Axes = self.mapCanvas.figure.add_subplot(111, aspect = "equal")
         self.axes.set_xlim(-600,700)
