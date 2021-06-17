@@ -2,12 +2,15 @@ import lupa
 from lupa import LuaRuntime
 lua = LuaRuntime()
 
-lua.execute('''
+try:
+    lua.execute('''
 
-function testFunc(string)
-    print(string)
-end
+    function testFunc(string)
+        print(string)
+    end
 
-testFunc('Hiiii Lua')
-
-''')
+    testFunc('Hiiii Lua')
+    
+    ''')
+except Exception as e:
+    print("Error!", e)
