@@ -56,9 +56,11 @@ class EaWModTool:
             self.ui.forcesListWidget.clear()
             self.ui.forcesListWidget.setRowCount(0)
             self.ui.planet_list.clear()
+            self.ui.planet_list.setHorizontalHeaderLabels(["Planets"])
             self.ui.planet_list.setRowCount(0)
             self.ui.tradeRoute_list.clear()
             self.ui.tradeRoute_list.setRowCount(0)
+            self.ui.tradeRoute_list.setHorizontalHeaderLabels(["Trade Routes"])
 
             self.repository = ModRepository(config.dataPath, self.ui)
             self.repository.update_ui()

@@ -158,6 +158,11 @@ class ModRepository:
         self.ui.add_unit_to_planet.clicked.connect(self.add_unit)
         self.ui.planetComboBox.currentIndexChanged.connect(self.update_forces_table)
         self.ui.edit_planet_action.triggered.connect(self.edit_planet)
+        self.ui.select_all_planets.clicked.connect(self.check_all_planets)
+        self.ui.deselect_all_planets.clicked.connect(self.uncheck_all_planets)
+        self.ui.select_all_tradeRoutes.clicked.connect(self.check_all_tradeRoutes)
+        self.ui.deselect_all_tradeRoutes.clicked.connect(self.uncheck_all_tradeRoutes)
+
         self.ui.edit_unit_action.triggered.connect(self.edit_unit)
         self.update_selected_planets()
         self.update_seleceted_trade_routes()
@@ -352,3 +357,41 @@ class ModRepository:
         if owner_name in [x.name for x in self.factions]:
             owner_index = [x.name for x in self.factions].index(owner_name)
         planet.planet_owners[self.ui.select_GC.currentText()] = self.factions[owner_index]
+    def check_all_planets(self):
+        self.ui.planet_list.itemChanged.disconnect(self.onCellChanged)
+        rowCount = self.ui.planet_list.rowCount()
+        for i in range(rowCount):
+            self.ui.planet_list.item(i,0).setCheckState(QtCore.Qt.Checked)
+        campaign = self.campaigns[self.ui.select_GC.currentText()]
+        campaign.planets = self.planets
+
+        self.ui.planet_list.itemChanged.connect(self.onCellChanged)
+        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)
+    def uncheck_all_planets(self):
+        self.ui.planet_list.itemChanged.disconnect(self.onCellChanged)
+        rowCount = self.ui.planet_list.rowCount()
+        for i in range(rowCount):
+            self.ui.planet_list.item(i,0).setCheckState(QtCore.Qt.Unchecked)
+        campaign = self.campaigns[self.ui.select_GC.currentText()]
+        campaign.planets = []
+        self.ui.planet_list.itemChanged.connect(self.onCellChanged)
+        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)
+    def check_all_tradeRoutes(self):
+        self.ui.tradeRoute_list.itemChanged.disconnect(self.ontradeRouteCellChanged)
+        rowCount = self.ui.tradeRoute_list.rowCount()
+        for i in range(rowCount):
+            self.ui.tradeRoute_list.item(i,0).setCheckState(QtCore.Qt.Checked)
+        campaign = self.campaigns[self.ui.select_GC.currentText()]
+        campaign.trade_routes = self.trade_routes
+
+        self.ui.tradeRoute_list.itemChanged.connect(self.ontradeRouteCellChanged)
+        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)
+    def uncheck_all_tradeRoutes(self):
+        self.ui.tradeRoute_list.itemChanged.disconnect(self.ontradeRouteCellChanged)
+        rowCount = self.ui.tradeRoute_list.rowCount()
+        for i in range(rowCount):
+            self.ui.tradeRoute_list.item(i,0).setCheckState(QtCore.Qt.Unchecked)
+        campaign = self.campaigns[self.ui.select_GC.currentText()]
+        campaign.trade_routes = []
+        self.ui.tradeRoute_list.itemChanged.connect(self.ontradeRouteCellChanged)
+        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.planets)
