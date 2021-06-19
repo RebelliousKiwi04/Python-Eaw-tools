@@ -3,14 +3,14 @@ import sys, os
 from PyQt5 import QtCore
 from PyQt5 import QtGui
 import lxml.etree as et
-from gameObject.GameObjectRepository import ModRepository
+from UI_Manager import UI_Presenter
 from ui.MainWindow import MainUIWindow
 #sys.setrecursionlimit(10**6)
 
 originalPath = os.path.dirname(sys.argv[0])
 
 def validate_datapath(config):
-    while config.dataPath == None or not config.dataPath.endswith(('DATA', 'Data', 'data')):
+    if config.dataPath == None or not config.dataPath.endswith(('DATA', 'Data', 'data')):
         msg = QMessageBox()
         msg.setWindowTitle('Error!')
         msg.setText('Point To a Vaild EaW Mod Data Folder!')
@@ -18,6 +18,9 @@ def validate_datapath(config):
         directory = str(QFileDialog.getExistingDirectory())
         if directory.endswith(('DATA', 'Data', 'data')):
             config.dataPath = directory
+        return False
+    else:
+        return True
 class Config:
     def __init__(self):
         self.configFile = "config.xml"
@@ -32,40 +35,34 @@ class EaWModTool:
         self.config = config
         self.ui = MainWindow
         self.originalPath = originalPath
-        self.repository = ModRepository(config.dataPath, self.ui)
-        self.repository.update_ui()
-        self.ui.select_GC.currentIndexChanged.connect(self.repository.select_GC)
-        self.ui.map.planetSelectedSignal.connect(self.repository.onPlanetSelection)
-        self.ui.main_window.setWindowTitle("EaW Mod Tool - " + self.ui.select_GC.currentText())
+        self.presenter = UI_Presenter(self.ui, config.dataPath)
+        self.repository = self.presenter.repository
+        self.presenter.update_tabs()
+
         self.ui.setDataFolderAction.triggered.connect(self.set_datapath)
     def set_datapath(self):
         directory = str(QFileDialog.getExistingDirectory())
         if directory != self.config.dataPath:
             self.config.dataPath = directory
-            validate_datapath(self.config)
-            self.ui.planet_list.itemChanged.disconnect(self.repository.onCellChanged)
-            self.ui.map.planetSelectedSignal.disconnect(self.repository.onPlanetSelection)
-            self.ui.tradeRoute_list.itemChanged.disconnect(self.repository.ontradeRouteCellChanged)
-            self.ui.add_unit_to_planet.clicked.disconnect(self.repository.add_unit)
-            self.ui.planetComboBox.currentIndexChanged.disconnect(self.repository.update_forces_table)
-            self.ui.ownerSelection.currentIndexChanged.disconnect(self.repository.change_planet_owner)
-            self.ui.select_GC.currentIndexChanged.disconnect(self.repository.select_GC)
-            self.ui.select_GC.clear()
-            self.ui.ownerSelection.clear()
-            self.ui.planetComboBox.clear()
-            self.ui.forcesListWidget.clear()
-            self.ui.forcesListWidget.setRowCount(0)
-            self.ui.planet_list.clear()
-            self.ui.planet_list.setHorizontalHeaderLabels(["Planets"])
-            self.ui.planet_list.setRowCount(0)
-            self.ui.tradeRoute_list.clear()
-            self.ui.tradeRoute_list.setRowCount(0)
-            self.ui.tradeRoute_list.setHorizontalHeaderLabels(["Trade Routes"])
+            if validate_datapath(self.config):
+                self.presenter.disconnect_triggers()
+                self.ui.select_GC.clear()
+                self.ui.ownerSelection.clear()
+                self.ui.planetComboBox.clear()
+                self.ui.forcesListWidget.clear()
+                self.ui.forcesListWidget.setRowCount(0)
+                self.ui.planet_list.clear()
+                self.ui.planet_list.setHorizontalHeaderLabels(["Planets"])
+                self.ui.planet_list.setRowCount(0)
+                self.ui.tradeRoute_list.clear()
+                self.ui.tradeRoute_list.setRowCount(0)
+                self.ui.tradeRoute_list.setHorizontalHeaderLabels(["Trade Routes"])
 
-            self.repository = ModRepository(config.dataPath, self.ui)
-            self.repository.update_ui()
-            self.ui.select_GC.currentIndexChanged.connect(self.repository.select_GC)
-            self.ui.map.planetSelectedSignal.connect(self.repository.onPlanetSelection)
+                self.presenter = UI_Presenter(self.ui, self.config.dataPath)
+                self.repository = self.presenter.repository
+        
+                self.repository.update_tabs()
+
 
 
 app = QApplication(sys.argv)
