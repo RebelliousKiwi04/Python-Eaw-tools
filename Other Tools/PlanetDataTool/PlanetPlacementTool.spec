@@ -4,7 +4,7 @@
 block_cipher = None
 
 
-a = Analysis(['PlanetPlacementTool.py'],
+a = Analysis(['PlanetPlacementTool.pyw'],
              pathex=['C:\\Users\\Christopher\\Desktop\\Python EaW tool\\Other Tools\\PlanetDataTool'],
              binaries=[],
              datas=[],
@@ -31,4 +31,4 @@ exe = EXE(pyz,
           upx=True,
           upx_exclude=[],
           runtime_tmpdir=None,
-          console=True )
+          console=False )
