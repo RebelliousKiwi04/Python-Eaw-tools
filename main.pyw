@@ -47,7 +47,6 @@ class EaWModTool:
             if validate_datapath(self.config):
                 self.presenter.disconnect_triggers()
                 self.ui.select_GC.clear()
-                self.ui.ownerSelection.clear()
                 self.ui.planetComboBox.clear()
                 self.ui.forcesListWidget.clear()
                 self.ui.forcesListWidget.setRowCount(0)

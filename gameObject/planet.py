@@ -36,10 +36,8 @@ class Planet:
                 return float(entry[0]), float(entry[1])
     def reset_starting_forces_table(self, campaigns):
         self.starting_forces = {}
-        self.planet_owners = {}
         for name in campaigns.keys():
             self.starting_forces[name] = []
-            self.planet_owners[name] = None
     def add_campaign_to_table(self, name):
         self.starting_forces[name] = []
     def get_model_name(self):

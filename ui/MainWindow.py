@@ -176,22 +176,16 @@ class MainUIWindow:
         self.planetComboBox: QComboBox = QComboBox()
         self.add_unit_to_planet= QPushButton("Add Unit...")
 
-        self.OwnerLayout = QHBoxLayout()
-        self.ownerLabel = QLabel()
-        self.ownerLabel.setObjectName(u"OwnerLabel")
         font = QFont()
         font.setPointSize(10)
-        self.ownerLabel.setFont(font)
-        self.OwnerLayout.addWidget(self.ownerLabel)
-        self.ownerLabel.setText('Planet Owner:')
-        self.ownerSelection = QComboBox()
-        self.OwnerLayout.addWidget(self.ownerSelection)
 
-        self.forcesListWidget = PyQtUtil.construct_table_widget(["Unit", "Power", "Tech"], 3)        
+
+        self.forcesListWidget = PyQtUtil.construct_table_widget(["Unit", "Power", "Owner", "Tech"], 4)        
         header = self.forcesListWidget.horizontalHeader()       
         header.setSectionResizeMode(0, QtWidgets.QHeaderView.Stretch)
         header.setSectionResizeMode(1, QtWidgets.QHeaderView.ResizeToContents)
-        header.setSectionResizeMode(2, QtWidgets.QHeaderView.ResizeToContents)
+        header.setSectionResizeMode(2, QtWidgets.QHeaderView.Stretch)
+        header.setSectionResizeMode(3, QtWidgets.QHeaderView.ResizeToContents)
         #Far Right tab
         self.scriptModeComboBox = QComboBox()
 
@@ -266,7 +260,6 @@ class MainUIWindow:
 
 
         self.__startingForces.layout().addWidget(self.planetComboBox)
-        self.__startingForces.layout().addLayout(self.OwnerLayout)
         self.__startingForces.layout().addWidget(self.add_unit_to_planet)
         self.__startingForces.layout().addWidget(self.forcesListWidget)
         self.map = GalacticMap(self.window_splitter)

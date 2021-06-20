@@ -43,7 +43,13 @@ class AddUnitWindow:
         self.UnitTypeSelection.setLayoutDirection(Qt.LeftToRight)
         
 
-
+        self.ownerLayout = QHBoxLayout()
+        self.OwnerLabel =QLabel()
+        self.OwnerLabel.setFont(font)
+        self.OwnerLabel.setText("Owner:")
+        self.OwnerDropdown = QComboBox()
+        self.ownerLayout.addWidget(self.OwnerLabel)
+        self.ownerLayout.addWidget(self.OwnerDropdown)
 
         self.buttonLayout = QHBoxLayout()
         self.OkCancelButtons = QDialogButtonBox()
@@ -57,6 +63,7 @@ class AddUnitWindow:
         self.layout.addWidget(self.UnitTypeSelection)
         self.layout.addLayout(self.techLayout)
         self.layout.addLayout(self.QuantityLayout)
+        self.layout.addLayout(self.ownerLayout)
         self.layout.addLayout(self.buttonLayout)
         
         self.dialogWindow.setWindowTitle('Add Starting Forces')
