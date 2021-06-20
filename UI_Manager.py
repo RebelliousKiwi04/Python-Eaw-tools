@@ -7,7 +7,7 @@ import os, sys
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore
 from PyQt5 import QtGui
-
+from ui.CampaignProperties import CampaignPropertiesWindow
 
 class UI_Presenter:
     def __init__(self, ui, mod_dir):
@@ -27,6 +27,7 @@ class UI_Presenter:
         self.ui.edit_unit_action.triggered.connect(self.edit_unit)
         self.ui.select_GC.currentIndexChanged.connect(self.select_GC)
         self.ui.map.planetSelectedSignal.connect(self.onPlanetSelection)
+        self.ui.edit_gc_properties.clicked.connect(self.show_campaign_properties)
         self.ui.main_window.setWindowTitle("EaW Mod Tool - " + self.ui.select_GC.currentText())
     def disconnect_triggers(self):
         self.ui.planet_list.itemChanged.disconnect(self.onCellChanged)
@@ -41,6 +42,7 @@ class UI_Presenter:
         self.ui.edit_unit_action.triggered.disconnect(self.edit_unit)
         self.ui.select_GC.currentIndexChanged.disconnect(self.select_GC)
         self.ui.map.planetSelectedSignal.disconnect(self.onPlanetSelection)
+        self.ui.edit_gc_properties.clicked.disconnect(self.show_campaign_properties)
     def update_tabs(self):
         for planet in self.repository.planets:
             rowCount = self.ui.planet_list.rowCount()
@@ -301,3 +303,7 @@ class UI_Presenter:
         campaign.trade_routes = []
         self.ui.tradeRoute_list.itemChanged.connect(self.ontradeRouteCellChanged)
         self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets)
+    def show_campaign_properties(self):
+        campaign = self.repository.campaigns[self.ui.select_GC.currentText()]
+        window = CampaignPropertiesWindow(campaign)
+        
