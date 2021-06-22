@@ -12,7 +12,6 @@ class TextEditor(QWidget):
         self.setLayout(QVBoxLayout())
         self.toolbar.setIconSize(QSize(30, 30))
         self.textWindow = LuaEditor()
-
         self.layout().addWidget(self.toolbar)
 
         open_file_action = QAction(QIcon(os.path.join('images', 'blue-folder-open-document.png')), "Open file...", self)
@@ -70,7 +69,9 @@ class TextEditor(QWidget):
         self.layout().addWidget(self.textWindow)
 
 
+
 class LuaEditor(Qsci.QsciScintilla):
+    ARROW_MARKER_NUM = 8
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setLexer(Qsci.QsciLexerLua(self))
@@ -78,12 +79,87 @@ class LuaEditor(Qsci.QsciScintilla):
         
         print('hi')
         end""")
+        font = QFont()
+        font.setPointSize(10)
+        fontmetrics = QFontMetrics(font)
+        self.setMarginsFont(font)
+        self.setMarginWidth(0, fontmetrics.width("0000") + 6)
+        self.setMarginLineNumbers(0, True)
+        self.setCallTipsVisible(0)
+        self.setMarginsBackgroundColor(QColor("#cccccc"))
+        #self.setAutocompletionSource(Qsci.QsciScintilla.AcsAll)
+        self.setMarginSensitivity(1, True)
+        self.marginClicked.connect(self.on_margin_clicked)
+        self.markerDefine(Qsci.QsciScintilla.RightArrow,self.ARROW_MARKER_NUM)
+        self.setMarkerBackgroundColor(QColor("#ee1111"),self.ARROW_MARKER_NUM)
+        self.setBraceMatching(Qsci.QsciScintilla.SloppyBraceMatch)
+        self.setIndentationGuides(True)
+        self.setCaretLineVisible(True)
+        self.setCaretLineBackgroundColor(QColor("#ffe4e4"))
+
+        self.SendScintilla(Qsci.QsciScintilla.SCI_SETHSCROLLBAR, 0)
+    def on_margin_clicked(self, nmargin, nline, modifiers):
+        # Toggle marker for the line the margin was clicked on
+        if self.markersAtLine(nline) != 0:
+            self.markerDelete(nline, self.ARROW_MARKER_NUM)
+        else:
+            self.markerAdd(nline, self.ARROW_MARKER_NUM)
     def set_text(self,text):
         self.setText(text)
     def append_text(self,text):
         currentText = self.text()
         currentText.append("\n"+text)
         self.setText(currentText)
+
+class ActionsWidget(QWidget):
+    def __init__(self, parent=None) -> None:
+        super().__init__(parent)
+        self.setLayout(QVBoxLayout())
+        self.ActiveEnvironmentLayout = QVBoxLayout()
+        self.sublayout1 = QHBoxLayout()
+        self.ActiveEnvironmentLabel = QLabel("Active Environment:")
+        self.ActiveEnvironment = QComboBox()
+        self.sublayout1.addWidget(self.ActiveEnvironmentLabel)
+        self.sublayout1.addWidget(self.ActiveEnvironment)
+        self.EnvironmentProperties = QPushButton("Environment Properties")
+        self.ActiveEnvironmentLayout.addLayout(self.sublayout1)
+
+        self.ButtonLayout = QHBoxLayout()
+        self.NewEnviro = QPushButton("New Environment")
+        self.ButtonLayout.addWidget(self.NewEnviro)
+        self.ButtonLayout.addWidget(self.EnvironmentProperties)
+        self.ActiveEnvironmentLayout.addLayout(self.ButtonLayout)
+        self.layout().addLayout(self.ActiveEnvironmentLayout)
+
+        self.enviroActions = QHBoxLayout()
+        self.SpawnUnit = QPushButton("Add Unit To Environment")
+        self.RemoveUnit = QPushButton("Remove Unit From Environment")
+        self.enviroActions.addWidget(self.SpawnUnit)
+        self.enviroActions.addWidget(self.RemoveUnit)
+
+        self.layout().addLayout(self.enviroActions)
+
+        self.scriptLayout = QHBoxLayout()
+        self.scriptLayout.addWidget(QLabel("Current Active Script:"))
+        self.scriptName = QLineEdit()
+        self.scriptLayout.addWidget(self.scriptName)
+        self.openScriptButton = QToolButton()
+        self.openScriptButton.setText("...")
+        self.scriptLayout.addWidget(self.openScriptButton)
+
+        self.layout().addLayout(self.scriptLayout)
+
+        self.layout().addWidget(QLabel("Actions:"))
+        self.ActionsLayout = QHBoxLayout()
+        self.funcLayout = QVBoxLayout()
+        self.triggerFunc = QPushButton("Trigger Function")
+        self.ActionsLayout.addLayout(self.funcLayout)
+        self.funcLayout.addWidget(self.triggerFunc)
+        self.layout().addLayout(self.ActionsLayout)
+        self.layout().addItem(QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding))
+
+
+
 
 class ScriptTestWindow:
     def __init__(self) -> None:
@@ -92,7 +168,7 @@ class ScriptTestWindow:
         self.dialogWindow = QDialog()
         self.layout = QHBoxLayout()
         self.dialogWindow.setLayout(self.layout)
-        self.dialogWindow.setWindowTitle("Edit Unit")
+        self.dialogWindow.setWindowTitle("Edit/Test Script")
         font = QFont()
         font.setPointSize(10)
 
@@ -100,7 +176,8 @@ class ScriptTestWindow:
         self.layout.addWidget(TextEditor())
 
         self.RightSideLayout = QVBoxLayout()
-        self.actionsLayout = QWidget()
+        self.actionsLayout = ActionsWidget()
+
 
         self.RightSideLayout.addWidget(self.actionsLayout)
 
@@ -115,7 +192,7 @@ class ScriptTestWindow:
         self.TerminalWindow.setText("Lua Test Terminal V1.0\n>>>")
         self.RightSideLayout.addWidget(self.TerminalWindow)
         self.layout.addLayout(self.RightSideLayout)
-        
+        self.dialogWindow.setGeometry(720,720,720,720)
 
 
 
