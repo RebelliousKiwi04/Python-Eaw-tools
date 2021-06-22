@@ -2,9 +2,17 @@ import lupa
 from lupa import LuaRuntime
 outPutDebug = open('outputDebug.txt', 'w')
 ailog = open('AILog.txt', 'w')
+
+
+
+
 class GameObject:
     def __init__(self, obj_name):
         self.name = obj_name
+        self.script = None
+    def init_gameObject_script() -> LuaRuntime:
+        lua = LuaRuntime()
+
 
 class GameObjectType:
     def __init__(self, obj_name):
@@ -98,7 +106,15 @@ class Finding_GameObjects:
 def printToTerminal(val):
     print(str(val))
 
-def init_eaw_environment(file=None, Object=None):
+
+
+def init_tactical_lua_environment(file=None):
+    lua = LuaRuntime()
+    lua.globals().Script = file
+    lua.globals().ServiceRate = 1
+    lua.globals().UnitServiceRate = 1
+
+def init_galactic_eaw_environment(file=None, Object=None):
     lua = LuaRuntime()
 
     #Global Variables
@@ -115,10 +131,10 @@ def init_eaw_environment(file=None, Object=None):
 
 
     #General Functions
-    lua.globals().Get_Event = Get_Event
+    lua.globals().GetEvent = GetEvent
 
-    lua.globals().StringCompare = StringCompare
-    lua.globals().Game_Message = printToTerminal
+    lua.globals().StringCompare = BasicEaWFunctions.StringCompare
+    lua.globals().Game_Message = BasicEaWFunctions.Game_Message
 
     lua.globals().Find_First_Object = Finding_GameObjects.Find_First_Object
     return lua

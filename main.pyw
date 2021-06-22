@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import QApplication,QFileDialog,QMessageBox
 import sys, os
 from PyQt5 import QtCore
 from PyQt5 import QtGui
-import lxml.etree as et
+import lxml.etree as et,atexit
 from UI_Manager import UI_Presenter
 from ui.MainWindow import MainUIWindow
 #sys.setrecursionlimit(10**6)
@@ -39,7 +39,7 @@ class EaWModTool:
         self.presenter = UI_Presenter(self.ui, config.dataPath)
         self.repository = self.presenter.repository
         self.presenter.update_tabs()
-
+        atexit.register(self.closeEvent)
         self.ui.setDataFolderAction.triggered.connect(self.set_datapath)
     def set_datapath(self):
         directory = str(QFileDialog.getExistingDirectory())
@@ -62,6 +62,21 @@ class EaWModTool:
                 self.repository = self.presenter.repository
         
                 self.repository.update_tabs()
+    def closeEvent(self):
+        messageBox = QMessageBox()
+        title = "Quit Application?"
+        message = "WARNING !!\n\nIf you quit without saving, any changes made to the file will be lost.\n\nSave file before quitting?"
+        messageBox.exec()
+        # reply = messageBox.question(self, title, message, messageBox.Yes | messageBox.No |
+        #         messageBox.Cancel, messageBox.Cancel)
+        # if reply == messageBox.Yes:
+        #     return_value = self.save_current_file()
+        #     if return_value == False:
+        #         event.ignore()
+        # elif reply == messageBox.No:
+        #     event.accept()
+        # else:
+        #     event.ignore()
 
 
 
