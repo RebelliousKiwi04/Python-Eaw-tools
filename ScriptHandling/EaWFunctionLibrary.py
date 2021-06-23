@@ -4,6 +4,11 @@ outPutDebug = open('outputDebug.txt', 'w')
 ailog = open('AILog.txt', 'w')
 
 
+def loadFile(fileName):
+    file = open(fileName, 'r').read()
+    string = 'require("PGBase")\n'
+    finalString = string+file
+    return finalString
 
 
 class GameObject:

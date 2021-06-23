@@ -3,6 +3,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5 import QtCore
 from PyQt5 import Qsci
+from Utilities import PyQtUtil
 import sys,sched, time,os
 
 class TextEditor(QWidget):
@@ -96,7 +97,7 @@ class LuaEditor(Qsci.QsciScintilla):
         self.setIndentationGuides(True)
         self.setCaretLineVisible(True)
         self.setCaretLineBackgroundColor(QColor("#ffe4e4"))
-
+        self.setAutoIndent(True)
         self.SendScintilla(Qsci.QsciScintilla.SCI_SETHSCROLLBAR, 0)
     def on_margin_clicked(self, nmargin, nline, modifiers):
         # Toggle marker for the line the margin was clicked on
@@ -104,8 +105,6 @@ class LuaEditor(Qsci.QsciScintilla):
             self.markerDelete(nline, self.ARROW_MARKER_NUM)
         else:
             self.markerAdd(nline, self.ARROW_MARKER_NUM)
-    def set_text(self,text):
-        self.setText(text)
     def append_text(self,text):
         currentText = self.text()
         currentText.append("\n"+text)
@@ -117,7 +116,10 @@ class ActionsWidget(QWidget):
         self.setLayout(QVBoxLayout())
         self.ActiveEnvironmentLayout = QVBoxLayout()
         self.sublayout1 = QHBoxLayout()
+        font = QFont()
+        font.setPointSize(10)
         self.ActiveEnvironmentLabel = QLabel("Active Environment:")
+        self.ActiveEnvironmentLabel.setFont(font)
         self.ActiveEnvironment = QComboBox()
         self.sublayout1.addWidget(self.ActiveEnvironmentLabel)
         self.sublayout1.addWidget(self.ActiveEnvironment)
@@ -140,7 +142,10 @@ class ActionsWidget(QWidget):
         self.layout().addLayout(self.enviroActions)
 
         self.scriptLayout = QHBoxLayout()
-        self.scriptLayout.addWidget(QLabel("Current Active Script:"))
+        self.scriptLabel = QLabel("Current Active Script:")
+        self.scriptLayout.addWidget(self.scriptLabel)
+        self.scriptLabel.setFont(font)
+
         self.scriptName = QLineEdit()
         self.scriptLayout.addWidget(self.scriptName)
         self.openScriptButton = QToolButton()
@@ -148,15 +153,28 @@ class ActionsWidget(QWidget):
         self.scriptLayout.addWidget(self.openScriptButton)
 
         self.layout().addLayout(self.scriptLayout)
-
-        self.layout().addWidget(QLabel("Actions:"))
+        self.actionsLabel =QLabel("Actions:")
+        self.layout().addWidget(self.actionsLabel)
+        self.actionsLabel.setFont(font)
         self.ActionsLayout = QHBoxLayout()
         self.funcLayout = QVBoxLayout()
-        self.triggerFunc = QPushButton("Trigger Function")
-        self.ActionsLayout.addLayout(self.funcLayout)
-        self.funcLayout.addWidget(self.triggerFunc)
+        self.triggerFunc = QPushButton("        Trigger Function        ")
+        #self.ActionsLayout.addLayout(self.funcLayout)
+        
+
+
+        self.globalValueLayout = QVBoxLayout()
+        self.GlobalValueTable = PyQtUtil.construct_table_widget(["Global Values"],1) 
+
+        self.globalValueLayout.addWidget(self.GlobalValueTable)
+
+        self.ManageGlobalvalues = QPushButton("Manage Global Values")
+
+        self.globalValueLayout.addWidget(self.ManageGlobalvalues)
+        self.ActionsLayout.addLayout(self.globalValueLayout)
+        self.globalValueLayout.addWidget(self.triggerFunc)
         self.layout().addLayout(self.ActionsLayout)
-        self.layout().addItem(QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding))
+        #self.layout().addItem(QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding))
 
 
 
@@ -210,16 +228,14 @@ class GameObject:
 lua.globals().GameObject = GameObject
 try:
     lua.execute('''
-    require("RequireTest")
+    require("RequireTesdwadawt")
     classInstance = GameObject()
     print(classInstance.hi)
     TestRequire('Hiiii Lua')
-    adw
+
     ''')
 except Exception as e:
     print("Error!", e)
     Script = ScriptTestWindow()
-    Script.TerminalWindow.setText("Lua Test Terminal V1.0\n\n"+str('>>> '+"ERROR! Syntax Error on line: [2]"))
+    Script.TerminalWindow.setText("Lua Test Terminal V1.0\n\n"+str('>>> ' +str(e)))
     Script.dialogWindow.exec()
-
-
