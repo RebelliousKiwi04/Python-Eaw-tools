@@ -210,7 +210,7 @@ class ScriptTestWindow:
         self.TerminalWindow.setText("Lua Test Terminal V1.0\n>>>")
         self.RightSideLayout.addWidget(self.TerminalWindow)
         self.layout.addLayout(self.RightSideLayout)
-        self.dialogWindow.setGeometry(720,720,720,720)
+        self.dialogWindow.setGeometry(900,900,900,900)
 
 
 
@@ -228,14 +228,16 @@ class GameObject:
 lua.globals().GameObject = GameObject
 try:
     lua.execute('''
-    require("RequireTesdwadawt")
-    classInstance = GameObject()
-    print(classInstance.hi)
-    TestRequire('Hiiii Lua')
+function TestCall()
+require("aaaaa")
+end
+TestCall()
 
     ''')
 except Exception as e:
     print("Error!", e)
     Script = ScriptTestWindow()
-    Script.TerminalWindow.setText("Lua Test Terminal V1.0\n\n"+str('>>> ' +str(e)))
+    string = str(e)
+    string = string.replace('Christopher', 'Chloe')
+    Script.TerminalWindow.setText("Lua Test Terminal V1.0\n\n"+str('>>> ' +string))
     Script.dialogWindow.exec()
