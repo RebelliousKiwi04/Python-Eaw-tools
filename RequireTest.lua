@@ -1,7 +1,7 @@
 function TestRequire(string)
     print(string)
 end
-fail
+
 
 require("RequireTesdwadawt")
 classInstance = GameObject()
