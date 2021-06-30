@@ -3,8 +3,17 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5 import QtCore
 from PyQt5 import Qsci
-from Utilities import PyQtUtil
+from ui.Utilities import PyQtUtil
 import sys,sched, time,os
+from ScriptHandling.EaWFunctionLibrary import *
+#     def require(fileName):
+#         if '.lua' not in fileName.lower():
+#             fileName = fileName +'.lua'
+#         for folder in self.path:
+#             if fileName in os.listdir(folder):
+#                 try:
+#                     lua = init_galactic_eaw_environment(self.mod_dir)
+# def replaceRequires(contents):
 
 class TextEditor(QWidget):
     def __init__(self,parent=None):
@@ -76,10 +85,6 @@ class LuaEditor(Qsci.QsciScintilla):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setLexer(Qsci.QsciLexerLua(self))
-        self.setText("""function Test(func)  
-        
-        print('hi')
-        end""")
         font = QFont()
         font.setPointSize(10)
         fontmetrics = QFontMetrics(font)
@@ -105,10 +110,7 @@ class LuaEditor(Qsci.QsciScintilla):
             self.markerDelete(nline, self.ARROW_MARKER_NUM)
         else:
             self.markerAdd(nline, self.ARROW_MARKER_NUM)
-    def append_text(self,text):
-        currentText = self.text()
-        currentText.append("\n"+text)
-        self.setText(currentText)
+        
 
 class ActionsWidget(QWidget):
     def __init__(self, parent=None) -> None:
@@ -125,7 +127,7 @@ class ActionsWidget(QWidget):
         self.sublayout1.addWidget(self.ActiveEnvironment)
         self.EnvironmentProperties = QPushButton("Environment Properties")
         self.ActiveEnvironmentLayout.addLayout(self.sublayout1)
-
+        self.ActiveEnvironment.addItem("Default Environment")
         self.ButtonLayout = QHBoxLayout()
         self.NewEnviro = QPushButton("New Environment")
         self.ButtonLayout.addWidget(self.NewEnviro)
@@ -149,7 +151,7 @@ class ActionsWidget(QWidget):
         self.scriptName = QLineEdit()
         self.scriptLayout.addWidget(self.scriptName)
         self.openScriptButton = QToolButton()
-        self.openScriptButton.setText("...")
+        self.openScriptButton.setText("Load New Script")
         self.scriptLayout.addWidget(self.openScriptButton)
 
         self.layout().addLayout(self.scriptLayout)
@@ -180,7 +182,13 @@ class ActionsWidget(QWidget):
 
 
 class ScriptTestWindow:
-    def __init__(self) -> None:
+    def __init__(self, mod_dir, gameobjectrepo) -> None:
+        self.mod_dir = mod_dir
+        self.script_dir = mod_dir + "/scripts/"
+        self.library = self.script_dir + 'library/'
+        self.story = self.script_dir +'story/'
+        self.misc = self.script_dir +'miscallaneous/'
+        self.repository = gameobjectrepo
         Fontdb = QFontDatabase()
         idd = Fontdb.addApplicationFont("CascadiaCodePL.ttf")
         self.dialogWindow = QDialog()
@@ -191,7 +199,8 @@ class ScriptTestWindow:
         font.setPointSize(10)
 
         self.EditFile = QTextEdit()
-        self.layout.addWidget(TextEditor())
+        self.editor = TextEditor()
+        self.layout.addWidget(self.editor)
 
         self.RightSideLayout = QVBoxLayout()
         self.actionsLayout = ActionsWidget()
@@ -210,34 +219,50 @@ class ScriptTestWindow:
         self.TerminalWindow.setText("Lua Test Terminal V1.0\n>>>")
         self.RightSideLayout.addWidget(self.TerminalWindow)
         self.layout.addLayout(self.RightSideLayout)
-        self.dialogWindow.setGeometry(900,900,900,900)
+        self.load_file()
+        screenSize = QApplication.primaryScreen().size()
+        #self.dialogWindow.setGeometry(QRect(screenSize.width(), screenSize.height()))
+        self.dialogWindow.setWindowFlags(QtCore.Qt.WindowCloseButtonHint | QtCore.Qt.WindowMinimizeButtonHint | QtCore.Qt.WindowMaximizeButtonHint)
+    def append_text(self,text):
+        currentText = self.TerminalWindow.toPlainText()
+        currentText = currentText + "\n"+text
+        currentText = currentText.replace('cjsan', 'Chloe')
+        currentText = currentText.replace('Christopher', 'Chloe')
+        print(currentText)
+        self.TerminalWindow.setText(currentText)
+    def load_file(self, filename="Library/PGBase.lua"):
+        file = open(self.script_dir+filename, 'r')
+        lines = file.readlines()
+        file.close()
+        file = open(self.script_dir+filename, 'r')
+        contents = file.read()
+        self.editor.textWindow.setText(contents)
+        if filename.lower() != 'library/pgbase.lua':
+            contents = '''require("PGBase")\n'''+contents
 
+        for i in lines:
+            if 'require' in i:
+                print(i)
+                line = i
+                line = line.replace('require("','')
+                line = line.replace('")','')
+                line = line.replace("\n", '')
+                print(line+'.lua')
+        contents = contents.replace('require("', 'require("' +self.library)
+        contents = contents.replace("require('", "require('" +self.library)
 
+        if 'function definitions(' in contents.lower():
+            contents = contents +'\n Definitions()'
 
+        fileString=filename.lower().replace('library/', '')
+        fileString=fileString.replace('story/','')
+        fileString=fileString.replace('miscallaneous/','')
+        self.actionsLayout.scriptName.setText(fileString)
+    
+        try:
+            lua = init_galactic_eaw_environment(mod_dir = self.mod_dir)
+            lua.execute(contents)
+        except Exception as e:
+            self.append_text(str(e))
+   # def trigger_func(self):
 
-app = QApplication(sys.argv)
-
-
-import lupa
-from lupa import LuaRuntime
-lua = LuaRuntime()
-class GameObject:
-    def __init__(self):
-        self.hi = "Hello"
-
-lua.globals().GameObject = GameObject
-try:
-    lua.execute('''
-function TestCall()
-require("aaaaa")
-end
-TestCall()
-
-    ''')
-except Exception as e:
-    print("Error!", e)
-    Script = ScriptTestWindow()
-    string = str(e)
-    string = string.replace('Christopher', 'Chloe')
-    Script.TerminalWindow.setText("Lua Test Terminal V1.0\n\n"+str('>>> ' +string))
-    Script.dialogWindow.exec()

@@ -84,11 +84,16 @@ app = QApplication(sys.argv)
 
 config = Config()
 
-
-MainWindow = MainUIWindow()
-#MainWindow.map.plotGalaxy(checkedPlanets, [], planets)
-validate_datapath(config)
-EaWModToolApp = EaWModTool(config, MainWindow, originalPath)
-
+try:
+    MainWindow = MainUIWindow()
+    #MainWindow.map.plotGalaxy(checkedPlanets, [], planets)
+    validate_datapath(config)
+    EaWModToolApp = EaWModTool(config, MainWindow, originalPath)
+except Exception as e:
+    msg = QMessageBox()
+    msg.setWindowTitle('Critical Error!')
+    msg.setText('Critical Python Error:', str(e))
+    msg.exec_()
+    sys.exit()
 
 sys.exit(app.exec_())

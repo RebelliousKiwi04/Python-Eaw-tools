@@ -196,7 +196,7 @@ class MainUIWindow:
         self.__addMenu: QMenu = QMenu("New", self.main_window)
         self.__editMenu: QMenu = QMenu("Edit", self.main_window)
 
-
+        self.test_script_action: QAction = QAction("Test Script", self.main_window)
         self.edit_planet_action = QAction("Planet", self.main_window)
         self.edit_unit_action = QAction("Unit", self.main_window)
         self.__openAutoConnectionSettingsAction: QAction = QAction("Auto connection settings", self.main_window)
@@ -231,6 +231,7 @@ class MainUIWindow:
         self.__menuBar.addMenu(self.__addMenu)
         self.__menuBar.addMenu(self.__editMenu)
         self.__menuBar.addMenu(self.__optionsMenu)
+        self.__menuBar.addAction(self.test_script_action)
         self.main_window.setMenuWidget(self.__menuBar)
 
         #Set up left pane tabs

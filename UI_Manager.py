@@ -1,12 +1,14 @@
 from ui.AddUnitWindow import AddUnitWindow
 from ui.EditUnitWindow import EditUnitWindow
 from ui.EditPlanetWindow import PlanetWindow
+from ui.ScriptEditWindow import ScriptTestWindow
 from gameObject.GameObjectRepository import ModRepository
 from gameObject.StartingForcesObject import StartingForcesObject
 import os, sys
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore
 from PyQt5 import QtGui
+from PyQt5.QtCore import *
 from ui.CampaignProperties import CampaignPropertiesWindow
 
 class UI_Presenter:
@@ -28,6 +30,7 @@ class UI_Presenter:
         self.ui.select_GC.currentIndexChanged.connect(self.select_GC)
         self.ui.map.planetSelectedSignal.connect(self.onPlanetSelection)
         self.ui.edit_gc_properties.clicked.connect(self.show_campaign_properties)
+        self.ui.test_script_action.triggered.connect(self.test_script)
         self.ui.main_window.setWindowTitle("EaW Mod Tool - " + self.ui.select_GC.currentText())
     def disconnect_triggers(self):
         self.ui.planet_list.itemChanged.disconnect(self.onCellChanged)
@@ -42,6 +45,8 @@ class UI_Presenter:
         self.ui.edit_unit_action.triggered.disconnect(self.edit_unit)
         self.ui.select_GC.currentIndexChanged.disconnect(self.select_GC)
         self.ui.map.planetSelectedSignal.disconnect(self.onPlanetSelection)
+        self.ui.test_script_action.triggered.disconnect(self.test_script)
+
         self.ui.edit_gc_properties.clicked.disconnect(self.show_campaign_properties)
     def update_tabs(self):
         for planet in self.repository.planets:
@@ -306,4 +311,10 @@ class UI_Presenter:
     def show_campaign_properties(self):
         campaign = self.repository.campaigns[self.ui.select_GC.currentText()]
         window = CampaignPropertiesWindow(campaign)
+    def test_script(self):
+        Script = ScriptTestWindow(self.mod_dir, self.repository)
+        #string = str(e)
+        #string = string.replace('Christopher', 'Chloe')
+        #Script.TerminalWindow.setText("Lua Test Terminal V1.0\n\n"+str('>>> ' +string))
+        Script.dialogWindow.exec()
         

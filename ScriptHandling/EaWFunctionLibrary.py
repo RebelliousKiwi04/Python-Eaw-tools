@@ -2,8 +2,7 @@ import lupa
 from lupa import LuaRuntime
 outPutDebug = open('outputDebug.txt', 'w')
 ailog = open('AILog.txt', 'w')
-
-
+import _pickle as pickle
 def loadFile(fileName):
     file = open(fileName, 'r').read()
     string = 'require("PGBase")\n'
@@ -17,6 +16,10 @@ class GameObject:
         self.script = None
     def init_gameObject_script() -> LuaRuntime:
         lua = LuaRuntime()
+
+class FleetObject:
+    def __init__(self):
+        pass
 
 
 class GameObjectType:
@@ -78,6 +81,37 @@ class BasicEaWFunctions:
     def Remove_Planet_Highlight(string):
         if planets != None and string in planets:
             print('Planet Highlight on planet ' + string+ ' Removed')
+    def Add_Planet_Highlight(string):
+        print("Planet Highlight added")
+    def Add_Radar_Blip(x,y):
+        print("Radar Blip Added")
+    def Hide_Sub_Object(gameObject, integer, string):
+        print("Some stuff that accesses alo object stuff")
+    def Hide_Object(gameObject, integer):
+        print("Object Hidden")
+    def Assemble_Fleet(gameObjectList):
+        return FleetObject()
+    def Is_Point_in_Asteroid_Field(args):
+        print("Unknown Function Purpose!")
+    def Is_Point_In_Ion_Storm(args):
+        print("Unknown Function Purpose!")
+    def Are_On_Opposite_Sides_Of_Shield(x,y,bool=False):
+        return True
+    def Activate_Retry_Dialog():
+        print("retry dialog activated")
+    def WaitForStarbase(planet,num):
+        print("Function Has No Purpose In Emulator!")
+    def WaitForGroundbase(planet, num):
+        print("Function has no known purpose in emulator")
+    def GetNextGroundBaseType(obj):
+        '''some stuff about getting next level here'''
+        return GameObjectType("Obj")
+    def GetNextStarbaseType(obj):
+        '''some stuff about getting next level here'''
+        return GameObjectType("Obj")
+    
+        
+    
     
 class GetCurrentTime:
     def __init__():
@@ -112,6 +146,28 @@ def printToTerminal(val):
     print(str(val))
 
 
+# class requireFunc:
+#     def __init__(self, mod_dir):
+#         self.mod_dir = mod_dir
+#         self.script_dir = mod_dir + "/scripts/"
+#         self.library = self.script_dir + 'library'
+#         self.story = self.script_dir +'story'
+#         self.misc = self.script_dir +'miscallaneous'
+#         self.path = []
+#         self.path.append(self.script_dir)
+#         self.path.append(self.library)
+#         self.path.append(self.story)
+#         self.path.append(self.misc)
+#     def require(fileName):
+#         if '.lua' not in fileName.lower():
+#             fileName = fileName +'.lua'
+#         for folder in self.path:
+#             if fileName in os.listdir(folder):
+#                 try:
+#                     lua = init_galactic_eaw_environment(self.mod_dir)
+
+
+    
 
 def init_tactical_lua_environment(file=None):
     lua = LuaRuntime()
@@ -119,7 +175,7 @@ def init_tactical_lua_environment(file=None):
     lua.globals().ServiceRate = 1
     lua.globals().UnitServiceRate = 1
 
-def init_galactic_eaw_environment(file=None, Object=None):
+def init_galactic_eaw_environment(file=None, Object=None, mod_dir=None):
     lua = LuaRuntime()
 
     #Global Variables
@@ -133,8 +189,8 @@ def init_galactic_eaw_environment(file=None, Object=None):
     lua.globals().AITarget = None
     lua.globals().Object = Object
     lua.globals().ScriptPoolCount = 1
-
-
+    # requireStuff = requireFunc(mod_dir)
+    # lua.globals().require = require
     #General Functions
     lua.globals().GetEvent = GetEvent
 

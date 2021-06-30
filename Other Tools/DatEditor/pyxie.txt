@@ -1,0 +1,3 @@
+--mingw64 --follow-imports --plugin-enable=qt-plugins --windows-disable-console --standalone --onefile
+
+--mingw64 --onefile --standalone --follow-imports --plugin-enable=qt-plugins --windows-disable-console --windows-company-name=Kiwi --windows-product-name=DatEditor --windows-product-version=1.0 --windows-file-description="Dat Editor for petroglyph language files" DatEditor.pyw
