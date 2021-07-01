@@ -4,7 +4,7 @@ from PyQt5.QtCore import *
 from PyQt5 import QtCore
 from PyQt5 import Qsci
 from ui.Utilities import PyQtUtil
-import sys,sched, time,os
+import sys,sched, time,os,re
 from ScriptHandling.EaWFunctionLibrary import *
 #     def require(fileName):
 #         if '.lua' not in fileName.lower():
@@ -184,10 +184,10 @@ class ActionsWidget(QWidget):
 class ScriptTestWindow:
     def __init__(self, mod_dir, gameobjectrepo) -> None:
         self.mod_dir = mod_dir
-        self.script_dir = mod_dir + "/scripts/"
-        self.library = self.script_dir + 'library/'
-        self.story = self.script_dir +'story/'
-        self.misc = self.script_dir +'miscallaneous/'
+        self.script_dir = mod_dir + "/Scripts/"
+        self.library = self.script_dir + 'Library/'
+        self.story = self.script_dir +'Story/'
+        self.misc = self.script_dir +'Miscallaneous/'
         self.repository = gameobjectrepo
         Fontdb = QFontDatabase()
         idd = Fontdb.addApplicationFont("CascadiaCodePL.ttf")
@@ -228,31 +228,21 @@ class ScriptTestWindow:
         currentText = currentText + "\n"+text
         currentText = currentText.replace('cjsan', 'Chloe')
         currentText = currentText.replace('Christopher', 'Chloe')
-        print(currentText)
         self.TerminalWindow.setText(currentText)
     def load_file(self, filename="Library/PGBase.lua"):
         file = open(self.script_dir+filename, 'r')
-        lines = file.readlines()
-        file.close()
-        file = open(self.script_dir+filename, 'r')
         contents = file.read()
+        file.close()
         self.editor.textWindow.setText(contents)
+        fileContents = contents
         if filename.lower() != 'library/pgbase.lua':
-            contents = '''require("PGBase")\n'''+contents
+            fileContents = '''require("PGBase")\n'''+fileContents
+        f = open('output.txt','w')
+        f.write(fileContents)
 
-        for i in lines:
-            if 'require' in i:
-                print(i)
-                line = i
-                line = line.replace('require("','')
-                line = line.replace('")','')
-                line = line.replace("\n", '')
-                print(line+'.lua')
-        contents = contents.replace('require("', 'require("' +self.library)
-        contents = contents.replace("require('", "require('" +self.library)
 
-        if 'function definitions(' in contents.lower():
-            contents = contents +'\n Definitions()'
+        if 'function definitions(' in fileContents.lower():
+            fileContents = fileContents +'\n Definitions()'
 
         fileString=filename.lower().replace('library/', '')
         fileString=fileString.replace('story/','')
@@ -260,8 +250,12 @@ class ScriptTestWindow:
         self.actionsLayout.scriptName.setText(fileString)
     
         try:
+            cwd = os.getcwd()
+            os.chdir(self.library)
             lua = init_galactic_eaw_environment(mod_dir = self.mod_dir)
-            lua.execute(contents)
+            lua.execute(fileContents)
+
+            os.chdir(cwd)
         except Exception as e:
             self.append_text(str(e))
    # def trigger_func(self):
