@@ -3,7 +3,6 @@ from PyQt5.QtWidgets import *
 from PyQt5.Qt import QStandardItemModel, QStandardItem
 from PyQt5.QtGui import QFont,QColor
 import os
-
 class StandardItem(QStandardItem):
     def __init__(self, txt='', font_size=12, set_bold=False, color=QColor(0, 0, 0)):
         super().__init__()
@@ -41,7 +40,6 @@ class SelectScriptWindow(QDialog):
             newItem = StandardItem(i)
             Scripts.appendRow(newItem)
             self.fullPaths[i] = fullPath
-            print(i,self.fullPaths[i])
             if os.path.isdir(i):
                 self.directories.append(fullPath)
                 self.addToTree(fullPath,newItem)  
@@ -65,7 +63,6 @@ class SelectScriptWindow(QDialog):
             absPath = os.path.abspath(i)
             if os.path.isfile(i):
                 self.fullPaths[i] = absPath
-                print(i,self.fullPaths[i])
                 secondaryItem = StandardItem(i)
                 item.appendRow(secondaryItem)
             elif os.path.isdir(i):

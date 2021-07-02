@@ -7,14 +7,7 @@ from ui.Utilities import PyQtUtil
 import sys,sched, time,os,re
 from ScriptHandling.EaWFunctionLibrary import *
 from ui.SelectScriptWindow import *
-#     def require(fileName):
-#         if '.lua' not in fileName.lower():
-#             fileName = fileName +'.lua'
-#         for folder in self.path:
-#             if fileName in os.listdir(folder):
-#                 try:
-#                     lua = init_galactic_eaw_environment(self.mod_dir)
-# def replaceRequires(contents):
+from slpp import slpp as luadecoder
 
 class TextEditor(QWidget):
     def __init__(self,parent=None):
@@ -167,11 +160,11 @@ class ActionsWidget(QWidget):
 
 
         self.globalValueLayout = QVBoxLayout()
-        self.GlobalValueTable = PyQtUtil.construct_table_widget(["Global Values"],1) 
+        self.GlobalValueTable = PyQtUtil.construct_table_widget(["Lua Globals"],1) 
 
         self.globalValueLayout.addWidget(self.GlobalValueTable)
 
-        self.ManageGlobalvalues = QPushButton("Manage Global Values")
+        self.ManageGlobalvalues = QPushButton("Manage Lua Globals")
 
         self.globalValueLayout.addWidget(self.ManageGlobalvalues)
         self.ActionsLayout.addLayout(self.globalValueLayout)
@@ -217,7 +210,7 @@ class ScriptTestWindow:
         terminalfont.setPointSize(8)
         self.TerminalWindow.setFont(terminalfont)
         self.TerminalWindow.setReadOnly(True)
-        self.TerminalWindow.setText("Lua Test Terminal V1.0\n>>>")
+        self.TerminalWindow.setText("Lua Test Terminal V1.1")
         self.RightSideLayout.addWidget(self.TerminalWindow)
         self.layout.addLayout(self.RightSideLayout)
         self.load_file()
@@ -226,11 +219,10 @@ class ScriptTestWindow:
         #self.dialogWindow.setGeometry(QRect(screenSize.width(), screenSize.height()))
         self.dialogWindow.setWindowFlags(QtCore.Qt.WindowCloseButtonHint | QtCore.Qt.WindowMinimizeButtonHint | QtCore.Qt.WindowMaximizeButtonHint)
     def append_text(self,text):
-        currentText = self.TerminalWindow.toPlainText()
-        currentText = currentText + "\n"+text
+        currentText = text
         currentText = currentText.replace('cjsan', 'Chloe')
         currentText = currentText.replace('Christopher', 'Chloe')
-        self.TerminalWindow.setText(currentText)
+        self.TerminalWindow.append('\n'+currentText)
     def select_file(self):
         selectWindow = SelectScriptWindow(self,self.script_dir,self.mod_dir)
         os.chdir(self.mod_dir)
@@ -246,8 +238,6 @@ class ScriptTestWindow:
         fileContents = contents
         if filename.lower() != 'pgbase.lua':
             fileContents = '''require("PGBase")\n'''+fileContents
-        f = open('output.txt','w')
-        f.write(fileContents)
 
 
         if 'function definitions(' in fileContents.lower():
@@ -261,12 +251,21 @@ class ScriptTestWindow:
         try:
             cwd = os.getcwd()
             os.chdir(self.library)
-            lua = init_galactic_eaw_environment(mod_dir = self.mod_dir, gameObjectRepo=self.repository,file=filename)
+            lua = init_galactic_eaw_environment(mod_dir = self.mod_dir, gameObjectRepo=self.repository,file=filename).lua
+            for i in lua.globals():
+                print(i)
+                rowCount = self.actionsLayout.GlobalValueTable.rowCount()
+                self.actionsLayout.GlobalValueTable.setRowCount(rowCount + 1)
+                item= QTableWidgetItem(i)
+                item.setFlags(QtCore.Qt.ItemIsEnabled)
+                self.actionsLayout.GlobalValueTable.setItem(rowCount, 0, item)
             lua.execute(fileContents)
 
             os.chdir(cwd)
+            self.append_text("No Initial Error Encountered In File: " +filename)
         except Exception as e:
-            self.append_text(str(e))
+            self.append_text('Critical Lua Error!\n'+str(e))
+            
         
    # def trigger_func(self):
 

@@ -2,13 +2,12 @@ import lupa
 from lupa import LuaRuntime
 outPutDebug = open('outputDebug.txt', 'w')
 ailog = open('AILog.txt', 'w')
-import _pickle as pickle
+
 def loadFile(fileName):
     file = open(fileName, 'r').read()
     string = 'require("PGBase")\n'
     finalString = string+file
     return finalString
-
 
 class GameObject:
     def __init__(self, obj_name):
@@ -20,7 +19,6 @@ class GameObject:
 class FleetObject:
     def __init__(self):
         pass
-
 
 class GameObjectType:
     def __init__(self, obj_name):
@@ -110,9 +108,6 @@ class BasicEaWFunctions:
         '''some stuff about getting next level here'''
         return GameObjectType("Obj")
     
-        
-    
-    
 class GetCurrentTime:
     def __init__():
         return 1
@@ -120,7 +115,6 @@ class GetCurrentTime:
         return 1
     def Galactic_Time():
         return 1
-
 
 class GetEvent:
     def __init__(self, name):
@@ -139,63 +133,43 @@ class Finding_GameObjects:
     def Find_Player(name):
         return Player(name)
 
-# class GameObjectType:
-#     def __init__(self)
-
 def printToTerminal(val):
     print(str(val))
 
-
-# class requireFunc:
-#     def __init__(self, mod_dir):
-#         self.mod_dir = mod_dir
-#         self.script_dir = mod_dir + "/scripts/"
-#         self.library = self.script_dir + 'library'
-#         self.story = self.script_dir +'story'
-#         self.misc = self.script_dir +'miscallaneous'
-#         self.path = []
-#         self.path.append(self.script_dir)
-#         self.path.append(self.library)
-#         self.path.append(self.story)
-#         self.path.append(self.misc)
-#     def require(fileName):
-#         if '.lua' not in fileName.lower():
-#             fileName = fileName +'.lua'
-#         for folder in self.path:
-#             if fileName in os.listdir(folder):
-#                 try:
-#                     lua = init_galactic_eaw_environment(self.mod_dir)
-
-
-    
-
-def init_tactical_lua_environment(file=None):
-    lua = LuaRuntime()
-    lua.globals().Script = file
-    lua.globals().ServiceRate = 1
-    lua.globals().UnitServiceRate = 1
 def garbage(num):
     print('collecting lua garbage')
     
-def init_galactic_eaw_environment(mod_dir=None,gameObjectRepo=None, Object=None,file=None):
-    lua = LuaRuntime()
+class init_galactic_eaw_environment():
+    def __init__(self,mod_dir=None,gameObjectRepo=None, Object=None,file=None):
+        self.__lua = LuaRuntime()
 
-    #Global Variables
-    lua.globals().Script = file
-    lua.globals().ServiceRate = 1
-    lua.globals().UnitServiceRate = 1
-    lua.globals().LuaThreadTable = []
-    lua.globals().LuaWrapperMetaTable = []
-    lua.globals().PlayerObject = None
-    lua.globals().Target= None
-    lua.globals().AITarget = None
-    lua.globals().Object = Object
-    lua.globals().ScriptPoolCount = 1
-    lua.globals().collectgarbage = garbage
-    lua.globals().GetEvent = GetEvent
+        #Global Variables
+        self.__lua.globals().Script = file
+        self.__lua.globals().ServiceRate = 1
+        self.__lua.globals().UnitServiceRate = 1
+        self.__lua.globals().LuaThreadTable = []
+        self.__lua.globals().LuaWrapperMetaTable = []
+        self.__lua.globals().PlayerObject = None
+        self.__lua.globals().Target= None
+        self.__lua.globals().AITarget = None
+        self.__lua.globals().Object = Object
+        self.__lua.globals().ScriptPoolCount = 1
+        self.__lua.globals().collectgarbage = garbage
+        self.__lua.globals().GetEvent = GetEvent
+        self.__lua.globals().unpack = self.__lua.globals().table.unpack
+        self.__lua.globals().StringCompare = BasicEaWFunctions.StringCompare
+        self.__lua.globals().Game_Message = BasicEaWFunctions.Game_Message
 
-    lua.globals().StringCompare = BasicEaWFunctions.StringCompare
-    lua.globals().Game_Message = BasicEaWFunctions.Game_Message
-
-    lua.globals().Find_First_Object = Finding_GameObjects.Find_First_Object
-    return lua
+        self.__lua.globals().Find_First_Object = Finding_GameObjects.Find_First_Object
+    # Using @property decorator
+    @property
+    def lua(self):
+        return self.__lua
+    # Setter method
+    @lua.setter
+    def lua(self, val):
+        self.__lua = val
+    # Deleter method
+    @lua.deleter
+    def lua(self):
+       del self.__lua
