@@ -6,6 +6,7 @@ from PyQt5 import Qsci
 from ui.Utilities import PyQtUtil
 import sys,sched, time,os,re
 from ScriptHandling.EaWFunctionLibrary import *
+from ui.SelectScriptWindow import *
 #     def require(fileName):
 #         if '.lua' not in fileName.lower():
 #             fileName = fileName +'.lua'
@@ -150,7 +151,7 @@ class ActionsWidget(QWidget):
 
         self.scriptName = QLineEdit()
         self.scriptLayout.addWidget(self.scriptName)
-        self.openScriptButton = QToolButton()
+        self.openScriptButton = QPushButton()
         self.openScriptButton.setText("Load New Script")
         self.scriptLayout.addWidget(self.openScriptButton)
 
@@ -221,6 +222,7 @@ class ScriptTestWindow:
         self.layout.addLayout(self.RightSideLayout)
         self.load_file()
         screenSize = QApplication.primaryScreen().size()
+        self.actionsLayout.openScriptButton.clicked.connect(self.select_file)
         #self.dialogWindow.setGeometry(QRect(screenSize.width(), screenSize.height()))
         self.dialogWindow.setWindowFlags(QtCore.Qt.WindowCloseButtonHint | QtCore.Qt.WindowMinimizeButtonHint | QtCore.Qt.WindowMaximizeButtonHint)
     def append_text(self,text):
@@ -229,13 +231,20 @@ class ScriptTestWindow:
         currentText = currentText.replace('cjsan', 'Chloe')
         currentText = currentText.replace('Christopher', 'Chloe')
         self.TerminalWindow.setText(currentText)
-    def load_file(self, filename="Library/PGBase.lua"):
-        file = open(self.script_dir+filename, 'r')
+    def select_file(self):
+        selectWindow = SelectScriptWindow(self,self.script_dir,self.mod_dir)
+        os.chdir(self.mod_dir)
+    def load_file(self, filename=None):
+        if filename == None:
+            file = open(self.library+'PGBase.lua', 'r')
+            filename = self.library+'PGBase.lua'
+        else:
+            file = open(filename, 'r')
         contents = file.read()
         file.close()
         self.editor.textWindow.setText(contents)
         fileContents = contents
-        if filename.lower() != 'library/pgbase.lua':
+        if filename.lower() != 'pgbase.lua':
             fileContents = '''require("PGBase")\n'''+fileContents
         f = open('output.txt','w')
         f.write(fileContents)
@@ -252,11 +261,12 @@ class ScriptTestWindow:
         try:
             cwd = os.getcwd()
             os.chdir(self.library)
-            lua = init_galactic_eaw_environment(mod_dir = self.mod_dir)
+            lua = init_galactic_eaw_environment(mod_dir = self.mod_dir, gameObjectRepo=self.repository,file=filename)
             lua.execute(fileContents)
 
             os.chdir(cwd)
         except Exception as e:
             self.append_text(str(e))
+        
    # def trigger_func(self):
 

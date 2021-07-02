@@ -39,7 +39,6 @@ class EaWModTool:
         self.presenter = UI_Presenter(self.ui, config.dataPath)
         self.repository = self.presenter.repository
         self.presenter.update_tabs()
-        atexit.register(self.closeEvent)
         self.ui.setDataFolderAction.triggered.connect(self.set_datapath)
     def set_datapath(self):
         directory = str(QFileDialog.getExistingDirectory())
@@ -89,11 +88,14 @@ try:
     #MainWindow.map.plotGalaxy(checkedPlanets, [], planets)
     validate_datapath(config)
     EaWModToolApp = EaWModTool(config, MainWindow, originalPath)
+    atexit.register(EaWModToolApp.closeEvent)
+    fail
 except Exception as e:
     msg = QMessageBox()
     msg.setWindowTitle('Critical Error!')
-    msg.setText('Critical Python Error:', str(e))
+    msg.setText('Critical Python Error:\n'+ str(e))
     msg.exec_()
     sys.exit()
+    
 
 sys.exit(app.exec_())

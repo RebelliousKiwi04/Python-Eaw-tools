@@ -174,8 +174,10 @@ def init_tactical_lua_environment(file=None):
     lua.globals().Script = file
     lua.globals().ServiceRate = 1
     lua.globals().UnitServiceRate = 1
-
-def init_galactic_eaw_environment(file=None, Object=None, mod_dir=None):
+def garbage(num):
+    print('collecting lua garbage')
+    
+def init_galactic_eaw_environment(mod_dir=None,gameObjectRepo=None, Object=None,file=None):
     lua = LuaRuntime()
 
     #Global Variables
@@ -189,9 +191,7 @@ def init_galactic_eaw_environment(file=None, Object=None, mod_dir=None):
     lua.globals().AITarget = None
     lua.globals().Object = Object
     lua.globals().ScriptPoolCount = 1
-    # requireStuff = requireFunc(mod_dir)
-    # lua.globals().require = require
-    #General Functions
+    lua.globals().collectgarbage = garbage
     lua.globals().GetEvent = GetEvent
 
     lua.globals().StringCompare = BasicEaWFunctions.StringCompare
