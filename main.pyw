@@ -89,7 +89,6 @@ try:
     validate_datapath(config)
     EaWModToolApp = EaWModTool(config, MainWindow, originalPath)
     atexit.register(EaWModToolApp.closeEvent)
-    fail
 except Exception as e:
     msg = QMessageBox()
     msg.setWindowTitle('Critical Error!')
