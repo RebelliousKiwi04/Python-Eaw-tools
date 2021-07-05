@@ -7,7 +7,6 @@ from ui.Utilities import PyQtUtil
 import sys,sched, time,os,re
 from ScriptHandling.EaWFunctionLibrary import *
 from ui.SelectScriptWindow import *
-from slpp import slpp as luadecoder
 
 class TextEditor(QWidget):
     def __init__(self,parent=None):
