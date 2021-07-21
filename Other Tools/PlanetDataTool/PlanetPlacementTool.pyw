@@ -1,16 +1,14 @@
-from typing import List
-from PyQt5 import QtCore, QtWidgets, QtGui
+from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QFont
 from matplotlib.backends.backend_qt5agg import FigureCanvas, \
     NavigationToolbar2QT as NavigationToolbar
 from matplotlib.figure import Axes, Figure
-from matplotlib.pyplot import grid
 import sys
 from matplotlib.patches import Ellipse
 import os, lxml.etree as et
 from math import sqrt
-import pickle,atexit,math
+import pickle,math
 def validate_datapath(config):
     while config.dataPath == None or not config.dataPath.endswith(('DATA', 'Data', 'data')):
         msg = QMessageBox()
@@ -22,12 +20,23 @@ def validate_datapath(config):
             config.dataPath = directory
 def loadFile(filename):
     file = open(filename, 'rb')
+    obj = file.read().decode('utf-32')
+    print(obj)
+    obj = obj.replace('%20',' ')
+    file.close()
+    return obj
+def pickleLoad(filename):
+    file = open(filename, 'rb')
     obj = pickle.load(file)
     file.close()
     return obj
 def serialize(obj, fileName):
     file = open(fileName, 'wb')
     obj = pickle.dump(obj, file)
+    file.close()
+def encode(obj, fileName):
+    file = open(fileName, 'wb')
+    file.write(str(obj).encode('utf-32'))
     file.close()
 
 class Planet:
@@ -86,29 +95,30 @@ class DraggablePoint:
         parent.mapCanvas.figure.axes[0].add_patch(self.point)
         self.press = None
         self.background = None
+    def remove(self):
+        self.point.remove()
 
 class EditPlanetWindow:
-    def __init__(self, planets):
+    def __init__(self, planets,parent):
         if os.path.isfile('pointSize'):
-            self.size = loadFile('pointSize')
+            try:
+                self.size = float(pickleLoad('pointSize'))
+            except:
+                self.size = float(25)
         else:
             self.size = float(25)
+        self.parent = parent
         self.mainWindow = QMainWindow()
         self.planets = planets
-        self.dialogWindow = QDialog()
+        self.dialogWindow = QSplitter(self.mainWindow)
         self.mainWindow.setCentralWidget(self.dialogWindow)
-        self.layout = QHBoxLayout()
-        self.dialogWindow.setLayout(self.layout)
-        self.dialogWindow.setWindowTitle("Edit Planet")
+        self.mainWindow.setWindowTitle("Edit Planet")
         self.x = 0
         self.y = 0
         font = QFont()
         font.setPointSize(10)
         self.mainWindow.setWindowTitle("Planet Placement Tool")
-        self.__menuBar: QMenuBar = QMenuBar()
-        self.__fileMenu: QMenu = QMenu("File", self.mainWindow)
-        self.__menuBar.addMenu(self.__fileMenu)
-        self.mainWindow.setMenuWidget(self.__menuBar)
+       
 
         self.__quitAction: QAction = QAction("Quit", self.mainWindow)
         self.__quitAction.triggered.connect(sys.exit)
@@ -116,12 +126,9 @@ class EditPlanetWindow:
         self.setDataFolderAction = QAction("Set Data Folder", self.mainWindow)
         self.setPointSizeAction = QAction("Set Point Size", self.mainWindow)
         self.setPointSizeAction.triggered.connect(self.change_point_size)
-        self.__fileMenu.addAction(self.saveAction)
-        self.__fileMenu.addAction(self.setDataFolderAction)
-        self.__fileMenu.addAction(self.setPointSizeAction)
-        self.__fileMenu.addAction(self.__quitAction)
-
+        self.leftSideWidget = QWidget()
         self.LeftSideLayout = QVBoxLayout()
+        self.leftSideWidget.setLayout(self.LeftSideLayout)
         self.planetSelection = QComboBox()
         self.ModelNameLayout = QVBoxLayout()
         self.modelNameSublayout = QHBoxLayout()
@@ -158,6 +165,9 @@ class EditPlanetWindow:
 
         self.xLayout.addWidget(self.xLabel)
         self.xLayout.addWidget(self.XPosition)
+        self.changeX = QToolButton()
+        self.changeX.setText("...")
+        self.xLayout.addWidget(self.changeX)
 
 
 
@@ -170,7 +180,9 @@ class EditPlanetWindow:
 
         self.yLayout.addWidget(self.yLabel)
         self.yLayout.addWidget(self.yPosition)
-
+        self.changeY = QToolButton()
+        self.yLayout.addWidget(self.changeY)
+        self.changeY.setText("...")
 
         self.positionLayout.addLayout(self.xLayout)
         self.positionLayout.addLayout(self.yLayout)
@@ -238,7 +250,7 @@ class EditPlanetWindow:
 
         self.HideGridButton.clicked.connect(self.toggle_grid)
         self.LeftSideLayout.addWidget(self.OkCancelButtons)
-        self.layout.addLayout(self.LeftSideLayout)
+        self.dialogWindow.addWidget(self.leftSideWidget)
         self.dialogWindow.setFixedSize(900, 540)
 
 
@@ -247,7 +259,7 @@ class EditPlanetWindow:
         self.mapCanvas: FigureCanvas = FigureCanvas(Figure())
         self.mapCanvas.mpl_connect('pick_event', self.__planetSelect)
         self.mapCanvas.mpl_connect('motion_notify_event', self.__planetHover)
-        self.navbar = NavigationToolbar(self.mapCanvas, self.mapWidget)
+        self.navbar = NavigationToolbar(self.mapCanvas, self.dialogWindow)
         self.mapWidget.layout().addWidget(self.navbar)
         self.mapWidget.layout().addWidget(self.mapCanvas)
         self.axes: Axes = self.mapCanvas.figure.add_subplot(111, aspect = "equal")
@@ -259,16 +271,18 @@ class EditPlanetWindow:
         self.__planetsScatter = None
         self.selected_planet = None
         self.times = 0
-        self.layout.addWidget(self.mapWidget)
+        self.dialogWindow.addWidget(self.mapWidget)
         self.OkCancelButtons.rejected.connect(sys.exit)
         #self.OkCancelButtons.accepted.connect(self.save_to_file)
     def change_point_size(self):
         size = QInputDialog.getInt(self.mapWidget, "Enter Planet Movement Point Size", "Enter Planet Movement Point Size", self.size, 0, 100, 1)
         if size[1] != False:
+            planet_name = self.planetSelection.currentText()
+            if planet_name in [x.name for x in self.planets]:
+                planet_index = [x.name for x in self.planets].index(planet_name)
             serialize(size[0],'pointSize')
             self.size = float(size[0])
-            self.selected_planet.point.remove()
-            self.selected_planet = DraggablePoint(self, self.x, self.y, self.size)
+            self.plotSelectedPlanet(self.planets[planet_index],size=self.size)
     def toggle_grid(self):
         if self.HideGridButton.text() == 'Show Grid':
             self.axes.grid(True)
@@ -308,7 +322,6 @@ class EditPlanetWindow:
         self.yPosition.setText(str(planet.y))
         self.mainWindow.show()
     def reset_position(self):
-        self.selected_planet.point.remove()
         planet_name = self.planetSelection.currentText()
         if planet_name in [x.name for x in self.planets]:
             planet_index = [x.name for x in self.planets].index(planet_name)
@@ -316,10 +329,13 @@ class EditPlanetWindow:
         planet = self.planets[planet_index]
         self.XPosition.setText(str(planet.x))
         self.yPosition.setText(str(planet.y))
+        self.parent.save_to_cache()
     def plotSelectedPlanet(self, planet, size=25):
         # del(self.list_points[:])
         self.x = planet.x 
         self.y = planet.y
+        if self.selected_planet != None:
+            self.selected_planet.point.remove()
         self.selected_planet = DraggablePoint(self, planet.x, planet.y,self.size)
         self.connect()
         self.mapCanvas.draw()
@@ -355,18 +371,21 @@ class EditPlanetWindow:
             pass
         else:
             self.PlanetModelName.setText(directory)
+        self.parent.save_to_cache()
     def set_land_map(self):
         directory = str(QFileDialog.getOpenFileName())
         if not directory.lower().endswith('.ted'):
             pass
         else:
             self.LandMap.setText(directory)
+        self.parent.save_to_cache()
     def set_space_map(self):
         directory = str(QFileDialog.getOpenFileName())
         if not directory.lower().endswith('.ted'):
             pass
         else:
             self.SpaceMap.setText(directory)
+        self.parent.save_to_cache()
     def __planetSelect(self, event) -> None:
         '''Event handler for selecting a planet on the map'''
         planet_index = event.ind
@@ -462,6 +481,7 @@ class EditPlanetWindow:
         self.y = self.selected_planet.point.center[1]
         self.XPosition.setText(str(self.x))
         self.yPosition.setText(str(self.y))
+        self.parent.save_to_cache()
     def hide(self):
         self.dialogWindow.accept()
 
@@ -479,27 +499,61 @@ def validate_datapath(dataPath):
 class PlanetPlacementTool:
     def __init__(self):
         app = QApplication(sys.argv)
+        app.setStyle('Fusion')
+    
         if os.path.isfile('dataPath'):
-            self.mod_dir = loadFile('dataPath')
+            try:
+                self.mod_dir = loadFile('dataPath')
+            except:
+                self.mod_dir = self.get_mod_dir()
         else:
             self.mod_dir = self.get_mod_dir()
         self.planetFiles =[]
         self.planets = []
         self.set_planets()
-        self.window = EditPlanetWindow(self.planets)
+        self.window = EditPlanetWindow(self.planets, self)
         for planet in self.planets:
             self.window.planetSelection.addItem(planet.name)
         self.window.show()
         self.window.setDataFolderAction.triggered.connect(self.set_data_path)
-        self.window.OkCancelButtons.accepted.connect(self.save_to_cache)
+        self.window.OkCancelButtons.accepted.connect(self.save_to_file)
         self.window.saveAction.triggered.connect(self.save_to_file)
+        self.window.changeX.clicked.connect(self.change_x_coord)
+        self.window.changeY.clicked.connect(self.change_y_coord)
         sys.exit(app.exec_())
+    def change_x_coord(self):
+        integer, ok = QInputDialog().getInt(None, "Enter New Planet X Coordinate",
+                                     "Enter New Planet X Coordinate")
+        if ok:
+            planet_name = self.window.planetSelection.currentText()
+            if planet_name in [x.name for x in self.planets]:
+                planet_index = [x.name for x in self.planets].index(planet_name)
+            
+            self.window.XPosition.setText(str(integer))
+
+            
+            self.save_to_cache()
+            self.window.plotSelectedPlanet(self.planets[planet_index])
+    def change_y_coord(self):
+        integer, ok = QInputDialog().getInt(None, "Enter New Planet Y Coordinate",
+                                     "Enter New Planet Y Coordinate")
+        if ok:
+            planet_name = self.window.planetSelection.currentText()
+            if planet_name in [x.name for x in self.planets]:
+                planet_index = [x.name for x in self.planets].index(planet_name)
+            
+            self.window.YPosition.setText(str(integer))
+
+            
+            self.save_to_cache()
+            self.window.plotSelectedPlanet(self.planets[planet_index])
     def set_data_path(self):
         dataPath = str(QFileDialog.getExistingDirectory())
         validate_datapath(dataPath)
         if dataPath == self.mod_dir:
             return
-        serialize(dataPath, 'dataPath')
+        dataPath=dataPath.replace('%20',' ')
+        encode(dataPath, 'dataPath')
         self.mod_dir = dataPath
         self.set_planets()
         self.window.planets = self.planets
@@ -523,7 +577,7 @@ class PlanetPlacementTool:
     def get_mod_dir(self):
         dataPath = str(QFileDialog.getExistingDirectory())
         validate_datapath(dataPath)
-        serialize(dataPath, 'dataPath')
+        encode(dataPath, 'dataPath')
         return dataPath
     def set_planets(self):
         game_object_files = []
@@ -537,7 +591,10 @@ class PlanetPlacementTool:
             if child.tag == 'File':
                 game_object_files.append(self.mod_dir+xmlPath+'/'+child.text)
         for file in game_object_files:
-            root = et.parse(file).getroot()
+            try:
+                root = et.parse(file).getroot()
+            except:
+                continue
             if root.tag == 'Planets':
                 self.planetFiles.append(os.path.abspath(file))
             for child in root:
@@ -546,7 +603,6 @@ class PlanetPlacementTool:
                         self.planets.append(Planet(child, file))
                         if not file in self.planetFiles:
                             self.planetFiles.append(file)
-        atexit.register(serialize, self.planets, 'planets')
     def save_to_cache(self):
         planet = self.planets[self.window.planetSelection.currentIndex()]
         if self.window.PlanetModelName.text() != planet.get_model_name():
@@ -561,7 +617,10 @@ class PlanetPlacementTool:
             planet.y = math.floor(float(self.window.yPosition.text()))
     def save_to_file(self):
         for file in self.planetFiles:
-            xml = et.parse(file)
+            try:
+                xml = et.parse(file)
+            except:
+                continue
             for child in xml.getroot():
                 if child.tag == 'Planet':
                     if child.get('Name') in [x.name for x in self.planets]:
