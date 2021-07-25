@@ -62,11 +62,20 @@ class Planet:
                 return child.text
     def get_position(self):
         for child in self.entry:
-            if child.tag == 'Galactic_Position':     
+            if child.tag == 'Galactic_Position':    
                 entry = child.text     
                 entry = entry.replace(',',' ')
                 entry = entry.split()
-                return float(entry[0]), float(entry[1])
+                try:
+                    return float(entry[0]), float(entry[1])
+                except Exception as e:
+                    msgBox = QMessageBox()
+                    msgBox.setIcon(QMessageBox.Critical)
+                    msgBox.setText("Critical Error! \n"+str(e)+'\n In planet '+self.name)
+                    msgBox.setWindowTitle("Critical Error!")
+                    msgBox.setStandardButtons(QMessageBox.Ok)
+                    msgBox.exec()
+                    sys.exit()
     def reset_starting_forces_table(self, campaigns):
         self.starting_forces = {}
         for name in campaigns.keys():
@@ -75,7 +84,7 @@ class Planet:
         self.starting_forces[name] = []
     def get_model_name(self):
         for child in self.entry:
-            if child.tag == 'Galactic_Model_Name':     
+            if child.tag == 'Galactic_Model_Name': 
                 return child.text
 
 
@@ -508,6 +517,8 @@ class PlanetPlacementTool:
                 self.mod_dir = self.get_mod_dir()
         else:
             self.mod_dir = self.get_mod_dir()
+        self.mod_dir = self.mod_dir.replace('%20',' ')
+        print(self.mod_dir)
         self.planetFiles =[]
         self.planets = []
         self.set_planets()
