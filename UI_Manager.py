@@ -308,10 +308,4 @@ class UI_Presenter:
     def show_campaign_properties(self):
         campaign = self.repository.campaigns[self.ui.select_GC.currentText()]
         window = CampaignPropertiesWindow(campaign)
-    def test_script(self):
-        Script = ScriptTestWindow(self.mod_dir, self.repository)
-        #string = str(e)
-        #string = string.replace('Christopher', 'Chloe')
-        #Script.TerminalWindow.setText("Lua Test Terminal V1.0\n\n"+str('>>> ' +string))
-        Script.dialogWindow.exec()
         
