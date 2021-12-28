@@ -1,7 +1,6 @@
 from ui.AddUnitWindow import AddUnitWindow
 from ui.EditUnitWindow import EditUnitWindow
 from ui.EditPlanetWindow import PlanetWindow
-from ui.ScriptEditWindow import ScriptTestWindow
 from gameObject.GameObjectRepository import ModRepository
 from gameObject.StartingForcesObject import StartingForcesObject
 import os, sys
@@ -30,7 +29,6 @@ class UI_Presenter:
         self.ui.select_GC.currentIndexChanged.connect(self.select_GC)
         self.ui.map.planetSelectedSignal.connect(self.onPlanetSelection)
         self.ui.edit_gc_properties.clicked.connect(self.show_campaign_properties)
-        self.ui.test_script_action.triggered.connect(self.test_script)
         self.ui.main_window.setWindowTitle("EaW Mod Tool - " + self.ui.select_GC.currentText())
     def disconnect_triggers(self):
         self.ui.planet_list.itemChanged.disconnect(self.onCellChanged)
@@ -45,7 +43,6 @@ class UI_Presenter:
         self.ui.edit_unit_action.triggered.disconnect(self.edit_unit)
         self.ui.select_GC.currentIndexChanged.disconnect(self.select_GC)
         self.ui.map.planetSelectedSignal.disconnect(self.onPlanetSelection)
-        self.ui.test_script_action.triggered.disconnect(self.test_script)
 
         self.ui.edit_gc_properties.clicked.disconnect(self.show_campaign_properties)
     def update_tabs(self):
