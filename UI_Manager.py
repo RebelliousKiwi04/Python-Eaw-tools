@@ -145,7 +145,7 @@ class UI_Presenter:
     def update_starting_forces_table(self):
         self.ui.forcesListWidget.clear()
         self.ui.forcesListWidget.setRowCount(0)
-        self.ui.forcesListWidget.setHorizontalHeaderLabels(["Unit", "Power", "Owner", "Tech"])
+        self.ui.forcesListWidget.setHorizontalHeaderLabels(["Unit", "Owner", "Tech", "Quantity"])
 
         planet_name = self.ui.planetComboBox.currentText()
         planet_index = None
@@ -159,7 +159,7 @@ class UI_Presenter:
         planet = self.repository.planets[planet_index]
         starting_forces = planet.starting_forces[self.selected_campaign.name]
 
-        for tech, obj in zip(list(range(1,len(starting_forces)+1)), starting_forces):
+        for obj in starting_forces:
             rowCount = self.ui.forcesListWidget.rowCount()
             self.ui.forcesListWidget.setRowCount(rowCount + 1)
             item= QTableWidgetItem(obj.unit.name)
@@ -168,7 +168,7 @@ class UI_Presenter:
             item= QTableWidgetItem(str(obj.unit.aicp))
             item.setFlags(QtCore.Qt.ItemIsEnabled)
             self.ui.forcesListWidget.setItem(rowCount, 1, item)
-            item= QTableWidgetItem(str(tech))
+            item= QTableWidgetItem(str(obj.tech))
             self.ui.forcesListWidget.setItem(rowCount, 3, item)
             item = QTableWidgetItem(obj.owner.name)
             item.setFlags(QtCore.Qt.ItemIsEnabled)
@@ -266,13 +266,12 @@ class UI_Presenter:
         self.ui.forcesListWidget.setRowCount(rowCount + 1)
         item= QTableWidgetItem(unit.name)
         self.ui.forcesListWidget.setItem(rowCount, 0, item)
-        item= QTableWidgetItem(str(unit.aicp))
+        item= QTableWidgetItem(str(owner.name))
         self.ui.forcesListWidget.setItem(rowCount, 1, item)
         item= QTableWidgetItem(str(techLevel))
-        self.ui.forcesListWidget.setItem(rowCount, 3, item)
-        item = QTableWidgetItem(owner.name)
-        item.setFlags(QtCore.Qt.ItemIsEnabled)
         self.ui.forcesListWidget.setItem(rowCount, 2, item)
+        item = QTableWidgetItem(str(quantity))
+        self.ui.forcesListWidget.setItem(rowCount, 3, item)
         self.addUnitWindow.dialogWindow.accept()
     def edit_planet(self):
         editWindow = PlanetWindow(self.repository.planets, self.repository.text_dict)
