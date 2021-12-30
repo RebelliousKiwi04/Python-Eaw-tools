@@ -22,7 +22,7 @@ class Campaign:
     def get_active_faction(self):
         for item in self.entry:
             if item.tag == 'Starting_Active_Player':
-                return item.text
+                return item.text.replace(" ", "")
     def get_set_name(self):
         for item in self.entry:
             if item.tag == 'Campaign_Set':

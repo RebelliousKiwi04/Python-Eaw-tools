@@ -10,4 +10,15 @@ class CampaignSet:
         self.playableFactions[campaign.activeFaction] = campaign
     def getactivecampaign(self, faction):
         return self.playableFactions[faction]
+    def addFaction(self, factionName):
+        for faction, campaign in self.playableFactions.items():
+            template = campaign
+            break
+        template.activeFaction=factionName
+        template.name = self.name +'_'+factionName
+        print(template.activeFaction)
+        print(template.name)
+        self.playableFactions[factionName] = template
+        return template
+
 

@@ -1,5 +1,6 @@
 from ui.AddUnitWindow import AddUnitWindow
 from ui.EditPlanetWindow import PlanetWindow
+from ui.addFactionWindow import AddFactionWindow
 from gameObject.GameObjectRepository import ModRepository
 from gameObject.StartingForcesObject import StartingForcesObject
 import os, sys
@@ -26,6 +27,7 @@ class UI_Presenter:
         self.ui.select_all_planets.clicked.connect(self.check_all_planets)
         self.ui.deselect_all_planets.clicked.connect(self.uncheck_all_planets)
         self.ui.select_all_tradeRoutes.clicked.connect(self.check_all_tradeRoutes)
+        self.ui.add_faction.clicked.connect(self.addFactionToCampaign)
         self.ui.deselect_all_tradeRoutes.clicked.connect(self.uncheck_all_tradeRoutes)
         self.ui.select_GC.currentIndexChanged.connect(self.select_GC)
         self.ui.select_faction.currentIndexChanged.connect(self.select_faction)
@@ -39,6 +41,7 @@ class UI_Presenter:
         self.ui.planetComboBox.currentIndexChanged.disconnect(self.update_starting_forces_table)
         self.ui.edit_planet_action.triggered.disconnect(self.edit_planet)
         self.ui.select_all_planets.clicked.disconnect(self.check_all_planets)
+        self.ui.add_faction.clicked.disconnect(self.addFactionToCampaign)
         self.ui.deselect_all_planets.clicked.disconnect(self.uncheck_all_planets)
         self.ui.select_all_tradeRoutes.clicked.disconnect(self.check_all_tradeRoutes)
         self.ui.deselect_all_tradeRoutes.clicked.disconnect(self.uncheck_all_tradeRoutes)
@@ -320,4 +323,12 @@ class UI_Presenter:
     def show_campaign_properties(self):
         campaign = self.selected_campaign
         window = CampaignPropertiesWindow(campaign)
+    def addFactionToCampaign(self):
+        test = AddFactionWindow(self.selected_set, self.repository)
+        i = test.dialogWindow.exec_()
+        if i ==1:
+            campaign = self.selected_set.addFaction(test.faction.currentText())
+            for planet in self.repository.planets:
+                planet.add_campaign_to_table(campaign.name)
+            self.select_GC()
         
