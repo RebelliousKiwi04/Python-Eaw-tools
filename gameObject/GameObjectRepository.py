@@ -3,6 +3,7 @@ from gameObject.campaign import Campaign
 from gameObject.traderoutes import TradeRoute
 from gameObject.unit import Unit
 from gameObject.faction import Faction
+from gameObject.campaignset import CampaignSet
 from gameObject.TextHandler import TextFile
 import os, sys, lxml.etree as et
 
@@ -126,8 +127,7 @@ class ModRepository:
                     for j in child:
                         if j.tag == 'Campaign_Set':
                             if j.text in self.campaign_sets.keys():
-                                table = list(self.campaign_sets[j])
-                                table.append(self.campaigns[child.get('Name')])
-                                self.campaign_sets[j] = tuple(table)
+                                self.campaign_sets[j.text].addCampaign(self.campaigns[child.get('Name')])
                             else:
-                                self.campaign_sets[j] = (self.campaigns[child.get('Name')])
+                                self.campaign_sets[j.text] = CampaignSet(j.text)
+                                self.campaign_sets[j.text].addCampaign(self.campaigns[child.get('Name')])

@@ -4,6 +4,7 @@ class Campaign:
     def __init__(self, xml_entry, planets, tradeRoutes, fileLocation):
         self.fileLocation = fileLocation
         self.entry = xml_entry
+        self.activeFaction = self.get_active_faction()
         self.name = xml_entry.get('Name')
         self.setName: str = self.get_set_name()
         self.planets = []
@@ -18,6 +19,10 @@ class Campaign:
             for j in tradeRoutes:
                 if j.name == i:
                     self.trade_routes.append(j)
+    def get_active_faction(self):
+        for item in self.entry:
+            if item.tag == 'Starting_Active_Player':
+                return item.text
     def get_set_name(self):
         for item in self.entry:
             if item.tag == 'Campaign_Set':

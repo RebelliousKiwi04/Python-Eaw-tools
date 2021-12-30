@@ -87,7 +87,7 @@ class Unit:
     def get_pop(self):
         for child in self.entry:
             if child.tag == 'Size_Value':
-                return int(child.text)
+                return float(child.text)
         return 0
     def get_hyperspace_speed(self):
         for child in self.entry:
@@ -117,22 +117,22 @@ class Unit:
     def get_shipyard_level(self):
         for child in self.entry:
             if child.tag == 'Required_Star_Base_Level':
-                return int(child.text)
+                return float(child.text)
         return 0
     def get_refresh_rate(self):
         for child in self.entry:
             if child.tag == 'Shield_Refresh_Rate':
-                return int(child.text)
+                return float(child.text)
         return 0
     def get_shield(self):
         for child in self.entry:
             if child.tag == 'Shield_Points':
-                return int(child.text)
+                return float(child.text)
         return 0
     def get_hull(self):
         for child in self.entry:
             if child.tag == 'Tactical_Health':
-                return int(child.text)
+                return float(child.text)
         return 0
     def get_cost(self):
         for child in self.entry:
@@ -142,7 +142,7 @@ class Unit:
     def get_build_time(self):
         for child in self.entry:
             if child.tag == 'Build_Time_Seconds':
-                return int(child.text)
+                return float(child.text)
         return 0
     def get_hardpoints(self):
         for child in self.entry:

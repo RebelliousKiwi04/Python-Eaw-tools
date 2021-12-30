@@ -1,8 +1,7 @@
 import sys
-from PyQt5 import QtCore, QtWidgets, QtGui
-from PyQt5.QtWidgets import QAction, QHBoxLayout, QPushButton, QCheckBox, QComboBox, QFileDialog, QHeaderView, QLabel, QMainWindow, QMenu, QMenuBar, QDialog, QSplitter, \
-    QTableWidget, QTableWidgetItem, QTabWidget, QVBoxLayout, QWidget
-from PyQt5.QtGui import QFont
+from PyQt5 import QtCore, QtWidgets
+from PyQt5.QtWidgets import *
+from PyQt5.QtGui import *
 from ui.Utilities import PyQtUtil
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
@@ -257,5 +256,6 @@ class MainUIWindow:
         self.map = GalacticMap(self.window_splitter)
         #plot = GalacticMap()
         self.window_splitter.addWidget(self.map.mapWidget)
+        self.main_window.setWindowIcon(QIcon('eawIcon.png'))
         self.main_window.show()
     

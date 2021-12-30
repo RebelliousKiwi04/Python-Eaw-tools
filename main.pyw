@@ -18,6 +18,7 @@ def validate_datapath(config):
         directory = str(QFileDialog.getExistingDirectory())
         if directory.endswith(('DATA', 'Data', 'data')):
             config.dataPath = directory
+            return True
         return False
     else:
         return True
@@ -47,6 +48,7 @@ class EaWModTool:
             if validate_datapath(self.config):
                 self.presenter.disconnect_triggers()
                 self.ui.select_GC.clear()
+                self.ui.select_faction.clear()
                 self.ui.planetComboBox.clear()
                 self.ui.forcesListWidget.clear()
                 self.ui.forcesListWidget.setRowCount(0)
@@ -60,7 +62,7 @@ class EaWModTool:
                 self.presenter = UI_Presenter(self.ui, self.config.dataPath)
                 self.repository = self.presenter.repository
         
-                self.repository.update_tabs()
+                self.presenter.update_tabs()
     def closeEvent(self):
         messageBox = QMessageBox()
         title = "Quit Application?"
@@ -83,18 +85,12 @@ app = QApplication(sys.argv)
 
 config = Config()
 
-try:
-    MainWindow = MainUIWindow()
-    #MainWindow.map.plotGalaxy(checkedPlanets, [], planets)
-    validate_datapath(config)
-    EaWModToolApp = EaWModTool(config, MainWindow, originalPath)
-    atexit.register(EaWModToolApp.closeEvent)
-except Exception as e:
-    msg = QMessageBox()
-    msg.setWindowTitle('Critical Error!')
-    msg.setText('Critical Python Error:\n'+ str(e))
-    msg.exec_()
-    sys.exit()
+MainWindow = MainUIWindow()
+#MainWindow.map.plotGalaxy(checkedPlanets, [], planets)
+validate_datapath(config)
+EaWModToolApp = EaWModTool(config, MainWindow, originalPath)
+atexit.register(EaWModToolApp.closeEvent)
+
     
 
 sys.exit(app.exec_())
