@@ -1,5 +1,4 @@
 from ui.AddUnitWindow import AddUnitWindow
-from ui.EditUnitWindow import EditUnitWindow
 from ui.EditPlanetWindow import PlanetWindow
 from gameObject.GameObjectRepository import ModRepository
 from gameObject.StartingForcesObject import StartingForcesObject
@@ -25,7 +24,6 @@ class UI_Presenter:
         self.ui.deselect_all_planets.clicked.connect(self.uncheck_all_planets)
         self.ui.select_all_tradeRoutes.clicked.connect(self.check_all_tradeRoutes)
         self.ui.deselect_all_tradeRoutes.clicked.connect(self.uncheck_all_tradeRoutes)
-        self.ui.edit_unit_action.triggered.connect(self.edit_unit)
         self.ui.select_GC.currentIndexChanged.connect(self.select_GC)
         self.ui.map.planetSelectedSignal.connect(self.onPlanetSelection)
         self.ui.edit_gc_properties.clicked.connect(self.show_campaign_properties)
@@ -40,7 +38,6 @@ class UI_Presenter:
         self.ui.deselect_all_planets.clicked.disconnect(self.uncheck_all_planets)
         self.ui.select_all_tradeRoutes.clicked.disconnect(self.check_all_tradeRoutes)
         self.ui.deselect_all_tradeRoutes.clicked.disconnect(self.uncheck_all_tradeRoutes)
-        self.ui.edit_unit_action.triggered.disconnect(self.edit_unit)
         self.ui.select_GC.currentIndexChanged.disconnect(self.select_GC)
         self.ui.map.planetSelectedSignal.disconnect(self.onPlanetSelection)
 
@@ -249,11 +246,6 @@ class UI_Presenter:
         for planet in self.repository.planets:
             editWindow.planetSelection.addItem(planet.name)
         editWindow.show()
-    def edit_unit(self):
-        editUnitWindow = EditUnitWindow(self.repository.units, self.repository.text_dict)
-        for unit in self.repository.units:
-            editUnitWindow.SelectUnit.addItem(unit.name)
-        editUnitWindow.show()
 
 
 

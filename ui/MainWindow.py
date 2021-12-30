@@ -150,29 +150,28 @@ class MainUIWindow:
 
 
         self.select_GC = QComboBox()
-        #self.select_GC.activated.connect(self.on_gc_selection)
+        
+        self.faction_layout = QHBoxLayout()
+        self.select_faction = QComboBox()
+        self.add_faction = QPushButton("Add")
+        self.faction_layout.addWidget(self.select_faction)
+        self.faction_layout.addWidget(self.add_faction)
+
+
         self.edit_gc_properties= QPushButton("Edit Campaign Properties")
-        #self.edit_gc_properties.clicked.connect(self.edit_gc_propertiesClicked)
 
         self.planet_list = PyQtUtil.construct_table_widget(["Planets"])
-       # self.planet_list.itemClicked.connect(self.__onPlanetTableWidgetItemClicked)
         self.planet_list.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
-        #self.planet_list.customContextMenuRequested.connect(self.__showPlanetContextMenu)
 
         self.tradeRoute_list = PyQtUtil.construct_table_widget(["Trade Routes"])
-       # self.tradeRoute_list.itemClicked.connect(self.__onTradeRouteTableWidgetItemClicked)
 
         self.select_all_planets = QPushButton("Select All Planets")
-        #self.select_all_planets.clicked.connect(lambda: self.__selectAllPlanetsButtonClicked(self.planet_list, True))
 
         self.deselect_all_planets = QPushButton("Deselect All Planets")
-        #self.deselect_all_planets.clicked.connect(lambda: self.__selectAllPlanetsButtonClicked(self.planet_list, False))
 
         self.select_all_tradeRoutes = QPushButton("Select All Trade Routes")
-        #self.select_all_tradeRoutes.clicked.connect(lambda: self.__selectAllTradeRoutesButtonClicked(self.tradeRoute_list, True))
 
         self.deselect_all_tradeRoutes = QPushButton("Deselect All Trade Routes")
-        # self.deselect_all_tradeRoutes.clicked.connect(lambda: self.__selectAllTradeRoutesButtonClicked(self.tradeRoute_list, False))
 
         #Left pane, Forces tab
         self.planetComboBox: QComboBox = QComboBox()
@@ -182,7 +181,7 @@ class MainUIWindow:
         font.setPointSize(10)
 
 
-        self.forcesListWidget = PyQtUtil.construct_table_widget(["Unit", "Power", "Owner", "Tech"], 4)        
+        self.forcesListWidget = PyQtUtil.construct_table_widget(["Unit", "Owner", "Tech", "Quantity"], 4)        
         header = self.forcesListWidget.horizontalHeader()       
         header.setSectionResizeMode(0, QtWidgets.QHeaderView.Stretch)
         header.setSectionResizeMode(1, QtWidgets.QHeaderView.ResizeToContents)
@@ -199,32 +198,23 @@ class MainUIWindow:
         self.__editMenu: QMenu = QMenu("Edit", self.main_window)
 
         self.edit_planet_action = QAction("Planet", self.main_window)
-        self.edit_unit_action = QAction("Unit", self.main_window)
-        self.__openAutoConnectionSettingsAction: QAction = QAction("Auto connection settings", self.main_window)
-        #self.__openAutoConnectionSettingsAction.triggered.connect(self.__showAutoConnectionSettings)
         
         self.__newCampaignAction: QAction = QAction("Galactic Conquest...", self.main_window)
-        #self.__newCampaignAction.triggered.connect(self.__newCampaign)
 
         self.__newTradeRouteAction: QAction = QAction("Trade Route...", self.main_window)
-        #self.__newTradeRouteAction.triggered.connect(self.__newTradeRoute)
 
         self.setDataFolderAction: QAction = QAction("Set Data Folder", self.main_window)
-        #self.setDataFolderAction.triggered.connect(self.__openFolder)
 
         self.__saveAction: QAction = QAction("Save", self.main_window)
-        #self.__saveAction.triggered.connect(self.__saveFile)
 
         self.__quitAction: QAction = QAction("Quit", self.main_window)
         self.__quitAction.triggered.connect(sys.exit)
         
-        self.__optionsMenu.addAction(self.__openAutoConnectionSettingsAction)
         
         self.__fileMenu.addAction(self.__saveAction)
         self.__fileMenu.addAction(self.setDataFolderAction)
         self.__fileMenu.addAction(self.__quitAction)
         self.__editMenu.addAction(self.edit_planet_action)
-        self.__editMenu.addAction(self.edit_unit_action)
         self.__addMenu.addAction(self.__newCampaignAction)
         self.__addMenu.addAction(self.__newTradeRouteAction)
         
@@ -249,6 +239,7 @@ class MainUIWindow:
         self.window_splitter.addWidget(self.__leftTabsWidget)
 
         self.__planetsTradeRoutes.layout().addWidget(self.select_GC)
+        self.__planetsTradeRoutes.layout().addLayout(self.faction_layout)
         self.__planetsTradeRoutes.layout().addWidget(self.edit_gc_properties)
         self.__planetsTradeRoutes.layout().addWidget(self.planet_list)
         self.__planetsTradeRoutes.layout().addWidget(self.select_all_planets)

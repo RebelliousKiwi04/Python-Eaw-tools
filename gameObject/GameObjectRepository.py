@@ -26,6 +26,7 @@ class ModRepository:
         self.hardpoints = {}
         self.text = {}
         self.campaigns = {}
+        self.campaign_sets = {}
         self.trade_routes = []
         self.init_repo()
     def get_game_constants(self):
@@ -122,3 +123,11 @@ class ModRepository:
             for child in root:
                 if child.tag == 'Campaign':
                     self.campaigns[child.get('Name')] = Campaign(child, self.planets, self.trade_routes, file)
+                    for j in child:
+                        if j.tag == 'Campaign_Set':
+                            if j.text in self.campaign_sets.keys():
+                                table = list(self.campaign_sets[j])
+                                table.append(self.campaigns[child.get('Name')])
+                                self.campaign_sets[j] = tuple(table)
+                            else:
+                                self.campaign_sets[j] = (self.campaigns[child.get('Name')])
