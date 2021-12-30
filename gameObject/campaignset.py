@@ -12,13 +12,19 @@ class CampaignSet:
         return self.playableFactions[faction]
     def addFaction(self, factionName):
         for faction, campaign in self.playableFactions.items():
-            template = campaign
+            filelocation = campaign.fileLocation
+            planets= campaign.planets
+            traderoutes = campaign.trade_routes
             break
-        template.activeFaction=factionName
-        template.name = self.name +'_'+factionName
-        print(template.activeFaction)
-        print(template.name)
-        self.playableFactions[factionName] = template
-        return template
+
+        self.playableFactions[factionName] = NewCampaign(self.name+'_'+factionName, factionName, planets, traderoutes, filelocation)
+        return self.playableFactions[factionName]
 
 
+class NewCampaign:
+    def __init__(self, name, faction,planets, tradeRoutes, fileLocation):
+        self.fileLocation = fileLocation
+        self.activeFaction = faction
+        self.name = name
+        self.planets = planets
+        self.trade_routes= tradeRoutes
