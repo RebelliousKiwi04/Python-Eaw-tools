@@ -20,7 +20,6 @@ class CampaignPropertiesWindow:
         self.CampaignSet = QLineEdit()
         self.CampaignSetLayout.addWidget(self.CampaignSetLabel)
         self.CampaignSetLayout.addWidget(self.CampaignSet)
-        self.CampaignSet.setText(campaign.setName)
         self.NameLayout = QHBoxLayout()
         self.NameLabel = QLabel()
         self.NameLabel.setFont(font)

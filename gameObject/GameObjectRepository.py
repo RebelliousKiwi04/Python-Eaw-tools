@@ -23,6 +23,7 @@ class ModRepository:
         self.planetFiles = []
         self.planets = []
         self.units = []
+        self.ai_players = self.get_ai_players()
         self.factions = []
         self.hardpoints = {}
         self.text = {}
@@ -30,6 +31,17 @@ class ModRepository:
         self.campaign_sets = {}
         self.trade_routes = []
         self.init_repo()
+    def get_ai_players(self):
+        ai_players = []
+        ai_folder = self.mod_dir+'/xml/AI/Players'
+        ai_files = os.listdir(ai_folder)
+        for file in ai_files:
+            file = et.parse(ai_folder+'/'+file).getroot()
+            for child in file:
+                if child.tag == 'Name':
+                    ai_players.append(child.text.replace(" ", ""))
+        print(ai_players)
+        return ai_players
     def get_game_constants(self):
         if os.path.isdir('xml'):
             xmlPath = '/xml/'
