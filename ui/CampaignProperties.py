@@ -3,45 +3,58 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 import sys
 
+class FactionHomeLocation(QWidget):
+    def __init__(self, factionName, campaign):
+        super().__init__()
+        self.setLayout(QHBoxLayout())
+        self.label = QLabel(factionName)
+        self.homeplanet = QComboBox()
+        self.layout().addWidget(self.label)
+        self.layout().addWidget(self.homeplanet)
+
+
+
 class CampaignPropertiesWindow:
-    def __init__(self, campaign):
+    def __init__(self, campaignset, campaign, gameobjectrepository):
         self.dialogWindow = QDialog()
         self.layout = QVBoxLayout()
 
+        ## SORT ORDER
+        self.sortorderlayout = QHBoxLayout()
+        self.sortlabel = QLabel("Sort Order: ")
+        self.sortorder = QSpinBox()
+        self.sortorder.setMinimum(1)
+        self.sortorder.setMaximum(20)
+        self.sortorderlayout.addWidget(self.sortlabel)
+        self.sortorderlayout.addWidget(self.sortorder)
+
+        ## IN GAME NAME
+        self.campaignnamelayout = QHBoxLayout()
+        self.campaignnamelabel = QLabel("Campaign Name (In Game): ")
+        self.campaignname = QLineEdit()
+        self.campaignnamelayout.addWidget(self.campaignnamelabel)
+        self.campaignnamelayout.addWidget(self.campaignname)
+
+        ## IN GAME DESCRIPTION
+        self.campaigndesclayout = QHBoxLayout()
+        self.campaigndesclabel = QLabel("Campaign Description (In Game): ")
+        self.campaigndesc = QLineEdit()
+        self.campaigndesclayout.addWidget(self.campaigndesclabel)
+        self.campaigndesclayout.addWidget(self.campaigndesc)
+
+
         
-        font = QFont()
-        font.setPointSize(9)
 
 
-        self.CampaignSetLayout = QHBoxLayout()
-        self.CampaignSetLabel = QLabel()
-        self.CampaignSetLabel.setFont(font)
-        self.CampaignSetLabel.setText("Campaign Set Name")
-        self.CampaignSet = QLineEdit()
-        self.CampaignSetLayout.addWidget(self.CampaignSetLabel)
-        self.CampaignSetLayout.addWidget(self.CampaignSet)
-        self.NameLayout = QHBoxLayout()
-        self.NameLabel = QLabel()
-        self.NameLabel.setFont(font)
-        self.NameLabel.setText("Campaign Name")
-        self.Name = QLineEdit()
-        self.NameLayout.addWidget(self.NameLabel)
-        self.NameLayout.addWidget(self.Name)
-        self.Name.setText(campaign.name)
+        ## HOME LOCATIONS
+        self.homelocationslayout = QVBoxLayout()
+        self.homelocationslayout.addWidget(FactionHomeLocation('test', []))
+        self.factionhomelayouts = []
 
 
-        self.OkCancelButtons = QDialogButtonBox()
-        self.OkCancelButtons.setStandardButtons(QDialogButtonBox.Cancel|QDialogButtonBox.Ok)
-        self.OkCancelButtons.accepted.connect(self.dialogWindow.accept)
-        self.OkCancelButtons.rejected.connect(self.dialogWindow.reject)
-        self.layout.addLayout(self.NameLayout)
-        self.layout.addLayout(self.CampaignSetLayout)
-        self.layout.addWidget(self.OkCancelButtons)
-        self.dialogWindow.setWindowTitle('Campaign Properties')
-        self.dialogWindow.setLayout(self.layout)
-        self.dialogWindow.exec()
+
         
-# app = QApplication(sys.argv)
-# ui = CampaignPropertiesWindow()
-# ui.dialogWindow.exec()
-# sys.exit(app.exec_())
+app = QApplication(sys.argv)
+ui = CampaignPropertiesWindow(None, None, None)
+ui.dialogWindow.exec()
+sys.exit(app.exec_())
