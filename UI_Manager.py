@@ -322,7 +322,8 @@ class UI_Presenter:
         self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets)
     def show_campaign_properties(self):
         campaign = self.selected_campaign
-        window = CampaignPropertiesWindow(campaign)
+        window = CampaignPropertiesWindow(self.selected_set, self.selected_campaign, self.repository)
+        i = window.dialogWindow.exec_()
     def addFactionToCampaign(self):
         test = AddFactionWindow(self.selected_set, self.repository)
         i = test.dialogWindow.exec_()
