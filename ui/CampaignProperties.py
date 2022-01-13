@@ -17,7 +17,7 @@ class FactionHomeLocation(QWidget):
 class CampaignPropertiesWindow:
     def __init__(self, campaignset, campaign, repository):
         self.dialogWindow = QDialog()
-        self.dialogWindow.setWindowTitle("Campaign Properties")
+        self.dialogWindow.setWindowTitle(f"{campaign.name} Properties")
         self.layout = QVBoxLayout()
         self.dialogWindow.setLayout(self.layout)
 

@@ -7,10 +7,14 @@ class Campaign:
         self.activeFaction = self.get_active_faction()
         self.name = xml_entry.get('Name')
         self.setName: str = self.get_set_name()
-        self.planets = []
         self.max_tech_level = self.get_max_tech()
+        self.starting_tech = self.get_starting_tech()
+        self.ai_players = self.get_ai_players()
+        self.home_locations = self.get_home_locations()
+        self.starting_credits = self.get_starting_credits()
+
         self.trade_routes= []
-        self.__ai_players = []
+        self.planets = []
         for i in self.get_planets():
             for j in planets:
                 if j.name == i:
@@ -44,19 +48,52 @@ class Campaign:
                     outputList.append(newText)
                 return outputList
     def get_max_tech(self):
-        max_tech = []
+        max_tech = {}
         for item in self.entry:
             if item.tag == 'Max_Tech_Level':
-                outputList = []
-                for text in item.text.split():
-                    newText = text.replace(',','')
-                    outputList.append(newText)
-                max_tech.append(int(outputList[1]))
-        # self.using_deepcore = bool(et.parse('config.xml').getroot().find("Using_Deepcore").text)
-        # print(self.using_deepcore)
-        if len(max_tech) >0:
-            return max(max_tech)
-
-        return None
+                splitText = item.text.split(',')
+                for text in splitText:
+                    text = text.replace(" ","")
+                    max_tech[splitText[0]] = splitText[1]
+                
+        return max_tech
+    def get_starting_credits(self):
+        starting_credits = {}
+        for item in self.entry:
+            if item.tag == 'Starting_Credits':
+                splitText = item.text.split(',')
+                for text in splitText:
+                    text = text.replace(" ","")
+                    starting_credits[splitText[0]] = splitText[1]
+                
+        return starting_credits
+    def get_starting_tech(self):
+        min_tech = {}
+        for item in self.entry:
+            if item.tag == 'Starting_Tech_Level':
+                splitText = item.text.split(',')
+                for text in splitText:
+                    text = text.replace(" ","")
+                    min_tech[splitText[0]] = splitText[1]
+                
+        return min_tech
+    def get_ai_players(self):
+        ai_players = {}
+        for item in self.entry:
+            if item.tag == 'AI_Player_Control':
+                splitText = item.text.split(',')
+                for text in splitText:
+                    text = text.replace(" ","")
+                ai_players[splitText[0]] = splitText[1]
+        return ai_players
+    def get_home_locations(self):
+        home_locations = {}
+        for item in self.entry:
+            if item.tag == 'Home_Location':
+                splitText = item.text.split(',')
+                for text in splitText:
+                    text = text.replace(" ","")
+                home_locations[splitText[0]] = splitText[1]
+        return home_locations
 
 
