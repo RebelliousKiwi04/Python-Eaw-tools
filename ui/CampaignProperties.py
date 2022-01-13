@@ -29,7 +29,9 @@ class CampaignPropertiesWindow:
         self.sortorder.setMaximum(20)
         self.sortorderlayout.addWidget(self.sortlabel)
         self.sortorderlayout.addWidget(self.sortorder)
-        
+        self.sortorder.setValue(campaign.sort_order)
+
+
         self.layout.addLayout(self.sortorderlayout)
 
         ## IN GAME NAME
@@ -38,6 +40,7 @@ class CampaignPropertiesWindow:
         self.campaignname = QLineEdit()
         self.campaignnamelayout.addWidget(self.campaignnamelabel)
         self.campaignnamelayout.addWidget(self.campaignname)
+        self.campaignname.setText(repository.text_dict[campaign.text_name])
 
         self.layout.addLayout(self.campaignnamelayout)
 
@@ -47,6 +50,7 @@ class CampaignPropertiesWindow:
         self.campaigndesc = QLineEdit()
         self.campaigndesclayout.addWidget(self.campaigndesclabel)
         self.campaigndesclayout.addWidget(self.campaigndesc)
+        self.campaigndesc.setText(repository.text_dict[campaign.desc_name])
 
         self.layout.addLayout(self.campaigndesclayout)
 
@@ -74,7 +78,7 @@ class CampaignPropertiesWindow:
         self.selectedfaction = QComboBox()
         for faction in campaignset.playableFactions.keys():
             self.selectedfaction.addItem(faction)
-
+        faction = self.selectedfaction.currentText()
         self.layout.addWidget(self.perfactionlabel)
         self.layout.addWidget(self.selectedfaction)
 
@@ -88,6 +92,9 @@ class CampaignPropertiesWindow:
         self.homelocationlayout.addWidget(self.homelocationlabel)
         self.homelocationlayout.addWidget(self.homelocation)
 
+        self.homelocation.setCurrentText(campaign.home_locations[faction])
+        
+
         self.layout.addLayout(self.homelocationlayout)
 
 
@@ -100,6 +107,8 @@ class CampaignPropertiesWindow:
         self.startingcreditslayout.addWidget(self.startingcreditslabel)
         self.startingcreditslayout.addWidget(self.startingcredits)
 
+        self.startingcredits.setValue(campaign.starting_credits[faction])
+        
         self.layout.addLayout(self.startingcreditslayout)
 
         #Starting Tech
@@ -111,6 +120,9 @@ class CampaignPropertiesWindow:
         self.startingtechlayout.addWidget(self.startingtechlabel)
         self.startingtechlayout.addWidget(self.startingtech)
 
+        print(campaign.starting_tech.keys())
+        self.startingtech.setValue(campaign.starting_tech[faction])
+        
         self.layout.addLayout(self.startingtechlayout)
 
         #Max Tech
@@ -121,6 +133,8 @@ class CampaignPropertiesWindow:
         self.maxtech.setMaximum(5)
         self.maxtechlayout.addWidget(self.maxtechlabel)
         self.maxtechlayout.addWidget(self.maxtech)
+
+        self.maxtech.setValue(campaign.max_tech_level[faction])
 
         self.layout.addLayout(self.maxtechlayout)
 
@@ -133,6 +147,8 @@ class CampaignPropertiesWindow:
 
         self.aicontrollayout.addWidget(self.aicontrollabel)
         self.aicontrollayout.addWidget(self.aicontroller)
+        self.aicontroller.setCurrentText(campaign.ai_players[faction])
+
 
         self.layout.addLayout(self.aicontrollayout)
 
