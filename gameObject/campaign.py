@@ -17,8 +17,21 @@ class StartingForcesContainer:
         index = 0
         increment = 0
         for obj in self.startingforcestable:
-
-
+            if obj.planet == planet_name:
+                planet_forces.append(obj)
+    def __getitem__(self, indice):
+        planet_forces = []
+        index = 0
+        increment = 0
+        for obj in self.startingforcestable:
+            if obj.planet == indice:
+                planet_forces.append(obj)
+        return planet_forces
+    def remove_obj(self, obj):
+        index = self.startingforcestable.index(obj)
+        popped = self.startingforcestable.pop(index)
+        return popped
+    
 class Campaign:
     def __init__(self, xml_entry, planets, tradeRoutes, fileLocation):
         self.fileLocation = fileLocation
@@ -36,7 +49,6 @@ class Campaign:
         self.desc_name = self.get_desc_id()
 
         self.starting_forces = {}
-
 
         self.trade_routes= []
         self.planets = []
