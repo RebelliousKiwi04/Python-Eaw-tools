@@ -1,24 +1,9 @@
 import lxml.etree as et
 from gameObject.StartingForcesObject import StartingForcesObject
 
-
-class StartingForcesObject:
-    def __init__(self, planet,unit, owner, quantity):
-        self.planet = planet
-        self.unit = unit
-        self.owner = owner
-        self.quantity = 0
-
 class StartingForcesContainer:
     def __init__(self):
         self.startingforcestable = []
-    def get_starting_forces_for_planet(self,planet_name):
-        planet_forces = []
-        index = 0
-        increment = 0
-        for obj in self.startingforcestable:
-            if obj.planet == planet_name:
-                planet_forces.append(obj)
     def __getitem__(self, indice):
         planet_forces = []
         index = 0
@@ -31,7 +16,19 @@ class StartingForcesContainer:
         index = self.startingforcestable.index(obj)
         popped = self.startingforcestable.pop(index)
         return popped
-    
+    def addItem(self, planet, unit, owner, quantity):
+        self.startingforcestable.append(StartingForcesObject(planet, unit, owner, quantity))
+    def addObject(self, obj):
+        self.startingforcestable.append(obj)
+    def get_all_forces_by_planet(self, planets):
+        forces_dict = {}
+        for planet in planets:
+            forces_dict[planet] = tuple(self[planet])
+        return forces_dict
+
+def remove_values_from_list(the_list, val):
+   return [value for value in the_list if value != val]
+
 class Campaign:
     def __init__(self, xml_entry, planets, tradeRoutes, fileLocation):
         self.fileLocation = fileLocation
@@ -48,8 +45,8 @@ class Campaign:
         self.text_name = self.get_text_id()
         self.desc_name = self.get_desc_id()
 
-        self.starting_forces = {}
-
+        self.starting_forces = StartingForcesContainer()
+        self.get_starting_forces()
         self.trade_routes= []
         self.planets = []
         for i in self.get_planets():
@@ -60,6 +57,25 @@ class Campaign:
             for j in tradeRoutes:
                 if j.name == i:
                     self.trade_routes.append(j)
+    def get_starting_forces(self):
+        forces = []
+        for item in self.entry:
+            if item.tag == 'Starting_Forces':
+                splitText = item.text.split(',')
+                finalText= []
+                for text in splitText:
+                    newText = text.replace(" ","")
+                    finalText.append(newText)
+                forces.append(finalText)
+                
+        while len(forces) > 0:
+            val = forces[0]
+            planet = val[0]
+            faction = val[1]
+            unit = val[2]
+            quantity = forces.count(val)
+            self.starting_forces.addItem(planet, unit, faction, quantity)
+            forces = remove_values_from_list(forces, val)
     def get_text_id(self):
         for item in self.entry:
             if item.tag == 'Text_ID':
