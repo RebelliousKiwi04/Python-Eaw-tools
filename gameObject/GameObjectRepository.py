@@ -138,8 +138,9 @@ class ModRepository:
                     self.campaigns[child.get('Name')] = Campaign(child, self.planets, self.trade_routes, file)
                     for j in child:
                         if j.tag == 'Campaign_Set':
-                            if j.text in self.campaign_sets.keys():
-                                self.campaign_sets[j.text].addCampaign(self.campaigns[child.get('Name')])
+                            campaignsetname = j.text.replace(" ","")
+                            if campaignsetname in self.campaign_sets.keys():
+                                self.campaign_sets[campaignsetname].addCampaign(self.campaigns[child.get('Name')])
                             else:
-                                self.campaign_sets[j.text] = CampaignSet(j.text)
-                                self.campaign_sets[j.text].addCampaign(self.campaigns[child.get('Name')])
+                                self.campaign_sets[campaignsetname] = CampaignSet(campaignsetname)
+                                self.campaign_sets[campaignsetname].addCampaign(self.campaigns[child.get('Name')])

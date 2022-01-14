@@ -120,7 +120,6 @@ class CampaignPropertiesWindow:
         self.startingtechlayout.addWidget(self.startingtechlabel)
         self.startingtechlayout.addWidget(self.startingtech)
 
-        print(campaign.starting_tech.keys())
         self.startingtech.setValue(campaign.starting_tech[faction])
         
         self.layout.addLayout(self.startingtechlayout)
@@ -151,10 +150,3 @@ class CampaignPropertiesWindow:
 
 
         self.layout.addLayout(self.aicontrollayout)
-
-
-        
-# app = QApplication(sys.argv)
-# ui = CampaignPropertiesWindow(None, None, None)
-# ui.dialogWindow.exec()
-# sys.exit(app.exec_())

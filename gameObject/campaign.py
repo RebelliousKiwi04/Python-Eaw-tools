@@ -83,7 +83,11 @@ class Campaign:
                 for text in splitText:
                     newText = text.replace(" ","")
                     finalText.append(newText)
-                starting_credits[finalText[0]] = int(finalText[1])
+                if len(finalText) < 2:
+                    print(self.name)
+                    print(finalText)
+                else:
+                    starting_credits[finalText[0]] = int(finalText[1])
                 
         return starting_credits
     def get_starting_tech(self):
