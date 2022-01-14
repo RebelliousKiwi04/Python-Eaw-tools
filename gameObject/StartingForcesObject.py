@@ -3,4 +3,4 @@ class StartingForcesObject:
         self.planet = planet
         self.unit = unit
         self.owner = owner
-        self.quantity = 0
+        self.quantity = quantity

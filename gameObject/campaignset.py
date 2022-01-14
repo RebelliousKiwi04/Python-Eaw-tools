@@ -19,7 +19,6 @@ class CampaignSet:
         self.playableFactions[factionName] = copy.deepcopy(campaigna)
         self.playableFactions[factionName].activeFaction = factionName
         self.playableFactions[factionName].name = self.name+'_'+factionName
-        print(self.playableFactions[factionName].name)
         return self.playableFactions[factionName]
 
 

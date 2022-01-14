@@ -4,12 +4,12 @@ from gameObject.StartingForcesObject import StartingForcesObject
 class StartingForcesContainer:
     def __init__(self):
         self.startingforcestable = []
-    def __getitem__(self, indice):
+    def __getitem__(self, planet):
         planet_forces = []
         index = 0
         increment = 0
         for obj in self.startingforcestable:
-            if obj.planet == indice:
+            if obj.planet == planet.name:
                 planet_forces.append(obj)
         return planet_forces
     def remove_obj(self, obj):
@@ -30,7 +30,7 @@ def remove_values_from_list(the_list, val):
    return [value for value in the_list if value != val]
 
 class Campaign:
-    def __init__(self, xml_entry, planets, tradeRoutes, fileLocation):
+    def __init__(self, xml_entry, planets, tradeRoutes, fileLocation, all_factions):
         self.fileLocation = fileLocation
         self.entry = xml_entry
         self.activeFaction = self.get_active_faction()
@@ -44,6 +44,9 @@ class Campaign:
         self.sort_order = int(self.get_sort_order())
         self.text_name = self.get_text_id()
         self.desc_name = self.get_desc_id()
+
+        self.all_factions = all_factions
+
 
         self.starting_forces = StartingForcesContainer()
         self.get_starting_forces()
@@ -70,8 +73,21 @@ class Campaign:
                 
         while len(forces) > 0:
             val = forces[0]
-            planet = val[0]
-            faction = val[1]
+            factionIndex = None
+            for i in self.all_factions:
+                try:
+                    factionIndex = val.index(i.name)
+                except:
+                    pass
+            if factionIndex == None:
+                planet = val[0]
+                faction = val[1]
+            elif factionIndex == 1:
+                planet = val[0]
+                faction = val[1]
+            else:
+                planet = val[1]
+                faction = val[0]
             unit = val[2]
             quantity = forces.count(val)
             self.starting_forces.addItem(planet, unit, faction, quantity)
@@ -134,8 +150,9 @@ class Campaign:
                     newText = text.replace(" ","")
                     finalText.append(newText)
                 if len(finalText) < 2:
-                    print(self.name)
-                    print(finalText)
+                    # print(self.name)
+                    # print(finalText)
+                    pass
                 else:
                     starting_credits[finalText[0]] = int(finalText[1])
                 

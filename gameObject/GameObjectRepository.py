@@ -40,7 +40,6 @@ class ModRepository:
             for child in file:
                 if child.tag == 'Name':
                     ai_players.append(child.text.replace(" ", ""))
-        print(ai_players)
         return ai_players
     def get_game_constants(self):
         if os.path.isdir('xml'):
@@ -135,7 +134,7 @@ class ModRepository:
             root = et.parse(file).getroot()
             for child in root:
                 if child.tag == 'Campaign':
-                    self.campaigns[child.get('Name')] = Campaign(child, self.planets, self.trade_routes, file)
+                    self.campaigns[child.get('Name')] = Campaign(child, self.planets, self.trade_routes, file, self.factions)
                     for j in child:
                         if j.tag == 'Campaign_Set':
                             campaignsetname = j.text.replace(" ","")

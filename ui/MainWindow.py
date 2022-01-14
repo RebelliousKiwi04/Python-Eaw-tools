@@ -180,12 +180,11 @@ class MainUIWindow:
         font.setPointSize(10)
 
 
-        self.forcesListWidget = PyQtUtil.construct_table_widget(["Unit", "Owner", "AICP", "Quantity"], 4)        
+        self.forcesListWidget = PyQtUtil.construct_table_widget(["Unit", "Owner", "Quantity"], 3)        
         header = self.forcesListWidget.horizontalHeader()       
         header.setSectionResizeMode(0, QtWidgets.QHeaderView.Stretch)
-        header.setSectionResizeMode(1, QtWidgets.QHeaderView.ResizeToContents)
+        header.setSectionResizeMode(1, QtWidgets.QHeaderView.Stretch)
         header.setSectionResizeMode(2, QtWidgets.QHeaderView.Stretch)
-        header.setSectionResizeMode(3, QtWidgets.QHeaderView.ResizeToContents)
         #Far Right tab
         self.scriptModeComboBox = QComboBox()
 
@@ -195,8 +194,6 @@ class MainUIWindow:
         self.__fileMenu: QMenu = QMenu("File", self.main_window)
         self.__addMenu: QMenu = QMenu("New", self.main_window)
         self.__editMenu: QMenu = QMenu("Edit", self.main_window)
-
-        self.edit_planet_action = QAction("Planet", self.main_window)
         
         self.__newCampaignAction: QAction = QAction("Galactic Conquest...", self.main_window)
 
@@ -213,7 +210,6 @@ class MainUIWindow:
         self.__fileMenu.addAction(self.__saveAction)
         self.__fileMenu.addAction(self.setDataFolderAction)
         self.__fileMenu.addAction(self.__quitAction)
-        self.__editMenu.addAction(self.edit_planet_action)
         self.__addMenu.addAction(self.__newCampaignAction)
         self.__addMenu.addAction(self.__newTradeRouteAction)
         

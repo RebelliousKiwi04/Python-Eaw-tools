@@ -1,5 +1,4 @@
 from ui.AddUnitWindow import AddUnitWindow
-from ui.EditPlanetWindow import PlanetWindow
 from ui.addFactionWindow import AddFactionWindow
 from gameObject.GameObjectRepository import ModRepository
 from gameObject.StartingForcesObject import StartingForcesObject
@@ -23,7 +22,6 @@ class UI_Presenter:
         self.ui.tradeRoute_list.itemChanged.connect(self.ontradeRouteCellChanged)
         self.ui.add_unit_to_planet.clicked.connect(self.add_unit_to_starting_forces)
         self.ui.planetComboBox.currentIndexChanged.connect(self.update_starting_forces_table)
-        self.ui.edit_planet_action.triggered.connect(self.edit_planet)
         self.ui.select_all_planets.clicked.connect(self.check_all_planets)
         self.ui.deselect_all_planets.clicked.connect(self.uncheck_all_planets)
         self.ui.select_all_tradeRoutes.clicked.connect(self.check_all_tradeRoutes)
@@ -39,7 +37,6 @@ class UI_Presenter:
         self.ui.tradeRoute_list.itemChanged.disconnect(self.ontradeRouteCellChanged)
         self.ui.add_unit_to_planet.clicked.disconnect(self.add_unit_to_starting_forces)
         self.ui.planetComboBox.currentIndexChanged.disconnect(self.update_starting_forces_table)
-        self.ui.edit_planet_action.triggered.disconnect(self.edit_planet)
         self.ui.select_all_planets.clicked.disconnect(self.check_all_planets)
         self.ui.add_faction.clicked.disconnect(self.addFactionToCampaign)
         self.ui.deselect_all_planets.clicked.disconnect(self.uncheck_all_planets)
@@ -58,7 +55,6 @@ class UI_Presenter:
             item.setFlags(QtCore.Qt.ItemIsUserCheckable | QtCore.Qt.ItemIsEnabled)
             item.setCheckState(QtCore.Qt.Unchecked)
             self.ui.planet_list.setItem(rowCount, 0, item)
-            planet.reset_starting_forces_table(self.repository.campaigns)
         for route in self.repository.trade_routes:
             rowCount = self.ui.tradeRoute_list.rowCount()
             self.ui.tradeRoute_list.setRowCount(rowCount + 1)
@@ -148,7 +144,7 @@ class UI_Presenter:
     def update_starting_forces_table(self):
         self.ui.forcesListWidget.clear()
         self.ui.forcesListWidget.setRowCount(0)
-        self.ui.forcesListWidget.setHorizontalHeaderLabels(["Unit", "Owner", "AICP", "Quantity"])
+        self.ui.forcesListWidget.setHorizontalHeaderLabels(["Unit", "Owner", "Quantity"])
 
         planet_name = self.ui.planetComboBox.currentText()
         planet_index = None
@@ -160,19 +156,19 @@ class UI_Presenter:
             self.logFile.write(f'\n Error During Planet Indexing [Line 157 UI_Manager.py] planet {planet_name} failed to index')
             return
         planet = self.repository.planets[planet_index]
-        starting_forces = planet.starting_forces[self.selected_campaign.name]
+        print('Indexing Into starting forces')
+        print(planet_name)
+        starting_forces = self.selected_campaign.starting_forces[planet]
 
         for obj in starting_forces:
             rowCount = self.ui.forcesListWidget.rowCount()
             self.ui.forcesListWidget.setRowCount(rowCount + 1)
-            item= QTableWidgetItem(obj.unit.name)
+            item= QTableWidgetItem(obj.unit)
             self.ui.forcesListWidget.setItem(rowCount, 0, item)
-            item= QTableWidgetItem(str(obj.owner.name))
+            item= QTableWidgetItem(str(obj.owner))
             self.ui.forcesListWidget.setItem(rowCount, 1, item)
-            item= QTableWidgetItem(str(obj.unit.aicp))
-            self.ui.forcesListWidget.setItem(rowCount, 2, item)
             item = QTableWidgetItem(str(obj.quantity))
-            self.ui.forcesListWidget.setItem(rowCount, 3, item)
+            self.ui.forcesListWidget.setItem(rowCount, 2, item)
         self.ui.forcesListWidget.setEditTriggers(QTableWidget.NoEditTriggers)
     def update_planets_box(self):
         self.ui.planetComboBox.currentIndexChanged.disconnect(self.update_starting_forces_table)
@@ -256,8 +252,8 @@ class UI_Presenter:
         unit = self.repository.units[unit_index]
         owner = self.repository.factions[owner_index]
         planet = self.repository.planets[planet_index]
-        forces = planet.starting_forces[self.selected_campaign.name]
-        forces.append(StartingForcesObject(planet, unit, owner, quantity))
+        forces = self.selected_campaign.starting_forces
+        forces.addItem(planet.name, unit.name, owner.name, quantity)
         self.addUnitWindow.OkCancelButtons.accepted.disconnect(self.complete_unit_adding)
 
 
@@ -267,16 +263,9 @@ class UI_Presenter:
         self.ui.forcesListWidget.setItem(rowCount, 0, item)
         item= QTableWidgetItem(str(owner.name))
         self.ui.forcesListWidget.setItem(rowCount, 1, item)
-        item= QTableWidgetItem(str(unit.aicp))
-        self.ui.forcesListWidget.setItem(rowCount, 2, item)
         item = QTableWidgetItem(str(quantity))
-        self.ui.forcesListWidget.setItem(rowCount, 3, item)
+        self.ui.forcesListWidget.setItem(rowCount, 2, item)
         self.addUnitWindow.dialogWindow.accept()
-    def edit_planet(self):
-        editWindow = PlanetWindow(self.repository.planets, self.repository.text_dict)
-        for planet in self.repository.planets:
-            editWindow.planetSelection.addItem(planet.name)
-        editWindow.show()
 
     #Check Uncheck all planets/traderoutes, is associated with layout tab
     def check_all_planets(self):
@@ -324,8 +313,7 @@ class UI_Presenter:
         test = AddFactionWindow(self.selected_set, self.repository)
         i = test.dialogWindow.exec_()
         if i ==1:
-            campaign = self.selected_set.addFaction(test.faction.currentText())
-            for planet in self.repository.planets:
-                planet.add_campaign_to_table(campaign.name)
+            self.selected_set.addFaction(test.faction.currentText())
+
             self.select_GC()
         
