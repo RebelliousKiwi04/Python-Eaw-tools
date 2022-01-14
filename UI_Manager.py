@@ -148,7 +148,7 @@ class UI_Presenter:
     def update_starting_forces_table(self):
         self.ui.forcesListWidget.clear()
         self.ui.forcesListWidget.setRowCount(0)
-        self.ui.forcesListWidget.setHorizontalHeaderLabels(["Unit", "Owner", "Tech", "Quantity"])
+        self.ui.forcesListWidget.setHorizontalHeaderLabels(["Unit", "Owner", "AICP", "Quantity"])
 
         planet_name = self.ui.planetComboBox.currentText()
         planet_index = None
@@ -166,16 +166,13 @@ class UI_Presenter:
             rowCount = self.ui.forcesListWidget.rowCount()
             self.ui.forcesListWidget.setRowCount(rowCount + 1)
             item= QTableWidgetItem(obj.unit.name)
-            item.setFlags(QtCore.Qt.ItemIsEnabled)
             self.ui.forcesListWidget.setItem(rowCount, 0, item)
-            item= QTableWidgetItem(str(obj.unit.aicp))
-            item.setFlags(QtCore.Qt.ItemIsEnabled)
+            item= QTableWidgetItem(str(obj.owner.name))
             self.ui.forcesListWidget.setItem(rowCount, 1, item)
-            item= QTableWidgetItem(str(obj.tech))
-            self.ui.forcesListWidget.setItem(rowCount, 3, item)
-            item = QTableWidgetItem(obj.owner.name)
-            item.setFlags(QtCore.Qt.ItemIsEnabled)
+            item= QTableWidgetItem(str(obj.unit.aicp))
             self.ui.forcesListWidget.setItem(rowCount, 2, item)
+            item = QTableWidgetItem(str(obj.quantity))
+            self.ui.forcesListWidget.setItem(rowCount, 3, item)
         self.ui.forcesListWidget.setEditTriggers(QTableWidget.NoEditTriggers)
     def update_planets_box(self):
         self.ui.planetComboBox.currentIndexChanged.disconnect(self.update_starting_forces_table)
@@ -247,7 +244,6 @@ class UI_Presenter:
         self.addUnitWindow.show()
     def complete_unit_adding(self):
         planet_name = self.addUnitWindow.planet
-        techLevel = self.addUnitWindow.TechLevel.value()
         quantity = self.addUnitWindow.Quantity.value()
         unit_name = self.addUnitWindow.UnitTypeSelection.currentText()
         owner_name = self.addUnitWindow.OwnerDropdown.currentText()
@@ -261,7 +257,7 @@ class UI_Presenter:
         owner = self.repository.factions[owner_index]
         planet = self.repository.planets[planet_index]
         forces = planet.starting_forces[self.selected_campaign.name]
-        forces.append(StartingForcesObject(planet, unit, techLevel, owner, quantity))
+        forces.append(StartingForcesObject(planet, unit, owner, quantity))
         self.addUnitWindow.OkCancelButtons.accepted.disconnect(self.complete_unit_adding)
 
 
@@ -271,7 +267,7 @@ class UI_Presenter:
         self.ui.forcesListWidget.setItem(rowCount, 0, item)
         item= QTableWidgetItem(str(owner.name))
         self.ui.forcesListWidget.setItem(rowCount, 1, item)
-        item= QTableWidgetItem(str(techLevel))
+        item= QTableWidgetItem(str(unit.aicp))
         self.ui.forcesListWidget.setItem(rowCount, 2, item)
         item = QTableWidgetItem(str(quantity))
         self.ui.forcesListWidget.setItem(rowCount, 3, item)

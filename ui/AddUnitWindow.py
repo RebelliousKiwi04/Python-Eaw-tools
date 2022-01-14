@@ -8,19 +8,9 @@ class AddUnitWindow:
         self.dialogWindow = QDialog()
         self.layout = QVBoxLayout()
 
-        self.techLayout = QHBoxLayout()
-        self.TechLabel = QLabel()
-        self.TechLabel.setObjectName(u"TechLabel")
-        self.TechLabel.setGeometry(QRect(10, 60, 81, 31))
         font = QFont()
         font.setPointSize(10)
-        self.TechLabel.setFont(font)
-        self.TechLevel = QSpinBox()
-        self.TechLevel.setObjectName(u"TechLevel")
-        self.TechLabel.setText(QCoreApplication.translate("AddUnitWindow", u"Tech Level", None))
-        self.techLayout.addWidget(self.TechLabel)
-        self.techLayout.addWidget(self.TechLevel)
-        self.TechLevel.setValue(1)
+
 
 
         self.QuantityLayout = QHBoxLayout()
@@ -61,7 +51,6 @@ class AddUnitWindow:
     
 
         self.layout.addWidget(self.UnitTypeSelection)
-        self.layout.addLayout(self.techLayout)
         self.layout.addLayout(self.QuantityLayout)
         self.layout.addLayout(self.ownerLayout)
         self.layout.addLayout(self.buttonLayout)
@@ -76,8 +65,7 @@ class AddUnitWindow:
     def show(self):
         self.dialogWindow.exec()
     def on_completion(self):
-        techLevel = self.TechLevel.value()
         quantity = self.Quantity.value()
         unit_name = self.UnitTypeSelection.currentText()
-        self.signal.emit(list(techLevel, quantity, unit_name, self.planet))
+        self.signal.emit(list(quantity, unit_name, self.planet))
         

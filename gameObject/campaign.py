@@ -1,4 +1,23 @@
 import lxml.etree as et
+from gameObject.StartingForcesObject import StartingForcesObject
+
+
+class StartingForcesObject:
+    def __init__(self, planet,unit, owner, quantity):
+        self.planet = planet
+        self.unit = unit
+        self.owner = owner
+        self.quantity = 0
+
+class StartingForcesContainer:
+    def __init__(self):
+        self.startingforcestable = []
+    def get_starting_forces_for_planet(self,planet_name):
+        planet_forces = []
+        index = 0
+        increment = 0
+        for obj in self.startingforcestable:
+
 
 class Campaign:
     def __init__(self, xml_entry, planets, tradeRoutes, fileLocation):
@@ -15,6 +34,9 @@ class Campaign:
         self.sort_order = int(self.get_sort_order())
         self.text_name = self.get_text_id()
         self.desc_name = self.get_desc_id()
+
+        self.starting_forces = {}
+
 
         self.trade_routes= []
         self.planets = []

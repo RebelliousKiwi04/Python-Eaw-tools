@@ -180,7 +180,7 @@ class MainUIWindow:
         font.setPointSize(10)
 
 
-        self.forcesListWidget = PyQtUtil.construct_table_widget(["Unit", "Owner", "Tech", "Quantity"], 4)        
+        self.forcesListWidget = PyQtUtil.construct_table_widget(["Unit", "Owner", "AICP", "Quantity"], 4)        
         header = self.forcesListWidget.horizontalHeader()       
         header.setSectionResizeMode(0, QtWidgets.QHeaderView.Stretch)
         header.setSectionResizeMode(1, QtWidgets.QHeaderView.ResizeToContents)
