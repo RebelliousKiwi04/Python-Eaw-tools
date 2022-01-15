@@ -5,11 +5,15 @@ class StartingForcesContainer:
     def __init__(self):
         self.startingforcestable = []
     def __getitem__(self, planet):
+        planet_name = planet
+        if type(planet) != str:
+            planet_name = planet.name
+        
         planet_forces = []
         index = 0
         increment = 0
         for obj in self.startingforcestable:
-            if obj.planet == planet.name:
+            if obj.planet == planet_name:
                 planet_forces.append(obj)
         return planet_forces
     def remove_obj(self, obj):

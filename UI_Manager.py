@@ -1,4 +1,4 @@
-from ui.AddUnitWindow import AddUnitWindow
+from ui.AddUnitWindow import AddUnitWindow, EditUnitWindow
 from ui.addFactionWindow import AddFactionWindow
 from gameObject.GameObjectRepository import ModRepository
 from gameObject.StartingForcesObject import StartingForcesObject
@@ -25,6 +25,7 @@ class UI_Presenter:
         self.ui.select_all_planets.clicked.connect(self.check_all_planets)
         self.ui.deselect_all_planets.clicked.connect(self.uncheck_all_planets)
         self.ui.select_all_tradeRoutes.clicked.connect(self.check_all_tradeRoutes)
+        self.ui.modify_entry.clicked.connect(self.delete_starting_forces_entry)
         self.ui.add_faction.clicked.connect(self.addFactionToCampaign)
         self.ui.deselect_all_tradeRoutes.clicked.connect(self.uncheck_all_tradeRoutes)
         self.ui.select_GC.currentIndexChanged.connect(self.select_GC)
@@ -41,6 +42,7 @@ class UI_Presenter:
         self.ui.add_faction.clicked.disconnect(self.addFactionToCampaign)
         self.ui.deselect_all_planets.clicked.disconnect(self.uncheck_all_planets)
         self.ui.select_all_tradeRoutes.clicked.disconnect(self.check_all_tradeRoutes)
+        self.ui.modify_entry.clicked.disconnect(self.delete_starting_forces_entry)
         self.ui.deselect_all_tradeRoutes.clicked.disconnect(self.uncheck_all_tradeRoutes)
         self.ui.select_GC.currentIndexChanged.disconnect(self.select_GC)
         self.ui.select_faction.currentIndexChanged.disconnect(self.select_faction)
@@ -316,4 +318,15 @@ class UI_Presenter:
             self.selected_set.addFaction(test.faction.currentText())
 
             self.select_GC()
+    def delete_starting_forces_entry(self):
+        row = self.ui.forcesListWidget.currentRow()
+        if row < 0:
+            return
+      
+        obj = self.selected_campaign.starting_forces[self.ui.planetComboBox.currentText()][row]
+
+        window = EditUnitWindow(obj,self.selected_campaign,self.repository)
+        window.dialogWindow.exec_()
+        self.update_starting_forces_table()
+
         

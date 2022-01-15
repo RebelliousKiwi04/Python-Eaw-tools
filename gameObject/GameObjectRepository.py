@@ -120,7 +120,7 @@ class ModRepository:
                         self.planets.append(Planet(child, file))
                         if not file in self.planetFiles:
                             self.planetFiles.append(file)
-                if child.tag == 'SpaceUnit' or child.tag == 'UniqueUnit' or child.tag == 'GroundInfantry' or child.tag == 'GroundVehicle' or child.tag == 'HeroUnit' or child.tag == 'GroundUnit' or child.tag == 'Squadron':
+                if child.tag == 'SpaceUnit' or child.tag == 'UniqueUnit' or child.tag == 'SpecialStructure' or child.tag == 'GroundInfantry' or child.tag == 'GroundVehicle' or child.tag == 'HeroUnit' or child.tag == 'GroundUnit' or child.tag == 'Squadron' or child.tag =='SpaceStructure' or child.tag == 'StarBase' or child.tag =='GroundStructure' or child.tag == 'GroundBase':
                     if 'death_clone' not in child.get('Name').lower():
                         self.units.append(Unit(child,file,self.mod_dir))
         for file in self.tradeRoute_files:

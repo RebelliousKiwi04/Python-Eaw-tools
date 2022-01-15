@@ -183,8 +183,8 @@ class MainUIWindow:
         self.forcesListWidget = PyQtUtil.construct_table_widget(["Unit", "Owner", "Quantity"], 3)        
         header = self.forcesListWidget.horizontalHeader()       
         header.setSectionResizeMode(0, QtWidgets.QHeaderView.Stretch)
-        header.setSectionResizeMode(1, QtWidgets.QHeaderView.Stretch)
-        header.setSectionResizeMode(2, QtWidgets.QHeaderView.Stretch)
+        header.setSectionResizeMode(1, QtWidgets.QHeaderView.ResizeToContents)
+        header.setSectionResizeMode(2, QtWidgets.QHeaderView.ResizeToContents)
         #Far Right tab
         self.scriptModeComboBox = QComboBox()
 
@@ -227,7 +227,7 @@ class MainUIWindow:
 
         self.__leftTabsWidget.addTab(self.__planetsTradeRoutes, "Layout")
         self.__leftTabsWidget.addTab(self.__startingForces, "Forces")
-        self.__leftTabsWidget.addTab(self.scriptingTab, 'Scripting')
+        # self.__leftTabsWidget.addTab(self.scriptingTab, 'Scripting')
         self.__planetsTradeRoutes.setLayout(QVBoxLayout())
         self.__startingForces.setLayout(QVBoxLayout())
         self.scriptingTab.setLayout(QVBoxLayout())
@@ -249,6 +249,8 @@ class MainUIWindow:
         self.__startingForces.layout().addWidget(self.planetComboBox)
         self.__startingForces.layout().addWidget(self.add_unit_to_planet)
         self.__startingForces.layout().addWidget(self.forcesListWidget)
+        self.modify_entry = QPushButton("Modify Selected Entry")
+        self.__startingForces.layout().addWidget(self.modify_entry)
         self.map = GalacticMap(self.window_splitter)
         #plot = GalacticMap()
         self.window_splitter.addWidget(self.map.mapWidget)
