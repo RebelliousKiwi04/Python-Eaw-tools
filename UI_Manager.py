@@ -49,6 +49,19 @@ class UI_Presenter:
         self.ui.map.planetSelectedSignal.disconnect(self.onPlanetSelection)
 
         self.ui.edit_gc_properties.clicked.disconnect(self.show_campaign_properties)
+    def clear_data(self):
+        self.disconnect_triggers()
+        self.ui.select_GC.clear()
+        self.ui.select_faction.clear()
+        self.ui.planetComboBox.clear()
+        self.ui.forcesListWidget.clear()
+        self.ui.forcesListWidget.setRowCount(0)
+        self.ui.planet_list.clear()
+        self.ui.planet_list.setHorizontalHeaderLabels(["Planets"])
+        self.ui.planet_list.setRowCount(0)
+        self.ui.tradeRoute_list.clear()
+        self.ui.tradeRoute_list.setRowCount(0)
+        self.ui.tradeRoute_list.setHorizontalHeaderLabels(["Trade Routes"])
     def update_tabs(self):
         for planet in self.repository.planets:
             rowCount = self.ui.planet_list.rowCount()

@@ -76,8 +76,8 @@ class CampaignPropertiesWindow:
         ###DATA PER FACTION
         self.perfactionlabel = QLabel("Faction Related Data")
         self.selectedfaction = QComboBox()
-        for faction in campaignset.playableFactions.keys():
-            self.selectedfaction.addItem(faction)
+        for faction in repository.factions:
+            self.selectedfaction.addItem(faction.name)
         faction = self.selectedfaction.currentText()
         self.layout.addWidget(self.perfactionlabel)
         self.layout.addWidget(self.selectedfaction)
@@ -92,6 +92,10 @@ class CampaignPropertiesWindow:
         self.homelocationlayout.addWidget(self.homelocationlabel)
         self.homelocationlayout.addWidget(self.homelocation)
 
+        print(campaign.name)
+        print(campaign.home_locations.keys())
+        if faction not in campaign.home_locations.keys():
+            campaign.home_locations[faction] = campaign.planets[0]
         self.homelocation.setCurrentText(campaign.home_locations[faction])
         
 
