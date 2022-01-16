@@ -1,13 +1,14 @@
 from ui.AddUnitWindow import AddUnitWindow, EditUnitWindow
+from ui.CampaignProperties import CampaignPropertiesWindow
 from ui.addFactionWindow import AddFactionWindow
+from ui.NewSetWindow import CreateNewGCWindow
 from gameObject.GameObjectRepository import ModRepository
-from gameObject.StartingForcesObject import StartingForcesObject
-import os, sys
+from gameObject.campaignset import CampaignSet
+import os, sys, lxml.etree as et, copy
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore
 from PyQt5 import QtGui
 from PyQt5.QtCore import *
-from ui.CampaignProperties import CampaignPropertiesWindow
 
 class UI_Presenter:
     def __init__(self, ui, mod_dir):
@@ -29,6 +30,7 @@ class UI_Presenter:
         self.ui.add_faction.clicked.connect(self.addFactionToCampaign)
         self.ui.deselect_all_tradeRoutes.clicked.connect(self.uncheck_all_tradeRoutes)
         self.ui.select_GC.currentIndexChanged.connect(self.select_GC)
+        self.ui.newCampaignAction.triggered.connect(self.create_new_set)
         self.ui.select_faction.currentIndexChanged.connect(self.select_faction)
         self.ui.map.planetSelectedSignal.connect(self.onPlanetSelection)
         self.ui.edit_gc_properties.clicked.connect(self.show_campaign_properties)
@@ -40,6 +42,7 @@ class UI_Presenter:
         self.ui.planetComboBox.currentIndexChanged.disconnect(self.update_starting_forces_table)
         self.ui.select_all_planets.clicked.disconnect(self.check_all_planets)
         self.ui.add_faction.clicked.disconnect(self.addFactionToCampaign)
+        self.ui.newCampaignAction.triggered.disconnect(self.create_new_set)
         self.ui.deselect_all_planets.clicked.disconnect(self.uncheck_all_planets)
         self.ui.select_all_tradeRoutes.clicked.disconnect(self.check_all_tradeRoutes)
         self.ui.modify_entry.clicked.disconnect(self.delete_starting_forces_entry)
@@ -339,5 +342,34 @@ class UI_Presenter:
         window = EditUnitWindow(obj,self.selected_campaign,self.repository)
         window.dialogWindow.exec_()
         self.update_starting_forces_table()
+    def create_new_set(self):
+        gcwindow = CreateNewGCWindow(self.repository)
+        if gcwindow.dialogWindow.exec_() == 1:
+            if os.path.isdir('xml'):
+                xmlPath = '/xml/'
+            else:
+                xmlPath = '/XML/'
+            campaignFiles = et.parse(self.mod_dir+xmlPath+'/campaignfiles.xml')
+            root = campaignFiles.getroot()
+            newset = et.SubElement(root,"File")
+            newset.text = gcwindow.location.text()
+            campaignFilesET = et.ElementTree(root)
+            campaignFilesET.write(self.mod_dir+xmlPath+'/campaignfiles.xml', xml_declaration=True, encoding='utf-8', pretty_print=True)
+
+            setname = gcwindow.setname.text()
+
+
+
+            template = copy.deepcopy(self.repository.campaigns[gcwindow.template.currentText()])
+
+            template.activeFaction = gcwindow.faction.currentText()
+            template.name = setname+'_'+gcwindow.faction.currentText()
+            template.fileLocation = self.mod_dir+xmlPath+gcwindow.location.text()
+
+            self.repository.campaigns[template.name] = template
+            campaignset = CampaignSet(setname)
+            campaignset.addCampaign(template)
+            self.repository.campaign_sets[setname] = campaignset
+            self.ui.select_GC.addItem(setname)
 
         

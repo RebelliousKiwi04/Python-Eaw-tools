@@ -20,12 +20,3 @@ class CampaignSet:
         self.playableFactions[factionName].activeFaction = factionName
         self.playableFactions[factionName].name = self.name+'_'+factionName
         return self.playableFactions[factionName]
-
-
-class NewCampaign:
-    def __init__(self, name, faction,planets, tradeRoutes, fileLocation):
-        self.fileLocation = fileLocation
-        self.activeFaction = faction
-        self.name = name
-        self.planets = planets
-        self.trade_routes= tradeRoutes

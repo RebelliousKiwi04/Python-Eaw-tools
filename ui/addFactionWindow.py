@@ -7,6 +7,7 @@ class AddFactionWindow:
         self.campaignset = campaignset
         self.repository = repository
         self.dialogWindow = QDialog()
+        self.dialogWindow.setWindowTitle("Add Faction")
         self.layout = QVBoxLayout()
 
         self.factionLayout = QHBoxLayout()

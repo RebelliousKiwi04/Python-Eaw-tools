@@ -131,7 +131,10 @@ class ModRepository:
                     route.set_point_planets(self.planets)
                     self.trade_routes.append(route)
         for file in self.campaign_files:
-            root = et.parse(file).getroot()
+            try:
+                root = et.parse(file).getroot()
+            except:
+                print(f"File {file} doesn't exist")
             for child in root:
                 if child.tag == 'Campaign':
                     self.campaigns[child.get('Name')] = Campaign(child, self.planets, self.trade_routes, file, self.factions)

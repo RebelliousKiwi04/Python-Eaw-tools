@@ -195,7 +195,7 @@ class MainUIWindow:
         self.__addMenu: QMenu = QMenu("New", self.main_window)
         self.__editMenu: QMenu = QMenu("Edit", self.main_window)
         
-        self.__newCampaignAction: QAction = QAction("Galactic Conquest...", self.main_window)
+        self.newCampaignAction: QAction = QAction("Galactic Conquest...", self.main_window)
 
         self.__newTradeRouteAction: QAction = QAction("Trade Route...", self.main_window)
 
@@ -210,7 +210,7 @@ class MainUIWindow:
         self.__fileMenu.addAction(self.__saveAction)
         self.__fileMenu.addAction(self.setDataFolderAction)
         self.__fileMenu.addAction(self.__quitAction)
-        self.__addMenu.addAction(self.__newCampaignAction)
+        self.__addMenu.addAction(self.newCampaignAction)
         self.__addMenu.addAction(self.__newTradeRouteAction)
         
         self.__menuBar.addMenu(self.__fileMenu)
