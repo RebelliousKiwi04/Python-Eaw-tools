@@ -1,8 +1,13 @@
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
-import sys
+import sys,copy
 
+def getListItems(listwidget):
+    items = []
+    for index in range(listwidget.count()):
+        items.append(listwidget.item(index))
+    return items
 class StoryPlotWidget(QWidget):
     def __init__(self, plot_owner, plot_location,repository):
         super().__init__()
@@ -53,7 +58,7 @@ class StoryPlotWidget(QWidget):
         directory = fileName[0].split('/XML/')
         if len(directory) <2:
             directory = fileName[0].split('/xml/')
-        self.locationlabel.setText(f"Plot File{directory}")
+        self.locationlabel.setText(f"Plot File{directory[1]}")
     def modify_plot(self):
         self.owner = self.ownercombobox.currentText()
         self.location = self.locationlabel.text().replace('Plot File: ','')
@@ -62,7 +67,11 @@ class StoryPlotWidget(QWidget):
 
 class CampaignPropertiesWindow:
     def __init__(self, campaignset, campaign, repository):
+        self.repository =repository
+        self.campaign = campaign
+
         self.dialogWindow = QDialog()
+        self.dialogWindow.setMinimumWidth(500)
         self.dialogWindow.setWindowTitle(f"{campaign.name} Properties")
         self.layout = QVBoxLayout()
         self.dialogWindow.setLayout(self.layout)
@@ -116,6 +125,15 @@ class CampaignPropertiesWindow:
         self.layout.addWidget(self.storyplotlabel)
         self.layout.addWidget(self.storyplots)
 
+        #DELETE PLOT
+
+
+        self.deletestoryplots = QPushButton("Delete Selected Plot")
+        self.deletestoryplots.clicked.connect(self.delete_story_plot)
+        self.layout.addWidget(self.deletestoryplots)
+
+
+        # ADD PLOT
 
         self.addStoryPlots = QHBoxLayout()
         self.addStoryPlotLabel = QLabel("Add Story Plot: ")
@@ -126,6 +144,8 @@ class CampaignPropertiesWindow:
                 self.storyplotfaction.addItem(i.name)
 
         self.addButton = QPushButton("Add")
+        self.addButton.clicked.connect(self.add_story_plot)
+
         self.addStoryPlots.addWidget(self.addStoryPlotLabel)
         self.addStoryPlots.addWidget(self.storyplotfaction)
         self.addStoryPlots.addWidget(self.addButton)
@@ -153,7 +173,7 @@ class CampaignPropertiesWindow:
 
 
         if faction not in campaign.home_locations.keys():
-            campaign.home_locations[faction] = campaign.planets[0]
+            campaign.home_locations[faction] = campaign.planets[0].name
         self.homelocation.setCurrentText(campaign.home_locations[faction])
         
 
@@ -221,3 +241,86 @@ class CampaignPropertiesWindow:
         self.aicontroller.setCurrentText(campaign.ai_players[faction])
 
         self.layout.addLayout(self.aicontrollayout)
+        self.activeFaction = self.selectedfaction.currentText()
+        self.buttonLayout = QHBoxLayout()
+        self.cancelButton = QPushButton("Cancel")
+        self.SaveButton = QPushButton("Save")
+
+        self.buttonLayout.addWidget(self.cancelButton)
+        self.buttonLayout.addWidget(self.SaveButton)
+
+        self.cancelButton.clicked.connect(self.dialogWindow.reject)
+        self.SaveButton.clicked.connect(self.save_changes)
+        self.selectedfaction.currentIndexChanged.connect(self.change_active_faction)
+        self.layout.addLayout(self.buttonLayout)
+    def change_active_faction(self):
+        activeFaction = self.activeFaction
+        self.campaign.home_locations[activeFaction] = self.homelocation.currentText()
+        self.campaign.starting_credits[activeFaction] = self.startingcredits.value()
+        self.campaign.starting_tech[activeFaction] = self.startingtech.value()
+        self.campaign.max_tech_level[activeFaction] = self.maxtech.value()
+        self.campaign.ai_players[activeFaction] = self.aicontroller.currentText()
+
+        self.activeFaction = self.selectedfaction.currentText()
+        faction = self.activeFaction
+        print(self.campaign.home_locations)
+        if faction not in self.campaign.ai_players.keys():
+            self.campaign.ai_players[faction] = self.repository.ai_players[0]
+        if faction not in self.campaign.max_tech_level.keys():
+            self.campaign.max_tech_level[faction] = 1
+        if faction not in self.campaign.starting_tech.keys():
+            self.campaign.starting_tech[faction] = 1
+        if faction not in self.campaign.starting_credits.keys():
+            self.campaign.starting_credits[faction] = 0
+
+        if faction not in self.campaign.home_locations.keys():
+            self.campaign.home_locations[faction] = str(self.campaign.planets[0].name)
+
+        self.homelocation.setCurrentText(self.campaign.home_locations[faction])
+        self.startingcredits.setValue(int(self.campaign.starting_credits[faction]))
+        self.startingtech.setValue(int(self.campaign.starting_tech[faction]))
+        self.maxtech.setValue(int(self.campaign.max_tech_level[faction]))
+        self.aicontroller.setCurrentText(self.campaign.ai_players[faction])
+    def save_changes(self):
+        self.campaign.plots = {}
+        for item in getListItems(self.storyplots):
+            widget = self.storyplots.itemWidget(item)
+            owner = widget.owner
+            plot = widget.location
+            self.campaign.plots[owner] = plot
+        self.campaign.sort_order = self.sortorder.value()
+        self.repository.text_dict[self.campaign.text_name] = self.campaignname.text()
+        self.repository.text_dict[self.campaign.desc_name] = self.campaigndesc.text()
+
+        activeFaction = self.activeFaction
+        self.campaign.home_locations[activeFaction] = self.homelocation.currentText()
+        self.campaign.starting_credits[activeFaction] = self.startingcredits.value()
+        self.campaign.starting_tech[activeFaction] = self.startingtech.value()
+        self.campaign.max_tech_level[activeFaction] = self.maxtech.value()
+        self.campaign.ai_players[activeFaction] = self.aicontroller.currentText()
+
+        self.dialogWindow.accept()
+    def delete_story_plot(self):
+        row = self.storyplots.currentRow()
+        if row == -1:
+            return
+        self.storyplots.takeItem(row)
+    def add_story_plot(self):
+        fileName = QFileDialog.getOpenFileName(None, "Select Plot File",
+                                       self.repository.mod_dir+'\\xml',
+                                       "*.xml")
+        directory = fileName[0].split('/XML/')
+        if len(directory) <2:
+            directory = fileName[0].split('/xml/')
+        if len(directory) <2:
+            return
+
+
+        itemN = QListWidgetItem()
+        widget = StoryPlotWidget(self.storyplotfaction.currentText(),directory[1],self.repository)
+        itemN.setSizeHint(widget.sizeHint())
+
+        self.storyplots.addItem(itemN)
+        self.storyplots.setItemWidget(itemN, widget)
+
+        self.storyplotfaction.removeItem(self.storyplotfaction.currentIndex())

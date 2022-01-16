@@ -171,8 +171,6 @@ class UI_Presenter:
             self.logFile.write(f'\n Error During Planet Indexing [Line 157 UI_Manager.py] planet {planet_name} failed to index')
             return
         planet = self.repository.planets[planet_index]
-        print('Indexing Into starting forces')
-        print(planet_name)
         starting_forces = self.selected_campaign.starting_forces[planet]
 
         for obj in starting_forces:
