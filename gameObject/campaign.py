@@ -48,7 +48,7 @@ class Campaign:
         self.sort_order = int(self.get_sort_order())
         self.text_name = self.get_text_id()
         self.desc_name = self.get_desc_id()
-
+        self.plots = self.get_story_plots()
         self.all_factions = all_factions
 
 
@@ -64,6 +64,29 @@ class Campaign:
             for j in tradeRoutes:
                 if j.name == i:
                     self.trade_routes.append(j)
+    def get_story_plots(self):
+        plots= {}
+        for item in self.entry:
+            if item.tag =='Empire_Story_Name':
+                if not item.text:
+                    plots['Empire'] = ''
+                else:
+                    plots['Empire'] = item.text.replace(" ","")
+            elif item.tag == 'Rebel_Story_Name':
+                if not item.text:
+                    plots['Rebel'] = ''
+                else:
+                    plots['Rebel'] = item.text.replace(" ","")
+            elif item.tag == 'Underworld_Story_Name':
+                if not item.text:
+                    plots['Underworld'] = ''
+                else:
+                    plots['Underworld'] = item.text.replace(" ","")
+            elif item.tag == 'Story_Name':
+                if item.text:
+                    text = item.text.split(',')
+                    plots[text[0].replace(' ','')] = text[1].replace(' ','')
+        return plots
     def get_starting_forces(self):
         forces = []
         for item in self.entry:
@@ -123,7 +146,7 @@ class Campaign:
                 for text in item.text.split():
                     newText = text.replace(',','')
                     outputList.append(newText)
-                return outputList
+        return outputList
     def get_trade_routes(self):
         for item in self.entry:
             if item.tag == 'Trade_Routes':
@@ -131,7 +154,7 @@ class Campaign:
                 for text in item.text.split():
                     newText = text.replace(',','')
                     outputList.append(newText)
-                return outputList
+        return outputList
     def get_max_tech(self):
         max_tech = {}
         for item in self.entry:
