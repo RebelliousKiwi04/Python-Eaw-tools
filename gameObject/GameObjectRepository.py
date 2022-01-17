@@ -1,4 +1,5 @@
 from cgitb import text
+import gc
 from gameObject.planet import Planet
 from gameObject.campaign import Campaign
 from gameObject.traderoutes import TradeRoute
@@ -200,6 +201,9 @@ class ModRepository:
                 gcElem = et.SubElement(fileRoot, 'Campaign')
                 gcElem.set('Name',conquest.name)
 
+                sortOrderElem = et.SubElement(gcElem, 'Sort_Order')
+                sortOrderElem.text = str(conquest.sort_order)
+
                 setElem = et.SubElement(gcElem, 'Campaign_Set')
                 setElem.text = conquest.setName
 
@@ -221,21 +225,28 @@ class ModRepository:
                 locationsElem = et.SubElement(gcElem, 'Locations')
                 locationsText = 'Galaxy_Core_Art_Model'
                 for i in conquest.planets:
-                    locationsText = locationsText+',\n'+i.name
+                    locationsText = locationsText+',\n\t\t\t'+i.name
                 locationsElem.text = locationsText
 
                 tradeRoutesElem = et.SubElement(gcElem, 'Trade_Routes')
                 routesText = ''
                 for i in conquest.trade_routes:
-                    routesText = routesText+i.name+',\n'
+                    routesText = routesText+i.name+',\n\t\t\t'
                 tradeRoutesElem.text = routesText
 
 
-                for faction, location in conquest.home_locations:
+                for faction, location in conquest.home_locations.items():
                     elem = et.SubElement(gcElem, 'Home_Locations')
                     elem.text = faction+', '+location
+
+                activePlayerElem = et.SubElement(gcElem, 'Starting_Active_Player')
+                activePlayerElem.text = conquest.activeFaction
+
+                for faction, plot, in conquest.plots.items():
+                    plotElem = et.SubElement(gcElem, 'Story_Name')
+                    plotElem.text = faction+', '+plot
                 
-                for faction, player in conquest.ai_players:
+                for faction, player in conquest.ai_players.items():
                     elem = et.SubElement(gcElem, 'AI_Player_Control')
                     elem.text = faction+', '+player
 
@@ -260,11 +271,11 @@ class ModRepository:
                     for force in forcestable:
                         for i in range(force.quantity):
                             forceElem = et.SubElement(gcElem, 'Starting_Forces')
-                            forceElem.text = force.faction+', '+force.planet+', '+force.unit
+                            forceElem.text = force.owner+', '+force.planet+', '+force.unit
                 
             fileTree = et.ElementTree(fileRoot)
             fileTree.write(file,xml_declaration=True, encoding='UTF-8',pretty_print=True)
-            
+
         campaignFilesET = et.ElementTree(campaignFilesRoot)
         campaignFilesET.write(self.mod_dir+xmlPath+'campaignfiles.xml',xml_declaration=True, encoding='UTF-8',pretty_print=True)
 
