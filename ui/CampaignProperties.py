@@ -24,6 +24,7 @@ class StoryPlotWidget(QWidget):
         self.layout().addWidget(self.modify)
     def open_modify_window(self):
         self.modifyWindow = QDialog()
+        self.dialogWindow.setWindowIcon(QIcon('eawIcon.png'))
         self.modifyWindow.setLayout(QVBoxLayout())
         self.ownerLayout = QHBoxLayout()
         self.ownerlabel = QLabel("Owner: ")
@@ -71,6 +72,7 @@ class CampaignPropertiesWindow:
         self.campaign = campaign
 
         self.dialogWindow = QDialog()
+        self.dialogWindow.setWindowIcon(QIcon('eawIcon.png'))
         self.dialogWindow.setMinimumWidth(500)
         self.dialogWindow.setWindowTitle(f"{campaign.name} Properties")
         self.layout = QVBoxLayout()
@@ -173,7 +175,11 @@ class CampaignPropertiesWindow:
 
 
         if faction not in campaign.home_locations.keys():
+            repository.logfile.write(f'No Home Location Detected For {faction} attempting to set home location to planet from GC')
+            repository.logfile.flush()
             campaign.home_locations[faction] = campaign.planets[0].name
+
+ 
         self.homelocation.setCurrentText(campaign.home_locations[faction])
         
 

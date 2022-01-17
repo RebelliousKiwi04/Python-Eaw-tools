@@ -10,6 +10,7 @@ import sys
 class CreateTradeRouteWindow:
     def __init__(self, repository):
         self.dialogWindow = QDialog()
+        self.dialogWindow.setWindowIcon(QIcon('eawIcon.png'))
         self.layout = QVBoxLayout()
         self.dialogWindow.setLayout(self.layout)
         self.dialogWindow.setWindowTitle("Create Trade Route")

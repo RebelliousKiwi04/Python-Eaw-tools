@@ -11,6 +11,7 @@ class CreateNewGCWindow:
     def __init__(self, repository):
         self.repository = repository
         self.dialogWindow = QDialog()
+        self.dialogWindow.setWindowIcon(QIcon('eawIcon.png'))
         self.layout = QVBoxLayout()
 
         self.dialogWindow.setWindowTitle("Create New GC Set")

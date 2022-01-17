@@ -1,4 +1,4 @@
-from PyQt5.QtGui import QWindow, QFont
+from PyQt5.QtGui import QWindow, QFont, QIcon
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 
@@ -6,6 +6,7 @@ class AddUnitWindow:
     def __init__(self, planet_name):
         self.planet = planet_name
         self.dialogWindow = QDialog()
+        self.dialogWindow.setWindowIcon(QIcon('eawIcon.png'))
         self.layout = QVBoxLayout()
 
         font = QFont()
@@ -78,6 +79,7 @@ class EditUnitWindow:
         self.campaign  = campaign
         self.repository = repository
         self.dialogWindow = QDialog()
+        self.dialogWindow.setWindowIcon(QIcon('eawIcon.png'))
         self.layout = QVBoxLayout()
 
         font = QFont()

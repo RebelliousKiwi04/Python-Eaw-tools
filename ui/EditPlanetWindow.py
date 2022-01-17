@@ -1,7 +1,7 @@
 from typing import List
 from PyQt5 import QtCore, QtWidgets, QtGui
 from PyQt5.QtWidgets import *
-from PyQt5.QtGui import QFont
+from PyQt5.QtGui import QFont, QIcon
 from matplotlib.backends.backend_qt5agg import FigureCanvas, \
     NavigationToolbar2QT as NavigationToolbar
 from matplotlib.figure import Axes, Figure
@@ -15,6 +15,7 @@ class PlanetWindow:
         self.planets = planets
         self.text = text
         self.dialogWindow = QDialog()
+        self.dialogWindow.setWindowIcon(QIcon('eawIcon.png'))
         self.layout = QHBoxLayout()
         self.dialogWindow.setLayout(self.layout)
         self.dialogWindow.setWindowTitle("Edit Planet")

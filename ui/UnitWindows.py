@@ -1,4 +1,4 @@
-from PyQt5.QtGui import QWindow, QFont
+from PyQt5.QtGui import QWindow, QFont, QIcon
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 import sys
@@ -6,6 +6,7 @@ import sys
 class ChooseUnitTypeWindow:
     def __init__(self):
         self.dialogWindow = QDialog()
+        self.dialogWindow.setWindowIcon(QIcon('eawIcon.png'))
         self.layout = QVBoxLayout()
 
 

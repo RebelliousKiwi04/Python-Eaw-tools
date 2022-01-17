@@ -186,7 +186,7 @@ class UI_Presenter:
             planet_index = [x.name for x in self.repository.planets].index(planet_name)
         
         if planet_index == None:
-            self.repository.logfile.write(f'\n Error During Planet Indexing planet {planet_name} failed to index when updating starting forces')
+            self.repository.logfile.write(f'\n Error During Planet Indexing planet {planet_name} failed to index when updating starting forces\n')
             return
         planet = self.repository.planets[planet_index]
         starting_forces = self.selected_campaign.starting_forces[planet]

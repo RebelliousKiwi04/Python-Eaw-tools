@@ -9,6 +9,7 @@ class EditUnitWindow:
         self.units = units
         self.text = text
         self.dialogWindow = QDialog()
+        self.dialogWindow.setWindowIcon(QIcon('eawIcon.png'))
         self.layout = QHBoxLayout()
         self.dialogWindow.setLayout(self.layout)
         self.dialogWindow.setWindowTitle("Edit Unit")
