@@ -68,6 +68,7 @@ class Campaign:
                     self.trade_routes.append(j)
     def get_story_plots(self):
         self.logfile.write(f'Collecting Story Plots For Conquest {self.name}\n')
+        self.logfile.flush()
         plots= {}
         for item in self.entry:
             if item.tag =='Empire_Story_Name':
@@ -92,6 +93,7 @@ class Campaign:
         return plots
     def get_starting_forces(self):
         self.logfile.write(f'Collecting Starting Forces For Conquest {self.name}\n')
+        self.logfile.flush()
         forces = []
         for item in self.entry:
             if item.tag == 'Starting_Forces':
@@ -107,6 +109,7 @@ class Campaign:
             val = forces[0]
             if len(val) != 3:
                 self.logfile.write(f'CRITICAL ERROR when reading starting forces for Conquest {self.name}\n')
+                self.logfile.flush()
                 sys.exit()
             factionIndex = None
             for i in self.all_factions:
@@ -129,31 +132,37 @@ class Campaign:
             forces = remove_values_from_list(forces, val)
     def get_text_id(self):
         self.logfile.write(f'Collecting Text ID for conquest {self.name}\n')
+        self.logfile.flush()
         for item in self.entry:
             if item.tag == 'Text_ID':
                 return item.text.replace(" ", "")
     def get_desc_id(self):
         self.logfile.write(f'Collecting Description ID for conquest {self.name}\n')
+        self.logfile.flush()
         for item in self.entry:
             if item.tag == 'Description_Text':
                 return item.text.replace(" ", "")
     def get_active_faction(self):
         self.logfile.write(f'Collecting Active Player Name for conquest {self.name}\n')
+        self.logfile.flush()
         for item in self.entry:
             if item.tag == 'Starting_Active_Player':
                 return item.text.replace(" ", "")
     def get_set_name(self):
         self.logfile.write(f'Collecting Campaign Set for conquest {self.name}\n')
+        self.logfile.flush()
         for item in self.entry:
             if item.tag == 'Campaign_Set':
                 return item.text
     def get_sort_order(self):
         self.logfile.write(f'Collecting Sort Order for conquest {self.name}\n')
+        self.logfile.flush()
         for item in self.entry:
             if item.tag == 'Sort_Order':
                 return item.text.replace(' ','')
     def get_planets(self):
         self.logfile.write(f'Collecting Locations for conquest {self.name}\n')
+        self.logfile.flush()
         for item in self.entry:
             if item.tag == 'Locations':
                 outputList = []
@@ -163,15 +172,18 @@ class Campaign:
         return outputList
     def get_trade_routes(self):
         self.logfile.write(f'Collecting Trade Routes for conquest {self.name}\n')
+        self.logfile.flush()
         for item in self.entry:
             if item.tag == 'Trade_Routes':
                 outputList = []
-                for text in item.text.split():
-                    newText = text.replace(',','')
-                    outputList.append(newText)
+                if item.text:
+                    for text in item.text.split():
+                        newText = text.replace(',','')
+                        outputList.append(newText)
         return outputList
     def get_max_tech(self):
         self.logfile.write(f'Collecting Max Tech Levels for conquest {self.name}\n')
+        self.logfile.flush()
         max_tech = {}
         for item in self.entry:
             if item.tag == 'Max_Tech_Level':
@@ -185,6 +197,7 @@ class Campaign:
         return max_tech
     def get_starting_credits(self):
         self.logfile.write(f'Collecting Starting Credits for conquest {self.name}\n')
+        self.logfile.flush()
         starting_credits = {}
         for item in self.entry:
             if item.tag == 'Starting_Credits':
@@ -203,6 +216,7 @@ class Campaign:
         return starting_credits
     def get_starting_tech(self):
         self.logfile.write(f'Collecting Starting Tech Levels for conquest {self.name}\n')
+        self.logfile.flush()
         min_tech = {}
         for item in self.entry:
             if item.tag == 'Starting_Tech_Level':
@@ -217,6 +231,7 @@ class Campaign:
         return min_tech
     def get_ai_players(self):
         self.logfile.write(f'Collecting AI Players for conquest {self.name}\n')
+        self.logfile.flush()
         ai_players = {}
         for item in self.entry:
             if item.tag == 'AI_Player_Control':
@@ -230,6 +245,7 @@ class Campaign:
         return ai_players
     def get_home_locations(self):
         self.logfile.write(f'Collecting Home Locations for conquest {self.name}\n')
+        self.logfile.flush()
         home_locations = {}
         for item in self.entry:
             if item.tag == 'Home_Location':

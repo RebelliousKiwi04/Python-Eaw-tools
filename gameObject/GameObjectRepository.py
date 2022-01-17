@@ -12,9 +12,9 @@ import os, sys, lxml.etree as et
 
 
 class ModRepository:
-    def __init__(self, mod_directory):
+    def __init__(self, mod_directory,log):
         self.mod_dir = mod_directory
-        self.logfile = open('logfile.txt', 'w')
+        self.logfile = log
         self.game_object_files = self.get_game_object_files()
         self.campaign_files = self.get_galactic_conquests()
         self.hardpoint_files = self.get_hardpoint_files()
@@ -33,6 +33,7 @@ class ModRepository:
         self.campaigns = {}
         self.campaign_sets = {}
         self.trade_routes = []
+        self.mod_loaded = False
         self.init_repo()
     def get_ai_players(self):
         ai_players = []
@@ -157,7 +158,7 @@ class ModRepository:
             try:
                 root = et.parse(file).getroot()
             except:
-                print(f"File {file} doesn't exist")
+                self.logfile.write(f"File {file} doesn't exist\n")
             for child in root:
                 if child.tag == 'Campaign':
                     self.logfile.write('Adding Campaign '+child.get('Name')+'\n')
@@ -170,6 +171,7 @@ class ModRepository:
                             else:
                                 self.campaign_sets[campaignsetname] = CampaignSet(campaignsetname)
                                 self.campaign_sets[campaignsetname].addCampaign(self.campaigns[child.get('Name')])
+        self.mod_loaded = 'true'
     def save_to_file(self):
         if os.path.isdir('xml'):
             xmlPath = '\\xml\\'
@@ -230,7 +232,6 @@ class ModRepository:
                 self.logfile.write(f'Building Element For Campaign {conquest.name}\n')
                 gcElem = et.SubElement(fileRoot, 'Campaign')
                 gcElem.set('Name',conquest.name)
-
                 sortOrderElem = et.SubElement(gcElem, 'Sort_Order')
                 sortOrderElem.text = str(conquest.sort_order)
 
@@ -317,6 +318,7 @@ class ModRepository:
         campaignFilesET.write(self.mod_dir+xmlPath+'campaignfiles.xml',xml_declaration=True, encoding='UTF-8',pretty_print=True)
 
         self.logfile.write(f'Finished Saving Successfully\n')
+        self.logfile.flush()
 
 
 class SaveContainer:

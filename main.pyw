@@ -36,8 +36,9 @@ class EaWModTool:
     def __init__(self, config, MainWindow, originalPath) -> None:
         self.config = config
         self.ui = MainWindow
+        self.logfile = open('logfile.txt', 'w')
         self.originalPath = originalPath
-        self.presenter = UI_Presenter(self.ui, config.dataPath)
+        self.presenter = UI_Presenter(self.ui, config.dataPath, self.logfile)
         self.repository = self.presenter.repository
         self.presenter.update_tabs()
         self.ui.setDataFolderAction.triggered.connect(self.set_datapath)
@@ -59,18 +60,22 @@ class EaWModTool:
                 self.ui.tradeRoute_list.setRowCount(0)
                 self.ui.tradeRoute_list.setHorizontalHeaderLabels(["Trade Routes"])
 
-                self.presenter = UI_Presenter(self.ui, self.config.dataPath)
+                self.presenter = UI_Presenter(self.ui, self.config.dataPath, self.logfile)
                 self.repository = self.presenter.repository
         
                 self.presenter.update_tabs()
     def closeEvent(self):   
-        messageBox = QMessageBox()
-        title = "Quit Application?"
-        message = "WARNING !!\n\nIf you quit without saving, any changes made to the file will be lost.\n\nSave file before quitting?"
-       
-        reply = messageBox.question(None, title, message, messageBox.Yes | messageBox.No,messageBox.No)
-        if reply == messageBox.Yes:
-            self.save_current_file()
+        print(self.repository.mod_loaded)
+        if self.repository.mod_loaded == 'true':
+            messageBox = QMessageBox()
+            title = "Quit Application?"
+            message = "WARNING !!\n\nIf you quit without saving, any changes made to the file will be lost.\n\nSave file before quitting?"
+        
+            reply = messageBox.question(None, title, message, messageBox.Yes | messageBox.No,messageBox.No)
+            if reply == messageBox.Yes:
+                self.save_current_file()
+        self.logfile.write("Exiting Application....")
+        self.logfile.flush()
 
 
 

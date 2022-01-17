@@ -12,10 +12,10 @@ from PyQt5 import QtGui
 from PyQt5.QtCore import *
 
 class UI_Presenter:
-    def __init__(self, ui, mod_dir):
+    def __init__(self, ui, mod_dir,logfile):
         self.ui = ui
         self.mod_dir = mod_dir
-        self.repository = ModRepository(mod_dir)
+        self.repository = ModRepository(mod_dir,logfile)
         self.selected_set = None
         self.selected_campaign = None
     def connect_triggers(self):
@@ -186,8 +186,7 @@ class UI_Presenter:
             planet_index = [x.name for x in self.repository.planets].index(planet_name)
         
         if planet_index == None:
-            print(planet_name)
-            self.repository.logFile.write(f'\n Error During Planet Indexing planet {planet_name} failed to index when updating starting forces')
+            self.repository.logfile.write(f'\n Error During Planet Indexing planet {planet_name} failed to index when updating starting forces')
             return
         planet = self.repository.planets[planet_index]
         starting_forces = self.selected_campaign.starting_forces[planet]
