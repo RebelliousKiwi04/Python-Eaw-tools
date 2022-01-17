@@ -147,14 +147,32 @@ class ModRepository:
                                 self.campaign_sets[campaignsetname] = CampaignSet(campaignsetname)
                                 self.campaign_sets[campaignsetname].addCampaign(self.campaigns[child.get('Name')])
     def save_to_file(self):
+        if os.path.isdir('xml'):
+            xmlPath = '/xml/'
+        else:
+            xmlPath = '/XML/'
+
         tradeRoutes = SaveContainer(self.trade_routes)
         campaigns = SaveContainer(self.campaigns)
 
+        campaignFilesRoot = et.Element('Campaign_Files')
+        
+        
+
+
         for file in self.tradeRoute_files:
             routes = tradeRoutes[file]
+
+
         for file in self.campaign_files:
+            fileEntry = et.SubElement(campaignFilesRoot,"File")
+            fileEntry.text = file
+
             gcs = campaigns[file]
-            
+
+        campaignFilesET = et.ElementTree(campaignFilesRoot)
+        campaignFilesET.write(self.mod_dir+xmlPath+'/campaignfiles.xml',xml_declaration=True, encoding='UTF-8',pretty_print=True)
+
 
 class SaveContainer:
     def __init__(self, objList):

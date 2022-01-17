@@ -352,13 +352,8 @@ class UI_Presenter:
                 xmlPath = '/xml/'
             else:
                 xmlPath = '/XML/'
-            campaignFiles = et.parse(self.mod_dir+xmlPath+'/campaignfiles.xml')
-            root = campaignFiles.getroot()
-            newset = et.SubElement(root,"File")
-            newset.text = gcwindow.location.text()
-            self.repository.campaign_files.append(newset.text)
-            campaignFilesET = et.ElementTree(root)
-            campaignFilesET.write(self.mod_dir+xmlPath+'/campaignfiles.xml', xml_declaration=True, encoding='utf-8', pretty_print=True)
+
+            self.repository.campaign_files.append(gcwindow.location.text())
 
             setname = gcwindow.setname.text()
 
