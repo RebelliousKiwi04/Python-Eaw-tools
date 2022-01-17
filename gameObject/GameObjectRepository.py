@@ -1,3 +1,4 @@
+from cgitb import text
 from gameObject.planet import Planet
 from gameObject.campaign import Campaign
 from gameObject.traderoutes import TradeRoute
@@ -193,11 +194,79 @@ class ModRepository:
         for file in self.campaign_files:
             fileEntry = et.SubElement(campaignFilesRoot,"File")
             fileEntry.text = file.replace(self.mod_dir+xmlPath,'')
-
             gcs = campaigns[file]
+            fileRoot = et.Element('Campaigns')
+            for conquest in gcs:
+                gcElem = et.SubElement(fileRoot, 'Campaign')
+                gcElem.set('Name',conquest.name)
 
+                setElem = et.SubElement(gcElem, 'Campaign_Set')
+                setElem.text = conquest.setName
+
+                textElem = et.SubElement(gcElem, 'Text_ID')
+                textElem.text = conquest.text_name
+
+                descElem = et.SubElement(gcElem, 'Description_Text')
+                descElem.text = conquest.desc_name
+
+                cameraXElem = et.SubElement(gcElem,'Camera_Shift_X')
+                cameraXElem.text = str(40.0)
+
+                cameraYElem = et.SubElement(gcElem, 'Camera_Shift_Y')
+                cameraYElem.text = str(0.0)
+
+                cameraDistanceElem = et.SubElement(gcElem, 'Camera_Distance')
+                cameraDistanceElem.text = str(1200.0)
+
+                locationsElem = et.SubElement(gcElem, 'Locations')
+                locationsText = 'Galaxy_Core_Art_Model'
+                for i in conquest.planets:
+                    locationsText = locationsText+',\n'+i.name
+                locationsElem.text = locationsText
+
+                tradeRoutesElem = et.SubElement(gcElem, 'Trade_Routes')
+                routesText = ''
+                for i in conquest.trade_routes:
+                    routesText = routesText+i.name+',\n'
+                tradeRoutesElem.text = routesText
+
+
+                for faction, location in conquest.home_locations:
+                    elem = et.SubElement(gcElem, 'Home_Locations')
+                    elem.text = faction+', '+location
+                
+                for faction, player in conquest.ai_players:
+                    elem = et.SubElement(gcElem, 'AI_Player_Control')
+                    elem.text = faction+', '+player
+
+                for faction in self.factions:
+                    elem = et.SubElement(gcElem, 'Markup_Filename')
+                    elem.text = faction.name+', DefaultGalacticHints'
+
+                customSettingsElem = et.SubElement(gcElem, 'Supports_Custom_Settings')
+                customSettingsElem.text = 'False'
+
+                completedTabElem = et.SubElement(gcElem, 'Show_Completed_Tab')
+                completedTabElem.text = 'True'
+
+                humanWinConditions = et.SubElement(gcElem, 'Human_Victory_Conditions')
+                humanWinConditions.text = 'Galactic_All_Planets_Controlled'
+
+                aiWinConditions = et.SubElement(gcElem, 'AI_Victory_Conditions')
+                aiWinConditions.text = 'Galactic_All_Planets_Controlled'
+
+                for planet in conquest.planets:
+                    forcestable = conquest.starting_forces[planet]
+                    for force in forcestable:
+                        for i in range(force.quantity):
+                            forceElem = et.SubElement(gcElem, 'Starting_Forces')
+                            forceElem.text = force.faction+', '+force.planet+', '+force.unit
+                
+            fileTree = et.ElementTree(fileRoot)
+            fileTree.write(file,xml_declaration=True, encoding='UTF-8',pretty_print=True)
+            
         campaignFilesET = et.ElementTree(campaignFilesRoot)
-        campaignFilesET.write(self.mod_dir+xmlPath+'/campaignfiles.xml',xml_declaration=True, encoding='UTF-8',pretty_print=True)
+        campaignFilesET.write(self.mod_dir+xmlPath+'campaignfiles.xml',xml_declaration=True, encoding='UTF-8',pretty_print=True)
 
 
 class SaveContainer:

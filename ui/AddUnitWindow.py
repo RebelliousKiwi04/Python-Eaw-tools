@@ -21,6 +21,7 @@ class AddUnitWindow:
         self.Quantity = QSpinBox()
         self.Quantity.setMaximum(1000)
         self.Quantity.setObjectName(u"Quantity")
+        self.Quantity.setMinimum(1)
         self.Quantity.setGeometry(QRect(80, 100, 51, 31))
         self.QuantityLabel.setText(QCoreApplication.translate("AddUnitWindow", u"Quantity", None))
         self.QuantityLayout.addWidget(self.QuantityLabel)
