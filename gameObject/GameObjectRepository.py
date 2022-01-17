@@ -146,3 +146,23 @@ class ModRepository:
                             else:
                                 self.campaign_sets[campaignsetname] = CampaignSet(campaignsetname)
                                 self.campaign_sets[campaignsetname].addCampaign(self.campaigns[child.get('Name')])
+    def save_to_file(self):
+        tradeRoutes = SaveContainer(self.trade_routes)
+        campaigns = SaveContainer(self.campaigns)
+
+        for file in self.tradeRoute_files:
+            routes = tradeRoutes[file]
+        for file in self.campaign_files:
+            gcs = campaigns[file]
+            
+
+class SaveContainer:
+    def __init__(self, objList):
+        self.objects = objList
+    def __getitem__(self, file):
+        objs = []
+
+        for obj in self.objects:
+            if obj.fileLocation == file:
+                objs.append(obj)
+        return objs
