@@ -69,16 +69,8 @@ class EaWModTool:
         message = "WARNING !!\n\nIf you quit without saving, any changes made to the file will be lost.\n\nSave file before quitting?"
        
         reply = messageBox.question(None, title, message, messageBox.Yes | messageBox.No,messageBox.No)
-        # reply = messageBox.question(self, title, message, messageBox.Yes | messageBox.No |
-        #         messageBox.Cancel, messageBox.Cancel)
-        # if reply == messageBox.Yes:
-        #     return_value = self.save_current_file()
-        #     if return_value == False:
-        #         event.ignore()
-        # elif reply == messageBox.No:
-        #     event.accept()
-        # else:
-        #     event.ignore()
+        if reply == messageBox.Yes:
+            self.save_current_file()
 
 
 
