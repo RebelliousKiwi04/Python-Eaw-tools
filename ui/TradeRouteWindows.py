@@ -7,52 +7,17 @@ from matplotlib.backends.backend_qt5agg import FigureCanvas, \
 from matplotlib.figure import Axes, Figure
 import sys
 
-class EditTradeRoute:
-    def __init__(self, planets, text):
-        self.size = float(25)
-        self.planets = planets
-        self.text = text
+class CreateTradeRouteWindow:
+    def __init__(self, repository):
         self.dialogWindow = QDialog()
-        self.layout = QHBoxLayout()
+        self.layout = QVBoxLayout()
         self.dialogWindow.setLayout(self.layout)
-        self.dialogWindow.setWindowTitle("Edit Trade Route")
-        self.x = 0
-        self.y = 0
-        font = QFont()
-        font.setPointSize(10)
-    
-
-        self.setPointSizeAction = QPushButton()
-        self.setPointSizeAction.clicked.connect(self.change_point_size)
-
-        self.LeftSideLayout = QVBoxLayout()
-        self.planetSelection = QComboBox()
-
-        self.planetNameLayout = QVBoxLayout()
-        self.PlanetNameText = QLabel()
-        self.PlanetNameText.setFont(font)
-        self.PlanetNameText.setText("Trade Route Name:")
-        self.PlanetName = QLineEdit()
-        self.planetNameLayout.addWidget(self.PlanetNameText)
-        self.planetNameLayout.addWidget(self.PlanetName)
+        self.dialogWindow.setWindowTitle("Create Trade Route")
 
 
-        self.OkCancelButtons = QDialogButtonBox()
-        self.OkCancelButtons.setStandardButtons(QDialogButtonBox.Cancel|QDialogButtonBox.Save)
-
-
-
-        
-
-
-        self.LeftSideLayout.addWidget(self.planetSelection)
-        self.LeftSideLayout.addItem(QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
-        self.LeftSideLayout.addLayout(self.planetNameLayout)
-        self.LeftSideLayout.addItem(QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding))
 
        
-        self.layout.addLayout(self.LeftSideLayout)
-        self.dialogWindow.setFixedSize(900, 540)
+        #self.dialogWindow.setFixedSize(900, 540)
 
 
         self.mapWidget: QWidget = QWidget()
@@ -71,27 +36,32 @@ class EditTradeRoute:
         self.__planetNames = []
         self.__planetsScatter = None
         self.selected_planet = None
-        self.times = 0
         self.layout.addWidget(self.mapWidget)
-        self.OkCancelButtons.rejected.connect(self.dialogWindow.accept)
-        #self.OkCancelButtons.accepted.connect(self.save_to_file)
-    def on_index_changed(self):
-        planet_name = self.planetSelection.currentText()
-        if planet_name in [x.name for x in self.planets]:
-            planet_index = [x.name for x in self.planets].index(planet_name)
-        self.plotGalaxy(self.planets)
-        self.plotSelectedPlanet(self.planets[planet_index])
-        planet = self.planets[planet_index]
-        self.PlanetModelName.setText(planet.get_model_name())
-        if planet.get_text_key() in self.text.keys():
-            self.PlanetName.setText(self.text[planet.get_text_key()])
-        else:
-            self.PlanetName.setText("Planet Has No Text")
+
+        self.label = QLabel("Create Trade Route\n Select 2 planets on the map, then press the button below to create route")
+
+    	
+
+
+        self.buttonLayout = QHBoxLayout()
+        self.cancelButton = QPushButton("Cancel")
+        self.cancelButton.clicked.connect(self.hide)
+        self.okButton = QPushButton("Create TradeRoute")
+        self.okButton.clicked.connect(self.accept)
+
+        self.buttonLayout.addWidget(self.cancelButton)
+        self.buttonLayout.addWidget(self.okButton)
+
+        self.layout.addWidget(self.label)
+        self.layout.addLayout(self.buttonLayout)
+
+
+        self.repository = repository
+        self.selected_planets = []
     def show(self):
-        self.plotGalaxy(self.planets)
-        self.dialogWindow.exec()
+        self.plotGalaxy(self.repository.planets)
+        return self.dialogWindow.exec_()
     def plotGalaxy(self, allPlanets) -> None:
-        '''Plots all planets as alpha = 0.1, then overlays all selected planets and trade routes'''
         self.axes.clear()
 
         #Has to be set again here for the planet hover labels to work
@@ -104,23 +74,30 @@ class EditTradeRoute:
         y = []
 
         for planet in allPlanets:
-            if planet.name != self.planetSelection.currentText():
-                x.append(planet.x)
-                y.append(planet.y)
-                self.__planetNames.append(planet.name)
-            else:
-                x.append(0)
-                y.append(0)
-                self.__planetNames.append("Dummy Planet")
+            x.append(planet.x)
+            y.append(planet.y)
+            self.__planetNames.append(planet.name)
 
         self.__planetsScatter = self.axes.scatter(x, y, c = 'b', alpha = 0.1,picker = 5)
+
+        x = []
+        y = []
+        for p in self.selected_planets:
+            x.append(p.x)
+            y.append(p.y)
+
+        self.axes.scatter(x, y, c = 'b')
+
         self.mapCanvas.draw_idle()
-        self.times = self.times +1
     def __planetSelect(self, event) -> None:
         '''Event handler for selecting a planet on the map'''
         planet_index = event.ind
-        planet_name = self.planets[planet_index[0]].name
-        self.planetSelection.setCurrentIndex(planet_index[0])
+        planet = self.repository.planets[planet_index[0]]
+        if planet in self.selected_planets:
+            self.selected_planets.pop(self.selected_planets.index(planet))
+        else:
+            self.selected_planets.append(planet)
+        self.plotGalaxy(self.repository.planets)
     def __planetHover(self, event) -> None:
         '''Handler for hovering on a planet in the plot'''
         visible = self.__annotate.get_visible()
@@ -142,5 +119,13 @@ class EditTradeRoute:
 
                     self.mapCanvas.draw_idle()
     def hide(self):
-        self.dialogWindow.accept()
-  
+        self.dialogWindow.reject()
+    def accept(self):
+        if len(self.selected_planets) == 2:
+            self.dialogWindow.accept()
+        else:
+            messageBox = QMessageBox()
+            title = "Invalid Selection!"
+            message = "Please Select 2 Planets In Order To Create Trade Routes"
+        
+            reply = messageBox.warning(None, title, message, messageBox.Ok, messageBox.Ok)

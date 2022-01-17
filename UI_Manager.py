@@ -2,6 +2,7 @@ from ui.AddUnitWindow import AddUnitWindow, EditUnitWindow
 from ui.CampaignProperties import CampaignPropertiesWindow
 from ui.addFactionWindow import AddFactionWindow
 from ui.NewSetWindow import CreateNewGCWindow
+from ui.TradeRouteWindows import CreateTradeRouteWindow
 from gameObject.GameObjectRepository import ModRepository
 from gameObject.campaignset import CampaignSet
 import os, sys, lxml.etree as et, copy
@@ -28,6 +29,7 @@ class UI_Presenter:
         self.ui.select_all_tradeRoutes.clicked.connect(self.check_all_tradeRoutes)
         self.ui.modify_entry.clicked.connect(self.delete_starting_forces_entry)
         self.ui.add_faction.clicked.connect(self.addFactionToCampaign)
+        self.ui.newTradeRouteAction.triggered.connect(self.create_new_traderoutes)
         self.ui.deselect_all_tradeRoutes.clicked.connect(self.uncheck_all_tradeRoutes)
         self.ui.select_GC.currentIndexChanged.connect(self.select_GC)
         self.ui.newCampaignAction.triggered.connect(self.create_new_set)
@@ -43,6 +45,7 @@ class UI_Presenter:
         self.ui.select_all_planets.clicked.disconnect(self.check_all_planets)
         self.ui.add_faction.clicked.disconnect(self.addFactionToCampaign)
         self.ui.newCampaignAction.triggered.disconnect(self.create_new_set)
+        self.ui.newTradeRouteAction.triggered.disconnect(self.create_new_traderoutes)
         self.ui.deselect_all_planets.clicked.disconnect(self.uncheck_all_planets)
         self.ui.select_all_tradeRoutes.clicked.disconnect(self.check_all_tradeRoutes)
         self.ui.modify_entry.clicked.disconnect(self.delete_starting_forces_entry)
@@ -353,12 +356,11 @@ class UI_Presenter:
             root = campaignFiles.getroot()
             newset = et.SubElement(root,"File")
             newset.text = gcwindow.location.text()
+            self.repository.campaign_files.append(newset.text)
             campaignFilesET = et.ElementTree(root)
             campaignFilesET.write(self.mod_dir+xmlPath+'/campaignfiles.xml', xml_declaration=True, encoding='utf-8', pretty_print=True)
 
             setname = gcwindow.setname.text()
-
-
 
             template = copy.deepcopy(self.repository.campaigns[gcwindow.template.currentText()])
 
@@ -370,6 +372,25 @@ class UI_Presenter:
             campaignset = CampaignSet(setname)
             campaignset.addCampaign(template)
             self.repository.campaign_sets[setname] = campaignset
-            self.ui.select_GC.addItem(setname)
+            self.ui.select_GC.addItem(setname) 
+    def create_new_traderoutes(self):
+        window = CreateTradeRouteWindow(self.repository)
+        if window.show() == 1:
+            newRoute = copy.deepcopy(self.repository.trade_routes[0])
+            newRoute.name = window.selected_planets[0].name+'_'+window.selected_planets[1].name
+            newRoute.point_A = window.selected_planets[0].name.lower()
+            newRoute.point_B = window.selected_planets[1].name.lower()
+            newRoute.points = []
+            newRoute.set_point_planets(self.repository.planets)
+            if newRoute.name not in [x.name for x in self.repository.trade_routes]:
+                self.ui.tradeRoute_list.itemChanged.disconnect(self.ontradeRouteCellChanged)
+                self.repository.trade_routes.append(newRoute)
 
-        
+                rowCount = self.ui.tradeRoute_list.rowCount()
+                self.ui.tradeRoute_list.setRowCount(rowCount + 1)
+                item= QTableWidgetItem(newRoute.name)
+                item.setFlags(QtCore.Qt.ItemIsUserCheckable | QtCore.Qt.ItemIsEnabled)
+                item.setCheckState(QtCore.Qt.Unchecked)
+                self.ui.tradeRoute_list.setItem(rowCount, 0, item)
+                self.ui.tradeRoute_list.itemChanged.connect(self.ontradeRouteCellChanged)
+            

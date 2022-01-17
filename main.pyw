@@ -63,11 +63,12 @@ class EaWModTool:
                 self.repository = self.presenter.repository
         
                 self.presenter.update_tabs()
-    def closeEvent(self):
+    def closeEvent(self):   
         messageBox = QMessageBox()
         title = "Quit Application?"
         message = "WARNING !!\n\nIf you quit without saving, any changes made to the file will be lost.\n\nSave file before quitting?"
-        messageBox.exec()
+       
+        reply = messageBox.question(None, title, message, messageBox.Yes | messageBox.No,messageBox.No)
         # reply = messageBox.question(self, title, message, messageBox.Yes | messageBox.No |
         #         messageBox.Cancel, messageBox.Cancel)
         # if reply == messageBox.Yes:
