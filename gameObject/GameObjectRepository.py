@@ -4,7 +4,7 @@ from gameObject.traderoutes import TradeRoute
 from gameObject.unit import Unit
 from gameObject.faction import Faction
 from gameObject.campaignset import CampaignSet
-from gameObject.TextHandler import TextFile
+from gameObject.TextHandler import *
 import os, sys, lxml.etree as et
 
 
@@ -43,66 +43,66 @@ class ModRepository:
         return ai_players
     def get_game_constants(self):
         if os.path.isdir('xml'):
-            xmlPath = '/xml/'
+            xmlPath = '\\xml\\'
         else:
-            xmlPath = '/XML/'
-        gameConstants = et.parse(self.mod_dir+xmlPath+'/gameconstants.xml').getroot()
+            xmlPath = '\\XML\\'
+        gameConstants = et.parse(self.mod_dir+xmlPath+'gameconstants.xml').getroot()
         
         return gameConstants
     def get_faction_files(self):
         faction_files = []
         if os.path.isdir('xml'):
-            xmlPath = '/xml/'
+            xmlPath = '\\xml\\'
         else:
-            xmlPath = '/XML/'
-        factionfiles = et.parse(self.mod_dir+xmlPath+'/factionfiles.xml')
+            xmlPath = '\\XML\\'
+        factionfiles = et.parse(self.mod_dir+xmlPath+'factionfiles.xml')
         for child in factionfiles.getroot():
             if child.tag == 'File':
-                faction_files.append(self.mod_dir+xmlPath+'/'+child.text)
+                faction_files.append(self.mod_dir+xmlPath+child.text)
         return faction_files
     def get_trade_routes(self):
         tradeRoute_files = []
         if os.path.isdir('xml'):
-            xmlPath = '/xml/'
+            xmlPath = '\\xml\\'
         else:
-            xmlPath = '/XML/'
-        tradeRouteFiles = et.parse(self.mod_dir+xmlPath+'/traderoutefiles.xml')
+            xmlPath = '\\XML\\'
+        tradeRouteFiles = et.parse(self.mod_dir+xmlPath+'traderoutefiles.xml')
         for child in tradeRouteFiles.getroot():
             if child.tag == 'File':
-                tradeRoute_files.append(self.mod_dir+xmlPath+'/'+child.text)
+                tradeRoute_files.append(self.mod_dir+xmlPath+child.text)
         return tradeRoute_files
     def get_hardpoint_files(self):
         hardPoint_files = []
         if os.path.isdir('xml'):
-            xmlPath = '/xml/'
+            xmlPath = '\\xml\\'
         else:
-            xmlPath = '/XML/'
-        hardpointdatafiles = et.parse(self.mod_dir+xmlPath+'/hardpointdatafiles.xml')
+            xmlPath = '\\XML\\'
+        hardpointdatafiles = et.parse(self.mod_dir+xmlPath+'hardpointdatafiles.xml')
         for child in hardpointdatafiles.getroot():
             if child.tag == 'File':
-                hardPoint_files.append(self.mod_dir+xmlPath+'/'+child.text)
+                hardPoint_files.append(self.mod_dir+xmlPath+child.text)
         return hardPoint_files
     def get_game_object_files(self):
         game_object_files = []
         if os.path.isdir('xml'):
-            xmlPath = '/xml'
+            xmlPath = '\\xml\\'
         else:
-            xmlPath = '/XML'
-        gameObjectFiles = et.parse(self.mod_dir+xmlPath+'/gameobjectfiles.xml')
+            xmlPath = '\\XML\\'
+        gameObjectFiles = et.parse(self.mod_dir+xmlPath+'gameobjectfiles.xml')
         for child in gameObjectFiles.getroot():
             if child.tag == 'File':
-                game_object_files.append(self.mod_dir+xmlPath+'/'+child.text)
+                game_object_files.append(self.mod_dir+xmlPath+child.text)
         return game_object_files
     def get_galactic_conquests(self):
         campaign_files = []
         if os.path.isdir('xml'):
-            xmlPath = '/xml/'
+            xmlPath = '\\xml\\'
         else:
-            xmlPath = '/XML/'
-        campaignFiles = et.parse(self.mod_dir+xmlPath+'/campaignfiles.xml')
+            xmlPath = '\\XML\\'
+        campaignFiles = et.parse(self.mod_dir+xmlPath+'campaignfiles.xml')
         for child in campaignFiles.getroot():
             if child.tag == 'File':
-                campaign_files.append(self.mod_dir+xmlPath+'/'+child.text)
+                campaign_files.append(self.mod_dir+xmlPath+child.text)
         return campaign_files
     def init_repo(self):
         for file in self.faction_files:
@@ -148,9 +148,9 @@ class ModRepository:
                                 self.campaign_sets[campaignsetname].addCampaign(self.campaigns[child.get('Name')])
     def save_to_file(self):
         if os.path.isdir('xml'):
-            xmlPath = '/xml/'
+            xmlPath = '\\xml\\'
         else:
-            xmlPath = '/XML/'
+            xmlPath = '\\XML\\'
 
         #Init Save Containers, for iteration by file
         tradeRoutes = SaveContainer(self.trade_routes)
@@ -187,13 +187,12 @@ class ModRepository:
                 visibleLineElem = et.SubElement(element, 'Visible_Line_Name')
                 visibleLineElem.text = 'DEFAULT'
             fileTree = et.ElementTree(fileRoot)
-            print(self.mod_dir+xmlPath+file)
-            fileTree.write(self.mod_dir+xmlPath+file,xml_declaration=True, encoding='UTF-8',pretty_print=True)
+            fileTree.write(file,xml_declaration=True, encoding='UTF-8',pretty_print=True)
 
         
         for file in self.campaign_files:
             fileEntry = et.SubElement(campaignFilesRoot,"File")
-            fileEntry.text = file
+            fileEntry.text = file.replace(self.mod_dir+xmlPath,'')
 
             gcs = campaigns[file]
 
@@ -206,7 +205,8 @@ class SaveContainer:
         self.objects = objList
     def __getitem__(self, file):
         objs = []
-
+        if type(self.objects) == dict:
+            self.objects = self.objects.values()
         for obj in self.objects:
             if obj.fileLocation == file:
                 objs.append(obj)

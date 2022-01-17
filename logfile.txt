@@ -1,2 +1,0 @@
-
- Error During Planet Indexing [Line 157 UI_Manager.py] planet  failed to index

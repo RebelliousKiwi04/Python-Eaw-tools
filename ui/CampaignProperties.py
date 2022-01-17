@@ -190,7 +190,7 @@ class CampaignPropertiesWindow:
         self.startingcreditslayout.addWidget(self.startingcredits)
 
         if faction not in campaign.starting_credits.keys():
-            campaign.home_locations[faction] = 0
+            campaign.starting_credits[faction] = 0
         self.startingcredits.setValue(campaign.starting_credits[faction])
 
         

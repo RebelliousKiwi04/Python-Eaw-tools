@@ -36,7 +36,7 @@ def createKeyPair(valueList):
         returnList[i] = Key_Pair(i)
     return returnList
 
-class crcGlobals:
+class crcGlobal:
     def __init__(self):
         self.crcTable = list(range(256))
         for i in range(256):
@@ -47,6 +47,7 @@ class crcGlobals:
                 else:
                     crc = (crc >> 1)
             self.crcTable[i] = crc & 0xFFFFFFFF;
+crcGlobals = crcGlobal()
 
 class Key_Pair:
     def __init__(self, index):
@@ -127,7 +128,6 @@ class TextFile:
             return returnDict
     def compileDat(self, source):
         total_entries = 0
-        crcGlobals = crcGlobals()
         entries = []
         if type(source) is dict:
             for identifier, entry in source.items():
@@ -174,5 +174,5 @@ class TextFile:
             letters = str(entries[i].identifier).encode('cp1252')
             for j in range(len(letters)):
                 datfile.append(letters[j])
-        outFile = open(self.mod_dir+'Text\MasterTextFile_ENGLISH.dat', 'wb')
+        outFile = open(self.mod_dir+'\Text\MasterTextFile_ENGLISH.dat', 'wb')
         outFile.write(datfile)

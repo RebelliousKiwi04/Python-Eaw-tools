@@ -201,13 +201,13 @@ class MainUIWindow:
 
         self.setDataFolderAction: QAction = QAction("Set Data Folder", self.main_window)
 
-        self.__saveAction: QAction = QAction("Save", self.main_window)
+        self.saveAction: QAction = QAction("Save", self.main_window)
 
         self.__quitAction: QAction = QAction("Quit", self.main_window)
         self.__quitAction.triggered.connect(sys.exit)
         
         
-        self.__fileMenu.addAction(self.__saveAction)
+        self.__fileMenu.addAction(self.saveAction)
         self.__fileMenu.addAction(self.setDataFolderAction)
         self.__fileMenu.addAction(self.__quitAction)
         self.__addMenu.addAction(self.newCampaignAction)
