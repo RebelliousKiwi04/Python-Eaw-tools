@@ -87,61 +87,85 @@ class Unit:
     def get_pop(self):
         for child in self.entry:
             if child.tag == 'Size_Value':
+                if child.text == None:
+                    return 0
                 return float(child.text)
         return 0
     def get_hyperspace_speed(self):
         for child in self.entry:
             if child.tag == 'Hyperspace_Speed':
+                if child.text == None:
+                    return 0
                 return float(child.text)
         return 0
     def get_deceleration(self):
         for child in self.entry:
             if child.tag == 'OverrideDeceleration':
+                if child.text == None:
+                    return 0
                 return float(child.text)
         return 0
     def get_acceleration(self):
         for child in self.entry:
             if child.tag == 'OverrideAcceleration':
+                if child.text == None:
+                    return 0
                 return float(child.text)
         return 0
     def get_max_speed(self):
         for child in self.entry:
             if child.tag == 'Max_Speed':
+                if child.text == None:
+                    return 0
                 return float(child.text)
         return 0
     def get_max_turn_rate(self):
         for child in self.entry:
             if child.tag == 'Max_Rate_Of_Turn':
+                if child.text == None:
+                    return 0
                 return float(child.text)
         return 0
     def get_shipyard_level(self):
         for child in self.entry:
             if child.tag == 'Required_Star_Base_Level':
+                if child.text == None:
+                    return 0
                 return float(child.text)
         return 0
     def get_refresh_rate(self):
         for child in self.entry:
             if child.tag == 'Shield_Refresh_Rate':
+                if child.text == None:
+                    return 0
                 return float(child.text)
         return 0
     def get_shield(self):
         for child in self.entry:
             if child.tag == 'Shield_Points':
+                if child.text == None:
+                    return 0
                 return float(child.text)
         return 0
     def get_hull(self):
         for child in self.entry:
             if child.tag == 'Tactical_Health':
+                if child.text == None:
+                    return 0
                 return float(child.text)
         return 0
     def get_cost(self):
         for child in self.entry:
             if child.tag == 'Build_Cost_Credits':
+                if child.text == None:
+                    return 0
                 return int(child.text)
         return 0
     def get_build_time(self):
         for child in self.entry:
             if child.tag == 'Build_Time_Seconds':
+                if child.text == None:
+                    return 0
                 return float(child.text)
         return 0
     def get_hardpoints(self):
@@ -158,10 +182,14 @@ class Unit:
     def get_text_key(self):
         for child in self.entry:
             if child.tag == 'Text_ID':
+                if child.text == None:
+                    return ''
                 return child.text
     def get_aicp(self) -> int:
         for item in self.entry:
             if item.tag == 'AI_Combat_Power':
+                if item.text == None:
+                    return 0
                 if item.text != None:
                     return int(math.floor(float(item.text)))
         return 0

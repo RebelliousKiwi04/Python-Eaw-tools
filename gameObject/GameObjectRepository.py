@@ -14,6 +14,7 @@ import os, sys, lxml.etree as et
 class ModRepository:
     def __init__(self, mod_directory):
         self.mod_dir = mod_directory
+        self.logfile = open('logfile.txt', 'w')
         self.game_object_files = self.get_game_object_files()
         self.campaign_files = self.get_galactic_conquests()
         self.hardpoint_files = self.get_hardpoint_files()
@@ -36,14 +37,18 @@ class ModRepository:
     def get_ai_players(self):
         ai_players = []
         ai_folder = self.mod_dir+'/xml/AI/Players'
+        self.logfile.write(f'Collecting AI Players From Directory {ai_folder}\n')
         ai_files = os.listdir(ai_folder)
         for file in ai_files:
+            self.logfile.write(f'Collecting AI Player From File {file}\n')
             file = et.parse(ai_folder+'/'+file).getroot()
             for child in file:
                 if child.tag == 'Name':
+                    self.logfile.write(f'Adding AI Player {child.text}\n')
                     ai_players.append(child.text.replace(" ", ""))
         return ai_players
     def get_game_constants(self):
+        self.logfile.write(f'Unpacking GameConstants.xml\n')
         if os.path.isdir('xml'):
             xmlPath = '\\xml\\'
         else:
@@ -57,7 +62,10 @@ class ModRepository:
             xmlPath = '\\xml\\'
         else:
             xmlPath = '\\XML\\'
+
+        self.logfile.write(f'Collecting Faction Files From File {self.mod_dir+xmlPath}factionfiles.xml\n')
         factionfiles = et.parse(self.mod_dir+xmlPath+'factionfiles.xml')
+        
         for child in factionfiles.getroot():
             if child.tag == 'File':
                 faction_files.append(self.mod_dir+xmlPath+child.text)
@@ -68,6 +76,7 @@ class ModRepository:
             xmlPath = '\\xml\\'
         else:
             xmlPath = '\\XML\\'
+        self.logfile.write(f'Collecting Trade Route Files From File {self.mod_dir+xmlPath}traderoutefiles.xml\n')
         tradeRouteFiles = et.parse(self.mod_dir+xmlPath+'traderoutefiles.xml')
         for child in tradeRouteFiles.getroot():
             if child.tag == 'File':
@@ -79,6 +88,7 @@ class ModRepository:
             xmlPath = '\\xml\\'
         else:
             xmlPath = '\\XML\\'
+        self.logfile.write(f'Collecting Hard Point Files From File {self.mod_dir+xmlPath}hardpointdatafiles.xml\n')
         hardpointdatafiles = et.parse(self.mod_dir+xmlPath+'hardpointdatafiles.xml')
         for child in hardpointdatafiles.getroot():
             if child.tag == 'File':
@@ -91,8 +101,10 @@ class ModRepository:
         else:
             xmlPath = '\\XML\\'
         gameObjectFiles = et.parse(self.mod_dir+xmlPath+'gameobjectfiles.xml')
+        self.logfile.write(f'Collecting Game Object Files From File {self.mod_dir+xmlPath}gameobjectfiles.xml\n')
         for child in gameObjectFiles.getroot():
             if child.tag == 'File':
+                self.logfile.write(f'Unpacking Game Object File {child.text}\n')
                 game_object_files.append(self.mod_dir+xmlPath+child.text)
         return game_object_files
     def get_galactic_conquests(self):
@@ -102,44 +114,54 @@ class ModRepository:
         else:
             xmlPath = '\\XML\\'
         campaignFiles = et.parse(self.mod_dir+xmlPath+'campaignfiles.xml')
+        self.logfile.write(f'Collecting Campaign Files From File {self.mod_dir+xmlPath}campaignfiles.xml\n')
         for child in campaignFiles.getroot():
             if child.tag == 'File':
                 campaign_files.append(self.mod_dir+xmlPath+child.text)
         return campaign_files
     def init_repo(self):
         for file in self.faction_files:
+            self.logfile.write(f'Unpacking Factions From File {file}\n')
             root = et.parse(file).getroot()
             for child in root:
                 if child.tag == 'Faction':
+                    self.logfile.write('Adding Faction '+child.get('Name')+'\n')
                     self.factions.append(Faction(child,file))
         for file in self.game_object_files:
             root = et.parse(file).getroot()
+            self.logfile.write(f'Unpacking Objects From File {file}\n')
             if root.tag == 'Planets':
                 self.planetFiles.append(file)
             for child in root:
                 if child.tag == 'Planet':
                     if child.get('Name') != 'Galaxy_Core_Art_Model':
-                        self.planets.append(Planet(child, file))
+                        self.logfile.write('Adding Planet '+child.get('Name')+'\n')
+                        self.planets.append(Planet(child, file,self.logfile))
                         if not file in self.planetFiles:
                             self.planetFiles.append(file)
                 if child.tag == 'SpaceUnit' or child.tag == 'UniqueUnit' or child.tag == 'SpecialStructure' or child.tag == 'GroundCompany' or child.tag == 'HeroUnit' or child.tag == 'HeroCompany' or child.tag == 'GroundUnit' or child.tag == 'Squadron' or child.tag =='SpaceStructure' or child.tag == 'StarBase' or child.tag =='GroundStructure' or child.tag == 'GroundBase':
                     if 'death_clone' not in child.get('Name').lower():
+                        self.logfile.write('Adding Unit '+child.get('Name')+'\n')
                         self.units.append(Unit(child,file,self.mod_dir))
         for file in self.tradeRoute_files:
             root = et.parse(file).getroot()
+            self.logfile.write(f'Unpacking Trade Routes From File {file}\n')
             for child in root:
                 if child.tag == 'TradeRoute':
+                    self.logfile.write('Adding Trade Route '+child.get('Name')+'\n')
                     route = TradeRoute(child, file)
                     route.set_point_planets(self.planets)
                     self.trade_routes.append(route)
         for file in self.campaign_files:
+            self.logfile.write(f'Unpacking Campaigns From File {file}\n')
             try:
                 root = et.parse(file).getroot()
             except:
                 print(f"File {file} doesn't exist")
             for child in root:
                 if child.tag == 'Campaign':
-                    self.campaigns[child.get('Name')] = Campaign(child, self.planets, self.trade_routes, file, self.factions)
+                    self.logfile.write('Adding Campaign '+child.get('Name')+'\n')
+                    self.campaigns[child.get('Name')] = Campaign(child, self.planets, self.trade_routes, file, self.factions, self.logfile)
                     for j in child:
                         if j.tag == 'Campaign_Set':
                             campaignsetname = j.text.replace(" ","")
@@ -154,21 +176,26 @@ class ModRepository:
         else:
             xmlPath = '\\XML\\'
 
+        self.logfile.write('Creating Save Containers For Trade Routes And Campaigns\n')
         #Init Save Containers, for iteration by file
         tradeRoutes = SaveContainer(self.trade_routes)
         campaigns = SaveContainer(self.campaigns)
 
         #Init New Campaign Files Tree
+        self.logfile.write('Initialising Element Tree For Campaign Files\n')
         campaignFilesRoot = et.Element('Campaign_Files')
         
         #Compile Dat
+        self.logfile.write('Compiling MasterTextFile_ENGLISH.dat\n')
         self.text_handler.compileDat(self.text_dict)
 
         #Build Trade Routes
         for file in self.tradeRoute_files:
+            self.logfile.write(f'Building Trade Route Element Tree In File {file}\n')
             routes = tradeRoutes[file]
             fileRoot = et.Element("TradeRoutes")
             for i in routes:
+                self.logfile.write(f'Building Element For Trade Route {i.name}\n')
                 element = et.SubElement(fileRoot, 'TradeRoute')
                 element.set('Name', i.name)
                 pointAElem = et.SubElement(element, 'Point_A')
@@ -188,16 +215,19 @@ class ModRepository:
 
                 visibleLineElem = et.SubElement(element, 'Visible_Line_Name')
                 visibleLineElem.text = 'DEFAULT'
+            self.logfile.write(f'Writing Element Tree To File {file}\n')
             fileTree = et.ElementTree(fileRoot)
             fileTree.write(file,xml_declaration=True, encoding='UTF-8',pretty_print=True)
 
         
         for file in self.campaign_files:
+            self.logfile.write(f'Building Campaign Element Tree In File {file}\n')
             fileEntry = et.SubElement(campaignFilesRoot,"File")
             fileEntry.text = file.replace(self.mod_dir+xmlPath,'')
             gcs = campaigns[file]
             fileRoot = et.Element('Campaigns')
             for conquest in gcs:
+                self.logfile.write(f'Building Element For Campaign {conquest.name}\n')
                 gcElem = et.SubElement(fileRoot, 'Campaign')
                 gcElem.set('Name',conquest.name)
 
@@ -222,19 +252,21 @@ class ModRepository:
                 cameraDistanceElem = et.SubElement(gcElem, 'Camera_Distance')
                 cameraDistanceElem.text = str(1200.0)
 
+                self.logfile.write(f'Writing Locations To Element Tree For Conquest {conquest.name}\n')
                 locationsElem = et.SubElement(gcElem, 'Locations')
                 locationsText = 'Galaxy_Core_Art_Model'
                 for i in conquest.planets:
                     locationsText = locationsText+',\n\t\t\t'+i.name
                 locationsElem.text = locationsText
 
+                self.logfile.write(f'Writing Trade Routes To Element Tree For Conquest {conquest.name}\n')
                 tradeRoutesElem = et.SubElement(gcElem, 'Trade_Routes')
                 routesText = ''
                 for i in conquest.trade_routes:
                     routesText = routesText+i.name+',\n\t\t\t'
                 tradeRoutesElem.text = routesText
 
-
+                self.logfile.write(f'Writing Home Locations To Element Tree For Conquest {conquest.name}\n')
                 for faction, location in conquest.home_locations.items():
                     elem = et.SubElement(gcElem, 'Home_Locations')
                     elem.text = faction+', '+location
@@ -242,14 +274,17 @@ class ModRepository:
                 activePlayerElem = et.SubElement(gcElem, 'Starting_Active_Player')
                 activePlayerElem.text = conquest.activeFaction
 
+                self.logfile.write(f'Writing Story Plots To Element Tree For Conquest {conquest.name}\n')
                 for faction, plot, in conquest.plots.items():
                     plotElem = et.SubElement(gcElem, 'Story_Name')
                     plotElem.text = faction+', '+plot
                 
+                self.logfile.write(f'Writing AI Player Control To Element Tree For Conquest {conquest.name}\n')
                 for faction, player in conquest.ai_players.items():
                     elem = et.SubElement(gcElem, 'AI_Player_Control')
                     elem.text = faction+', '+player
 
+                self.logfile.write(f'Writing Markup Filenames To Element Tree For Conquest {conquest.name}\n')
                 for faction in self.factions:
                     elem = et.SubElement(gcElem, 'Markup_Filename')
                     elem.text = faction.name+', DefaultGalacticHints'
@@ -266,18 +301,22 @@ class ModRepository:
                 aiWinConditions = et.SubElement(gcElem, 'AI_Victory_Conditions')
                 aiWinConditions.text = 'Galactic_All_Planets_Controlled'
 
+                self.logfile.write(f'Writing Starting Forces To Element Tree For Conquest {conquest.name}\n')
                 for planet in conquest.planets:
                     forcestable = conquest.starting_forces[planet]
                     for force in forcestable:
                         for i in range(force.quantity):
                             forceElem = et.SubElement(gcElem, 'Starting_Forces')
                             forceElem.text = force.owner+', '+force.planet+', '+force.unit
-                
+            self.logfile.write(f'Writing Element Tree To File {file}\n')
             fileTree = et.ElementTree(fileRoot)
             fileTree.write(file,xml_declaration=True, encoding='UTF-8',pretty_print=True)
 
+        self.logfile.write(f'Writing Campaign Files Element Tree To File CampaignFiles.xml\n')
         campaignFilesET = et.ElementTree(campaignFilesRoot)
         campaignFilesET.write(self.mod_dir+xmlPath+'campaignfiles.xml',xml_declaration=True, encoding='UTF-8',pretty_print=True)
+
+        self.logfile.write(f'Finished Saving Successfully\n')
 
 
 class SaveContainer:

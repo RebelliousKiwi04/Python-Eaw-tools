@@ -1,4 +1,4 @@
-import lxml.etree as et
+import lxml.etree as et, sys
 from gameObject.StartingForcesObject import StartingForcesObject
 
 class StartingForcesContainer:
@@ -34,11 +34,13 @@ def remove_values_from_list(the_list, val):
    return [value for value in the_list if value != val]
 
 class Campaign:
-    def __init__(self, xml_entry, planets, tradeRoutes, fileLocation, all_factions):
+    def __init__(self, xml_entry, planets, tradeRoutes, fileLocation, all_factions, logfile):
+        self.logfile = logfile
         self.fileLocation = fileLocation
         self.entry = xml_entry
-        self.activeFaction = self.get_active_faction()
         self.name = xml_entry.get('Name')
+        self.activeFaction = self.get_active_faction()
+        
         self.setName: str = self.get_set_name()
         self.max_tech_level = self.get_max_tech()
         self.starting_tech = self.get_starting_tech()
@@ -65,6 +67,7 @@ class Campaign:
                 if j.name == i:
                     self.trade_routes.append(j)
     def get_story_plots(self):
+        self.logfile.write(f'Collecting Story Plots For Conquest {self.name}\n')
         plots= {}
         for item in self.entry:
             if item.tag =='Empire_Story_Name':
@@ -88,18 +91,23 @@ class Campaign:
                     plots[text[0].replace(' ','')] = text[1].replace(' ','')
         return plots
     def get_starting_forces(self):
+        self.logfile.write(f'Collecting Starting Forces For Conquest {self.name}\n')
         forces = []
         for item in self.entry:
             if item.tag == 'Starting_Forces':
-                splitText = item.text.split(',')
-                finalText= []
-                for text in splitText:
-                    newText = text.replace(" ","")
-                    finalText.append(newText)
-                forces.append(finalText)
+                if item.text:
+                    splitText = item.text.split(',')
+                    finalText= []
+                    for text in splitText:
+                        newText = text.replace(" ","")
+                        finalText.append(newText)
+                    forces.append(finalText)
                 
         while len(forces) > 0:
             val = forces[0]
+            if len(val) != 3:
+                self.logfile.write(f'CRITICAL ERROR when reading starting forces for Conquest {self.name}\n')
+                sys.exit()
             factionIndex = None
             for i in self.all_factions:
                 try:
@@ -120,26 +128,32 @@ class Campaign:
             self.starting_forces.addItem(planet, unit, faction, quantity)
             forces = remove_values_from_list(forces, val)
     def get_text_id(self):
+        self.logfile.write(f'Collecting Text ID for conquest {self.name}\n')
         for item in self.entry:
             if item.tag == 'Text_ID':
                 return item.text.replace(" ", "")
     def get_desc_id(self):
+        self.logfile.write(f'Collecting Description ID for conquest {self.name}\n')
         for item in self.entry:
             if item.tag == 'Description_Text':
                 return item.text.replace(" ", "")
     def get_active_faction(self):
+        self.logfile.write(f'Collecting Active Player Name for conquest {self.name}\n')
         for item in self.entry:
             if item.tag == 'Starting_Active_Player':
                 return item.text.replace(" ", "")
     def get_set_name(self):
+        self.logfile.write(f'Collecting Campaign Set for conquest {self.name}\n')
         for item in self.entry:
             if item.tag == 'Campaign_Set':
                 return item.text
     def get_sort_order(self):
+        self.logfile.write(f'Collecting Sort Order for conquest {self.name}\n')
         for item in self.entry:
             if item.tag == 'Sort_Order':
                 return item.text.replace(' ','')
     def get_planets(self):
+        self.logfile.write(f'Collecting Locations for conquest {self.name}\n')
         for item in self.entry:
             if item.tag == 'Locations':
                 outputList = []
@@ -148,6 +162,7 @@ class Campaign:
                     outputList.append(newText)
         return outputList
     def get_trade_routes(self):
+        self.logfile.write(f'Collecting Trade Routes for conquest {self.name}\n')
         for item in self.entry:
             if item.tag == 'Trade_Routes':
                 outputList = []
@@ -156,6 +171,7 @@ class Campaign:
                     outputList.append(newText)
         return outputList
     def get_max_tech(self):
+        self.logfile.write(f'Collecting Max Tech Levels for conquest {self.name}\n')
         max_tech = {}
         for item in self.entry:
             if item.tag == 'Max_Tech_Level':
@@ -168,6 +184,7 @@ class Campaign:
                 
         return max_tech
     def get_starting_credits(self):
+        self.logfile.write(f'Collecting Starting Credits for conquest {self.name}\n')
         starting_credits = {}
         for item in self.entry:
             if item.tag == 'Starting_Credits':
@@ -185,38 +202,44 @@ class Campaign:
                 
         return starting_credits
     def get_starting_tech(self):
+        self.logfile.write(f'Collecting Starting Tech Levels for conquest {self.name}\n')
         min_tech = {}
         for item in self.entry:
             if item.tag == 'Starting_Tech_Level':
-                splitText = item.text.split(',')
-                finalText= []
-                for text in splitText:
-                    newText = text.replace(" ","")
-                    finalText.append(newText)
-                min_tech[finalText[0]] = int(finalText[1])
+                if item.text:
+                    splitText = item.text.split(',')
+                    finalText= []
+                    for text in splitText:
+                        newText = text.replace(" ","")
+                        finalText.append(newText)
+                    min_tech[finalText[0]] = int(finalText[1])
                 
         return min_tech
     def get_ai_players(self):
+        self.logfile.write(f'Collecting AI Players for conquest {self.name}\n')
         ai_players = {}
         for item in self.entry:
             if item.tag == 'AI_Player_Control':
-                splitText = item.text.split(',')
-                finalText= []
-                for text in splitText:
-                    newText = text.replace(" ","")
-                    finalText.append(newText)
-                ai_players[finalText[0]] = finalText[1]
+                if item.text:
+                    splitText = item.text.split(',')
+                    finalText= []
+                    for text in splitText:
+                        newText = text.replace(" ","")
+                        finalText.append(newText)
+                    ai_players[finalText[0]] = finalText[1]
         return ai_players
     def get_home_locations(self):
+        self.logfile.write(f'Collecting Home Locations for conquest {self.name}\n')
         home_locations = {}
         for item in self.entry:
             if item.tag == 'Home_Location':
-                splitText = item.text.split(',')
-                finalText= []
-                for text in splitText:
-                    newText = text.replace(" ","")
-                    finalText.append(newText)
-                home_locations[finalText[0]] = finalText[1]
+                if item.text:
+                    splitText = item.text.split(',')
+                    finalText= []
+                    for text in splitText:
+                        newText = text.replace(" ","")
+                        finalText.append(newText)
+                    home_locations[finalText[0]] = finalText[1]
         return home_locations
 
 

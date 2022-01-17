@@ -13,13 +13,13 @@ from PyQt5.QtCore import *
 
 class UI_Presenter:
     def __init__(self, ui, mod_dir):
-        self.logFile = open('logfile.txt', 'w')
         self.ui = ui
         self.mod_dir = mod_dir
         self.repository = ModRepository(mod_dir)
         self.selected_set = None
         self.selected_campaign = None
     def connect_triggers(self):
+        self.repository.logfile.write(f'Connecting Button Triggers\n')
         self.ui.planet_list.itemChanged.connect(self.planetStatusModified)
         self.ui.tradeRoute_list.itemChanged.connect(self.ontradeRouteCellChanged)
         self.ui.add_unit_to_planet.clicked.connect(self.add_unit_to_starting_forces)
@@ -39,6 +39,7 @@ class UI_Presenter:
         self.ui.edit_gc_properties.clicked.connect(self.show_campaign_properties)
         self.ui.main_window.setWindowTitle("EaW Galactic Conquest Editor - " + self.ui.select_GC.currentText() + " - " + self.ui.select_faction.currentText())
     def disconnect_triggers(self):
+        self.repository.logfile.write(f'Disonnecting Button Triggers\n')
         self.ui.planet_list.itemChanged.disconnect(self.planetStatusModified)
         self.ui.tradeRoute_list.itemChanged.disconnect(self.ontradeRouteCellChanged)
         self.ui.add_unit_to_planet.clicked.disconnect(self.add_unit_to_starting_forces)
@@ -58,6 +59,7 @@ class UI_Presenter:
 
         self.ui.edit_gc_properties.clicked.disconnect(self.show_campaign_properties)
     def clear_data(self):
+        self.repository.logfile.write(f'Resetting UI\n')
         self.disconnect_triggers()
         self.ui.select_GC.clear()
         self.ui.select_faction.clear()
@@ -71,6 +73,7 @@ class UI_Presenter:
         self.ui.tradeRoute_list.setRowCount(0)
         self.ui.tradeRoute_list.setHorizontalHeaderLabels(["Trade Routes"])
     def update_tabs(self):
+        self.repository.logfile.write(f'Updating UI Elements\n')
         for planet in self.repository.planets:
             rowCount = self.ui.planet_list.rowCount()
             self.ui.planet_list.setRowCount(rowCount + 1)
@@ -104,11 +107,14 @@ class UI_Presenter:
         self.update_starting_forces_table()
         
     def select_GC(self):
+        self.repository.logfile.write(f'New GC Set With Name {self.ui.select_GC.currentText()} Selected\n')
         index = self.ui.select_GC.currentText()
         campaignset = self.repository.campaign_sets[index]
         self.selected_set = campaignset
         self.disconnect_triggers()
         self.ui.select_faction.clear()
+
+        self.repository.logfile.write(f'Adding Playable Factions For Set To Combobox\n')
         for faction, campaign in campaignset.playableFactions.items():
             self.ui.select_faction.addItem(campaign.activeFaction)
         self.connect_triggers()
@@ -118,9 +124,10 @@ class UI_Presenter:
         self.update_seleceted_trade_routes()
         self.update_planets_box()
         self.update_starting_forces_table()
-
+        self.repository.logfile.write(f'Plotting Galactic Map...\n')
         self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets)
     def select_faction(self):
+        self.repository.logfile.write(f'Playable Faction {self.ui.select_faction.currentText()} selected for set {self.ui.select_GC.currentText()}\n')
         index = self.ui.select_faction.currentText()
         self.ui.main_window.setWindowTitle("EaW Galactic Conquest Editor - "+ self.ui.select_GC.currentText() + " - " + index)
         campaign = self.selected_set.getactivecampaign(self.ui.select_faction.currentText())
@@ -129,8 +136,10 @@ class UI_Presenter:
         self.update_seleceted_trade_routes()
         self.update_planets_box()
         self.update_starting_forces_table()
+        self.repository.logfile.write(f'Plotting Galactic Map...\n')
         self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets)
     def update_seleceted_trade_routes(self):
+        self.repository.logfile.write(f'Updating Selected Trade Routes For GC {self.selected_campaign.name}\n')
         self.ui.tradeRoute_list.itemChanged.disconnect(self.ontradeRouteCellChanged)
         rowCount = self.ui.tradeRoute_list.rowCount()
 
@@ -148,6 +157,7 @@ class UI_Presenter:
                 item.setCheckState(QtCore.Qt.Checked)
         self.ui.tradeRoute_list.itemChanged.connect(self.ontradeRouteCellChanged)
     def update_selected_planets(self):
+        self.repository.logfile.write(f'Updating Selected Planets For GC {self.selected_campaign.name}\n')
         self.ui.planet_list.itemChanged.disconnect(self.planetStatusModified)
         rowCount = self.ui.planet_list.rowCount()
         for row in range(rowCount):
@@ -165,6 +175,7 @@ class UI_Presenter:
         self.update_planets_box()
         self.ui.planet_list.itemChanged.connect(self.planetStatusModified)
     def update_starting_forces_table(self):
+        self.repository.logfile.write(f'Updating Starting Forces Table For GC {self.selected_campaign.name}\n')
         self.ui.forcesListWidget.clear()
         self.ui.forcesListWidget.setRowCount(0)
         self.ui.forcesListWidget.setHorizontalHeaderLabels(["Unit", "Owner", "Quantity"])
@@ -176,7 +187,7 @@ class UI_Presenter:
         
         if planet_index == None:
             print(planet_name)
-            self.logFile.write(f'\n Error During Planet Indexing [Line 157 UI_Manager.py] planet {planet_name} failed to index')
+            self.repository.logFile.write(f'\n Error During Planet Indexing planet {planet_name} failed to index when updating starting forces')
             return
         planet = self.repository.planets[planet_index]
         starting_forces = self.selected_campaign.starting_forces[planet]
@@ -241,6 +252,7 @@ class UI_Presenter:
 
     def onPlanetSelection(self, table):
         planet = self.repository.planets[table[0]]
+        self.repository.logfile.write(f'Planet {planet.name} Selected On Galactic Plot\n')
         item = self.ui.planet_list.item(table[0], 0)
         campaign = self.selected_campaign
         if not planet in campaign.planets:
@@ -261,6 +273,7 @@ class UI_Presenter:
         self.addUnitWindow.show()
     def complete_unit_adding(self):
         planet_name = self.addUnitWindow.planet
+        self.repository.logfile.write(f'Adding Unit To Starting Forces At Planet {planet_name}\n')
         quantity = self.addUnitWindow.Quantity.value()
         unit_name = self.addUnitWindow.UnitTypeSelection.currentText()
         owner_name = self.addUnitWindow.OwnerDropdown.currentText()
@@ -334,6 +347,7 @@ class UI_Presenter:
         test = AddFactionWindow(self.selected_set, self.repository)
         i = test.dialogWindow.exec_()
         if i ==1:
+            self.repository.logfile.write(f'Adding Faction {test.faction.currentText()} To Campaign Set\n')
             self.selected_set.addFaction(test.faction.currentText())
 
             self.select_GC()
@@ -354,7 +368,7 @@ class UI_Presenter:
                 xmlPath = '/xml/'
             else:
                 xmlPath = '/XML/'
-
+            self.repository.logfile.write(f'Creating new GC Set With Name {gcwindow.location.text()}\n')
             self.repository.campaign_files.append(gcwindow.location.text())
 
             setname = gcwindow.setname.text()
@@ -375,6 +389,7 @@ class UI_Presenter:
         if window.show() == 1:
             newRoute = copy.deepcopy(self.repository.trade_routes[0])
             newRoute.name = window.selected_planets[0].name+'_'+window.selected_planets[1].name
+            self.repository.logfile.write(f'Creating new Trade Route With Name {newRoute.name}\n')
             newRoute.point_A = window.selected_planets[0].name.lower()
             newRoute.point_B = window.selected_planets[1].name.lower()
             newRoute.points = []
