@@ -152,18 +152,45 @@ class ModRepository:
         else:
             xmlPath = '/XML/'
 
+        #Init Save Containers, for iteration by file
         tradeRoutes = SaveContainer(self.trade_routes)
         campaigns = SaveContainer(self.campaigns)
 
+        #Init New Campaign Files Tree
         campaignFilesRoot = et.Element('Campaign_Files')
         
-        
+        #Compile Dat
+        self.text_handler.compileDat(self.text_dict)
 
-
+        #Build Trade Routes
         for file in self.tradeRoute_files:
             routes = tradeRoutes[file]
+            fileRoot = et.Element("TradeRoutes")
+            for i in routes:
+                element = et.SubElement(fileRoot, 'TradeRoute')
+                element.set('Name', i.name)
+                pointAElem = et.SubElement(element, 'Point_A')
+                pointAElem.text = i.point_A
 
+                pointBElem = et.SubElement(element, 'Point_B')
+                pointBElem.text = i.point_B
 
+                hsSpeedFactorElem = et.SubElement(element, 'HS_Speed_Factor')
+                hsSpeedFactorElem.text = str(1.0)
+
+                politicalGainElem = et.SubElement(element, 'Political_Control_Gain')
+                politicalGainElem.text = str(0)
+
+                creditGainElem = et.SubElement(element, 'Credit_Gain_Factor')
+                creditGainElem.text= str(0)
+
+                visibleLineElem = et.SubElement(element, 'Visible_Line_Name')
+                visibleLineElem.text = 'DEFAULT'
+            fileTree = et.ElementTree(fileRoot)
+            print(self.mod_dir+xmlPath+file)
+            fileTree.write(self.mod_dir+xmlPath+file,xml_declaration=True, encoding='UTF-8',pretty_print=True)
+
+        
         for file in self.campaign_files:
             fileEntry = et.SubElement(campaignFilesRoot,"File")
             fileEntry.text = file
