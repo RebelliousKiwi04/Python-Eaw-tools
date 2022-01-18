@@ -1,0 +1,2 @@
+3.7 = C:\Users\cjsan\AppData\Local\Programs\Python\Python37\Scripts\pyinstaller.exe --onefile --icon="eawIcon.ico" main.pyw
+3.9 = pyinstaller --onefile --icon="eawIcon.ico" main.pyw
