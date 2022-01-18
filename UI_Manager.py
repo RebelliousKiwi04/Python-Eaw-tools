@@ -265,11 +265,37 @@ class UI_Presenter:
 
     def add_unit_to_starting_forces(self):
         self.addUnitWindow = AddUnitWindow(self.ui.planetComboBox.currentText())
-        self.addUnitWindow.OkCancelButtons.accepted.connect(self.complete_unit_adding)
+        self.addUnitWindow.add.clicked.connect(self.complete_unit_adding)
+        self.addUnitWindow.addtoall.clicked.connect(self.add_to_all)
         self.addUnitWindow.update_unit_box(self.repository.units)
         for faction in self.repository.factions:
             self.addUnitWindow.OwnerDropdown.addItem(faction.name)
         self.addUnitWindow.show()
+    def add_to_all(self):
+        self.repository.logfile.write(f'Adding Unit To Starting Forces On All Planets\n')
+        quantity = self.addUnitWindow.Quantity.value()
+        unit_name = self.addUnitWindow.UnitTypeSelection.currentText()
+        owner_name = self.addUnitWindow.OwnerDropdown.currentText()
+        if unit_name in [x.name for x in self.repository.units]:
+            unit_index = [x.name for x in self.repository.units].index(unit_name)
+        if owner_name in [x.name for x in self.repository.factions]:
+            owner_index = [x.name for x in self.repository.factions].index(owner_name)
+        unit = self.repository.units[unit_index]
+        owner = self.repository.factions[owner_index]
+        forces = self.selected_campaign.starting_forces
+        for i in self.selected_campaign.planets:
+            forces.addItem(i.name, unit.name, owner.name, quantity)
+
+
+        rowCount = self.ui.forcesListWidget.rowCount()
+        self.ui.forcesListWidget.setRowCount(rowCount + 1)
+        item= QTableWidgetItem(unit.name)
+        self.ui.forcesListWidget.setItem(rowCount, 0, item)
+        item= QTableWidgetItem(str(owner.name))
+        self.ui.forcesListWidget.setItem(rowCount, 1, item)
+        item = QTableWidgetItem(str(quantity))
+        self.ui.forcesListWidget.setItem(rowCount, 2, item)
+        self.addUnitWindow.dialogWindow.accept()
     def complete_unit_adding(self):
         planet_name = self.addUnitWindow.planet
         self.repository.logfile.write(f'Adding Unit To Starting Forces At Planet {planet_name}\n')
@@ -287,7 +313,6 @@ class UI_Presenter:
         planet = self.repository.planets[planet_index]
         forces = self.selected_campaign.starting_forces
         forces.addItem(planet.name, unit.name, owner.name, quantity)
-        self.addUnitWindow.OkCancelButtons.accepted.disconnect(self.complete_unit_adding)
 
 
         rowCount = self.ui.forcesListWidget.rowCount()
@@ -373,6 +398,7 @@ class UI_Presenter:
             setname = gcwindow.setname.text()
 
             template = copy.deepcopy(self.repository.campaigns[gcwindow.template.currentText()])
+            #template.copy(self.repository.campaigns[gcwindow.template.currentText()])
 
             template.activeFaction = gcwindow.faction.currentText()
             template.name = setname+'_'+gcwindow.faction.currentText()

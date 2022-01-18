@@ -7167,6 +7167,7 @@ Collecting Story Plots For Conquest Sandbox_Shell_SingleGC_Spacer
 Collecting Starting Forces For Conquest Sandbox_Shell_SingleGC_Spacer
 Collecting Locations for conquest Sandbox_Shell_SingleGC_Spacer
 Collecting Trade Routes for conquest Sandbox_Shell_SingleGC_Spacer
+Deleting Local Variable logfile from campaign Sandbox_Shell_SingleGC_Spacer
 Adding Campaign Sandbox_Shell_SingleGC
 Collecting Active Player Name for conquest Sandbox_Shell_SingleGC
 Collecting Campaign Set for conquest Sandbox_Shell_SingleGC
@@ -7182,6 +7183,7 @@ Collecting Story Plots For Conquest Sandbox_Shell_SingleGC
 Collecting Starting Forces For Conquest Sandbox_Shell_SingleGC
 Collecting Locations for conquest Sandbox_Shell_SingleGC
 Collecting Trade Routes for conquest Sandbox_Shell_SingleGC
+Deleting Local Variable logfile from campaign Sandbox_Shell_SingleGC
 Adding Campaign Sandbox_Shell_EraGC
 Collecting Active Player Name for conquest Sandbox_Shell_EraGC
 Collecting Campaign Set for conquest Sandbox_Shell_EraGC
@@ -7197,6 +7199,7 @@ Collecting Story Plots For Conquest Sandbox_Shell_EraGC
 Collecting Starting Forces For Conquest Sandbox_Shell_EraGC
 Collecting Locations for conquest Sandbox_Shell_EraGC
 Collecting Trade Routes for conquest Sandbox_Shell_EraGC
+Deleting Local Variable logfile from campaign Sandbox_Shell_EraGC
 Adding Campaign Sandbox_Shell_InfinitiesGC_Spacer
 Collecting Active Player Name for conquest Sandbox_Shell_InfinitiesGC_Spacer
 Collecting Campaign Set for conquest Sandbox_Shell_InfinitiesGC_Spacer
@@ -7212,6 +7215,7 @@ Collecting Story Plots For Conquest Sandbox_Shell_InfinitiesGC_Spacer
 Collecting Starting Forces For Conquest Sandbox_Shell_InfinitiesGC_Spacer
 Collecting Locations for conquest Sandbox_Shell_InfinitiesGC_Spacer
 Collecting Trade Routes for conquest Sandbox_Shell_InfinitiesGC_Spacer
+Deleting Local Variable logfile from campaign Sandbox_Shell_InfinitiesGC_Spacer
 Adding Campaign Sandbox_Shell_InfinitiesGC
 Collecting Active Player Name for conquest Sandbox_Shell_InfinitiesGC
 Collecting Campaign Set for conquest Sandbox_Shell_InfinitiesGC
@@ -7227,6 +7231,7 @@ Collecting Story Plots For Conquest Sandbox_Shell_InfinitiesGC
 Collecting Starting Forces For Conquest Sandbox_Shell_InfinitiesGC
 Collecting Locations for conquest Sandbox_Shell_InfinitiesGC
 Collecting Trade Routes for conquest Sandbox_Shell_InfinitiesGC
+Deleting Local Variable logfile from campaign Sandbox_Shell_InfinitiesGC
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Thrawn\Campaigns_Thrawn.xml
 Adding Campaign Sandbox_T_Empire
 Collecting Active Player Name for conquest Sandbox_T_Empire
@@ -7243,6 +7248,7 @@ Collecting Story Plots For Conquest Sandbox_T_Empire
 Collecting Starting Forces For Conquest Sandbox_T_Empire
 Collecting Locations for conquest Sandbox_T_Empire
 Collecting Trade Routes for conquest Sandbox_T_Empire
+Deleting Local Variable logfile from campaign Sandbox_T_Empire
 Adding Campaign Sandbox_T_Rebels
 Collecting Active Player Name for conquest Sandbox_T_Rebels
 Collecting Campaign Set for conquest Sandbox_T_Rebels
@@ -7258,6 +7264,7 @@ Collecting Story Plots For Conquest Sandbox_T_Rebels
 Collecting Starting Forces For Conquest Sandbox_T_Rebels
 Collecting Locations for conquest Sandbox_T_Rebels
 Collecting Trade Routes for conquest Sandbox_T_Rebels
+Deleting Local Variable logfile from campaign Sandbox_T_Rebels
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Empires\Campaigns_EaW.xml
 Adding Campaign Sandbox_EaWS_Maldrood
 Collecting Active Player Name for conquest Sandbox_EaWS_Maldrood
@@ -7274,6 +7281,7 @@ Collecting Story Plots For Conquest Sandbox_EaWS_Maldrood
 Collecting Starting Forces For Conquest Sandbox_EaWS_Maldrood
 Collecting Locations for conquest Sandbox_EaWS_Maldrood
 Collecting Trade Routes for conquest Sandbox_EaWS_Maldrood
+Deleting Local Variable logfile from campaign Sandbox_EaWS_Maldrood
 Adding Campaign Sandbox_EaWS_Eriadu
 Collecting Active Player Name for conquest Sandbox_EaWS_Eriadu
 Collecting Campaign Set for conquest Sandbox_EaWS_Eriadu
@@ -7289,6 +7297,7 @@ Collecting Story Plots For Conquest Sandbox_EaWS_Eriadu
 Collecting Starting Forces For Conquest Sandbox_EaWS_Eriadu
 Collecting Locations for conquest Sandbox_EaWS_Eriadu
 Collecting Trade Routes for conquest Sandbox_EaWS_Eriadu
+Deleting Local Variable logfile from campaign Sandbox_EaWS_Eriadu
 Adding Campaign Sandbox_EaWS_Zsinj
 Collecting Active Player Name for conquest Sandbox_EaWS_Zsinj
 Collecting Campaign Set for conquest Sandbox_EaWS_Zsinj
@@ -7304,6 +7313,7 @@ Collecting Story Plots For Conquest Sandbox_EaWS_Zsinj
 Collecting Starting Forces For Conquest Sandbox_EaWS_Zsinj
 Collecting Locations for conquest Sandbox_EaWS_Zsinj
 Collecting Trade Routes for conquest Sandbox_EaWS_Zsinj
+Deleting Local Variable logfile from campaign Sandbox_EaWS_Zsinj
 Adding Campaign Sandbox_EaWS_Pentastar
 Collecting Active Player Name for conquest Sandbox_EaWS_Pentastar
 Collecting Campaign Set for conquest Sandbox_EaWS_Pentastar
@@ -7319,6 +7329,7 @@ Collecting Story Plots For Conquest Sandbox_EaWS_Pentastar
 Collecting Starting Forces For Conquest Sandbox_EaWS_Pentastar
 Collecting Locations for conquest Sandbox_EaWS_Pentastar
 Collecting Trade Routes for conquest Sandbox_EaWS_Pentastar
+Deleting Local Variable logfile from campaign Sandbox_EaWS_Pentastar
 Adding Campaign Sandbox_EaWS_Empire
 Collecting Active Player Name for conquest Sandbox_EaWS_Empire
 Collecting Campaign Set for conquest Sandbox_EaWS_Empire
@@ -7334,6 +7345,7 @@ Collecting Story Plots For Conquest Sandbox_EaWS_Empire
 Collecting Starting Forces For Conquest Sandbox_EaWS_Empire
 Collecting Locations for conquest Sandbox_EaWS_Empire
 Collecting Trade Routes for conquest Sandbox_EaWS_Empire
+Deleting Local Variable logfile from campaign Sandbox_EaWS_Empire
 Adding Campaign Sandbox_EaWS_EotH
 Collecting Active Player Name for conquest Sandbox_EaWS_EotH
 Collecting Campaign Set for conquest Sandbox_EaWS_EotH
@@ -7349,6 +7361,7 @@ Collecting Story Plots For Conquest Sandbox_EaWS_EotH
 Collecting Starting Forces For Conquest Sandbox_EaWS_EotH
 Collecting Locations for conquest Sandbox_EaWS_EotH
 Collecting Trade Routes for conquest Sandbox_EaWS_EotH
+Deleting Local Variable logfile from campaign Sandbox_EaWS_EotH
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Daala\Campaigns_Daala.xml
 Adding Campaign Sandbox_Daala_Pentastar
 Collecting Active Player Name for conquest Sandbox_Daala_Pentastar
@@ -7365,6 +7378,7 @@ Collecting Story Plots For Conquest Sandbox_Daala_Pentastar
 Collecting Starting Forces For Conquest Sandbox_Daala_Pentastar
 Collecting Locations for conquest Sandbox_Daala_Pentastar
 Collecting Trade Routes for conquest Sandbox_Daala_Pentastar
+Deleting Local Variable logfile from campaign Sandbox_Daala_Pentastar
 Adding Campaign Sandbox_Daala_Eriadu
 Collecting Active Player Name for conquest Sandbox_Daala_Eriadu
 Collecting Campaign Set for conquest Sandbox_Daala_Eriadu
@@ -7380,6 +7394,7 @@ Collecting Story Plots For Conquest Sandbox_Daala_Eriadu
 Collecting Starting Forces For Conquest Sandbox_Daala_Eriadu
 Collecting Locations for conquest Sandbox_Daala_Eriadu
 Collecting Trade Routes for conquest Sandbox_Daala_Eriadu
+Deleting Local Variable logfile from campaign Sandbox_Daala_Eriadu
 Adding Campaign Sandbox_Daala_Maldrood
 Collecting Active Player Name for conquest Sandbox_Daala_Maldrood
 Collecting Campaign Set for conquest Sandbox_Daala_Maldrood
@@ -7395,6 +7410,7 @@ Collecting Story Plots For Conquest Sandbox_Daala_Maldrood
 Collecting Starting Forces For Conquest Sandbox_Daala_Maldrood
 Collecting Locations for conquest Sandbox_Daala_Maldrood
 Collecting Trade Routes for conquest Sandbox_Daala_Maldrood
+Deleting Local Variable logfile from campaign Sandbox_Daala_Maldrood
 Adding Campaign Sandbox_Daala_Rebel
 Collecting Active Player Name for conquest Sandbox_Daala_Rebel
 Collecting Campaign Set for conquest Sandbox_Daala_Rebel
@@ -7410,6 +7426,7 @@ Collecting Story Plots For Conquest Sandbox_Daala_Rebel
 Collecting Starting Forces For Conquest Sandbox_Daala_Rebel
 Collecting Locations for conquest Sandbox_Daala_Rebel
 Collecting Trade Routes for conquest Sandbox_Daala_Rebel
+Deleting Local Variable logfile from campaign Sandbox_Daala_Rebel
 Adding Campaign Sandbox_Daala_Empire
 Collecting Active Player Name for conquest Sandbox_Daala_Empire
 Collecting Campaign Set for conquest Sandbox_Daala_Empire
@@ -7425,6 +7442,7 @@ Collecting Story Plots For Conquest Sandbox_Daala_Empire
 Collecting Starting Forces For Conquest Sandbox_Daala_Empire
 Collecting Locations for conquest Sandbox_Daala_Empire
 Collecting Trade Routes for conquest Sandbox_Daala_Empire
+Deleting Local Variable logfile from campaign Sandbox_Daala_Empire
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\FTGU\Campaigns_FTGU.xml
 Adding Campaign Sandbox_FTGU_Rebel
 Collecting Active Player Name for conquest Sandbox_FTGU_Rebel
@@ -7441,6 +7459,7 @@ Collecting Story Plots For Conquest Sandbox_FTGU_Rebel
 Collecting Starting Forces For Conquest Sandbox_FTGU_Rebel
 Collecting Locations for conquest Sandbox_FTGU_Rebel
 Collecting Trade Routes for conquest Sandbox_FTGU_Rebel
+Deleting Local Variable logfile from campaign Sandbox_FTGU_Rebel
 Adding Campaign Sandbox_FTGU_Empire
 Collecting Active Player Name for conquest Sandbox_FTGU_Empire
 Collecting Campaign Set for conquest Sandbox_FTGU_Empire
@@ -7456,6 +7475,7 @@ Collecting Story Plots For Conquest Sandbox_FTGU_Empire
 Collecting Starting Forces For Conquest Sandbox_FTGU_Empire
 Collecting Locations for conquest Sandbox_FTGU_Empire
 Collecting Trade Routes for conquest Sandbox_FTGU_Empire
+Deleting Local Variable logfile from campaign Sandbox_FTGU_Empire
 Adding Campaign Sandbox_FTGU_Underworld
 Collecting Active Player Name for conquest Sandbox_FTGU_Underworld
 Collecting Campaign Set for conquest Sandbox_FTGU_Underworld
@@ -7471,6 +7491,7 @@ Collecting Story Plots For Conquest Sandbox_FTGU_Underworld
 Collecting Starting Forces For Conquest Sandbox_FTGU_Underworld
 Collecting Locations for conquest Sandbox_FTGU_Underworld
 Collecting Trade Routes for conquest Sandbox_FTGU_Underworld
+Deleting Local Variable logfile from campaign Sandbox_FTGU_Underworld
 Adding Campaign Sandbox_FTGU_Pentastar
 Collecting Active Player Name for conquest Sandbox_FTGU_Pentastar
 Collecting Campaign Set for conquest Sandbox_FTGU_Pentastar
@@ -7486,6 +7507,7 @@ Collecting Story Plots For Conquest Sandbox_FTGU_Pentastar
 Collecting Starting Forces For Conquest Sandbox_FTGU_Pentastar
 Collecting Locations for conquest Sandbox_FTGU_Pentastar
 Collecting Trade Routes for conquest Sandbox_FTGU_Pentastar
+Deleting Local Variable logfile from campaign Sandbox_FTGU_Pentastar
 Adding Campaign Sandbox_FTGU_Eriadu
 Collecting Active Player Name for conquest Sandbox_FTGU_Eriadu
 Collecting Campaign Set for conquest Sandbox_FTGU_Eriadu
@@ -7501,6 +7523,7 @@ Collecting Story Plots For Conquest Sandbox_FTGU_Eriadu
 Collecting Starting Forces For Conquest Sandbox_FTGU_Eriadu
 Collecting Locations for conquest Sandbox_FTGU_Eriadu
 Collecting Trade Routes for conquest Sandbox_FTGU_Eriadu
+Deleting Local Variable logfile from campaign Sandbox_FTGU_Eriadu
 Adding Campaign Sandbox_FTGU_Teradoc
 Collecting Active Player Name for conquest Sandbox_FTGU_Teradoc
 Collecting Campaign Set for conquest Sandbox_FTGU_Teradoc
@@ -7516,6 +7539,7 @@ Collecting Story Plots For Conquest Sandbox_FTGU_Teradoc
 Collecting Starting Forces For Conquest Sandbox_FTGU_Teradoc
 Collecting Locations for conquest Sandbox_FTGU_Teradoc
 Collecting Trade Routes for conquest Sandbox_FTGU_Teradoc
+Deleting Local Variable logfile from campaign Sandbox_FTGU_Teradoc
 Adding Campaign Sandbox_FTGU_Zsinj
 Collecting Active Player Name for conquest Sandbox_FTGU_Zsinj
 Collecting Campaign Set for conquest Sandbox_FTGU_Zsinj
@@ -7531,6 +7555,7 @@ Collecting Story Plots For Conquest Sandbox_FTGU_Zsinj
 Collecting Starting Forces For Conquest Sandbox_FTGU_Zsinj
 Collecting Locations for conquest Sandbox_FTGU_Zsinj
 Collecting Trade Routes for conquest Sandbox_FTGU_Zsinj
+Deleting Local Variable logfile from campaign Sandbox_FTGU_Zsinj
 Adding Campaign Sandbox_FTGU_CSA
 Collecting Active Player Name for conquest Sandbox_FTGU_CSA
 Collecting Campaign Set for conquest Sandbox_FTGU_CSA
@@ -7546,6 +7571,7 @@ Collecting Story Plots For Conquest Sandbox_FTGU_CSA
 Collecting Starting Forces For Conquest Sandbox_FTGU_CSA
 Collecting Locations for conquest Sandbox_FTGU_CSA
 Collecting Trade Routes for conquest Sandbox_FTGU_CSA
+Deleting Local Variable logfile from campaign Sandbox_FTGU_CSA
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Pellaeon\Campaigns_Pellaeon.xml
 Adding Campaign Sandbox_Pellaeon_Empire
 Collecting Active Player Name for conquest Sandbox_Pellaeon_Empire
@@ -7562,6 +7588,7 @@ Collecting Story Plots For Conquest Sandbox_Pellaeon_Empire
 Collecting Starting Forces For Conquest Sandbox_Pellaeon_Empire
 Collecting Locations for conquest Sandbox_Pellaeon_Empire
 Collecting Trade Routes for conquest Sandbox_Pellaeon_Empire
+Deleting Local Variable logfile from campaign Sandbox_Pellaeon_Empire
 Adding Campaign Sandbox_Pellaeon_Rebel
 Collecting Active Player Name for conquest Sandbox_Pellaeon_Rebel
 Collecting Campaign Set for conquest Sandbox_Pellaeon_Rebel
@@ -7577,6 +7604,7 @@ Collecting Story Plots For Conquest Sandbox_Pellaeon_Rebel
 Collecting Starting Forces For Conquest Sandbox_Pellaeon_Rebel
 Collecting Locations for conquest Sandbox_Pellaeon_Rebel
 Collecting Trade Routes for conquest Sandbox_Pellaeon_Rebel
+Deleting Local Variable logfile from campaign Sandbox_Pellaeon_Rebel
 Adding Campaign Sandbox_Pellaeon_Underworld
 Collecting Active Player Name for conquest Sandbox_Pellaeon_Underworld
 Collecting Campaign Set for conquest Sandbox_Pellaeon_Underworld
@@ -7592,6 +7620,7 @@ Collecting Story Plots For Conquest Sandbox_Pellaeon_Underworld
 Collecting Starting Forces For Conquest Sandbox_Pellaeon_Underworld
 Collecting Locations for conquest Sandbox_Pellaeon_Underworld
 Collecting Trade Routes for conquest Sandbox_Pellaeon_Underworld
+Deleting Local Variable logfile from campaign Sandbox_Pellaeon_Underworld
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\FIP\Campaigns_FIP.xml
 Adding Campaign FinalImperialPush_Empire
 Collecting Active Player Name for conquest FinalImperialPush_Empire
@@ -7608,6 +7637,7 @@ Collecting Story Plots For Conquest FinalImperialPush_Empire
 Collecting Starting Forces For Conquest FinalImperialPush_Empire
 Collecting Locations for conquest FinalImperialPush_Empire
 Collecting Trade Routes for conquest FinalImperialPush_Empire
+Deleting Local Variable logfile from campaign FinalImperialPush_Empire
 Adding Campaign FinalImperialPush_Rebel
 Collecting Active Player Name for conquest FinalImperialPush_Rebel
 Collecting Campaign Set for conquest FinalImperialPush_Rebel
@@ -7623,6 +7653,7 @@ Collecting Story Plots For Conquest FinalImperialPush_Rebel
 Collecting Starting Forces For Conquest FinalImperialPush_Rebel
 Collecting Locations for conquest FinalImperialPush_Rebel
 Collecting Trade Routes for conquest FinalImperialPush_Rebel
+Deleting Local Variable logfile from campaign FinalImperialPush_Rebel
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Orinda\Campaigns_Orinda.xml
 Adding Campaign Orinda_Empire
 Collecting Active Player Name for conquest Orinda_Empire
@@ -7639,6 +7670,7 @@ Collecting Story Plots For Conquest Orinda_Empire
 Collecting Starting Forces For Conquest Orinda_Empire
 Collecting Locations for conquest Orinda_Empire
 Collecting Trade Routes for conquest Orinda_Empire
+Deleting Local Variable logfile from campaign Orinda_Empire
 Adding Campaign Orinda_NewRep
 Collecting Active Player Name for conquest Orinda_NewRep
 Collecting Campaign Set for conquest Orinda_NewRep
@@ -7654,6 +7686,7 @@ Collecting Story Plots For Conquest Orinda_NewRep
 Collecting Starting Forces For Conquest Orinda_NewRep
 Collecting Locations for conquest Orinda_NewRep
 Collecting Trade Routes for conquest Orinda_NewRep
+Deleting Local Variable logfile from campaign Orinda_NewRep
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Isard\Campaigns_Ysanne.xml
 Adding Campaign Sandbox_Ysanne_Rebel
 Collecting Active Player Name for conquest Sandbox_Ysanne_Rebel
@@ -7670,6 +7703,7 @@ Collecting Story Plots For Conquest Sandbox_Ysanne_Rebel
 Collecting Starting Forces For Conquest Sandbox_Ysanne_Rebel
 Collecting Locations for conquest Sandbox_Ysanne_Rebel
 Collecting Trade Routes for conquest Sandbox_Ysanne_Rebel
+Deleting Local Variable logfile from campaign Sandbox_Ysanne_Rebel
 Adding Campaign Sandbox_Ysanne_Zsinj
 Collecting Active Player Name for conquest Sandbox_Ysanne_Zsinj
 Collecting Campaign Set for conquest Sandbox_Ysanne_Zsinj
@@ -7685,6 +7719,7 @@ Collecting Story Plots For Conquest Sandbox_Ysanne_Zsinj
 Collecting Starting Forces For Conquest Sandbox_Ysanne_Zsinj
 Collecting Locations for conquest Sandbox_Ysanne_Zsinj
 Collecting Trade Routes for conquest Sandbox_Ysanne_Zsinj
+Deleting Local Variable logfile from campaign Sandbox_Ysanne_Zsinj
 Adding Campaign Sandbox_Ysanne_Remnant
 Collecting Active Player Name for conquest Sandbox_Ysanne_Remnant
 Collecting Campaign Set for conquest Sandbox_Ysanne_Remnant
@@ -7700,6 +7735,7 @@ Collecting Story Plots For Conquest Sandbox_Ysanne_Remnant
 Collecting Starting Forces For Conquest Sandbox_Ysanne_Remnant
 Collecting Locations for conquest Sandbox_Ysanne_Remnant
 Collecting Trade Routes for conquest Sandbox_Ysanne_Remnant
+Deleting Local Variable logfile from campaign Sandbox_Ysanne_Remnant
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\IsardsRevenge\Campaigns_IsardsRevenge.xml
 Adding Campaign Sandbox_IsardsRevenge_Rebel
 Collecting Active Player Name for conquest Sandbox_IsardsRevenge_Rebel
@@ -7716,6 +7752,7 @@ Collecting Story Plots For Conquest Sandbox_IsardsRevenge_Rebel
 Collecting Starting Forces For Conquest Sandbox_IsardsRevenge_Rebel
 Collecting Locations for conquest Sandbox_IsardsRevenge_Rebel
 Collecting Trade Routes for conquest Sandbox_IsardsRevenge_Rebel
+Deleting Local Variable logfile from campaign Sandbox_IsardsRevenge_Rebel
 Adding Campaign Sandbox_IsardsRevenge_Empire
 Collecting Active Player Name for conquest Sandbox_IsardsRevenge_Empire
 Collecting Campaign Set for conquest Sandbox_IsardsRevenge_Empire
@@ -7731,6 +7768,7 @@ Collecting Story Plots For Conquest Sandbox_IsardsRevenge_Empire
 Collecting Starting Forces For Conquest Sandbox_IsardsRevenge_Empire
 Collecting Locations for conquest Sandbox_IsardsRevenge_Empire
 Collecting Trade Routes for conquest Sandbox_IsardsRevenge_Empire
+Deleting Local Variable logfile from campaign Sandbox_IsardsRevenge_Empire
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Palpatine\Campaigns_ShadowHand.xml
 Adding Campaign ShadowHand_Empire
 Collecting Active Player Name for conquest ShadowHand_Empire
@@ -7747,6 +7785,7 @@ Collecting Story Plots For Conquest ShadowHand_Empire
 Collecting Starting Forces For Conquest ShadowHand_Empire
 Collecting Locations for conquest ShadowHand_Empire
 Collecting Trade Routes for conquest ShadowHand_Empire
+Deleting Local Variable logfile from campaign ShadowHand_Empire
 Adding Campaign ShadowHand_Rebel
 Collecting Active Player Name for conquest ShadowHand_Rebel
 Collecting Campaign Set for conquest ShadowHand_Rebel
@@ -7762,6 +7801,7 @@ Collecting Story Plots For Conquest ShadowHand_Rebel
 Collecting Starting Forces For Conquest ShadowHand_Rebel
 Collecting Locations for conquest ShadowHand_Rebel
 Collecting Trade Routes for conquest ShadowHand_Rebel
+Deleting Local Variable logfile from campaign ShadowHand_Rebel
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Zsinj\Campaigns_Zsinj.xml
 Adding Campaign Sandbox_Zsinj_Zsinj
 Collecting Active Player Name for conquest Sandbox_Zsinj_Zsinj
@@ -7778,6 +7818,7 @@ Collecting Story Plots For Conquest Sandbox_Zsinj_Zsinj
 Collecting Starting Forces For Conquest Sandbox_Zsinj_Zsinj
 Collecting Locations for conquest Sandbox_Zsinj_Zsinj
 Collecting Trade Routes for conquest Sandbox_Zsinj_Zsinj
+Deleting Local Variable logfile from campaign Sandbox_Zsinj_Zsinj
 Adding Campaign Sandbox_Zsinj_Maldrood
 Collecting Active Player Name for conquest Sandbox_Zsinj_Maldrood
 Collecting Campaign Set for conquest Sandbox_Zsinj_Maldrood
@@ -7793,6 +7834,7 @@ Collecting Story Plots For Conquest Sandbox_Zsinj_Maldrood
 Collecting Starting Forces For Conquest Sandbox_Zsinj_Maldrood
 Collecting Locations for conquest Sandbox_Zsinj_Maldrood
 Collecting Trade Routes for conquest Sandbox_Zsinj_Maldrood
+Deleting Local Variable logfile from campaign Sandbox_Zsinj_Maldrood
 Adding Campaign Sandbox_Zsinj_Rebel
 Collecting Active Player Name for conquest Sandbox_Zsinj_Rebel
 Collecting Campaign Set for conquest Sandbox_Zsinj_Rebel
@@ -7808,6 +7850,7 @@ Collecting Story Plots For Conquest Sandbox_Zsinj_Rebel
 Collecting Starting Forces For Conquest Sandbox_Zsinj_Rebel
 Collecting Locations for conquest Sandbox_Zsinj_Rebel
 Collecting Trade Routes for conquest Sandbox_Zsinj_Rebel
+Deleting Local Variable logfile from campaign Sandbox_Zsinj_Rebel
 Adding Campaign Sandbox_Zsinj_CSA
 Collecting Active Player Name for conquest Sandbox_Zsinj_CSA
 Collecting Campaign Set for conquest Sandbox_Zsinj_CSA
@@ -7823,6 +7866,7 @@ Collecting Story Plots For Conquest Sandbox_Zsinj_CSA
 Collecting Starting Forces For Conquest Sandbox_Zsinj_CSA
 Collecting Locations for conquest Sandbox_Zsinj_CSA
 Collecting Trade Routes for conquest Sandbox_Zsinj_CSA
+Deleting Local Variable logfile from campaign Sandbox_Zsinj_CSA
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Carnor\Campaigns_Carnor.xml
 Adding Campaign CrimsonEmpire_Eriadu
 Collecting Active Player Name for conquest CrimsonEmpire_Eriadu
@@ -7839,6 +7883,7 @@ Collecting Story Plots For Conquest CrimsonEmpire_Eriadu
 Collecting Starting Forces For Conquest CrimsonEmpire_Eriadu
 Collecting Locations for conquest CrimsonEmpire_Eriadu
 Collecting Trade Routes for conquest CrimsonEmpire_Eriadu
+Deleting Local Variable logfile from campaign CrimsonEmpire_Eriadu
 Adding Campaign CrimsonEmpire_Teradoc
 Collecting Active Player Name for conquest CrimsonEmpire_Teradoc
 Collecting Campaign Set for conquest CrimsonEmpire_Teradoc
@@ -7854,6 +7899,7 @@ Collecting Story Plots For Conquest CrimsonEmpire_Teradoc
 Collecting Starting Forces For Conquest CrimsonEmpire_Teradoc
 Collecting Locations for conquest CrimsonEmpire_Teradoc
 Collecting Trade Routes for conquest CrimsonEmpire_Teradoc
+Deleting Local Variable logfile from campaign CrimsonEmpire_Teradoc
 Adding Campaign CrimsonEmpire_Pentastar
 Collecting Active Player Name for conquest CrimsonEmpire_Pentastar
 Collecting Campaign Set for conquest CrimsonEmpire_Pentastar
@@ -7869,6 +7915,7 @@ Collecting Story Plots For Conquest CrimsonEmpire_Pentastar
 Collecting Starting Forces For Conquest CrimsonEmpire_Pentastar
 Collecting Locations for conquest CrimsonEmpire_Pentastar
 Collecting Trade Routes for conquest CrimsonEmpire_Pentastar
+Deleting Local Variable logfile from campaign CrimsonEmpire_Pentastar
 Adding Campaign CrimsonEmpire_NR
 Collecting Active Player Name for conquest CrimsonEmpire_NR
 Collecting Campaign Set for conquest CrimsonEmpire_NR
@@ -7884,6 +7931,7 @@ Collecting Story Plots For Conquest CrimsonEmpire_NR
 Collecting Starting Forces For Conquest CrimsonEmpire_NR
 Collecting Locations for conquest CrimsonEmpire_NR
 Collecting Trade Routes for conquest CrimsonEmpire_NR
+Deleting Local Variable logfile from campaign CrimsonEmpire_NR
 Adding Campaign CrimsonEmpire_Empire
 Collecting Active Player Name for conquest CrimsonEmpire_Empire
 Collecting Campaign Set for conquest CrimsonEmpire_Empire
@@ -7899,6 +7947,7 @@ Collecting Story Plots For Conquest CrimsonEmpire_Empire
 Collecting Starting Forces For Conquest CrimsonEmpire_Empire
 Collecting Locations for conquest CrimsonEmpire_Empire
 Collecting Trade Routes for conquest CrimsonEmpire_Empire
+Deleting Local Variable logfile from campaign CrimsonEmpire_Empire
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\ArtofWar\Campaigns_EmpiresEnd.xml
 Adding Campaign Empires_End
 Collecting Active Player Name for conquest Empires_End
@@ -7915,6 +7964,7 @@ Collecting Story Plots For Conquest Empires_End
 Collecting Starting Forces For Conquest Empires_End
 Collecting Locations for conquest Empires_End
 Collecting Trade Routes for conquest Empires_End
+Deleting Local Variable logfile from campaign Empires_End
 Adding Campaign Empires_End_Rebel
 Collecting Active Player Name for conquest Empires_End_Rebel
 Collecting Campaign Set for conquest Empires_End_Rebel
@@ -7930,6 +7980,7 @@ Collecting Story Plots For Conquest Empires_End_Rebel
 Collecting Starting Forces For Conquest Empires_End_Rebel
 Collecting Locations for conquest Empires_End_Rebel
 Collecting Trade Routes for conquest Empires_End_Rebel
+Deleting Local Variable logfile from campaign Empires_End_Rebel
 Adding Campaign Empires_End_Pentastar
 Collecting Active Player Name for conquest Empires_End_Pentastar
 Collecting Campaign Set for conquest Empires_End_Pentastar
@@ -7945,6 +7996,7 @@ Collecting Story Plots For Conquest Empires_End_Pentastar
 Collecting Starting Forces For Conquest Empires_End_Pentastar
 Collecting Locations for conquest Empires_End_Pentastar
 Collecting Trade Routes for conquest Empires_End_Pentastar
+Deleting Local Variable logfile from campaign Empires_End_Pentastar
 Adding Campaign Empires_End_Teradoc
 Collecting Active Player Name for conquest Empires_End_Teradoc
 Collecting Campaign Set for conquest Empires_End_Teradoc
@@ -7960,6 +8012,7 @@ Collecting Story Plots For Conquest Empires_End_Teradoc
 Collecting Starting Forces For Conquest Empires_End_Teradoc
 Collecting Locations for conquest Empires_End_Teradoc
 Collecting Trade Routes for conquest Empires_End_Teradoc
+Deleting Local Variable logfile from campaign Empires_End_Teradoc
 Adding Campaign Empires_End_Zsinj
 Collecting Active Player Name for conquest Empires_End_Zsinj
 Collecting Campaign Set for conquest Empires_End_Zsinj
@@ -7975,6 +8028,7 @@ Collecting Story Plots For Conquest Empires_End_Zsinj
 Collecting Starting Forces For Conquest Empires_End_Zsinj
 Collecting Locations for conquest Empires_End_Zsinj
 Collecting Trade Routes for conquest Empires_End_Zsinj
+Deleting Local Variable logfile from campaign Empires_End_Zsinj
 Adding Campaign Empires_End_Eriadu
 Collecting Active Player Name for conquest Empires_End_Eriadu
 Collecting Campaign Set for conquest Empires_End_Eriadu
@@ -7990,6 +8044,7 @@ Collecting Story Plots For Conquest Empires_End_Eriadu
 Collecting Starting Forces For Conquest Empires_End_Eriadu
 Collecting Locations for conquest Empires_End_Eriadu
 Collecting Trade Routes for conquest Empires_End_Eriadu
+Deleting Local Variable logfile from campaign Empires_End_Eriadu
 Adding Campaign Empires_End_CSA
 Collecting Active Player Name for conquest Empires_End_CSA
 Collecting Campaign Set for conquest Empires_End_CSA
@@ -8005,6 +8060,7 @@ Collecting Story Plots For Conquest Empires_End_CSA
 Collecting Starting Forces For Conquest Empires_End_CSA
 Collecting Locations for conquest Empires_End_CSA
 Collecting Trade Routes for conquest Empires_End_CSA
+Deleting Local Variable logfile from campaign Empires_End_CSA
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\ArtofWar\Campaigns_Warlords.xml
 Adding Campaign Sandbox_Warlords_Remnant
 Collecting Active Player Name for conquest Sandbox_Warlords_Remnant
@@ -8021,6 +8077,7 @@ Collecting Story Plots For Conquest Sandbox_Warlords_Remnant
 Collecting Starting Forces For Conquest Sandbox_Warlords_Remnant
 Collecting Locations for conquest Sandbox_Warlords_Remnant
 Collecting Trade Routes for conquest Sandbox_Warlords_Remnant
+Deleting Local Variable logfile from campaign Sandbox_Warlords_Remnant
 Adding Campaign Sandbox_Warlords_Eriadu
 Collecting Active Player Name for conquest Sandbox_Warlords_Eriadu
 Collecting Campaign Set for conquest Sandbox_Warlords_Eriadu
@@ -8036,6 +8093,7 @@ Collecting Story Plots For Conquest Sandbox_Warlords_Eriadu
 Collecting Starting Forces For Conquest Sandbox_Warlords_Eriadu
 Collecting Locations for conquest Sandbox_Warlords_Eriadu
 Collecting Trade Routes for conquest Sandbox_Warlords_Eriadu
+Deleting Local Variable logfile from campaign Sandbox_Warlords_Eriadu
 Adding Campaign Sandbox_Warlords_Teradoc
 Collecting Active Player Name for conquest Sandbox_Warlords_Teradoc
 Collecting Campaign Set for conquest Sandbox_Warlords_Teradoc
@@ -8051,6 +8109,7 @@ Collecting Story Plots For Conquest Sandbox_Warlords_Teradoc
 Collecting Starting Forces For Conquest Sandbox_Warlords_Teradoc
 Collecting Locations for conquest Sandbox_Warlords_Teradoc
 Collecting Trade Routes for conquest Sandbox_Warlords_Teradoc
+Deleting Local Variable logfile from campaign Sandbox_Warlords_Teradoc
 Adding Campaign Sandbox_Warlords_Pentastar
 Collecting Active Player Name for conquest Sandbox_Warlords_Pentastar
 Collecting Campaign Set for conquest Sandbox_Warlords_Pentastar
@@ -8066,6 +8125,7 @@ Collecting Story Plots For Conquest Sandbox_Warlords_Pentastar
 Collecting Starting Forces For Conquest Sandbox_Warlords_Pentastar
 Collecting Locations for conquest Sandbox_Warlords_Pentastar
 Collecting Trade Routes for conquest Sandbox_Warlords_Pentastar
+Deleting Local Variable logfile from campaign Sandbox_Warlords_Pentastar
 Adding Campaign Sandbox_Warlords_Zsinj
 Collecting Active Player Name for conquest Sandbox_Warlords_Zsinj
 Collecting Campaign Set for conquest Sandbox_Warlords_Zsinj
@@ -8081,6 +8141,7 @@ Collecting Story Plots For Conquest Sandbox_Warlords_Zsinj
 Collecting Starting Forces For Conquest Sandbox_Warlords_Zsinj
 Collecting Locations for conquest Sandbox_Warlords_Zsinj
 Collecting Trade Routes for conquest Sandbox_Warlords_Zsinj
+Deleting Local Variable logfile from campaign Sandbox_Warlords_Zsinj
 Adding Campaign Sandbox_Warlords_NewRep
 Collecting Active Player Name for conquest Sandbox_Warlords_NewRep
 Collecting Campaign Set for conquest Sandbox_Warlords_NewRep
@@ -8096,6 +8157,7 @@ Collecting Story Plots For Conquest Sandbox_Warlords_NewRep
 Collecting Starting Forces For Conquest Sandbox_Warlords_NewRep
 Collecting Locations for conquest Sandbox_Warlords_NewRep
 Collecting Trade Routes for conquest Sandbox_Warlords_NewRep
+Deleting Local Variable logfile from campaign Sandbox_Warlords_NewRep
 Adding Campaign Sandbox_Warlords_CSA
 Collecting Active Player Name for conquest Sandbox_Warlords_CSA
 Collecting Campaign Set for conquest Sandbox_Warlords_CSA
@@ -8111,6 +8173,7 @@ Collecting Story Plots For Conquest Sandbox_Warlords_CSA
 Collecting Starting Forces For Conquest Sandbox_Warlords_CSA
 Collecting Locations for conquest Sandbox_Warlords_CSA
 Collecting Trade Routes for conquest Sandbox_Warlords_CSA
+Deleting Local Variable logfile from campaign Sandbox_Warlords_CSA
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\ArtofWar\Campaigns_Essence.xml
 Adding Campaign Essence_Empire
 Collecting Active Player Name for conquest Essence_Empire
@@ -8127,6 +8190,7 @@ Collecting Story Plots For Conquest Essence_Empire
 Collecting Starting Forces For Conquest Essence_Empire
 Collecting Locations for conquest Essence_Empire
 Collecting Trade Routes for conquest Essence_Empire
+Deleting Local Variable logfile from campaign Essence_Empire
 Adding Campaign Essence_Rebel
 Collecting Active Player Name for conquest Essence_Rebel
 Collecting Campaign Set for conquest Essence_Rebel
@@ -8142,6 +8206,7 @@ Collecting Story Plots For Conquest Essence_Rebel
 Collecting Starting Forces For Conquest Essence_Rebel
 Collecting Locations for conquest Essence_Rebel
 Collecting Trade Routes for conquest Essence_Rebel
+Deleting Local Variable logfile from campaign Essence_Rebel
 Adding Campaign Essence_EotH
 Collecting Active Player Name for conquest Essence_EotH
 Collecting Campaign Set for conquest Essence_EotH
@@ -8157,6 +8222,7 @@ Collecting Story Plots For Conquest Essence_EotH
 Collecting Starting Forces For Conquest Essence_EotH
 Collecting Locations for conquest Essence_EotH
 Collecting Trade Routes for conquest Essence_EotH
+Deleting Local Variable logfile from campaign Essence_EotH
 Adding Campaign Essence_Pentastar
 Collecting Active Player Name for conquest Essence_Pentastar
 Collecting Campaign Set for conquest Essence_Pentastar
@@ -8172,6 +8238,7 @@ Collecting Story Plots For Conquest Essence_Pentastar
 Collecting Starting Forces For Conquest Essence_Pentastar
 Collecting Locations for conquest Essence_Pentastar
 Collecting Trade Routes for conquest Essence_Pentastar
+Deleting Local Variable logfile from campaign Essence_Pentastar
 Adding Campaign Essence_Teradoc
 Collecting Active Player Name for conquest Essence_Teradoc
 Collecting Campaign Set for conquest Essence_Teradoc
@@ -8187,6 +8254,7 @@ Collecting Story Plots For Conquest Essence_Teradoc
 Collecting Starting Forces For Conquest Essence_Teradoc
 Collecting Locations for conquest Essence_Teradoc
 Collecting Trade Routes for conquest Essence_Teradoc
+Deleting Local Variable logfile from campaign Essence_Teradoc
 Adding Campaign Essence_Zsinj
 Collecting Active Player Name for conquest Essence_Zsinj
 Collecting Campaign Set for conquest Essence_Zsinj
@@ -8202,6 +8270,7 @@ Collecting Story Plots For Conquest Essence_Zsinj
 Collecting Starting Forces For Conquest Essence_Zsinj
 Collecting Locations for conquest Essence_Zsinj
 Collecting Trade Routes for conquest Essence_Zsinj
+Deleting Local Variable logfile from campaign Essence_Zsinj
 Adding Campaign Essence_Eriadu
 Collecting Active Player Name for conquest Essence_Eriadu
 Collecting Campaign Set for conquest Essence_Eriadu
@@ -8217,6 +8286,7 @@ Collecting Story Plots For Conquest Essence_Eriadu
 Collecting Starting Forces For Conquest Essence_Eriadu
 Collecting Locations for conquest Essence_Eriadu
 Collecting Trade Routes for conquest Essence_Eriadu
+Deleting Local Variable logfile from campaign Essence_Eriadu
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\ArtofWar\Campaigns_ArtofWar.xml
 Adding Campaign Art_of_War
 Collecting Active Player Name for conquest Art_of_War
@@ -8233,6 +8303,7 @@ Collecting Story Plots For Conquest Art_of_War
 Collecting Starting Forces For Conquest Art_of_War
 Collecting Locations for conquest Art_of_War
 Collecting Trade Routes for conquest Art_of_War
+Deleting Local Variable logfile from campaign Art_of_War
 Adding Campaign Art_of_War_Rebel
 Collecting Active Player Name for conquest Art_of_War_Rebel
 Collecting Campaign Set for conquest Art_of_War_Rebel
@@ -8248,6 +8319,7 @@ Collecting Story Plots For Conquest Art_of_War_Rebel
 Collecting Starting Forces For Conquest Art_of_War_Rebel
 Collecting Locations for conquest Art_of_War_Rebel
 Collecting Trade Routes for conquest Art_of_War_Rebel
+Deleting Local Variable logfile from campaign Art_of_War_Rebel
 Adding Campaign Art_of_War_EotH
 Collecting Active Player Name for conquest Art_of_War_EotH
 Collecting Campaign Set for conquest Art_of_War_EotH
@@ -8263,6 +8335,7 @@ Collecting Story Plots For Conquest Art_of_War_EotH
 Collecting Starting Forces For Conquest Art_of_War_EotH
 Collecting Locations for conquest Art_of_War_EotH
 Collecting Trade Routes for conquest Art_of_War_EotH
+Deleting Local Variable logfile from campaign Art_of_War_EotH
 Adding Campaign Art_of_War_Pentastar
 Collecting Active Player Name for conquest Art_of_War_Pentastar
 Collecting Campaign Set for conquest Art_of_War_Pentastar
@@ -8278,6 +8351,7 @@ Collecting Story Plots For Conquest Art_of_War_Pentastar
 Collecting Starting Forces For Conquest Art_of_War_Pentastar
 Collecting Locations for conquest Art_of_War_Pentastar
 Collecting Trade Routes for conquest Art_of_War_Pentastar
+Deleting Local Variable logfile from campaign Art_of_War_Pentastar
 Adding Campaign Art_of_War_Teradoc
 Collecting Active Player Name for conquest Art_of_War_Teradoc
 Collecting Campaign Set for conquest Art_of_War_Teradoc
@@ -8293,6 +8367,7 @@ Collecting Story Plots For Conquest Art_of_War_Teradoc
 Collecting Starting Forces For Conquest Art_of_War_Teradoc
 Collecting Locations for conquest Art_of_War_Teradoc
 Collecting Trade Routes for conquest Art_of_War_Teradoc
+Deleting Local Variable logfile from campaign Art_of_War_Teradoc
 Adding Campaign Art_of_War_Pirates
 Collecting Active Player Name for conquest Art_of_War_Pirates
 Collecting Campaign Set for conquest Art_of_War_Pirates
@@ -8308,6 +8383,7 @@ Collecting Story Plots For Conquest Art_of_War_Pirates
 Collecting Starting Forces For Conquest Art_of_War_Pirates
 Collecting Locations for conquest Art_of_War_Pirates
 Collecting Trade Routes for conquest Art_of_War_Pirates
+Deleting Local Variable logfile from campaign Art_of_War_Pirates
 Adding Campaign Art_of_War_Eriadu
 Collecting Active Player Name for conquest Art_of_War_Eriadu
 Collecting Campaign Set for conquest Art_of_War_Eriadu
@@ -8323,6 +8399,7 @@ Collecting Story Plots For Conquest Art_of_War_Eriadu
 Collecting Starting Forces For Conquest Art_of_War_Eriadu
 Collecting Locations for conquest Art_of_War_Eriadu
 Collecting Trade Routes for conquest Art_of_War_Eriadu
+Deleting Local Variable logfile from campaign Art_of_War_Eriadu
 Adding Campaign Art_of_War_CSA
 Collecting Active Player Name for conquest Art_of_War_CSA
 Collecting Campaign Set for conquest Art_of_War_CSA
@@ -8338,6 +8415,7 @@ Collecting Story Plots For Conquest Art_of_War_CSA
 Collecting Starting Forces For Conquest Art_of_War_CSA
 Collecting Locations for conquest Art_of_War_CSA
 Collecting Trade Routes for conquest Art_of_War_CSA
+Deleting Local Variable logfile from campaign Art_of_War_CSA
 Adding Campaign Art_of_War_Hapes
 Collecting Active Player Name for conquest Art_of_War_Hapes
 Collecting Campaign Set for conquest Art_of_War_Hapes
@@ -8353,6 +8431,7 @@ Collecting Story Plots For Conquest Art_of_War_Hapes
 Collecting Starting Forces For Conquest Art_of_War_Hapes
 Collecting Locations for conquest Art_of_War_Hapes
 Collecting Trade Routes for conquest Art_of_War_Hapes
+Deleting Local Variable logfile from campaign Art_of_War_Hapes
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Align\Campaigns_Align.xml
 Adding Campaign Sandbox_Align_Pentastar
 Collecting Active Player Name for conquest Sandbox_Align_Pentastar
@@ -8369,6 +8448,7 @@ Collecting Story Plots For Conquest Sandbox_Align_Pentastar
 Collecting Starting Forces For Conquest Sandbox_Align_Pentastar
 Collecting Locations for conquest Sandbox_Align_Pentastar
 Collecting Trade Routes for conquest Sandbox_Align_Pentastar
+Deleting Local Variable logfile from campaign Sandbox_Align_Pentastar
 Adding Campaign Sandbox_Align_Empire
 Collecting Active Player Name for conquest Sandbox_Align_Empire
 Collecting Campaign Set for conquest Sandbox_Align_Empire
@@ -8384,6 +8464,7 @@ Collecting Story Plots For Conquest Sandbox_Align_Empire
 Collecting Starting Forces For Conquest Sandbox_Align_Empire
 Collecting Locations for conquest Sandbox_Align_Empire
 Collecting Trade Routes for conquest Sandbox_Align_Empire
+Deleting Local Variable logfile from campaign Sandbox_Align_Empire
 Adding Campaign Sandbox_Align_Rebel
 Collecting Active Player Name for conquest Sandbox_Align_Rebel
 Collecting Campaign Set for conquest Sandbox_Align_Rebel
@@ -8399,6 +8480,7 @@ Collecting Story Plots For Conquest Sandbox_Align_Rebel
 Collecting Starting Forces For Conquest Sandbox_Align_Rebel
 Collecting Locations for conquest Sandbox_Align_Rebel
 Collecting Trade Routes for conquest Sandbox_Align_Rebel
+Deleting Local Variable logfile from campaign Sandbox_Align_Rebel
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Campaigns_BattleTest.xml
 Adding Campaign Sandbox_Battletest_Remnant
 Collecting Active Player Name for conquest Sandbox_Battletest_Remnant
@@ -8415,6 +8497,7 @@ Collecting Story Plots For Conquest Sandbox_Battletest_Remnant
 Collecting Starting Forces For Conquest Sandbox_Battletest_Remnant
 Collecting Locations for conquest Sandbox_Battletest_Remnant
 Collecting Trade Routes for conquest Sandbox_Battletest_Remnant
+Deleting Local Variable logfile from campaign Sandbox_Battletest_Remnant
 Adding Campaign Sandbox_Battletest_Ice
 Collecting Active Player Name for conquest Sandbox_Battletest_Ice
 Collecting Campaign Set for conquest Sandbox_Battletest_Ice
@@ -8430,6 +8513,7 @@ Collecting Story Plots For Conquest Sandbox_Battletest_Ice
 Collecting Starting Forces For Conquest Sandbox_Battletest_Ice
 Collecting Locations for conquest Sandbox_Battletest_Ice
 Collecting Trade Routes for conquest Sandbox_Battletest_Ice
+Deleting Local Variable logfile from campaign Sandbox_Battletest_Ice
 Adding Campaign Sandbox_Battletest_Ecumenopolis
 Collecting Active Player Name for conquest Sandbox_Battletest_Ecumenopolis
 Collecting Campaign Set for conquest Sandbox_Battletest_Ecumenopolis
@@ -8445,6 +8529,7 @@ Collecting Story Plots For Conquest Sandbox_Battletest_Ecumenopolis
 Collecting Starting Forces For Conquest Sandbox_Battletest_Ecumenopolis
 Collecting Locations for conquest Sandbox_Battletest_Ecumenopolis
 Collecting Trade Routes for conquest Sandbox_Battletest_Ecumenopolis
+Deleting Local Variable logfile from campaign Sandbox_Battletest_Ecumenopolis
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\DeepCore\Campaigns_DeepCoreConflict.xml
 Adding Campaign Sandbox_DeepCoreConflict_Harrsk
 Collecting Active Player Name for conquest Sandbox_DeepCoreConflict_Harrsk
@@ -8461,6 +8546,7 @@ Collecting Story Plots For Conquest Sandbox_DeepCoreConflict_Harrsk
 Collecting Starting Forces For Conquest Sandbox_DeepCoreConflict_Harrsk
 Collecting Locations for conquest Sandbox_DeepCoreConflict_Harrsk
 Collecting Trade Routes for conquest Sandbox_DeepCoreConflict_Harrsk
+Deleting Local Variable logfile from campaign Sandbox_DeepCoreConflict_Harrsk
 Adding Campaign Sandbox_DeepCoreConflict_Teradoc
 Collecting Active Player Name for conquest Sandbox_DeepCoreConflict_Teradoc
 Collecting Campaign Set for conquest Sandbox_DeepCoreConflict_Teradoc
@@ -8476,6 +8562,7 @@ Collecting Story Plots For Conquest Sandbox_DeepCoreConflict_Teradoc
 Collecting Starting Forces For Conquest Sandbox_DeepCoreConflict_Teradoc
 Collecting Locations for conquest Sandbox_DeepCoreConflict_Teradoc
 Collecting Trade Routes for conquest Sandbox_DeepCoreConflict_Teradoc
+Deleting Local Variable logfile from campaign Sandbox_DeepCoreConflict_Teradoc
 Adding Campaign Sandbox_DeepCoreConflict_Delvardus
 Collecting Active Player Name for conquest Sandbox_DeepCoreConflict_Delvardus
 Collecting Campaign Set for conquest Sandbox_DeepCoreConflict_Delvardus
@@ -8491,6 +8578,7 @@ Collecting Story Plots For Conquest Sandbox_DeepCoreConflict_Delvardus
 Collecting Starting Forces For Conquest Sandbox_DeepCoreConflict_Delvardus
 Collecting Locations for conquest Sandbox_DeepCoreConflict_Delvardus
 Collecting Trade Routes for conquest Sandbox_DeepCoreConflict_Delvardus
+Deleting Local Variable logfile from campaign Sandbox_DeepCoreConflict_Delvardus
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\CSA\Campaigns_CSA.xml
 Adding Campaign Sandbox_CSA_Rebel
 Collecting Active Player Name for conquest Sandbox_CSA_Rebel
@@ -8507,6 +8595,7 @@ Collecting Story Plots For Conquest Sandbox_CSA_Rebel
 Collecting Starting Forces For Conquest Sandbox_CSA_Rebel
 Collecting Locations for conquest Sandbox_CSA_Rebel
 Collecting Trade Routes for conquest Sandbox_CSA_Rebel
+Deleting Local Variable logfile from campaign Sandbox_CSA_Rebel
 Adding Campaign Sandbox_CSA_CSA
 Collecting Active Player Name for conquest Sandbox_CSA_CSA
 Collecting Campaign Set for conquest Sandbox_CSA_CSA
@@ -8522,6 +8611,7 @@ Collecting Story Plots For Conquest Sandbox_CSA_CSA
 Collecting Starting Forces For Conquest Sandbox_CSA_CSA
 Collecting Locations for conquest Sandbox_CSA_CSA
 Collecting Trade Routes for conquest Sandbox_CSA_CSA
+Deleting Local Variable logfile from campaign Sandbox_CSA_CSA
 Adding Campaign Sandbox_CSA_Empire
 Collecting Active Player Name for conquest Sandbox_CSA_Empire
 Collecting Campaign Set for conquest Sandbox_CSA_Empire
@@ -8537,6 +8627,7 @@ Collecting Story Plots For Conquest Sandbox_CSA_Empire
 Collecting Starting Forces For Conquest Sandbox_CSA_Empire
 Collecting Locations for conquest Sandbox_CSA_Empire
 Collecting Trade Routes for conquest Sandbox_CSA_Empire
+Deleting Local Variable logfile from campaign Sandbox_CSA_Empire
 Adding Campaign Sandbox_CSA_Zsinj
 Collecting Active Player Name for conquest Sandbox_CSA_Zsinj
 Collecting Campaign Set for conquest Sandbox_CSA_Zsinj
@@ -8552,6 +8643,7 @@ Collecting Story Plots For Conquest Sandbox_CSA_Zsinj
 Collecting Starting Forces For Conquest Sandbox_CSA_Zsinj
 Collecting Locations for conquest Sandbox_CSA_Zsinj
 Collecting Trade Routes for conquest Sandbox_CSA_Zsinj
+Deleting Local Variable logfile from campaign Sandbox_CSA_Zsinj
 Adding Campaign Sandbox_CSA_Teradoc
 Collecting Active Player Name for conquest Sandbox_CSA_Teradoc
 Collecting Campaign Set for conquest Sandbox_CSA_Teradoc
@@ -8567,10 +8659,23 @@ Collecting Story Plots For Conquest Sandbox_CSA_Teradoc
 Collecting Starting Forces For Conquest Sandbox_CSA_Teradoc
 Collecting Locations for conquest Sandbox_CSA_Teradoc
 Collecting Trade Routes for conquest Sandbox_CSA_Teradoc
+Deleting Local Variable logfile from campaign Sandbox_CSA_Teradoc
 Updating UI Elements
 Connecting Button Triggers
 Updating Selected Planets For GC Sandbox_Shell_SingleGC_Spacer
 Updating Selected Trade Routes For GC Sandbox_Shell_SingleGC_Spacer
 Updating Starting Forces Table For GC Sandbox_Shell_SingleGC_Spacer
 
- Error During Planet Indexing planet  failed to index when updating starting forcesExiting Application....
+ Error During Planet Indexing planet  failed to index when updating starting forces
+New GC Set With Name Sandbox_Thrawn Selected
+Disonnecting Button Triggers
+Adding Playable Factions For Set To Combobox
+Connecting Button Triggers
+Updating Selected Planets For GC Sandbox_T_Empire
+Updating Selected Trade Routes For GC Sandbox_T_Empire
+Updating Starting Forces Table For GC Sandbox_T_Empire
+Plotting Galactic Map...
+Adding Unit To Starting Forces On All Planets
+Updating Starting Forces Table For GC Sandbox_T_Empire
+Updating Starting Forces Table For GC Sandbox_T_Empire
+Exiting Application....

@@ -45,13 +45,15 @@ class AddUnitWindow:
         self.ownerLayout.addWidget(self.OwnerDropdown)
 
         self.buttonLayout = QHBoxLayout()
-        self.OkCancelButtons = QDialogButtonBox()
-        self.OkCancelButtons.setObjectName(u"OkCancelButtons")
-        self.OkCancelButtons.setGeometry(QRect(10, 190, 193, 28))
-        self.OkCancelButtons.setStandardButtons(QDialogButtonBox.Cancel|QDialogButtonBox.Ok)
-        self.buttonLayout.addWidget(self.OkCancelButtons)
+        self.addtoall = QPushButton("Add To All Planets")
+        self.add = QPushButton("Add")
+        self.cancel = QPushButton("Cancel")
 
-    
+        self.buttonLayout.addWidget(self.addtoall)
+        self.buttonLayout.addWidget(self.add)
+        self.buttonLayout.addWidget(self.cancel)
+
+        
 
         self.layout.addWidget(self.UnitTypeSelection)
         self.layout.addLayout(self.QuantityLayout)
@@ -61,7 +63,7 @@ class AddUnitWindow:
         self.dialogWindow.setWindowTitle('Add Starting Forces')
         self.dialogWindow.setLayout(self.layout)
         self.signal = pyqtSignal(list)
-        self.OkCancelButtons.rejected.connect(self.dialogWindow.accept)
+        self.cancel.clicked.connect(self.dialogWindow.reject)
     def update_unit_box(self, unit_list):
         for i in unit_list:
             self.UnitTypeSelection.addItem(i.name)
