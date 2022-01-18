@@ -8667,15 +8667,2542 @@ Updating Selected Trade Routes For GC Sandbox_Shell_SingleGC_Spacer
 Updating Starting Forces Table For GC Sandbox_Shell_SingleGC_Spacer
 
  Error During Planet Indexing planet  failed to index when updating starting forces
-New GC Set With Name Sandbox_Thrawn Selected
+Creating new GC Set With Name SaveTest.xml
+New GC Set With Name TestSet Selected
 Disonnecting Button Triggers
 Adding Playable Factions For Set To Combobox
 Connecting Button Triggers
-Updating Selected Planets For GC Sandbox_T_Empire
-Updating Selected Trade Routes For GC Sandbox_T_Empire
-Updating Starting Forces Table For GC Sandbox_T_Empire
+Updating Selected Planets For GC TestSet_Rebel
+Updating Selected Trade Routes For GC TestSet_Rebel
+Updating Starting Forces Table For GC TestSet_Rebel
 Plotting Galactic Map...
-Adding Unit To Starting Forces On All Planets
-Updating Starting Forces Table For GC Sandbox_T_Empire
-Updating Starting Forces Table For GC Sandbox_T_Empire
-Exiting Application....
+Planet Lwhekk Selected On Galactic Plot
+Updating Selected Planets For GC TestSet_Rebel
+Creating Save Containers For Trade Routes And Campaigns
+Initialising Element Tree For Campaign Files
+Compiling MasterTextFile_ENGLISH.dat
+Building Trade Route Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\TradeRoutes.xml
+Building Element For Trade Route Aargau_Alderaan
+Building Element For Trade Route Aargau_Basilisk
+Building Element For Trade Route Aargau_Coruscant
+Building Element For Trade Route Aargau_Ebaq
+Building Element For Trade Route Aargau_Graveyard
+Building Element For Trade Route Aargau_Kuat
+Building Element For Trade Route Abhean_Bimmisaari
+Building Element For Trade Route Abhean_Garos_IV
+Building Element For Trade Route Abhean_Centares
+Building Element For Trade Route Abhean_Metalorn
+Building Element For Trade Route Abhean_Onderon
+Building Element For Trade Route Abhean_Ryvester
+Building Element For Trade Route Abhean_Yavin
+Building Element For Trade Route Abregado_Bothawui
+Building Element For Trade Route Abregado_Byss
+Building Element For Trade Route Abregado_Endor
+Building Element For Trade Route Abregado_Fondor
+Building Element For Trade Route Abregado_Rae_Iphigin
+Building Element For Trade Route Abregado_Kalist
+Building Element For Trade Route Abregado_Khomm
+Building Element For Trade Route Abregado_Nkllon
+Building Element For Trade Route Abregado_Pakrik
+Building Element For Trade Route Abregado_Pantolomin
+Building Element For Trade Route Abregado_Thomork
+Building Element For Trade Route Abregado_Thyferra
+Building Element For Trade Route Adumar_Borosk
+Building Element For Trade Route Adumar_Bilbringi
+Building Element For Trade Route Adumar_Ilum
+Building Element For Trade Route Adumar_Nirauan
+Building Element For Trade Route Adumar_Orinda
+Building Element For Trade Route Adumar_Pesitiin
+Building Element For Trade Route Adumar_Wistril
+Building Element For Trade Route Agamar_Bimmiel
+Building Element For Trade Route Agamar_Ciutric
+Building Element For Trade Route Agamar_Columus
+Building Element For Trade Route Agamar_Gravlex
+Building Element For Trade Route Agamar_Hewett
+Building Element For Trade Route Agamar_Ithor
+Building Element For Trade Route Agamar_Ketaris
+Building Element For Trade Route Agamar_Mantell
+Building Element For Trade Route Agamar_RZ7
+Building Element For Trade Route Agamar_Paarin
+Building Element For Trade Route Agamar_Taris
+Building Element For Trade Route Agomar_Corvis
+Building Element For Trade Route Agomar_Dubrillion
+Building Element For Trade Route Agomar_Scipio
+Building Element For Trade Route Agomar_Taris
+Building Element For Trade Route Alderaan_Chandrila
+Building Element For Trade Route Alderaan_Columus
+Building Element For Trade Route Alzoc_Malastare
+Building Element For Trade Route Alzoc_Druckenwell
+Building Element For Trade Route Alzoc_Ryloth
+Building Element For Trade Route Alsakan_Anaxes
+Building Element For Trade Route Alsakan_Corulag
+Building Element For Trade Route Alsakan_Coruscant
+Building Element For Trade Route Alsakan_Vulpter
+Building Element For Trade Route Amrac_Bakura
+Building Element For Trade Route Amrac_Csilla
+Building Element For Trade Route Amrac_Rhigar
+Building Element For Trade Route Amrac_Riette
+Building Element For Trade Route Amrac_Syca
+Building Element For Trade Route Anaxes_Barlok
+Building Element For Trade Route Anaxes_Basilisk
+Building Element For Trade Route Anaxes_Corulag
+Building Element For Trade Route Anaxes_Mantell
+Building Element For Trade Route Antem_Bimmisaari
+Building Element For Trade Route Antem_Centares
+Building Element For Trade Route Antem_Chorios
+Building Element For Trade Route Antem_Columex
+Building Element For Trade Route Antem_Jomark
+Building Element For Trade Route Antem_Lianna
+Building Element For Trade Route Antem_Metalorn
+Building Element For Trade Route Antem_Ryvester
+Building Element For Trade Route AnxMinor_Bimmiel
+Building Element For Trade Route AnxMinor_Biniir
+Building Element For Trade Route AnxMinor_Ciutric
+Building Element For Trade Route AnxMinor_Corvis
+Building Element For Trade Route AnxMinor_Dantooine
+Building Element For Trade Route AnxMinor_Dathomir
+Building Element For Trade Route AnxMinor_Dubrillion
+Building Element For Trade Route Anx_Gabredor
+Building Element For Trade Route AnxMinor_Garqi
+Building Element For Trade Route AnxMinor_Gravlex
+Building Element For Trade Route AnxMinor_Morishim
+Building Element For Trade Route AnxMinor_Muunilinst
+Building Element For Trade Route AnxMinor_Mygeeto
+Building Element For Trade Route AnxMinor_Sernpidal
+Building Element For Trade Route AnxMinor_Tangrene
+Building Element For Trade Route AnxMinor_Trasi
+Building Element For Trade Route Atchorb_Bonadan
+Building Element For Trade Route Atchorb_Etti
+Building Element For Trade Route Atchorb_EolSha
+Building Element For Trade Route Atchorb_Mytus
+Building Element For Trade Route Atchorb_Ulicia
+Building Element For Trade Route Atravis_Belsavis
+Building Element For Trade Route Atravis_Eiattu
+Building Element For Trade Route Atravis_Elrood
+Building Element For Trade Route Atravis_Eriadu
+Building Element For Trade Route Atravis_Dagobah
+Building Element For Trade Route Atravis_Mustafar
+Building Element For Trade Route Atravis_Saijo
+Building Element For Trade Route Atravis_Sluis_Van
+Building Element For Trade Route Axxila_Bimmiel
+Building Element For Trade Route Axxila_Celanon
+Building Element For Trade Route Axxila_Chandrila
+Building Element For Trade Route Axxila_Ciutric
+Building Element For Trade Route Axxila_Columus
+Building Element For Trade Route Axxila_Commenor
+Building Element For Trade Route Axxila_Dathomir
+Building Element For Trade Route Axxila_Liinade
+Building Element For Trade Route Axxila_Selaggis
+Building Element For Trade Route Axxila_Tangrene
+Building Element For Trade Route Axxila_Taris
+Building Element For Trade Route Bakura_Endor
+Building Element For Trade Route Bakura_Rhigar
+Building Element For Trade Route Balmorra_Brentaal
+Building Element For Trade Route Balmorra_Colla
+Building Element For Trade Route Balmorra_Commenor
+Building Element For Trade Route Balmorra_Corellia
+Building Element For Trade Route Balmorra_Coruscant
+Building Element For Trade Route Balmorra_Deko
+Building Element For Trade Route Balmorra_Hakassi
+Building Element For Trade Route Balmorra_Kuat
+Building Element For Trade Route Balmorra_MistOne
+Building Element For Trade Route Balmorra_Onderon
+Building Element For Trade Route Bandomeer_Celanon
+Building Element For Trade Route Bandomeer_Cestus
+Building Element For Trade Route Bandomeer_Champala
+Building Element For Trade Route Bandomeer_Corsin
+Building Element For Trade Route Bandomeer_Chazwa
+Building Element For Trade Route Bandomeer_Columus
+Building Element For Trade Route Bandomeer_Contruum
+Building Element For Trade Route Bandomeer_Dathomir
+Building Element For Trade Route Bandomeer_Garos
+Building Element For Trade Route Bandomeer_Gravan
+Building Element For Trade Route Bandomeer_Hewett
+Building Element For Trade Route Bandomeer_Ithor
+Building Element For Trade Route Bandomeer_Kuat
+Building Element For Trade Route Bandomeer_Mandalore
+Building Element For Trade Route Bandomeer_Myrkr
+Building Element For Trade Route Bandomeer_Roche
+Building Element For Trade Route Bandomeer_Scarl
+Building Element For Trade Route Bandomeer_Taris
+Building Element For Trade Route Bandomeer_Vorpaya
+Building Element For Trade Route Bandomeer_Wayland
+Building Element For Trade Route Bandomeer_Yavin
+Building Element For Trade Route Barlok_Castell
+Building Element For Trade Route Barlok_Chazwa
+Building Element For Trade Route Barlok_Palanhi
+Building Element For Trade Route Barlok_Qiilura
+Building Element For Trade Route Basilisk_Chandrila
+Building Element For Trade Route Bastion_Bimmiel
+Building Element For Trade Route Bastion_Borosk
+Building Element For Trade Route Bastion_Dantooine
+Building Element For Trade Route Bastion_Dubrillion
+Building Element For Trade Route Bastion_Gabredor
+Building Element For Trade Route Bastion_Helska_4
+Building Element For Trade Route Bastion_Jaemus
+Building Element For Trade Route Bastion_Muunilinst
+Building Element For Trade Route Belderone_Ossus
+Building Element For Trade Route Belderone_Chorios
+Building Element For Trade Route Belsavis_Bespin
+Building Element For Trade Route Belsavis_Bilbringi
+Building Element For Trade Route Belsavis_Chardaan
+Building Element For Trade Route Belsavis_Clakdor
+Building Element For Trade Route Belsavis_Eiattu
+Building Element For Trade Route Belsavis_Endor
+Building Element For Trade Route Belsavis_Eriadu
+Building Element For Trade Route Belsavis_Fondor
+Building Element For Trade Route Belsavis_Kaal
+Building Element For Trade Route Belsavis_Mustafar
+Building Element For Trade Route Belsavis_QatChrystac
+Building Element For Trade Route Belsavis_Riette
+Building Element For Trade Route Belsavis_Sluis
+Building Element For Trade Route Belsavis_Vondarc
+Building Element For Trade Route Belsavis_YagDhul
+Building Element For Trade Route Belsmuth_Celanon
+Building Element For Trade Route Belsmuth_Centares
+Building Element For Trade Route Belsmuth_Columex
+Building Element For Trade Route Belsmuth_Dathomir
+Building Element For Trade Route Belsmuth_Felucia
+Building Element For Trade Route Belsmuth_Garos
+Building Element For Trade Route Belsmuth_Junction
+Building Element For Trade Route Belsmuth_Maridun
+Building Element For Trade Route Belsmuth_MonCal
+Building Element For Trade Route Belsmuth_Phind
+Building Element For Trade Route Belsmuth_Roche
+Building Element For Trade Route Belsmuth_Selaggis
+Building Element For Trade Route Belsmuth_Serenno
+Building Element For Trade Route Belsmuth_Tangrene
+Building Element For Trade Route Belsmuth_Yavin
+Building Element For Trade Route Bespin_Bpfassh
+Building Element For Trade Route Bespin_Eiattu
+Building Element For Trade Route Bespin_Endor
+Building Element For Trade Route Bespin_Hoth
+Building Element For Trade Route Bespin_Kaal
+Building Element For Trade Route Bespin_Qat
+Building Element For Trade Route Bespin_Saijo
+Building Element For Trade Route Bespin_Sluis
+Building Element For Trade Route Bilbringi_Borosk
+Building Element For Trade Route Bilbringi_Borleais
+Building Element For Trade Route Bilbringi_Ciutric
+Building Element For Trade Route Bilbringi_Corulag
+Building Element For Trade Route Bilbringi_Coruscant
+Building Element For Trade Route Bilbringi_Crustai
+Building Element For Trade Route Bilbringi_Darkon
+Building Element For Trade Route Bilbringi_Dolomar
+Building Element For Trade Route Bilbringi_Doornik
+Building Element For Trade Route Bilbringi_Entralla
+Building Element For Trade Route Bilbringi_Mantell
+Building Element For Trade Route Bilbringi_Myrkr
+Building Element For Trade Route Bilbringi_Mrisst
+Building Element For Trade Route Bilbringi_Nirauan
+Building Element For Trade Route Bilbringi_Noquivzor
+Building Element For Trade Route Bilbringi_Obroa
+Building Element For Trade Route Bilbringi_Orinda
+Building Element For Trade Route Bilbringi_Pakrik
+Building Element For Trade Route Bilbringi_Palanhi
+Building Element For Trade Route Bilbringi_Pesitiin
+Building Element For Trade Route Bilbringi_Scarl
+Building Element For Trade Route Bilbringi_Tyan
+Building Element For Trade Route Bilbringi_Wistril
+Building Element For Trade Route Bilbringi_Yinchorr
+Building Element For Trade Route Bimmiel_CauldronNebula
+Building Element For Trade Route Bimmiel_Ciutric
+Building Element For Trade Route Bimmiel_Corvis
+Building Element For Trade Route Bimmiel_Kauron
+Building Element For Trade Route Bimmiel_RZ7
+Building Element For Trade Route Bimmiel_Sernpidal
+Building Element For Trade Route Bimmiel_Tangrene
+Building Element For Trade Route Bimmiel_Trasi
+Building Element For Trade Route Bimmisaari_Cejansij
+Building Element For Trade Route Bimmisaari_Charros
+Building Element For Trade Route Bimmisaari_Da_SoochaV
+Building Element For Trade Route Bimmisaari_Ession
+Building Element For Trade Route Bimmisaari_Gravan
+Building Element For Trade Route Bimmisaari_Jomark
+Building Element For Trade Route Bimmisaari_Kashyyyk
+Building Element For Trade Route Bimmisaari_Kessel
+Building Element For Trade Route Bimmisaari_Metalorn
+Building Element For Trade Route Bimmisaari_MistThree
+Building Element For Trade Route Bimmisaari_MonCal
+Building Element For Trade Route Bimmisaari_Nespis
+Building Element For Trade Route Bimmisaari_NewAlderaan
+Building Element For Trade Route Bimmisaari_Onderon
+Building Element For Trade Route Bimmisaari_Porus
+Building Element For Trade Route Bimmisaari_Roche
+Building Element For Trade Route Bimmisaari_Ryvester
+Building Element For Trade Route Bimmisaari_Thanos
+Building Element For Trade Route Bimmisaari_Togoria
+Building Element For Trade Route Bimmisaari_Yavin
+Building Element For Trade Route Biniir_Garqi
+Building Element For Trade Route Biniir_Generis
+Building Element For Trade Route Biniir_Morishim
+Building Element For Trade Route Biniir_Mygeeto
+Building Element For Trade Route Biniir_Orinda
+Building Element For Trade Route Biniir_Phaeda
+Building Element For Trade Route Biniir_Trasi
+Building Element For Trade Route Biniir_Wistril
+Building Element For Trade Route Biniir_Yaga_Minor
+Building Element For Trade Route Bonadan_Ession
+Building Element For Trade Route Bonadan_Etti
+Building Element For Trade Route Bonadan_Orron
+Building Element For Trade Route Bonadan_Saffalore
+Building Element For Trade Route Bonadan_Ulicia
+Building Element For Trade Route Borleais_Carida
+Building Element For Trade Route Borleais_Chandrila
+Building Element For Trade Route Borleais_Champala
+Building Element For Trade Route Borleais_Corulag
+Building Element For Trade Route Borleais_Coruscant
+Building Element For Trade Route Borleais_Dolomar
+Building Element For Trade Route Borleais_Doornik
+Building Element For Trade Route Borleais_Farrfin
+Building Element For Trade Route Borleais_ILC905
+Building Element For Trade Route Borleais_Mantell
+Building Element For Trade Route Borleais_Mrisst
+Building Element For Trade Route Borleais_Noquivzor
+Building Element For Trade Route Borleais_Nzoth
+Building Element For Trade Route Borleias_Palanhi
+Building Element For Trade Route Borleais_Pantolomin
+Building Element For Trade Route Borleais_Yinchorr
+Building Element For Trade Route Borosk_Ithor
+Building Element For Trade Route Borosk_Jaemus
+Building Element For Trade Route Borosk_Morishim
+Building Element For Trade Route Borosk_Mygeeto
+Building Element For Trade Route Borosk_Nirauan
+Building Element For Trade Route Borosk_Orinda
+Building Element For Trade Route Borosk_Wistril
+Building Element For Trade Route Borosk_Yaga
+Building Element For Trade Route Bothawui_Chardaan
+Building Element For Trade Route Bothawui_Circumtore
+Building Element For Trade Route Bothawui_Commenor
+Building Element For Trade Route Bothawui_Da_SoochaV
+Building Element For Trade Route Bothawui_Denon
+Building Element For Trade Route Bothawui_Druckenwell
+Building Element For Trade Route Bothawui_Duro
+Building Element For Trade Route Bothawui_GlomTho
+Building Element For Trade Route Bothawui_Gyndine
+Building Element For Trade Route Bothawui_Kalarba
+Building Element For Trade Route Bothawui_Kashyyyk
+Building Element For Trade Route Bothawui_Kothlis
+Building Element For Trade Route Bothawui_MonCalimari
+Building Element For Trade Route Bothawui_NalHutta
+Building Element For Trade Route Bothawui_NewCov
+Building Element For Trade Route Bothawui_Maw
+Building Element For Trade Route Bothawui_Pardron
+Building Element For Trade Route Bothawui_Talasea
+Building Element For Trade Route Bothawui_Tatooine
+Building Element For Trade Route Bpfassh_Dagobah
+Building Element For Trade Route Bpfassh_Sluis
+Building Element For Trade Route Bpfassh_Svivren
+Building Element For Trade Route Bpfassh_Woostri
+Building Element For Trade Route Brentaal_Anaxes
+Building Element For Trade Route Brentaal_Caamas
+Building Element For Trade Route Brentaal_Carida
+Building Element For Trade Route Brentaal_Chandrila
+Building Element For Trade Route Brentaal_Contruum
+Building Element For Trade Route Brentaal_Corulag
+Building Element For Trade Route Brentaal_Coruscant
+Building Element For Trade Route Brentaal_Farrfin
+Building Element For Trade Route Brentaal_Hakassi
+Building Element For Trade Route Brentaal_Kuat
+Building Element For Trade Route Brentaal_Levian
+Building Element For Trade Route Brentaal_Poderis
+Building Element For Trade Route Byss_Coruscant
+Building Element For Trade Route Byss_Crustai
+Building Element For Trade Route Byss_Galantos
+Building Element For Trade Route Byss_Hakassi
+Building Element For Trade Route Byss_Kalist
+Building Element For Trade Route Byss_Khomm
+Building Element For Trade Route Byss_Kuat
+Building Element For Trade Route Byss_Metellos
+Building Element For Trade Route Byss_Nzoth
+Building Element For Trade Route Byss_Odik
+Building Element For Trade Route Byss_Pakrik
+Building Element For Trade Route Byss_Tsoss
+Building Element For Trade Route CalSeti_Coruscant
+Building Element For Trade Route CalSeti_Doornik
+Building Element For Trade Route CalSeti_Foerost
+Building Element For Trade Route CalSeti_Galantos
+Building Element For Trade Route CalSeti_Metellos
+Building Element For Trade Route CalSeti_Odik
+Building Element For Trade Route CalSeti_Palanhi
+Building Element For Trade Route CalSeti_Pantolomin
+Building Element For Trade Route CalSeti_Tsoss
+Building Element For Trade Route Cantrell_Garqi
+Building Element For Trade Route Cantrell_Lonnaw
+Building Element For Trade Route Cantrell_Orinda
+Building Element For Trade Route Cantrell_Mantell
+Building Element For Trade Route Cantrell_Mygeeto
+Building Element For Trade Route Cantrell_Phaeda
+Building Element For Trade Route Cantrell_Scipio
+Building Element For Trade Route Carida_Castell
+Building Element For Trade Route Carida_Champala
+Building Element For Trade Route Carida_Chandrila
+Building Element For Trade Route Carida_Chazwa
+Building Element For Trade Route Carida_Colla
+Building Element For Trade Route Carida_Contruum
+Building Element For Trade Route Carida_Corulag
+Building Element For Trade Route Carida_Farrfin
+Building Element For Trade Route Carida_Gravan
+Building Element For Trade Route Carida_Kuat
+Building Element For Trade Route Carida_Levian
+Building Element For Trade Route Carida_Mantell
+Building Element For Trade Route Carida_MistOne
+Building Element For Trade Route Carida_MistTwo
+Building Element For Trade Route Carida_Myrkr
+Building Element For Trade Route Carida_Obroa
+Building Element For Trade Route Carida_Poderis
+Building Element For Trade Route Carida_Togoria
+Building Element For Trade Route Carida_Yinchorr
+Building Element For Trade Route Castell_Colla
+Building Element For Trade Route Cauldron_EolSha
+Building Element For Trade Route CauldronNebula_Kauron
+Building Element For Trade Route Celanon_Centares
+Building Element For Trade Route Celanon_Corsin
+Building Element For Trade Route Celanon_Dathomir
+Building Element For Trade Route Celanon_Junction
+Building Element For Trade Route Celanon_Maridun
+Building Element For Trade Route Celanon_Phind
+Building Element For Trade Route Celanon_Selaggis
+Building Element For Trade Route Celanon_Serenno
+Building Element For Trade Route Celanon_Tangrene
+Building Element For Trade Route Cejansij_DaSoocha
+Building Element For Trade Route Cejansij_Honoghr
+Building Element For Trade Route Cejansij_Kashyyyk
+Building Element For Trade Route Cejansij_MistThree
+Building Element For Trade Route Cejansij_Thanos
+Building Element For Trade Route Cejansij_Togoria
+Building Element For Trade Route Cejansij_Utapau
+Building Element For Trade Route Centares_Columex
+Building Element For Trade Route Centares_Contruum
+Building Element For Trade Route Centares_Jomark
+Building Element For Trade Route Centares_Lianna
+Building Element For Trade Route Centares_Maridun
+Building Element For Trade Route Centares_Metalorn
+Building Element For Trade Route Centares_Ossus
+Building Element For Trade Route Centares_Phind
+Building Element For Trade Route Centares_Roche
+Building Element For Trade Route Centares_Ryvester
+Building Element For Trade Route Centares_Vros
+Building Element For Trade Route Centares_Yavin
+Building Element For Trade Route Cestus_Corvis
+Building Element For Trade Route Cestus_Dathomir
+Building Element For Trade Route Champala_Chandrila
+Building Element For Trade Route Champala_Chazwa
+Building Element For Trade Route Champala_Coruscant
+Building Element For Trade Route Champala_Farrfin
+Building Element For Trade Route Champala_Levian
+Building Element For Trade Route Champala_Mantell
+Building Element For Trade Route Champala_MistTwo
+Building Element For Trade Route Champala_Noquivzor
+Building Element For Trade Route Champala_Obredaan
+Building Element For Trade Route Champala_Obroa
+Building Element For Trade Route Champala_Taris
+Building Element For Trade Route Chandrila_Chazwa
+Building Element For Trade Route Chandrila_Coruscant
+Building Element For Trade Route Chandrila_Commenor
+Building Element For Trade Route Chandrila_Corulag
+Building Element For Trade Route Chandrila_Ebaq
+Building Element For Trade Route Chandrila_Farrfin
+Building Element For Trade Route Chandrila_MonCalimari
+Building Element For Trade Route Chandrila_Pantolomin
+Building Element For Trade Route Chandrila_Poderis
+Building Element For Trade Route Chardaan_Denon
+Building Element For Trade Route Chardaan_Derra
+Building Element For Trade Route Chardaan_Fondor
+Building Element For Trade Route Chardaan_GlomTho
+Building Element For Trade Route Chardaan_Gyndine
+Building Element For Trade Route Chardaan_Kalarba
+Building Element For Trade Route Chardaan_Kothlis
+Building Element For Trade Route Chardaan_NewCov
+Building Element For Trade Route Chardaan_Scarl
+Building Element For Trade Route Chardaan_Talasea
+Building Element For Trade Route Chardaan_Talfaglio
+Building Element For Trade Route Chardaan_Maw
+Building Element For Trade Route Chardaan_Sanrafsix
+Building Element For Trade Route Chardaan_Thyferra
+Building Element For Trade Route Chardaan_Vondarc
+Building Element For Trade Route Chardaan_Woostri
+Building Element For Trade Route Chardaan_YagDhul
+Building Element For Trade Route Charros_Thanos
+Building Element For Trade Route Charubah_Hapes
+Building Element For Trade Route Charubah_MistOne
+Building Element For Trade Route Charubah_MistTwo
+Building Element For Trade Route Chazwa_Colla
+Building Element For Trade Route Chazwa_Gravan
+Building Element For Trade Route Chazwa_Graveyard
+Building Element For Trade Route Chazwa_Noquivzor
+Building Element For Trade Route Chazwa_Togoria
+Building Element For Trade Route Chazwa_Yinchorr
+Building Element For Trade Route Chorax_Commenor
+Building Element For Trade Route Chorax_Corellia
+Building Element For Trade Route Chorax_Talasea
+Building Element For Trade Route Chorios_Ossus
+Building Element For Trade Route Chorios_Phind
+Building Element For Trade Route Chorios_Ryvester
+Building Element For Trade Route Chrondre_Filve
+Building Element For Trade Route Chrondre_Pardron
+Building Element For Trade Route Chrondre_Rodia
+Building Element For Trade Route Chrondre_Sluis
+Building Element For Trade Route Chrondre_Svivren
+Building Element For Trade Route Circumtore_NalHutta
+Building Element For Trade Route Circumtore_Ylesia
+Building Element For Trade Route Ciutric_Comkin
+Building Element For Trade Route Ciutric_Corsin
+Building Element For Trade Route Ciutric_Corvis
+Building Element For Trade Route Ciutric_Dathomir
+Building Element For Trade Route Ciutric_Garqi
+Building Element For Trade Route Ciutric_Generis
+Building Element For Trade Route Ciutric_Gravlex
+Building Element For Trade Route Ciutric_Hewett
+Building Element For Trade Route Ciutric_Ketaris
+Building Element For Trade Route Ciutric_Liinade
+Building Element For Trade Route Ciutric_M293
+Building Element For Trade Route Ciutric_Myrkr
+Building Element For Trade Route Ciutric_Phaeda
+Building Element For Trade Route Ciutric_Selaggis
+Building Element For Trade Route Ciutric_Tangrene
+Building Element For Trade Route Ciutric_Vros
+Building Element For Trade Route Ciutric_Wayland
+Building Element For Trade Route Clakdor_Eriadu
+Building Element For Trade Route Clakdor_Sanrafsix
+Building Element For Trade Route Clakdor_Sluis
+Building Element For Trade Route Clakdor_Utapau
+Building Element For Trade Route Columex_Ession
+Building Element For Trade Route Columex_Felucia
+Building Element For Trade Route Columex_Galidraan
+Building Element For Trade Route Columex_Jomark
+Building Element For Trade Route Columex_Lianna
+Building Element For Trade Route Columex_Maridun
+Building Element For Trade Route Columex_Metalorn
+Building Element For Trade Route Columex_MonCal
+Building Element For Trade Route Columex_Murkhana
+Building Element For Trade Route Columex_Ossus
+Building Element For Trade Route Columex_Yavin
+Building Element For Trade Route Columus_Contruum
+Building Element For Trade Route Columus_Corellia
+Building Element For Trade Route Columus_Fondor
+Building Element For Trade Route Columus_Hakassi
+Building Element For Trade Route Columus_Kampe
+Building Element For Trade Route Columus_Kuat
+Building Element For Trade Route Columus_Ojom
+Building Element For Trade Route Columus_Rendili
+Building Element For Trade Route Columus_Selaggis
+Building Element For Trade Route Columus_Wayland
+Building Element For Trade Route Comkin_Corsin
+Building Element For Trade Route Comkin_Garqi
+Building Element For Trade Route Comkin_Generis
+Building Element For Trade Route Comkin_Gravan
+Building Element For Trade Route Comkin_Levian
+Building Element For Trade Route Comkin_Mantell
+Building Element For Trade Route Comkin_Selaggis
+Building Element For Trade Route Comkin_Vros
+Building Element For Trade Route Comkin_Wayland
+Building Element For Trade Route Commenor_Corellia
+Building Element For Trade Route Commenor_Coruscant
+Building Element For Trade Route Commenor_Cularin
+Building Element For Trade Route Commenor_Gyndine
+Building Element For Trade Route Commenor_Halanit
+Building Element For Trade Route Commenor_Kashyyyk
+Building Element For Trade Route Commenor_Kuat
+Building Element For Trade Route Commenor_MistOne
+Building Element For Trade Route Commenor_Onderon
+Building Element For Trade Route Commenor_Talasea
+Building Element For Trade Route Concord_ObroaSkai
+Building Element For Trade Route Contruum_Garos
+Building Element For Trade Route Contruum_Gravan
+Building Element For Trade Route Contruum_Kampe
+Building Element For Trade Route Contruum_Korda
+Building Element For Trade Route Contruum_Kuat
+Building Element For Trade Route Contruum_Levian
+Building Element For Trade Route Contruum_Mandalore
+Building Element For Trade Route Contruum_MistThree
+Building Element For Trade Route Contruum_ObroaSkai
+Building Element For Trade Route Contruum_Onderon
+Building Element For Trade Route Contruum_Phind
+Building Element For Trade Route Contruum_Roche
+Building Element For Trade Route Contruum_Thanos
+Building Element For Trade Route Corellia_Denon
+Building Element For Trade Route Corellia_Duro
+Building Element For Trade Route Corellia_Fondor
+Building Element For Trade Route Corellia_Gyndine
+Building Element For Trade Route Corellia_Hakassi
+Building Element For Trade Route Corellia_Kampe
+Building Element For Trade Route Corellia_Kuat
+Building Element For Trade Route Corellia_Talasea
+Building Element For Trade Route Corellia_Thyferra
+Building Element For Trade Route Corellia_Talfaglio
+Building Element For Trade Route Corellia_Tsoss
+Building Element For Trade Route Corsin_Gravan
+Building Element For Trade Route Corsin_Hewett
+Building Element For Trade Route Corsin_Ithor
+Building Element For Trade Route Corsin_Ketaris
+Building Element For Trade Route Corsin_Levian
+Building Element For Trade Route Corsin_ObroaSkai
+Building Element For Trade Route Corsin_Selaggis
+Building Element For Trade Route Corsin_Sif
+Building Element For Trade Route Corsin_Tartaglia
+Building Element For Trade Route Corsin_Vros
+Building Element For Trade Route Corthenia_Kaal
+Building Element For Trade Route Corthenia_Traval
+Building Element For Trade Route Corthenia_Tyan
+Building Element For Trade Route Corulag_Coruscant
+Building Element For Trade Route Corulag_Graveyard
+Building Element For Trade Route Corulag_Hakassi
+Building Element For Trade Route Corulag_Kuat
+Building Element For Trade Route Corulag_MistOne
+Building Element For Trade Route Corulag_Noquivzor
+Building Element For Trade Route Coruscant_Doornik
+Building Element For Trade Route Coruscant_Ebaq
+Building Element For Trade Route Coruscant_Fondor
+Building Element For Trade Route Coruscant_Farrfin
+Building Element For Trade Route Coruscant_Galantos
+Building Element For Trade Route Coruscant_Graveyard
+Building Element For Trade Route Coruscant_ILC905
+Building Element For Trade Route Coruscant_Kalist
+Building Element For Trade Route Coruscant_Kuat
+Building Element For Trade Route Coruscant_Metellos
+Building Element For Trade Route Coruscant_Noquivzor
+Building Element For Trade Route Coruscant_Nzoth
+Building Element For Trade Route Coruscant_Odik
+Building Element For Trade Route Coruscant_Pakrik
+Building Element For Trade Route Coruscant_Pantolomin
+Building Element For Trade Route Coruscant_Prakith
+Building Element For Trade Route Coruscant_Qiilura
+Building Element For Trade Route Coruscant_Tsoss
+Building Element For Trade Route Corvis_Gravlex
+Building Element For Trade Route Corvis_Kauron
+Building Element For Trade Route Corvis_RZ7
+Building Element For Trade Route Corvis_Tangrene
+Building Element For Trade Route Corvis_Thule
+Building Element For Trade Route Crustai_Endor
+Building Element For Trade Route Crustai_Ilum
+Building Element For Trade Route Crustai_Noquivzor
+Building Element For Trade Route Crustai_Oristrom
+Building Element For Trade Route Crustai_Pesitiin
+Building Element For Trade Route Crustai_Pesfavri
+Building Element For Trade Route Crustai_Riette
+Building Element For Trade Route Crustai_Sarvchi
+Building Element For Trade Route Crustai_Syca
+Building Element For Trade Route Csilla_Sarvchi
+Building Element For Trade Route Csilla_Rhigar
+Building Element For Trade Route Darkon_Obredaan
+Building Element For Trade Route Darkon_Orinda
+Building Element For Trade Route Darkon_Traval
+Building Element For Trade Route Darkon_Wistril
+Building Element For Trade Route DaSoocha_Kashyyyk
+Building Element For Trade Route DaSoocha_Kessel
+Building Element For Trade Route DaSoocha_MonCal
+Building Element For Trade Route DaSoocha_NalHutta
+Building Element For Trade Route Da_SoochaV_NarShaddaa
+Building Element For Trade Route Da_SoochaV_Sleheyron
+Building Element For Trade Route DaSoocha_Ylesia
+Building Element For Trade Route Dagobah_Sluis
+Building Element For Trade Route Dantooine_Dubrillion
+Building Element For Trade Route Dantooine_Entralla
+Building Element For Trade Route Dantooine_EolSha
+Building Element For Trade Route Dantooine_Gabredor
+Building Element For Trade Route Dantooine_Generis
+Building Element For Trade Route Dantooine_Gravlex
+Building Element For Trade Route Dantooine_Morishim
+Building Element For Trade Route Dantooine_Muunilinst
+Building Element For Trade Route Dantooine_Trasi
+Building Element For Trade Route Dathomir_Garos
+Building Element For Trade Route Dathomir_Gravan
+Building Element For Trade Route Dathomir_Kauron
+Building Element For Trade Route Dathomir_Junction
+Building Element For Trade Route Dathomir_MistThree
+Building Element For Trade Route Dathomir_Obroa
+Building Element For Trade Route Dathomir_Quell
+Building Element For Trade Route Dathomir_Selaggis
+Building Element For Trade Route Dathomir_Taris
+Building Element For Trade Route Dathomir_Tangrene
+Building Element For Trade Route Dathomir_Vorpaya
+Building Element For Trade Route Dathomir_Wayland
+Building Element For Trade Route Dathomir_Yavin
+Building Element For Trade Route Deko_Emberlene
+Building Element For Trade Route Deko_Umbara
+Building Element For Trade Route Denon_Duro
+Building Element For Trade Route Denon_Derra
+Building Element For Trade Route Denon_Fondor
+Building Element For Trade Route Denon_Gyndine
+Building Element For Trade Route Denon_Kashyyyk
+Building Element For Trade Route Denon_NalHutta
+Building Element For Trade Route Denon_NewCov
+Building Element For Trade Route Denon_Ryloth
+Building Element For Trade Route Denon_Sanrafsix
+Building Element For Trade Route Denon_Talasea
+Building Element For Trade Route Denon_Thyferra
+Building Element For Trade Route Denon_YagDhul
+Building Element For Trade Route Derra_GlomTho
+Building Element For Trade Route Derra_Qretu
+Building Element For Trade Route Derra_Ryloth
+Building Element For Trade Route Derra_Wroona
+Building Element For Trade Route Derra_YagDhul
+Building Element For Trade Route Desevro_Felucia
+Building Element For Trade Route Desevro_Emmer
+Building Element For Trade Route Desevro_Ession
+Building Element For Trade Route Desevro_Etti
+Building Element For Trade Route Desevro_Hast
+Building Element For Trade Route Desevro_Lianna
+Building Element For Trade Route Desevro_MonCalimari
+Building Element For Trade Route Desevro_Orron
+Building Element For Trade Route Desevro_Raxus
+Building Element For Trade Route Desevro_Telos
+Building Element For Trade Route Dolomar_Farrfin
+Building Element For Trade Route Dolomar_Metellos
+Building Element For Trade Route Dolomar_Mrisst
+Building Element For Trade Route Dolomar_Nzoth
+Building Element For Trade Route Dolomar_Oristrom
+Building Element For Trade Route Dolomar_Pantolomin
+Building Element For Trade Route Doornik_ILC905
+Building Element For Trade Route Doornik_Jtptan
+Building Element For Trade Route Doornik_Mrisst
+Building Element For Trade Route Doornik_Nzoth
+Building Element For Trade Route Doornik_Oristrom
+Building Element For Trade Route Doornik_Pakrik
+Building Element For Trade Route Doornik_Pantolomin
+Building Element For Trade Route Dromund_Felucia
+Building Element For Trade Route Dromund_Korriban
+Building Element For Trade Route Dromund_Thule
+Building Element For Trade Route Druckenwell_Filve
+Building Element For Trade Route Druckenwell_GlomTho
+Building Element For Trade Route Druckenwell_Kalarba
+Building Element For Trade Route Druckenwell_NewCov
+Building Element For Trade Route Druckenwell_Sanrafsix
+Building Element For Trade Route Dubrillion_Gabredor
+Building Element For Trade Route Dubrillion_Gravlex
+Building Element For Trade Route Dubrillion_Muunilinst
+Building Element For Trade Route Dubrillion_Sernpidal
+Building Element For Trade Route Duro_Fondor
+Building Element For Trade Route Duro_Hakassi
+Building Element For Trade Route Duro_Kashyyyk
+Building Element For Trade Route Duro_Ojom
+Building Element For Trade Route Duro_Scarl
+Building Element For Trade Route Duro_Talfaglio
+Building Element For Trade Route Duro_Thyferra
+Building Element For Trade Route Eiattu_Malastare
+Building Element For Trade Route Eaittu_Moorja
+Building Element For Trade Route Eaittu_Mustafar
+Building Element For Trade Route Eaittu_Sullust
+Building Element For Trade Route Eiattu_Kaal
+Building Element For Trade Route Eiattu_Vondarc
+Building Element For Trade Route Eaittu_Vondarc
+Building Element For Trade Route Eaittu_YagDhul
+Building Element For Trade Route Ebaq_Hakassi
+Building Element For Trade Route Ebaq_Kampe
+Building Element For Trade Route Ebaq_Tsoss
+Building Element For Trade Route Emmer_MonCal
+Building Element For Trade Route Emmer_Ession
+Building Element For Trade Route Emmer_Kalla
+Building Element For Trade Route Elrood_Exocron
+Building Element For Trade Route Elrood_Glova
+Building Element For Trade Route Elrood_Saijo
+Building Element For Trade Route Elrood_Sluis_Van
+Building Element For Trade Route Elrood_Utapau
+Building Element For Trade Route Empress_Kaikielius
+Building Element For Trade Route Empress_Kampe
+Building Element For Trade Route Empress_Metellos
+Building Element For Trade Route Empress_Odik
+Building Element For Trade Route Empress_Prakith
+Building Element For Trade Route Empress_Tsoss
+Building Element For Trade Route Endor_Kaal
+Building Element For Trade Route Endor_Katana_Space
+Building Element For Trade Route Endor_Moorja
+Building Element For Trade Route Endor_Qat
+Building Element For Trade Route Endor_Qretu
+Building Element For Trade Route Endor_Saijo
+Building Element For Trade Route Endor_Sullust
+Building Element For Trade Route Endor_Zfell
+Building Element For Trade Route Entralla_Jaemus
+Building Element For Trade Route Entralla_Morishim
+Building Element For Trade Route Entralla_Muunilinst
+Building Element For Trade Route Entralla_Mygeeto
+Building Element For Trade Route Entralla_Yaga
+Building Element For Trade Route EolSha_Etti_IV
+Building Element For Trade Route EolSha_Kauron
+Building Element For Trade Route EolSha_Sernpidal
+Building Element For Trade Route EolSha_Telos
+Building Element For Trade Route EolSha_Yavin
+Building Element For Trade Route Eriadu_Qat
+Building Element For Trade Route Eriadu_Sanrafsix
+Building Element For Trade Route Eriadu_Sluis
+Building Element For Trade Route Eriadu_Sullust
+Building Element For Trade Route Eriadu_Woostri
+Building Element For Trade Route Eriadu_YagDhul
+Building Element For Trade Route Ession_Hast
+Building Element For Trade Route Ession_Etti
+Building Element For Trade Route Ession_Kalla
+Building Element For Trade Route Ession_Maryo
+Building Element For Trade Route Ession_Saffalore
+Building Element For Trade Route Ession_Telos
+Building Element For Trade Route Etti_Kauron
+Building Element For Trade Route Etti_Telos
+Building Element For Trade Route Etti_Yavin
+Building Element For Trade Route Exocron_Utapau
+Building Element For Trade Route Exocron_Sluis
+Building Element For Trade Route Exocron_Svivren
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\TradeRoutes.xml
+Building Trade Route Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\TradeRoutesToo.xml
+Building Element For Trade Route Farrfin_Mantell
+Building Element For Trade Route Farrfin_Noquivzor
+Building Element For Trade Route Farrfin_ObroaSkai
+Building Element For Trade Route Farrfin_Pantolomin
+Building Element For Trade Route Farrfin_Poderis
+Building Element For Trade Route Farrfin_Wistril
+Building Element For Trade Route Felucia_Lianna
+Building Element For Trade Route Felucia_Maridun
+Building Element For Trade Route Felucia_Raxus
+Building Element For Trade Route Felucia_Serenno
+Building Element For Trade Route Felucia_Yavin
+Building Element For Trade Route Filve_Kothlis
+Building Element For Trade Route Filve_NewCov
+Building Element For Trade Route Filve_Pardron
+Building Element For Trade Route Filve_Sluis
+Building Element For Trade Route Filve_Svivren
+Building Element For Trade Route Filve_Ukio
+Building Element For Trade Route Filve_Woostri
+Building Element For Trade Route Fondor_Hakassi
+Building Element For Trade Route Fondor_Kalist
+Building Element For Trade Route Fondor_Kampe
+Building Element For Trade Route Fondor_Khomm
+Building Element For Trade Route Fondor_Nkllon
+Building Element For Trade Route Fondor_Pakrik
+Building Element For Trade Route Fondor_Talasea
+Building Element For Trade Route Fondor_Thomork
+Building Element For Trade Route Fondor_Thyferra
+Building Element For Trade Route Fondor_Tsoss
+Building Element For Trade Route Fondor_YagDhul
+Building Element For Trade Route Gabredor_Morishim
+Building Element For Trade Route Gabredor_Muunilinst
+Building Element For Trade Route Gabredor_Sernpidal
+Building Element For Trade Route Galantos_Jtptan
+Building Element For Trade Route Galantos_Odik
+Building Element For Trade Route Galantos_Metellos
+Building Element For Trade Route Galantos_Nzoth
+Building Element For Trade Route Galantos_Zfell
+Building Element For Trade Route Galidraan_Lianna
+Building Element For Trade Route Galidraan_Rhen_Var
+Building Element For Trade Route Gamorr_Hypori
+Building Element For Trade Route Gamorr_Ylesia
+Building Element For Trade Route Garos_Gravan
+Building Element For Trade Route Garos_Levian
+Building Element For Trade Route Garos_IV_Mandalore
+Building Element For Trade Route Garos_IV_Maridun
+Building Element For Trade Route Garos_MistThree
+Building Element For Trade Route Garos_IV_Nespis
+Building Element For Trade Route Garos_NewAlderaan
+Building Element For Trade Route Garos_Ordo
+Building Element For Trade Route Garos_Ossus
+Building Element For Trade Route Garos_Phindar
+Building Element For Trade Route Garos_Roche
+Building Element For Trade Route Garos_Selaggis
+Building Element For Trade Route Garos_Wayland
+Building Element For Trade Route Garos_Yavin
+Building Element For Trade Route Garqi_Generis
+Building Element For Trade Route Garqi_Gravlex
+Building Element For Trade Route Garqi_Ithor
+Building Element For Trade Route Garqi_Ketaris
+Building Element For Trade Route Garqi_Mantell
+Building Element For Trade Route Garqi_Morishim
+Building Element For Trade Route Garqi_Mygeeto
+Building Element For Trade Route Garqi_Orinda
+Building Element For Trade Route Garqi_Trasi
+Building Element For Trade Route Garqi_Wistril
+Building Element For Trade Route Geonosis_Tatooine
+Building Element For Trade Route Geonosis_Pardron
+Building Element For Trade Route GlomTho_Gyndine
+Building Element For Trade Route GlomTho_Kalarba
+Building Element For Trade Route GlomTho_Rodia
+Building Element For Trade Route GlomTho_Sanrafsix
+Building Element For Trade Route Glova_Mustafar
+Building Element For Trade Route Glova_Sluis
+Building Element For Trade Route Glova_Utapau
+Building Element For Trade Route Generis_Gravlex
+Building Element For Trade Route Generis_Ithor
+Building Element For Trade Route Generis_Ketaris
+Building Element For Trade Route Generis_Levian
+Building Element For Trade Route Generis_Mygeeto
+Building Element For Trade Route Generis_Orinda
+Building Element For Trade Route Generis_Orocco
+Building Element For Trade Route Generis_Selaggis
+Building Element For Trade Route Generis_Trasi
+Building Element For Trade Route Generis_Wistril
+Building Element For Trade Route Gravan_Levian
+Building Element For Trade Route Gravan_MistTwo
+Building Element For Trade Route Gravan_Myrkr
+Building Element For Trade Route Gravan_NewAlderaan
+Building Element For Trade Route Gravan_Obroa
+Building Element For Trade Route Gravan_Phind
+Building Element For Trade Route Gravan_Selaggis
+Building Element For Trade Route Gravan_Togoria
+Building Element For Trade Route Graveyard_Kuat
+Building Element For Trade Route Graveyard_Pakrik
+Building Element For Trade Route Graveyard_Tsoss
+Building Element For Trade Route Gravlex_Ithor
+Building Element For Trade Route Gravlex_Ketaris
+Building Element For Trade Route Gravlex_Morishim
+Building Element For Trade Route Gravlex_Muunilinst
+Building Element For Trade Route Gravlex_RZ7
+Building Element For Trade Route Gravlex_Sernpidal
+Building Element For Trade Route Gravlex_Tangrene
+Building Element For Trade Route Gravlex_Trasi
+Building Element For Trade Route Gravlex_Yaga
+Building Element For Trade Route Gyndine_Halanit
+Building Element For Trade Route Gyndine_Kashyyyk
+Building Element For Trade Route Gyndine_Kessel
+Building Element For Trade Route Gyndine_NalHutta
+Building Element For Trade Route Gyndine_Talasea
+Building Element For Trade Route Gyndine_Toydaria
+Building Element For Trade Route Hakassi_Kalist
+Building Element For Trade Route Hakassi_Kampe
+Building Element For Trade Route Hakassi_Kessel
+Building Element For Trade Route Hakassi_Kuat
+Building Element For Trade Route Hakassi_Maw
+Building Element For Trade Route Hakassi_Ojom
+Building Element For Trade Route Hakassi_Tsoss
+Building Element For Trade Route Halanit_Talasea
+Building Element For Trade Route Halanit_Talfaglio
+Building Element For Trade Route Hapes_MistTwo
+Building Element For Trade Route Hapes_Terephon
+Building Element For Trade Route Hast_Ithor
+Building Element For Trade Route Hast_Levian
+Building Element For Trade Route Hast_MonCal
+Building Element For Trade Route Hast_Orron
+Building Element For Trade Route Helska_Sernpidal
+Building Element For Trade Route Hewett_Orocco
+Building Element For Trade Route Hewett_Paarin
+Building Element For Trade Route Hewett_Tartaglia
+Building Element For Trade Route Hewett_Vros
+Building Element For Trade Route Honoghr_Jomark
+Building Element For Trade Route Honoghr_Kashyyyk
+Building Element For Trade Route Honoghr_Kessel
+Building Element For Trade Route Honoghr_MonCal
+Building Element For Trade Route Honoghr_Maw
+Building Element For Trade Route Honoghr_Ylesia
+Building Element For Trade Route Hoth_Mustafar
+Building Element For Trade Route Hoth_Saijo
+Building Element For Trade Route Hoth_Sluis_Van
+Building Element For Trade Route ILC905_Jtptan
+Building Element For Trade Route ILC905_Nzoth
+Building Element For Trade Route ILC905_Odik
+Building Element For Trade Route ILC905_Oristrom
+Building Element For Trade Route ILC905_Zfell
+Building Element For Trade Route Ilum_Pesitiin
+Building Element For Trade Route Ilum_Quethold
+Building Element For Trade Route Ilum_Syca
+Building Element For Trade Route Iphigin_Kampe
+Building Element For Trade Route Iphigin_Scarl
+Building Element For Trade Route Ithor_Ketaris
+Building Element For Trade Route Ithor_Levian
+Building Element For Trade Route Ithor_M293
+Building Element For Trade Route Ithor_Mandalore
+Building Element For Trade Route Ithor_Mantell
+Building Element For Trade Route Ithor_Myrkr
+Building Element For Trade Route Ithor_Obroa
+Building Element For Trade Route Ithor_Obredaan
+Building Element For Trade Route Ithor_Orinda
+Building Element For Trade Route Ithor_Orocco
+Building Element For Trade Route Ithor_Phaeda
+Building Element For Trade Route Ithor_Selaggis
+Building Element For Trade Route Ithor_Vros
+Building Element For Trade Route Ithor_Wayland
+Building Element For Trade Route Jaemus_Muunilinst
+Building Element For Trade Route Jomark_Kessel
+Building Element For Trade Route Jomark_Metalorn
+Building Element For Trade Route Jomark_MonCal
+Building Element For Trade Route Jomark_Myrkr
+Building Element For Trade Route Jomark_Nespis
+Building Element For Trade Route Jomark_Phindar
+Building Element For Trade Route Jomark_Ryvester
+Building Element For Trade Route Jtptan_Nzoth
+Building Element For Trade Route Jtptan_Pesitiin
+Building Element For Trade Route Jtptan_Polneye
+Building Element For Trade Route Jtptan_Riette
+Building Element For Trade Route Jtptan_Zfell
+Building Element For Trade Route Junction_Phind
+Building Element For Trade Route Junction_Mandalore
+Building Element For Trade Route Junction_Serenno
+Building Element For Trade Route Junction_Tangrene
+Building Element For Trade Route Junction_Yavin
+Building Element For Trade Route Kaal_Nkllon
+Building Element For Trade Route Kaal_Traval
+Building Element For Trade Route Kaal_Moorja
+Building Element For Trade Route Kaikielius_Tsoss
+Building Element For Trade Route Kaikielius_Aargau
+Building Element For Trade Route Kalee_Muunilinst
+Building Element For Trade Route Kalist_Kampe
+Building Element For Trade Route Kalist_Katana_Space
+Building Element For Trade Route Kalist_Khomm
+Building Element For Trade Route Kalist_Odik
+Building Element For Trade Route Kalist_Pakrik
+Building Element For Trade Route Kalist_Thomork
+Building Element For Trade Route Kalist_Thyferra
+Building Element For Trade Route Kalist_Zfell
+Building Element For Trade Route Kalla_Orron
+Building Element For Trade Route Kalla_Oslumpex
+Building Element For Trade Route Kampe_Khomm
+Building Element For Trade Route Kampe_Ojom
+Building Element For Trade Route Kampe_Odik
+Building Element For Trade Route Kampe_Thomork
+Building Element For Trade Route Kampe_Tsoss
+Building Element For Trade Route Kariek_Nirauan
+Building Element For Trade Route Kariek_Quethold
+Building Element For Trade Route Kashyyyk_Kessel
+Building Element For Trade Route Kashyyyk_Kuat
+Building Element For Trade Route Kashyyyk_Lianna
+Building Element For Trade Route Kashyyyk_MistOne
+Building Element For Trade Route Kashyyyk_MistThree
+Building Element For Trade Route Kashyyyk_MonCal
+Building Element For Trade Route Kashyyyk_Nespis
+Building Element For Trade Route Kashyyyk_Onderon
+Building Element For Trade Route Kashyyyk_Phindar
+Building Element For Trade Route Kashyyyk_Porus
+Building Element For Trade Route Kashyyyk_Ryloth
+Building Element For Trade Route Kashyyyk_Togoria
+Building Element For Trade Route Kashyyyk_Toydaria
+Building Element For Trade Route Kashyyyk_Ylesia
+Building Element For Trade Route Katana_Pakrik
+Building Element For Trade Route Kauron_Serenno
+Building Element For Trade Route Kauron_Tangrene
+Building Element For Trade Route Kauron_Telos
+Building Element For Trade Route Kauron_Yavin
+Building Element For Trade Route Kessel_Klatooine
+Building Element For Trade Route Kessel_MonCal
+Building Element For Trade Route Kessel_Thanos
+Building Element For Trade Route Kessel_Maw
+Building Element For Trade Route Kessel_Sleheyron
+Building Element For Trade Route Kessel_Ylesia
+Building Element For Trade Route Ketaris_Levian
+Building Element For Trade Route Ketaris_Mantell
+Building Element For Trade Route Ketaris_Morishim
+Building Element For Trade Route Ketaris_Orinda
+Building Element For Trade Route Ketaris_Phaeda
+Building Element For Trade Route Ketaris_Paarin
+Building Element For Trade Route Ketaris_Wayland
+Building Element For Trade Route Ketaris_Wistril
+Building Element For Trade Route Khomm_Odik
+Building Element For Trade Route Khomm_Ojom
+Building Element For Trade Route Khomm_Talfaglio
+Building Element For Trade Route Khomm_Tsoss
+Building Element For Trade Route Klatooine_MonCalimari
+Building Element For Trade Route Korriban_Yavin
+Building Element For Trade Route Korriban_Telos
+Building Element For Trade Route Kothlis_NewCov
+Building Element For Trade Route Kothlis_Rishi
+Building Element For Trade Route Kothlis_Rodia
+Building Element For Trade Route Kothlis_Sullust
+Building Element For Trade Route Kothlis_Tatooine
+Building Element For Trade Route Kothlis_Ukio
+Building Element For Trade Route Kothlis_Vergesso
+Building Element For Trade Route Kothlis_Ylesia
+Building Element For Trade Route Kuat_MistOne
+Building Element For Trade Route Kuat_Pakrik
+Building Element For Trade Route Kuat_Sarapin
+Building Element For Trade Route Kuat_Talasea
+Building Element For Trade Route Kuat_Yavin
+Building Element For Trade Route Levian_Mantell
+Building Element For Trade Route Levian_Myrkr
+Building Element For Trade Route Levian_Noquivzor
+Building Element For Trade Route Levian_Obroa
+Building Element For Trade Route Levian_Sif
+Building Element For Trade Route Levian_Wayland
+Building Element For Trade Route Lianna_Maridun
+Building Element For Trade Route Lianna_MonCalimari
+Building Element For Trade Route Lianna_Morishim
+Building Element For Trade Route Lianna_Nespis
+Building Element For Trade Route Lianna_Ryvester
+Building Element For Trade Route Lonnaw_Orinda
+Building Element For Trade Route Lonnaw_Obredaan
+Building Element For Trade Route Lonnaw_Tyan
+Building Element For Trade Route M293_Vros
+Building Element For Trade Route M293_Paarin
+Building Element For Trade Route Mandalore_Obroa
+Building Element For Trade Route Mandalore_Ordo
+Building Element For Trade Route Mandalore_Phind
+Building Element For Trade Route Mandalore_Sy_Myrth
+Building Element For Trade Route Mandalore_Vorpaya
+Building Element For Trade Route Mandalore_Zanbar
+Building Element For Trade Route Mantell_Morishim
+Building Element For Trade Route Mantell_Myrkr
+Building Element For Trade Route Mantell_Noquivzor
+Building Element For Trade Route Mantell_Obredaan
+Building Element For Trade Route Mantell_Obroa
+Building Element For Trade Route Mantell_Orinda
+Building Element For Trade Route Mantell_Orocco
+Building Element For Trade Route Mantell_Poderis
+Building Element For Trade Route Mantell_Roxuli
+Building Element For Trade Route Mantell_Trasi
+Building Element For Trade Route Mantell_Tyan
+Building Element For Trade Route Mantell_Wistril
+Building Element For Trade Route Mantell_Yinchorr
+Building Element For Trade Route Maridun_Phind
+Building Element For Trade Route Maridun_Quell
+Building Element For Trade Route Maridun_Roche
+Building Element For Trade Route Maridun_Ryvester
+Building Element For Trade Route Maridun_Yavin
+Building Element For Trade Route Maryo_Serenno
+Building Element For Trade Route Maryo_Telos
+Building Element For Trade Route Maw_Ylesia
+Building Element For Trade Route Mechis_Malastare
+Building Element For Trade Route Metellos_Mygeeto
+Building Element For Trade Route Metellos_Noquivzor
+Building Element For Trade Route Metellos_Nzoth
+Building Element For Trade Route Metellos_Odik
+Building Element For Trade Route Metellos_Pakrik
+Building Element For Trade Route Metellos_Palanhi
+Building Element For Trade Route Metalorn_Roche
+Building Element For Trade Route Metalorn_Ryvester
+Building Element For Trade Route Metalorn_Sleheyron
+Building Element For Trade Route MistOne_MistTwo
+Building Element For Trade Route MistThree_MistTwo
+Building Element For Trade Route MistThree_MonCal
+Building Element For Trade Route MistThree_Nespis
+Building Element For Trade Route MistThree_NewAlderaan
+Building Element For Trade Route MistThree_Phind
+Building Element For Trade Route MistThree_Porus
+Building Element For Trade Route MistThree_Roche
+Building Element For Trade Route MistThree_Togoria
+Building Element For Trade Route MistThree_Terephon
+Building Element For Trade Route MistTwo_Myrkr
+Building Element For Trade Route MistTwo_Obroa
+Building Element For Trade Route MonCal_Nespis
+Building Element For Trade Route MonCal_NewAlderaan
+Building Element For Trade Route MonCal_Ossus
+Building Element For Trade Route MonCalimari_Pardron
+Building Element For Trade Route MonCal_Phindar
+Building Element For Trade Route MonCal_Vros
+Building Element For Trade Route MonCal_Yavin
+Building Element For Trade Route Moorja_QatChrystac
+Building Element For Trade Route Moorja_Saijo
+Building Element For Trade Route Moorja_Traval
+Building Element For Trade Route Moorja_Vondarc
+Building Element For Trade Route Moorja_YagDhul
+Building Element For Trade Route Morishim_Muunilinst
+Building Element For Trade Route Morishim_Orinda
+Building Element For Trade Route Morishim_Trasi
+Building Element For Trade Route Morishim_Yaga
+Building Element For Trade Route Mrisst_Noquivzor
+Building Element For Trade Route Mrisst_Pantolomin
+Building Element For Trade Route Mustafar_Saijo
+Building Element For Trade Route Muunilinst_Mygeeto
+Building Element For Trade Route Muunilinst_Trasi
+Building Element For Trade Route Muunilinst_Yaga
+Building Element For Trade Route Mygeeto_Muunilinst
+Building Element For Trade Route Mygeeto_Scipio
+Building Element For Trade Route Mygeeto_Sernpidal
+Building Element For Trade Route Mygeeto_Tangrene
+Building Element For Trade Route Mygeeto_Trasi
+Building Element For Trade Route Mytus_Ulicia
+Building Element For Trade Route Myrkr_Obroa
+Building Element For Trade Route Myrkr_Orocco
+Building Element For Trade Route Myrkr_Wayland
+Building Element For Trade Route Myrkr_Yinchorr
+Building Element For Trade Route Naboo_Sanrafsix
+Building Element For Trade Route NalHutta_NarShaddaa
+Building Element For Trade Route NalHutta_Onderon
+Building Element For Trade Route NalHutta_Toydaria
+Building Element For Trade Route NalHutta_Ylesia
+Building Element For Trade Route NarHaaska_Ylesia
+Building Element For Trade Route NewCov_Thyferra
+Building Element For Trade Route Nespis_NewAlderaan
+Building Element For Trade Route Nespis_Obroa
+Building Element For Trade Route Nespis_Ossus
+Building Element For Trade Route Nespis_Phindar
+Building Element For Trade Route Nespis_Yavin
+Building Element For Trade Route NewAlderaan_Phind
+Building Element For Trade Route NewPlympto_Ojom
+Building Element For Trade Route NewPlympto_Rendili
+Building Element For Trade Route Nirauan_Oristrom
+Building Element For Trade Route Nirauan_Pesitiin
+Building Element For Trade Route Nirauan_Quethold
+Building Element For Trade Route Nirauan_Yaga
+Building Element For Trade Route Nkllon_Qat
+Building Element For Trade Route Nkllon_Qretu
+Building Element For Trade Route Nkllon_Woostri
+Building Element For Trade Route Nkllon_YagDhul
+Building Element For Trade Route Noquivzor_Obroa
+Building Element For Trade Route Noquivzor_Palanhi
+Building Element For Trade Route Noquivzor_Pesitiin
+Building Element For Trade Route Noquivzor_Yinchorr
+Building Element For Trade Route Nzoth_Odik
+Building Element For Trade Route Nzoth_Pantolomin
+Building Element For Trade Route Nzoth_Pakrik_Minor
+Building Element For Trade Route Nzoth_Polneye
+Building Element For Trade Route Nzoth_Zfell
+Building Element For Trade Route Obroa_Poderis
+Building Element For Trade Route ObroaSkai_PorusVida
+Building Element For Trade Route Obroa_Wayland
+Building Element For Trade Route Obredaan_Orinda
+Building Element For Trade Route Obredaan_Tyan
+Building Element For Trade Route Odik_Palanhi
+Building Element For Trade Route Odik_Pakrik
+Building Element For Trade Route Odik_Prakith
+Building Element For Trade Route Odik_Tsoss
+Building Element For Trade Route Ojom_Thomork
+Building Element For Trade Route Ojom_Vulpter
+Building Element For Trade Route Onderon_Porus
+Building Element For Trade Route Onderon_Togoria
+Building Element For Trade Route Orinda_Orocco
+Building Element For Trade Route Orinda_Phaeda
+Building Element For Trade Route Orinda_Selaggis
+Building Element For Trade Route Orinda_Traval
+Building Element For Trade Route Orinda_Wistril
+Building Element For Trade Route Orinda_Yaga_Minor
+Building Element For Trade Route Oristrom_Pantolomin
+Building Element For Trade Route Oristrom_Riette
+Building Element For Trade Route Oristrom_Sarvchi
+Building Element For Trade Route Oristrom_Yaga
+Building Element For Trade Route Orocco_Tartaglia
+Building Element For Trade Route Orocco_Tyan
+Building Element For Trade Route Orocco_Yinchorr
+Building Element For Trade Route Orron_Saffalore
+Building Element For Trade Route Orron_Oslumpex
+Building Element For Trade Route Orron_Raxus_Second
+Building Element For Trade Route Oslumpex_Saffalore
+Building Element For Trade Route Ossus_Murkhana
+Building Element For Trade Route Ossus_Phindar
+Building Element For Trade Route Ossus_Yavin
+Building Element For Trade Route Paarin_Phaeda
+Building Element For Trade Route Paarin_Tartaglia
+Building Element For Trade Route Pakrik_Tsoss
+Building Element For Trade Route Pardron_Tatooine
+Building Element For Trade Route Pardron_Ukio
+Building Element For Trade Route Pardron_Sluis_Van
+Building Element For Trade Route Pesfavri_Syca
+Building Element For Trade Route Phaeda_Trasi
+Building Element For Trade Route Phindar_Ryvester
+Building Element For Trade Route Phindar_Tangrene
+Building Element For Trade Route Phindar_Wayland
+Building Element For Trade Route Phindar_Yavin
+Building Element For Trade Route Phindar_Zanbar
+Building Element For Trade Route Pesitiin_Polneye
+Building Element For Trade Route Polneye_Riette
+Building Element For Trade Route Polneye_Zfell
+Building Element For Trade Route Porus_Togoria
+Building Element For Trade Route Qat_Woostri
+Building Element For Trade Route Qat_YagDhul
+Building Element For Trade Route Quell_Ryvester
+Building Element For Trade Route Qretu_Thyferra
+Building Element For Trade Route Qretu_YagDhul
+Building Element For Trade Route Quell_Zanbar
+Building Element For Trade Route Quethold_Syca
+Building Element For Trade Route Rhigar_Riette
+Building Element For Trade Route Rhigar_Sarvchi
+Building Element For Trade Route Rhigar_Syca
+Building Element For Trade Route Rishi_Ukio
+Building Element For Trade Route Roche_Thanos
+Building Element For Trade Route Roche_Togoria
+Building Element For Trade Route Rodia_Ryloth
+Building Element For Trade Route Rodia_Sluis
+Building Element For Trade Route Rodia_Tatooine
+Building Element For Trade Route Rodia_Vergesso
+Building Element For Trade Route Ruusan_Ubrikkia
+Building Element For Trade Route Ryloth_Svivren
+Building Element For Trade Route Ryloth_Tatooine
+Building Element For Trade Route Ryloth_Utapau
+Building Element For Trade Route Ryloth_Vergesso
+Building Element For Trade Route Ryvester_Vros
+Building Element For Trade Route Ryvester_Yavin
+Building Element For Trade Route RZ7_Trasi
+Building Element For Trade Route Sanrafsix_Sullust
+Building Element For Trade Route Sanrafsix_Vergesso
+Building Element For Trade Route Sanrafsix_Vondarc
+Building Element For Trade Route Sanrafsix_Woostri
+Building Element For Trade Route Sarvchi_Syca
+Building Element For Trade Route Scarl_Thyferra
+Building Element For Trade Route Scarl_Traval
+Building Element For Trade Route Selaggis_Serenno
+Building Element For Trade Route Selaggis_Sernpidal
+Building Element For Trade Route Selaggis_Taris
+Building Element For Trade Route Selaggis_Wayland
+Building Element For Trade Route Serenno_Tangrene
+Building Element For Trade Route Serenno_Yavin
+Building Element For Trade Route Sernpidal_Telos
+Building Element For Trade Route Sif_Tartaglia
+Building Element For Trade Route Sleheyron_Thanos
+Building Element For Trade Route Sleheyron_Toydaria
+Building Element For Trade Route Sluis_Svivren
+Building Element For Trade Route Sluis_Thyferra
+Building Element For Trade Route Sluis_Utapau
+Building Element For Trade Route Sluis_Van_Vergesso
+Building Element For Trade Route Sluis_Woostri
+Building Element For Trade Route Sluis_YagDhul
+Building Element For Trade Route Sullust_Woostri
+Building Element For Trade Route Sullust_Vondarc
+Building Element For Trade Route Sullust_YagDhul
+Building Element For Trade Route Tatooine_Ukio
+Building Element For Trade Route Tatooine_Ylesia
+Building Element For Trade Route Tangrene_Telos
+Building Element For Trade Route Tangrene_Trasi
+Building Element For Trade Route Tangrene_Yavin
+Building Element For Trade Route Taris_Wayland
+Building Element For Trade Route Telos_Yavin
+Building Element For Trade Route Telos_Thule
+Building Element For Trade Route Thanos_Togoria
+Building Element For Trade Route Thyferra_YagDhul
+Building Element For Trade Route Thyferra_Tsoss
+Building Element For Trade Route Trasi_Yaga
+Building Element For Trade Route Toydaria_Ubrikkia
+Building Element For Trade Route Vondarc_Woostri
+Building Element For Trade Route Vondarc_YagDhul
+Building Element For Trade Route Vros_Wayland
+Building Element For Trade Route Wistril_Yaga_Minor
+Building Element For Trade Route Woostri_YagDhul
+Building Element For Trade Route Woostri_Wroona
+Building Element For Trade Route Wroona_YagDhul
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\TradeRoutesToo.xml
+Building Trade Route Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\TradeRoutes_CloneWarsGC.xml
+Building Element For Trade Route Barlok_Taris
+Building Element For Trade Route Druckenwell_Naboo
+Building Element For Trade Route Contruum_Quell
+Building Element For Trade Route Contruum_Kashyyyk
+Building Element For Trade Route Khomm_Thyferra
+Building Element For Trade Route Ando_Emberlene
+Building Element For Trade Route Mimban_Umbara
+Building Element For Trade Route Mimban_Tynna
+Building Element For Trade Route Ando_Krant
+Building Element For Trade Route Praesitlyn_Sluis_Van
+Building Element For Trade Route Devaron_Duro
+Building Element For Trade Route Devaron_Vulpter
+Building Element For Trade Route Duro_Vulpter
+Building Element For Trade Route Alderaan_Sarapin
+Building Element For Trade Route Alderaan_Caamas
+Building Element For Trade Route Basilisk_Caamas
+Building Element For Trade Route Mantell_Qiilura
+Building Element For Trade Route Roxuli_Qiilura
+Building Element For Trade Route Korriban_Thule
+Building Element For Trade Route Florrum_Korriban
+Building Element For Trade Route Felucia_Florrum
+Building Element For Trade Route Concord_Mandalore
+Building Element For Trade Route Concord_Korda
+Building Element For Trade Route Colla_Korda
+Building Element For Trade Route RhenVar_Quell
+Building Element For Trade Route RhenVar_Sy_Myrth
+Building Element For Trade Route Desevro_Florrum
+Building Element For Trade Route Raxus_Raxus_Second
+Building Element For Trade Route Raxus_Murkhana
+Building Element For Trade Route Columex_Sy_Myrth
+Building Element For Trade Route Murkhana_SyMyrth
+Building Element For Trade Route Saleucami_SyMyrth
+Building Element For Trade Route Klatooine_Saleucami
+Building Element For Trade Route Delacrix_Klatooine
+Building Element For Trade Route BozPity_Klatooine
+Building Element For Trade Route BozPity_Charros
+Building Element For Trade Route Charros_Saleucami
+Building Element For Trade Route Charros_Sy_Myrth
+Building Element For Trade Route BozPity_Sleheyron
+Building Element For Trade Route BozPity_Kashyyyk
+Building Element For Trade Route BozPity_Kwenn
+Building Element For Trade Route Kashyyyk_Kwenn
+Building Element For Trade Route Charros_Quell
+Building Element For Trade Route Minntooine_Murkhana
+Building Element For Trade Route MonCal_Murkhana
+Building Element For Trade Route Minntooine_MonCal
+Building Element For Trade Route MonCal_Pammant
+Building Element For Trade Route Delacrix_Pammant
+Building Element For Trade Route Cantrell_Ithor
+Building Element For Trade Route Cantrell_Taris
+Building Element For Trade Route Cantrell_Trasi
+Building Element For Trade Route Chazwa_Taris
+Building Element For Trade Route Circumtore_Kenn
+Building Element For Trade Route Circumtore_Krant
+Building Element For Trade Route Circumtore_Rothana
+Building Element For Trade Route Bothawui_Krant
+Building Element For Trade Route Bothawui_Emberlene
+Building Element For Trade Route Emberlene_Krant
+Building Element For Trade Route Emberlene_Mimban
+Building Element For Trade Route Emberlene_Ruusan
+Building Element For Trade Route Cularin_Emberlene
+Building Element For Trade Route Cularin_Tynna
+Building Element For Trade Route Cularin_Druckenwell
+Building Element For Trade Route Kamino_Krant
+Building Element For Trade Route Kamino_Pardron
+Building Element For Trade Route Kamino_Rothana
+Building Element For Trade Route Krant_Rishi
+Building Element For Trade Route Ando_druckenwell
+Building Element For Trade Route Ando_Christophsis
+Building Element For Trade Route Ando_Kamino
+Building Element For Trade Route Ando_Pardron
+Building Element For Trade Route Christophsis_Rodia
+Building Element For Trade Route Christophsis_Tatooine
+Building Element For Trade Route Christophsis_Geonosis
+Building Element For Trade Route Geonosis_Hypori
+Building Element For Trade Route Geonosis_Ryloth
+Building Element For Trade Route Christophsis_Naboo
+Building Element For Trade Route Malastare_Naboo
+Building Element For Trade Route Naboo_Tynna
+Building Element For Trade Route Ryloth_Praesitlyn
+Building Element For Trade Route Malastare_sullust
+Building Element For Trade Route Eriadu_Praesitlyn
+Building Element For Trade Route Eriadu_SluisVan
+Building Element For Trade Route Eriadu_Tibrin
+Building Element For Trade Route Eriadu_Naboo
+Building Element For Trade Route Derra_Tynna
+Building Element For Trade Route Derra_Tibrin
+Building Element For Trade Route Derra_Malastare
+Building Element For Trade Route Derra_Kooriva
+Building Element For Trade Route Devaron_Kooriva
+Building Element For Trade Route Devaron_Khomm
+Building Element For Trade Route Kooriva_Mechis
+Building Element For Trade Route Kooriva_Tynna
+Building Element For Trade Route Devaron_Mechis
+Building Element For Trade Route Bomis_Tibrin
+Building Element For Trade Route Bomis_Vassek
+Building Element For Trade Route Bomis_Moorja
+Building Element For Trade Route Mustafar_Vassek
+Building Element For Trade Route Mustafar_Sluis
+Building Element For Trade Route Ruusan_Umbara
+Building Element For Trade Route Kashyyyk_Umbara
+Building Element For Trade Route Telti_Umbara
+Building Element For Trade Route Onderon_Telti
+Building Element For Trade Route Kuat_Telti
+Building Element For Trade Route Deko_Mimban
+Building Element For Trade Route Deko_Telti
+Building Element For Trade Route Deko_Humbarine
+Building Element For Trade Route Cato_Deko
+Building Element For Trade Route Cato_Tynna
+Building Element For Trade Route Cato_Rendili
+Building Element For Trade Route Cato_Humbarine
+Building Element For Trade Route Corellia_Rendili
+Building Element For Trade Route Duro_Khomm
+Building Element For Trade Route Rendili_Sarapin
+Building Element For Trade Route Humbarine_Kuat
+Building Element For Trade Route Humbarine_Sarapin
+Building Element For Trade Route Sarapin_Vulpter
+Building Element For Trade Route Colla_Telti
+Building Element For Trade Route Colla_Mandalore
+Building Element For Trade Route Basilist_corulag
+Building Element For Trade Route Basilisk_Vulpter
+Building Element For Trade Route Coruscant_Foerost
+Building Element For Trade Route Foerost_Kaikeilius
+Building Element For Trade Route Foerost_Khomm
+Building Element For Trade Route Foerost_Vulpter
+Building Element For Trade Route Khomm_Metellos
+Building Element For Trade Route Kaikeilius_Vulpter
+Building Element For Trade Route Metellos_Roxuli
+Building Element For Trade Route Roxuli_Scipio
+Building Element For Trade Route Mechis_Moorja
+Building Element For Trade Route Mechis_Thyferra
+Building Element For Trade Route Devaron_Mimban
+Building Element For Trade Route GlomTho_Naboo
+Building Element For Trade Route GlomTho_Tynna
+Building Element For Trade Route Cularin_Kalarba
+Building Element For Trade Route Denon_Tynna
+Building Element For Trade Route Denon_Kooriva
+Building Element For Trade Route Deko_Neimoidia_Denon
+Building Element For Trade Route Kashyyyk_Ruusan
+Building Element For Trade Route Balamak_Kashyyyk
+Building Element For Trade Route Balamak_Charros
+Building Element For Trade Route Balamak_Thanos
+Building Element For Trade Route Balamak_Ruusan
+Building Element For Trade Route Balamak_Bothawui
+Building Element For Trade Route Bothawui_Rishi
+Building Element For Trade Route Bothawui_Kamino
+Building Element For Trade Route Kamino_Rishi
+Building Element For Trade Route Rishi_Rothana
+Building Element For Trade Route Hypori_Rothana
+Building Element For Trade Route Druckenwell_Kamino
+Building Element For Trade Route Geonosis_Nelvaan
+Building Element For Trade Route Kamino_Tatooine
+Building Element For Trade Route Druckenwell_Rodia
+Building Element For Trade Route Nelvaan_Praesitlyn
+Building Element For Trade Route Bimmisaari_BozPity
+Building Element For Trade Route BozPity_Rishi
+Building Element For Trade Route Metalorn_Saleucami
+Building Element For Trade Route Bimmisaari_Saleucami
+Building Element For Trade Route Charros_Roche
+Building Element For Trade Route Derra_IV_Woostri
+Building Element For Trade Route Mechis_Woostri
+Building Element For Trade Route Tibrin_Woostri
+Building Element For Trade Route Bomis_Koori_Mechis
+Building Element For Trade Route Fondor_Mechis
+Building Element For Trade Route Belgaroth_Fondor
+Building Element For Trade Route Belgaroth_Bomis_Koori
+Building Element For Trade Route Mustafar_Tibrin
+Building Element For Trade Route Mustafar_Polis_Massa
+Building Element For Trade Route Belgaroth_Roxuli
+Building Element For Trade Route Belgaroth_Empress
+Building Element For Trade Route Kalee_Roxuli
+Building Element For Trade Route Empress_Foerost
+Building Element For Trade Route Corellia_Ebaq
+Building Element For Trade Route Duro_Ebaq
+Building Element For Trade Route Ebaq_Fondor
+Building Element For Trade Route Empress_Fondor
+Building Element For Trade Route Ebaq_Empress
+Building Element For Trade Route Ebaq_Vulpter
+Building Element For Trade Route Rendili_Vulpter
+Building Element For Trade Route Empress_Roxuli
+Building Element For Trade Route Noquivzor_Roxuli
+Building Element For Trade Route Barlok_Noquivzor
+Building Element For Trade Route Barlok_Champala
+Building Element For Trade Route Barlok_Yinchorr
+Building Element For Trade Route Champala_Yinchorr
+Building Element For Trade Route Cato_Neimoidia_Corellia
+Building Element For Trade Route Cato_Neimoidia_Denon
+Building Element For Trade Route Balmorra_Telti
+Building Element For Trade Route Chazwa_Telti
+Building Element For Trade Route Carida_Telti
+Building Element For Trade Route Chazwa_ObroaSkai
+Building Element For Trade Route Contruum_Telti
+Building Element For Trade Route Thanos_Umbara
+Building Element For Trade Route Kashyyyk_Thanos
+Building Element For Trade Route Centares_Garos_IV
+Building Element For Trade Route Centares_Quell
+Building Element For Trade Route Centares_Chorios
+Building Element For Trade Route Centares_Sy_Myrth
+Building Element For Trade Route Jabiim_Saleucami
+Building Element For Trade Route Jabiim_Sy_Myrth
+Building Element For Trade Route Jabiim_Pammant
+Building Element For Trade Route Jabiim_Murkhana
+Building Element For Trade Route Qiilura_Yinchorr
+Building Element For Trade Route Noquivzor_Qiilura
+Building Element For Trade Route Orinda_Qiilura
+Building Element For Trade Route Ithor_Taris
+Building Element For Trade Route Agamar_Dathomir
+Building Element For Trade Route Agamar_Biniir
+Building Element For Trade Route Biniir_Garqi
+Building Element For Trade Route Centares_Murkhana
+Building Element For Trade Route Corsin_Qiilura
+Building Element For Trade Route Corsin_Wayland
+Building Element For Trade Route Chazwa_Corsin
+Building Element For Trade Route Taris_Zanbar
+Building Element For Trade Route Garos_IV_Zanbar
+Building Element For Trade Route Dathomir_Zanbar
+Building Element For Trade Route Cestus_Ciutric
+Building Element For Trade Route Cestus_Serenno
+Building Element For Trade Route Cestus_Quell
+Building Element For Trade Route Felucia_Rhen_Var
+Building Element For Trade Route Desevro_Murkhana
+Building Element For Trade Route Murkhana_Rhen_Var
+Building Element For Trade Route Murkhana_Ossus
+Building Element For Trade Route Ossus_Sy_Myrth
+Building Element For Trade Route Belderone_Rhen_Var
+Building Element For Trade Route Chorios_Quell
+Building Element For Trade Route Minntooine_Raxus
+Building Element For Trade Route Serenno_Thule
+Building Element For Trade Route Bothawui_Ruusan
+Building Element For Trade Route Alderaan_Vulpter
+Building Element For Trade Route Alderaan_Kuat
+Building Element For Trade Route Humbarine_Rendili
+Building Element For Trade Route Alderaan_Brentaal
+Building Element For Trade Route Caamas_Chandrila
+Building Element For Trade Route Anaxes_Caamas
+Building Element For Trade Route BozPity_Pammant
+Building Element For Trade Route Praesitlyn_Utapau
+Building Element For Trade Route Mustafar_Utapau
+Building Element For Trade Route Mustafar_Praesitlyn
+Building Element For Trade Route Hypori_Rishi
+Building Element For Trade Route Balamak_Bimmisaari
+Building Element For Trade Route Balamak_Roche
+Building Element For Trade Route Contruum_Wayland
+Building Element For Trade Route Carida_Corsin
+Building Element For Trade Route Barlok_Chandrila
+Building Element For Trade Route Barlok_Carida
+Building Element For Trade Route Corsin_Yinchorr
+Building Element For Trade Route Dathomir_Roche
+Building Element For Trade Route Ciutric_Serenno
+Building Element For Trade Route Florrum_Thule
+Building Element For Trade Route Corsin_Contruum
+Building Element For Trade Route Dathomir_Ithor
+Building Element For Trade Route Agamar_Orinda
+Building Element For Trade Route Mygeeto_Orinda
+Building Element For Trade Route Agamar_Trasi
+Building Element For Trade Route Corellia_Empress
+Building Element For Trade Route Balamak_BozPity
+Building Element For Trade Route BozPity_Roche
+Building Element For Trade Route Roche_Saleucami
+Building Element For Trade Route BozPity_Saleucami
+Building Element For Trade Route Sy_Myrth_Quell
+Building Element For Trade Route Dathomir_Serenno
+Building Element For Trade Route Corsin_Dathomir
+Building Element For Trade Route Ciutric_Trasi
+Building Element For Trade Route Ithor_Trasi
+Building Element For Trade Route Orinda_Yinchorr
+Building Element For Trade Route Ciutric_Ithor
+Building Element For Trade Route Anaxes_Yinchorr
+Building Element For Trade Route Anaxes_Chandrila
+Building Element For Trade Route Anaxes_Coruscant
+Building Element For Trade Route Foerost_Fondor
+Building Element For Trade Route Fondor_Vulpter
+Building Element For Trade Route Mechis_Tibrin
+Building Element For Trade Route Mechis_Sullust
+Building Element For Trade Route Sullust_Tibrin
+Building Element For Trade Route Naboo_Sullust
+Building Element For Trade Route Denon_Mechis
+Building Element For Trade Route Mechis_Tynna
+Building Element For Trade Route Christophsis_Cularin
+Building Element For Trade Route Bothawui_Christophsis
+Building Element For Trade Route Emberlene_Kashyyyk
+Building Element For Trade Route Quell_Roche
+Building Element For Trade Route Christophsis_Nelvaan
+Building Element For Trade Route Cato_Neimoidia_Kuat
+Building Element For Trade Route Alderaan_Rendili
+Building Element For Trade Route Cularin_Naboo
+Building Element For Trade Route Abregado_Rae_Belgaroth
+Building Element For Trade Route Fondor_Iphigin
+Building Element For Trade Route Bestine_Thyferra
+Building Element For Trade Route Bestine_Iphigin
+Building Element For Trade Route Bestine_Devaron
+Building Element For Trade Route Moorja_Thyferra
+Building Element For Trade Route Moorja_Vaug
+Building Element For Trade Route Bestine_Woostri
+Building Element For Trade Route Moorja_Woostri
+Building Element For Trade Route Moorja_QatChrystac
+Building Element For Trade Route QatChrystac_Tar_Morden
+Building Element For Trade Route Moorja_Tar_Morden
+Building Element For Trade Route Bormus_Woostri
+Building Element For Trade Route Bormus_Devaron
+Building Element For Trade Route Devaron_Iphigin
+Building Element For Trade Route Bormus_Malastare
+Building Element For Trade Route Malastare_QatChrystac
+Building Element For Trade Route Malastare_Sanrafsix
+Building Element For Trade Route Sanrafsix_Syned
+Building Element For Trade Route Syned_QatChrystac
+Building Element For Trade Route Bormus_Naboo
+Building Element For Trade Route Enarc_Naboo
+Building Element For Trade Route Enarc_Sanrafsix
+Building Element For Trade Route Enarc_Ryndellia
+Building Element For Trade Route Kaliida_Nebula_Ryndellia
+Building Element For Trade Route Kaliida_Nebula_Naboo
+Building Element For Trade Route Mrlsst_Fondor
+Building Element For Trade Route Mrlsst_Thyferra
+Building Element For Trade Route Balmorra_Koru_Neimoidia
+Building Element For Trade Route Commenor_Koru_Neimoidia
+Building Element For Trade Route Commenor_Deko_Neimoidia
+Building Element For Trade Route Deko_Neimoidia_Talasea
+Building Element For Trade Route Cato_Neimoidia_Talasea
+Building Element For Trade Route Kuat_Humbarine
+Building Element For Trade Route Corellia_NewPlympto
+Building Element For Trade Route Columus_Ebaq
+Building Element For Trade Route Ebaq_Ojom
+Building Element For Trade Route Khomm_Thomork
+Building Element For Trade Route Columus_Sarapin
+Building Element For Trade Route Loronar_Talasea
+Building Element For Trade Route Loronar_NewPlympto
+Building Element For Trade Route Chasin_NewPlympto
+Building Element For Trade Route Chasin_Duro
+Building Element For Trade Route Duro_Loronar
+Building Element For Trade Route Byblos_Duro
+Building Element For Trade Route Byblos_Loronar
+Building Element For Trade Route Byblos_Denon
+Building Element For Trade Route Iphigin_Thomork
+Building Element For Trade Route Fondor_Ghorman
+Building Element For Trade Route Bassadro_Iphigin
+Building Element For Trade Route Iphigin_NewPlympto
+Building Element For Trade Route Bassadro_Ghorman
+Building Element For Trade Route Bassadro_Bestine
+Building Element For Trade Route Bassadro_Thyferra
+Building Element For Trade Route Bassadro_Devaron
+Building Element For Trade Route Bassadro_Foless
+Building Element For Trade Route Devaron_Foless
+Building Element For Trade Route Denon_Devaron
+Building Element For Trade Route Denon_Ronyards
+Building Element For Trade Route Chardaan_Ronyards
+Building Element For Trade Route Ronyards_Tynna
+Building Element For Trade Route Chardaan_Tynna
+Building Element For Trade Route Atzerri_Chardaan
+Building Element For Trade Route Atzerri_Devaron
+Building Element For Trade Route Atzerri_Kooriva
+Building Element For Trade Route Kooriva_Vaklin
+Building Element For Trade Route Bestine_Vaklin
+Building Element For Trade Route Bestine_Kooriva
+Building Element For Trade Route Bestine_Foless
+Building Element For Trade Route Ghorman_Thyferra
+Building Element For Trade Route Mechis_Xeron
+Building Element For Trade Route Kooriva_Xeron
+Building Element For Trade Route Chardaan_Vaklin
+Building Element For Trade Route Vaklin_Xeron
+Building Element For Trade Route Xeron_YagDhul
+Building Element For Trade Route Wroona_Xeron
+Building Element For Trade Route Vaug_Wroona
+Building Element For Trade Route Chasin_Devaron
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\TradeRoutes_CloneWarsGC.xml
+Building Trade Route Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\TradeRoutes_OuterRimSieges.xml
+Building Element For Trade Route Garqi_Scipio
+Building Element For Trade Route Bandomeer_Brentaal
+Building Element For Trade Route Bandomeer_NewBornalex
+Building Element For Trade Route Bandomeer_Serenno
+Building Element For Trade Route Radama_Serenno
+Building Element For Trade Route Radama_Yavin
+Building Element For Trade Route Kashyyyk_Roche
+Building Element For Trade Route Duro_YagDhul
+Building Element For Trade Route Duro_Llanic
+Building Element For Trade Route Llanic_Tythe
+Building Element For Trade Route Llanic_Ragmar
+Building Element For Trade Route Ragmar_Tythe
+Building Element For Trade Route Coruscant_Empress
+Building Element For Trade Route Fondor_Sarrish
+Building Element For Trade Route Sarrish_Sullust
+Building Element For Trade Route Eriadu_Xagobah
+Building Element For Trade Route Sluis_Van_Xagobah
+Building Element For Trade Route Eriadu_Triton
+Building Element For Trade Route Sluis_Van_Triton
+Building Element For Trade Route Triton_Utapau
+Building Element For Trade Route Mustafar_Triton
+Building Element For Trade Route Bomis_Koori_Mustafar
+Building Element For Trade Route Bomis_Koori_Tar_Morden
+Building Element For Trade Route Sarrish_Tar_Morden
+Building Element For Trade Route Sarrish_YagDhul
+Building Element For Trade Route Ragmar_Utapau
+Building Element For Trade Route Ryloth_Tythe
+Building Element For Trade Route Ragmar_Ryloth
+Building Element For Trade Route Ryloth_Tellanroaeg
+Building Element For Trade Route Ryloth_Siskeen
+Building Element For Trade Route Siskeen_Tellanroaeg
+Building Element For Trade Route Kashyyyk_Tythe
+Building Element For Trade Route BozPity_Jabiim
+Building Element For Trade Route Centares_Jabiim
+Building Element For Trade Route Mandalore_Roche
+Building Element For Trade Route NewBornalex_Yavin
+Building Element For Trade Route Mandalore_NewBornalex
+Building Element For Trade Route Felucia_Radama
+Building Element For Trade Route Belderone_Columex
+Building Element For Trade Route Belderone_Centares
+Building Element For Trade Route Lianna_Ossus
+Building Element For Trade Route Belderone_Jabiim
+Building Element For Trade Route BozPity_Siskeen
+Building Element For Trade Route Llanic_Xagobah
+Building Element For Trade Route Llanic_Sullust
+Building Element For Trade Route Siskeen_Tythe
+Building Element For Trade Route Bandomeer_Mantell
+Building Element For Trade Route Orinda_Serenno
+Building Element For Trade Route Radama_Trasi
+Building Element For Trade Route Garqi_Serenno
+Building Element For Trade Route Cato_Neimoidia_Commenor
+Building Element For Trade Route Cato_Neimoidia_Llanic
+Building Element For Trade Route Cato_Neimoidia_Duro
+Building Element For Trade Route Balmorra_Columus
+Building Element For Trade Route Columus_Empress
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\TradeRoutes_OuterRimSieges.xml
+Building Trade Route Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\TradeRoutes_GCW.xml
+Building Element For Trade Route Mandalore_Yavin
+Building Element For Trade Route Ciutric_Yavin
+Building Element For Trade Route Dellalt_MonCalimari
+Building Element For Trade Route Cejansij_Ubrikkia
+Building Element For Trade Route NalHutta_Ubrikkia
+Building Element For Trade Route NalHutta_NarShaddaa
+Building Element For Trade Route Honoghr_NarShaddaa
+Building Element For Trade Route Bimmisaari_Honoghr
+Building Element For Trade Route Bimmisaari_Dellalt
+Building Element For Trade Route Dellalt_Yavin
+Building Element For Trade Route Bimmisaari_Mandalore
+Building Element For Trade Route Hapes_ObroaSkai
+Building Element For Trade Route Hapes_Kashyyyk
+Building Element For Trade Route Carida_Hapes
+Building Element For Trade Route Bestine_Ghorman
+Building Element For Trade Route Atzerri_Bestine
+Building Element For Trade Route Atzerri_Denon
+Building Element For Trade Route Kalarba_NewCov
+Building Element For Trade Route Derra_IV_Kalarba
+Building Element For Trade Route Naboo_Vergesso
+Building Element For Trade Route Kalarba_Naboo
+Building Element For Trade Route Derra_IV_Naboo
+Building Element For Trade Route Endor_Ghorman
+Building Element For Trade Route Bespin_Sullust
+Building Element For Trade Route Derra_IV_Sullust
+Building Element For Trade Route Bestine_Derra_IV
+Building Element For Trade Route Gyndine_Ubrikkia
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\TradeRoutes_GCW.xml
+Building Trade Route Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Tutorial_Traderoutes.xml
+Building Element For Trade Route T_Coruscant_Bastion
+Building Element For Trade Route T_Coruscant_MonCalimari
+Building Element For Trade Route T_Coruscant_Nzoth
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Tutorial_Traderoutes.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Dividers\Shell.xml
+Building Element For Campaign Sandbox_Shell_SingleGC_Spacer
+Writing Locations To Element Tree For Conquest Sandbox_Shell_SingleGC_Spacer
+Writing Trade Routes To Element Tree For Conquest Sandbox_Shell_SingleGC_Spacer
+Writing Home Locations To Element Tree For Conquest Sandbox_Shell_SingleGC_Spacer
+Writing Story Plots To Element Tree For Conquest Sandbox_Shell_SingleGC_Spacer
+Writing AI Player Control To Element Tree For Conquest Sandbox_Shell_SingleGC_Spacer
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Shell_SingleGC_Spacer
+Writing Starting Forces To Element Tree For Conquest Sandbox_Shell_SingleGC_Spacer
+Building Element For Campaign Sandbox_Shell_SingleGC
+Writing Locations To Element Tree For Conquest Sandbox_Shell_SingleGC
+Writing Trade Routes To Element Tree For Conquest Sandbox_Shell_SingleGC
+Writing Home Locations To Element Tree For Conquest Sandbox_Shell_SingleGC
+Writing Story Plots To Element Tree For Conquest Sandbox_Shell_SingleGC
+Writing AI Player Control To Element Tree For Conquest Sandbox_Shell_SingleGC
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Shell_SingleGC
+Writing Starting Forces To Element Tree For Conquest Sandbox_Shell_SingleGC
+Building Element For Campaign Sandbox_Shell_EraGC
+Writing Locations To Element Tree For Conquest Sandbox_Shell_EraGC
+Writing Trade Routes To Element Tree For Conquest Sandbox_Shell_EraGC
+Writing Home Locations To Element Tree For Conquest Sandbox_Shell_EraGC
+Writing Story Plots To Element Tree For Conquest Sandbox_Shell_EraGC
+Writing AI Player Control To Element Tree For Conquest Sandbox_Shell_EraGC
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Shell_EraGC
+Writing Starting Forces To Element Tree For Conquest Sandbox_Shell_EraGC
+Building Element For Campaign Sandbox_Shell_InfinitiesGC_Spacer
+Writing Locations To Element Tree For Conquest Sandbox_Shell_InfinitiesGC_Spacer
+Writing Trade Routes To Element Tree For Conquest Sandbox_Shell_InfinitiesGC_Spacer
+Writing Home Locations To Element Tree For Conquest Sandbox_Shell_InfinitiesGC_Spacer
+Writing Story Plots To Element Tree For Conquest Sandbox_Shell_InfinitiesGC_Spacer
+Writing AI Player Control To Element Tree For Conquest Sandbox_Shell_InfinitiesGC_Spacer
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Shell_InfinitiesGC_Spacer
+Writing Starting Forces To Element Tree For Conquest Sandbox_Shell_InfinitiesGC_Spacer
+Building Element For Campaign Sandbox_Shell_InfinitiesGC
+Writing Locations To Element Tree For Conquest Sandbox_Shell_InfinitiesGC
+Writing Trade Routes To Element Tree For Conquest Sandbox_Shell_InfinitiesGC
+Writing Home Locations To Element Tree For Conquest Sandbox_Shell_InfinitiesGC
+Writing Story Plots To Element Tree For Conquest Sandbox_Shell_InfinitiesGC
+Writing AI Player Control To Element Tree For Conquest Sandbox_Shell_InfinitiesGC
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Shell_InfinitiesGC
+Writing Starting Forces To Element Tree For Conquest Sandbox_Shell_InfinitiesGC
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Dividers\Shell.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Thrawn\Campaigns_Thrawn.xml
+Building Element For Campaign Sandbox_T_Empire
+Writing Locations To Element Tree For Conquest Sandbox_T_Empire
+Writing Trade Routes To Element Tree For Conquest Sandbox_T_Empire
+Writing Home Locations To Element Tree For Conquest Sandbox_T_Empire
+Writing Story Plots To Element Tree For Conquest Sandbox_T_Empire
+Writing AI Player Control To Element Tree For Conquest Sandbox_T_Empire
+Writing Markup Filenames To Element Tree For Conquest Sandbox_T_Empire
+Writing Starting Forces To Element Tree For Conquest Sandbox_T_Empire
+Building Element For Campaign Sandbox_T_Rebels
+Writing Locations To Element Tree For Conquest Sandbox_T_Rebels
+Writing Trade Routes To Element Tree For Conquest Sandbox_T_Rebels
+Writing Home Locations To Element Tree For Conquest Sandbox_T_Rebels
+Writing Story Plots To Element Tree For Conquest Sandbox_T_Rebels
+Writing AI Player Control To Element Tree For Conquest Sandbox_T_Rebels
+Writing Markup Filenames To Element Tree For Conquest Sandbox_T_Rebels
+Writing Starting Forces To Element Tree For Conquest Sandbox_T_Rebels
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Thrawn\Campaigns_Thrawn.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Empires\Campaigns_EaW.xml
+Building Element For Campaign Sandbox_EaWS_Maldrood
+Writing Locations To Element Tree For Conquest Sandbox_EaWS_Maldrood
+Writing Trade Routes To Element Tree For Conquest Sandbox_EaWS_Maldrood
+Writing Home Locations To Element Tree For Conquest Sandbox_EaWS_Maldrood
+Writing Story Plots To Element Tree For Conquest Sandbox_EaWS_Maldrood
+Writing AI Player Control To Element Tree For Conquest Sandbox_EaWS_Maldrood
+Writing Markup Filenames To Element Tree For Conquest Sandbox_EaWS_Maldrood
+Writing Starting Forces To Element Tree For Conquest Sandbox_EaWS_Maldrood
+Building Element For Campaign Sandbox_EaWS_Eriadu
+Writing Locations To Element Tree For Conquest Sandbox_EaWS_Eriadu
+Writing Trade Routes To Element Tree For Conquest Sandbox_EaWS_Eriadu
+Writing Home Locations To Element Tree For Conquest Sandbox_EaWS_Eriadu
+Writing Story Plots To Element Tree For Conquest Sandbox_EaWS_Eriadu
+Writing AI Player Control To Element Tree For Conquest Sandbox_EaWS_Eriadu
+Writing Markup Filenames To Element Tree For Conquest Sandbox_EaWS_Eriadu
+Writing Starting Forces To Element Tree For Conquest Sandbox_EaWS_Eriadu
+Building Element For Campaign Sandbox_EaWS_Zsinj
+Writing Locations To Element Tree For Conquest Sandbox_EaWS_Zsinj
+Writing Trade Routes To Element Tree For Conquest Sandbox_EaWS_Zsinj
+Writing Home Locations To Element Tree For Conquest Sandbox_EaWS_Zsinj
+Writing Story Plots To Element Tree For Conquest Sandbox_EaWS_Zsinj
+Writing AI Player Control To Element Tree For Conquest Sandbox_EaWS_Zsinj
+Writing Markup Filenames To Element Tree For Conquest Sandbox_EaWS_Zsinj
+Writing Starting Forces To Element Tree For Conquest Sandbox_EaWS_Zsinj
+Building Element For Campaign Sandbox_EaWS_Pentastar
+Writing Locations To Element Tree For Conquest Sandbox_EaWS_Pentastar
+Writing Trade Routes To Element Tree For Conquest Sandbox_EaWS_Pentastar
+Writing Home Locations To Element Tree For Conquest Sandbox_EaWS_Pentastar
+Writing Story Plots To Element Tree For Conquest Sandbox_EaWS_Pentastar
+Writing AI Player Control To Element Tree For Conquest Sandbox_EaWS_Pentastar
+Writing Markup Filenames To Element Tree For Conquest Sandbox_EaWS_Pentastar
+Writing Starting Forces To Element Tree For Conquest Sandbox_EaWS_Pentastar
+Building Element For Campaign Sandbox_EaWS_Empire
+Writing Locations To Element Tree For Conquest Sandbox_EaWS_Empire
+Writing Trade Routes To Element Tree For Conquest Sandbox_EaWS_Empire
+Writing Home Locations To Element Tree For Conquest Sandbox_EaWS_Empire
+Writing Story Plots To Element Tree For Conquest Sandbox_EaWS_Empire
+Writing AI Player Control To Element Tree For Conquest Sandbox_EaWS_Empire
+Writing Markup Filenames To Element Tree For Conquest Sandbox_EaWS_Empire
+Writing Starting Forces To Element Tree For Conquest Sandbox_EaWS_Empire
+Building Element For Campaign Sandbox_EaWS_EotH
+Writing Locations To Element Tree For Conquest Sandbox_EaWS_EotH
+Writing Trade Routes To Element Tree For Conquest Sandbox_EaWS_EotH
+Writing Home Locations To Element Tree For Conquest Sandbox_EaWS_EotH
+Writing Story Plots To Element Tree For Conquest Sandbox_EaWS_EotH
+Writing AI Player Control To Element Tree For Conquest Sandbox_EaWS_EotH
+Writing Markup Filenames To Element Tree For Conquest Sandbox_EaWS_EotH
+Writing Starting Forces To Element Tree For Conquest Sandbox_EaWS_EotH
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Empires\Campaigns_EaW.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Daala\Campaigns_Daala.xml
+Building Element For Campaign Sandbox_Daala_Pentastar
+Writing Locations To Element Tree For Conquest Sandbox_Daala_Pentastar
+Writing Trade Routes To Element Tree For Conquest Sandbox_Daala_Pentastar
+Writing Home Locations To Element Tree For Conquest Sandbox_Daala_Pentastar
+Writing Story Plots To Element Tree For Conquest Sandbox_Daala_Pentastar
+Writing AI Player Control To Element Tree For Conquest Sandbox_Daala_Pentastar
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Daala_Pentastar
+Writing Starting Forces To Element Tree For Conquest Sandbox_Daala_Pentastar
+Building Element For Campaign Sandbox_Daala_Eriadu
+Writing Locations To Element Tree For Conquest Sandbox_Daala_Eriadu
+Writing Trade Routes To Element Tree For Conquest Sandbox_Daala_Eriadu
+Writing Home Locations To Element Tree For Conquest Sandbox_Daala_Eriadu
+Writing Story Plots To Element Tree For Conquest Sandbox_Daala_Eriadu
+Writing AI Player Control To Element Tree For Conquest Sandbox_Daala_Eriadu
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Daala_Eriadu
+Writing Starting Forces To Element Tree For Conquest Sandbox_Daala_Eriadu
+Building Element For Campaign Sandbox_Daala_Maldrood
+Writing Locations To Element Tree For Conquest Sandbox_Daala_Maldrood
+Writing Trade Routes To Element Tree For Conquest Sandbox_Daala_Maldrood
+Writing Home Locations To Element Tree For Conquest Sandbox_Daala_Maldrood
+Writing Story Plots To Element Tree For Conquest Sandbox_Daala_Maldrood
+Writing AI Player Control To Element Tree For Conquest Sandbox_Daala_Maldrood
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Daala_Maldrood
+Writing Starting Forces To Element Tree For Conquest Sandbox_Daala_Maldrood
+Building Element For Campaign Sandbox_Daala_Rebel
+Writing Locations To Element Tree For Conquest Sandbox_Daala_Rebel
+Writing Trade Routes To Element Tree For Conquest Sandbox_Daala_Rebel
+Writing Home Locations To Element Tree For Conquest Sandbox_Daala_Rebel
+Writing Story Plots To Element Tree For Conquest Sandbox_Daala_Rebel
+Writing AI Player Control To Element Tree For Conquest Sandbox_Daala_Rebel
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Daala_Rebel
+Writing Starting Forces To Element Tree For Conquest Sandbox_Daala_Rebel
+Building Element For Campaign Sandbox_Daala_Empire
+Writing Locations To Element Tree For Conquest Sandbox_Daala_Empire
+Writing Trade Routes To Element Tree For Conquest Sandbox_Daala_Empire
+Writing Home Locations To Element Tree For Conquest Sandbox_Daala_Empire
+Writing Story Plots To Element Tree For Conquest Sandbox_Daala_Empire
+Writing AI Player Control To Element Tree For Conquest Sandbox_Daala_Empire
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Daala_Empire
+Writing Starting Forces To Element Tree For Conquest Sandbox_Daala_Empire
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Daala\Campaigns_Daala.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\FTGU\Campaigns_FTGU.xml
+Building Element For Campaign Sandbox_FTGU_Rebel
+Writing Locations To Element Tree For Conquest Sandbox_FTGU_Rebel
+Writing Trade Routes To Element Tree For Conquest Sandbox_FTGU_Rebel
+Writing Home Locations To Element Tree For Conquest Sandbox_FTGU_Rebel
+Writing Story Plots To Element Tree For Conquest Sandbox_FTGU_Rebel
+Writing AI Player Control To Element Tree For Conquest Sandbox_FTGU_Rebel
+Writing Markup Filenames To Element Tree For Conquest Sandbox_FTGU_Rebel
+Writing Starting Forces To Element Tree For Conquest Sandbox_FTGU_Rebel
+Building Element For Campaign Sandbox_FTGU_Empire
+Writing Locations To Element Tree For Conquest Sandbox_FTGU_Empire
+Writing Trade Routes To Element Tree For Conquest Sandbox_FTGU_Empire
+Writing Home Locations To Element Tree For Conquest Sandbox_FTGU_Empire
+Writing Story Plots To Element Tree For Conquest Sandbox_FTGU_Empire
+Writing AI Player Control To Element Tree For Conquest Sandbox_FTGU_Empire
+Writing Markup Filenames To Element Tree For Conquest Sandbox_FTGU_Empire
+Writing Starting Forces To Element Tree For Conquest Sandbox_FTGU_Empire
+Building Element For Campaign Sandbox_FTGU_Underworld
+Writing Locations To Element Tree For Conquest Sandbox_FTGU_Underworld
+Writing Trade Routes To Element Tree For Conquest Sandbox_FTGU_Underworld
+Writing Home Locations To Element Tree For Conquest Sandbox_FTGU_Underworld
+Writing Story Plots To Element Tree For Conquest Sandbox_FTGU_Underworld
+Writing AI Player Control To Element Tree For Conquest Sandbox_FTGU_Underworld
+Writing Markup Filenames To Element Tree For Conquest Sandbox_FTGU_Underworld
+Writing Starting Forces To Element Tree For Conquest Sandbox_FTGU_Underworld
+Building Element For Campaign Sandbox_FTGU_Pentastar
+Writing Locations To Element Tree For Conquest Sandbox_FTGU_Pentastar
+Writing Trade Routes To Element Tree For Conquest Sandbox_FTGU_Pentastar
+Writing Home Locations To Element Tree For Conquest Sandbox_FTGU_Pentastar
+Writing Story Plots To Element Tree For Conquest Sandbox_FTGU_Pentastar
+Writing AI Player Control To Element Tree For Conquest Sandbox_FTGU_Pentastar
+Writing Markup Filenames To Element Tree For Conquest Sandbox_FTGU_Pentastar
+Writing Starting Forces To Element Tree For Conquest Sandbox_FTGU_Pentastar
+Building Element For Campaign Sandbox_FTGU_Eriadu
+Writing Locations To Element Tree For Conquest Sandbox_FTGU_Eriadu
+Writing Trade Routes To Element Tree For Conquest Sandbox_FTGU_Eriadu
+Writing Home Locations To Element Tree For Conquest Sandbox_FTGU_Eriadu
+Writing Story Plots To Element Tree For Conquest Sandbox_FTGU_Eriadu
+Writing AI Player Control To Element Tree For Conquest Sandbox_FTGU_Eriadu
+Writing Markup Filenames To Element Tree For Conquest Sandbox_FTGU_Eriadu
+Writing Starting Forces To Element Tree For Conquest Sandbox_FTGU_Eriadu
+Building Element For Campaign Sandbox_FTGU_Teradoc
+Writing Locations To Element Tree For Conquest Sandbox_FTGU_Teradoc
+Writing Trade Routes To Element Tree For Conquest Sandbox_FTGU_Teradoc
+Writing Home Locations To Element Tree For Conquest Sandbox_FTGU_Teradoc
+Writing Story Plots To Element Tree For Conquest Sandbox_FTGU_Teradoc
+Writing AI Player Control To Element Tree For Conquest Sandbox_FTGU_Teradoc
+Writing Markup Filenames To Element Tree For Conquest Sandbox_FTGU_Teradoc
+Writing Starting Forces To Element Tree For Conquest Sandbox_FTGU_Teradoc
+Building Element For Campaign Sandbox_FTGU_Zsinj
+Writing Locations To Element Tree For Conquest Sandbox_FTGU_Zsinj
+Writing Trade Routes To Element Tree For Conquest Sandbox_FTGU_Zsinj
+Writing Home Locations To Element Tree For Conquest Sandbox_FTGU_Zsinj
+Writing Story Plots To Element Tree For Conquest Sandbox_FTGU_Zsinj
+Writing AI Player Control To Element Tree For Conquest Sandbox_FTGU_Zsinj
+Writing Markup Filenames To Element Tree For Conquest Sandbox_FTGU_Zsinj
+Writing Starting Forces To Element Tree For Conquest Sandbox_FTGU_Zsinj
+Building Element For Campaign Sandbox_FTGU_CSA
+Writing Locations To Element Tree For Conquest Sandbox_FTGU_CSA
+Writing Trade Routes To Element Tree For Conquest Sandbox_FTGU_CSA
+Writing Home Locations To Element Tree For Conquest Sandbox_FTGU_CSA
+Writing Story Plots To Element Tree For Conquest Sandbox_FTGU_CSA
+Writing AI Player Control To Element Tree For Conquest Sandbox_FTGU_CSA
+Writing Markup Filenames To Element Tree For Conquest Sandbox_FTGU_CSA
+Writing Starting Forces To Element Tree For Conquest Sandbox_FTGU_CSA
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\FTGU\Campaigns_FTGU.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Pellaeon\Campaigns_Pellaeon.xml
+Building Element For Campaign Sandbox_Pellaeon_Empire
+Writing Locations To Element Tree For Conquest Sandbox_Pellaeon_Empire
+Writing Trade Routes To Element Tree For Conquest Sandbox_Pellaeon_Empire
+Writing Home Locations To Element Tree For Conquest Sandbox_Pellaeon_Empire
+Writing Story Plots To Element Tree For Conquest Sandbox_Pellaeon_Empire
+Writing AI Player Control To Element Tree For Conquest Sandbox_Pellaeon_Empire
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Pellaeon_Empire
+Writing Starting Forces To Element Tree For Conquest Sandbox_Pellaeon_Empire
+Building Element For Campaign Sandbox_Pellaeon_Rebel
+Writing Locations To Element Tree For Conquest Sandbox_Pellaeon_Rebel
+Writing Trade Routes To Element Tree For Conquest Sandbox_Pellaeon_Rebel
+Writing Home Locations To Element Tree For Conquest Sandbox_Pellaeon_Rebel
+Writing Story Plots To Element Tree For Conquest Sandbox_Pellaeon_Rebel
+Writing AI Player Control To Element Tree For Conquest Sandbox_Pellaeon_Rebel
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Pellaeon_Rebel
+Writing Starting Forces To Element Tree For Conquest Sandbox_Pellaeon_Rebel
+Building Element For Campaign Sandbox_Pellaeon_Underworld
+Writing Locations To Element Tree For Conquest Sandbox_Pellaeon_Underworld
+Writing Trade Routes To Element Tree For Conquest Sandbox_Pellaeon_Underworld
+Writing Home Locations To Element Tree For Conquest Sandbox_Pellaeon_Underworld
+Writing Story Plots To Element Tree For Conquest Sandbox_Pellaeon_Underworld
+Writing AI Player Control To Element Tree For Conquest Sandbox_Pellaeon_Underworld
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Pellaeon_Underworld
+Writing Starting Forces To Element Tree For Conquest Sandbox_Pellaeon_Underworld
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Pellaeon\Campaigns_Pellaeon.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\FIP\Campaigns_FIP.xml
+Building Element For Campaign FinalImperialPush_Empire
+Writing Locations To Element Tree For Conquest FinalImperialPush_Empire
+Writing Trade Routes To Element Tree For Conquest FinalImperialPush_Empire
+Writing Home Locations To Element Tree For Conquest FinalImperialPush_Empire
+Writing Story Plots To Element Tree For Conquest FinalImperialPush_Empire
+Writing AI Player Control To Element Tree For Conquest FinalImperialPush_Empire
+Writing Markup Filenames To Element Tree For Conquest FinalImperialPush_Empire
+Writing Starting Forces To Element Tree For Conquest FinalImperialPush_Empire
+Building Element For Campaign FinalImperialPush_Rebel
+Writing Locations To Element Tree For Conquest FinalImperialPush_Rebel
+Writing Trade Routes To Element Tree For Conquest FinalImperialPush_Rebel
+Writing Home Locations To Element Tree For Conquest FinalImperialPush_Rebel
+Writing Story Plots To Element Tree For Conquest FinalImperialPush_Rebel
+Writing AI Player Control To Element Tree For Conquest FinalImperialPush_Rebel
+Writing Markup Filenames To Element Tree For Conquest FinalImperialPush_Rebel
+Writing Starting Forces To Element Tree For Conquest FinalImperialPush_Rebel
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\FIP\Campaigns_FIP.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Orinda\Campaigns_Orinda.xml
+Building Element For Campaign Orinda_Empire
+Writing Locations To Element Tree For Conquest Orinda_Empire
+Writing Trade Routes To Element Tree For Conquest Orinda_Empire
+Writing Home Locations To Element Tree For Conquest Orinda_Empire
+Writing Story Plots To Element Tree For Conquest Orinda_Empire
+Writing AI Player Control To Element Tree For Conquest Orinda_Empire
+Writing Markup Filenames To Element Tree For Conquest Orinda_Empire
+Writing Starting Forces To Element Tree For Conquest Orinda_Empire
+Building Element For Campaign Orinda_NewRep
+Writing Locations To Element Tree For Conquest Orinda_NewRep
+Writing Trade Routes To Element Tree For Conquest Orinda_NewRep
+Writing Home Locations To Element Tree For Conquest Orinda_NewRep
+Writing Story Plots To Element Tree For Conquest Orinda_NewRep
+Writing AI Player Control To Element Tree For Conquest Orinda_NewRep
+Writing Markup Filenames To Element Tree For Conquest Orinda_NewRep
+Writing Starting Forces To Element Tree For Conquest Orinda_NewRep
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Orinda\Campaigns_Orinda.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Isard\Campaigns_Ysanne.xml
+Building Element For Campaign Sandbox_Ysanne_Rebel
+Writing Locations To Element Tree For Conquest Sandbox_Ysanne_Rebel
+Writing Trade Routes To Element Tree For Conquest Sandbox_Ysanne_Rebel
+Writing Home Locations To Element Tree For Conquest Sandbox_Ysanne_Rebel
+Writing Story Plots To Element Tree For Conquest Sandbox_Ysanne_Rebel
+Writing AI Player Control To Element Tree For Conquest Sandbox_Ysanne_Rebel
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Ysanne_Rebel
+Writing Starting Forces To Element Tree For Conquest Sandbox_Ysanne_Rebel
+Building Element For Campaign Sandbox_Ysanne_Zsinj
+Writing Locations To Element Tree For Conquest Sandbox_Ysanne_Zsinj
+Writing Trade Routes To Element Tree For Conquest Sandbox_Ysanne_Zsinj
+Writing Home Locations To Element Tree For Conquest Sandbox_Ysanne_Zsinj
+Writing Story Plots To Element Tree For Conquest Sandbox_Ysanne_Zsinj
+Writing AI Player Control To Element Tree For Conquest Sandbox_Ysanne_Zsinj
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Ysanne_Zsinj
+Writing Starting Forces To Element Tree For Conquest Sandbox_Ysanne_Zsinj
+Building Element For Campaign Sandbox_Ysanne_Remnant
+Writing Locations To Element Tree For Conquest Sandbox_Ysanne_Remnant
+Writing Trade Routes To Element Tree For Conquest Sandbox_Ysanne_Remnant
+Writing Home Locations To Element Tree For Conquest Sandbox_Ysanne_Remnant
+Writing Story Plots To Element Tree For Conquest Sandbox_Ysanne_Remnant
+Writing AI Player Control To Element Tree For Conquest Sandbox_Ysanne_Remnant
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Ysanne_Remnant
+Writing Starting Forces To Element Tree For Conquest Sandbox_Ysanne_Remnant
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Isard\Campaigns_Ysanne.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\IsardsRevenge\Campaigns_IsardsRevenge.xml
+Building Element For Campaign Sandbox_IsardsRevenge_Rebel
+Writing Locations To Element Tree For Conquest Sandbox_IsardsRevenge_Rebel
+Writing Trade Routes To Element Tree For Conquest Sandbox_IsardsRevenge_Rebel
+Writing Home Locations To Element Tree For Conquest Sandbox_IsardsRevenge_Rebel
+Writing Story Plots To Element Tree For Conquest Sandbox_IsardsRevenge_Rebel
+Writing AI Player Control To Element Tree For Conquest Sandbox_IsardsRevenge_Rebel
+Writing Markup Filenames To Element Tree For Conquest Sandbox_IsardsRevenge_Rebel
+Writing Starting Forces To Element Tree For Conquest Sandbox_IsardsRevenge_Rebel
+Building Element For Campaign Sandbox_IsardsRevenge_Empire
+Writing Locations To Element Tree For Conquest Sandbox_IsardsRevenge_Empire
+Writing Trade Routes To Element Tree For Conquest Sandbox_IsardsRevenge_Empire
+Writing Home Locations To Element Tree For Conquest Sandbox_IsardsRevenge_Empire
+Writing Story Plots To Element Tree For Conquest Sandbox_IsardsRevenge_Empire
+Writing AI Player Control To Element Tree For Conquest Sandbox_IsardsRevenge_Empire
+Writing Markup Filenames To Element Tree For Conquest Sandbox_IsardsRevenge_Empire
+Writing Starting Forces To Element Tree For Conquest Sandbox_IsardsRevenge_Empire
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\IsardsRevenge\Campaigns_IsardsRevenge.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Palpatine\Campaigns_ShadowHand.xml
+Building Element For Campaign ShadowHand_Empire
+Writing Locations To Element Tree For Conquest ShadowHand_Empire
+Writing Trade Routes To Element Tree For Conquest ShadowHand_Empire
+Writing Home Locations To Element Tree For Conquest ShadowHand_Empire
+Writing Story Plots To Element Tree For Conquest ShadowHand_Empire
+Writing AI Player Control To Element Tree For Conquest ShadowHand_Empire
+Writing Markup Filenames To Element Tree For Conquest ShadowHand_Empire
+Writing Starting Forces To Element Tree For Conquest ShadowHand_Empire
+Building Element For Campaign ShadowHand_Rebel
+Writing Locations To Element Tree For Conquest ShadowHand_Rebel
+Writing Trade Routes To Element Tree For Conquest ShadowHand_Rebel
+Writing Home Locations To Element Tree For Conquest ShadowHand_Rebel
+Writing Story Plots To Element Tree For Conquest ShadowHand_Rebel
+Writing AI Player Control To Element Tree For Conquest ShadowHand_Rebel
+Writing Markup Filenames To Element Tree For Conquest ShadowHand_Rebel
+Writing Starting Forces To Element Tree For Conquest ShadowHand_Rebel
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Palpatine\Campaigns_ShadowHand.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Zsinj\Campaigns_Zsinj.xml
+Building Element For Campaign Sandbox_Zsinj_Zsinj
+Writing Locations To Element Tree For Conquest Sandbox_Zsinj_Zsinj
+Writing Trade Routes To Element Tree For Conquest Sandbox_Zsinj_Zsinj
+Writing Home Locations To Element Tree For Conquest Sandbox_Zsinj_Zsinj
+Writing Story Plots To Element Tree For Conquest Sandbox_Zsinj_Zsinj
+Writing AI Player Control To Element Tree For Conquest Sandbox_Zsinj_Zsinj
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Zsinj_Zsinj
+Writing Starting Forces To Element Tree For Conquest Sandbox_Zsinj_Zsinj
+Building Element For Campaign Sandbox_Zsinj_Maldrood
+Writing Locations To Element Tree For Conquest Sandbox_Zsinj_Maldrood
+Writing Trade Routes To Element Tree For Conquest Sandbox_Zsinj_Maldrood
+Writing Home Locations To Element Tree For Conquest Sandbox_Zsinj_Maldrood
+Writing Story Plots To Element Tree For Conquest Sandbox_Zsinj_Maldrood
+Writing AI Player Control To Element Tree For Conquest Sandbox_Zsinj_Maldrood
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Zsinj_Maldrood
+Writing Starting Forces To Element Tree For Conquest Sandbox_Zsinj_Maldrood
+Building Element For Campaign Sandbox_Zsinj_Rebel
+Writing Locations To Element Tree For Conquest Sandbox_Zsinj_Rebel
+Writing Trade Routes To Element Tree For Conquest Sandbox_Zsinj_Rebel
+Writing Home Locations To Element Tree For Conquest Sandbox_Zsinj_Rebel
+Writing Story Plots To Element Tree For Conquest Sandbox_Zsinj_Rebel
+Writing AI Player Control To Element Tree For Conquest Sandbox_Zsinj_Rebel
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Zsinj_Rebel
+Writing Starting Forces To Element Tree For Conquest Sandbox_Zsinj_Rebel
+Building Element For Campaign Sandbox_Zsinj_CSA
+Writing Locations To Element Tree For Conquest Sandbox_Zsinj_CSA
+Writing Trade Routes To Element Tree For Conquest Sandbox_Zsinj_CSA
+Writing Home Locations To Element Tree For Conquest Sandbox_Zsinj_CSA
+Writing Story Plots To Element Tree For Conquest Sandbox_Zsinj_CSA
+Writing AI Player Control To Element Tree For Conquest Sandbox_Zsinj_CSA
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Zsinj_CSA
+Writing Starting Forces To Element Tree For Conquest Sandbox_Zsinj_CSA
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Zsinj\Campaigns_Zsinj.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Carnor\Campaigns_Carnor.xml
+Building Element For Campaign CrimsonEmpire_Eriadu
+Writing Locations To Element Tree For Conquest CrimsonEmpire_Eriadu
+Writing Trade Routes To Element Tree For Conquest CrimsonEmpire_Eriadu
+Writing Home Locations To Element Tree For Conquest CrimsonEmpire_Eriadu
+Writing Story Plots To Element Tree For Conquest CrimsonEmpire_Eriadu
+Writing AI Player Control To Element Tree For Conquest CrimsonEmpire_Eriadu
+Writing Markup Filenames To Element Tree For Conquest CrimsonEmpire_Eriadu
+Writing Starting Forces To Element Tree For Conquest CrimsonEmpire_Eriadu
+Building Element For Campaign CrimsonEmpire_Teradoc
+Writing Locations To Element Tree For Conquest CrimsonEmpire_Teradoc
+Writing Trade Routes To Element Tree For Conquest CrimsonEmpire_Teradoc
+Writing Home Locations To Element Tree For Conquest CrimsonEmpire_Teradoc
+Writing Story Plots To Element Tree For Conquest CrimsonEmpire_Teradoc
+Writing AI Player Control To Element Tree For Conquest CrimsonEmpire_Teradoc
+Writing Markup Filenames To Element Tree For Conquest CrimsonEmpire_Teradoc
+Writing Starting Forces To Element Tree For Conquest CrimsonEmpire_Teradoc
+Building Element For Campaign CrimsonEmpire_Pentastar
+Writing Locations To Element Tree For Conquest CrimsonEmpire_Pentastar
+Writing Trade Routes To Element Tree For Conquest CrimsonEmpire_Pentastar
+Writing Home Locations To Element Tree For Conquest CrimsonEmpire_Pentastar
+Writing Story Plots To Element Tree For Conquest CrimsonEmpire_Pentastar
+Writing AI Player Control To Element Tree For Conquest CrimsonEmpire_Pentastar
+Writing Markup Filenames To Element Tree For Conquest CrimsonEmpire_Pentastar
+Writing Starting Forces To Element Tree For Conquest CrimsonEmpire_Pentastar
+Building Element For Campaign CrimsonEmpire_NR
+Writing Locations To Element Tree For Conquest CrimsonEmpire_NR
+Writing Trade Routes To Element Tree For Conquest CrimsonEmpire_NR
+Writing Home Locations To Element Tree For Conquest CrimsonEmpire_NR
+Writing Story Plots To Element Tree For Conquest CrimsonEmpire_NR
+Writing AI Player Control To Element Tree For Conquest CrimsonEmpire_NR
+Writing Markup Filenames To Element Tree For Conquest CrimsonEmpire_NR
+Writing Starting Forces To Element Tree For Conquest CrimsonEmpire_NR
+Building Element For Campaign CrimsonEmpire_Empire
+Writing Locations To Element Tree For Conquest CrimsonEmpire_Empire
+Writing Trade Routes To Element Tree For Conquest CrimsonEmpire_Empire
+Writing Home Locations To Element Tree For Conquest CrimsonEmpire_Empire
+Writing Story Plots To Element Tree For Conquest CrimsonEmpire_Empire
+Writing AI Player Control To Element Tree For Conquest CrimsonEmpire_Empire
+Writing Markup Filenames To Element Tree For Conquest CrimsonEmpire_Empire
+Writing Starting Forces To Element Tree For Conquest CrimsonEmpire_Empire
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Carnor\Campaigns_Carnor.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\ArtofWar\Campaigns_EmpiresEnd.xml
+Building Element For Campaign Empires_End
+Writing Locations To Element Tree For Conquest Empires_End
+Writing Trade Routes To Element Tree For Conquest Empires_End
+Writing Home Locations To Element Tree For Conquest Empires_End
+Writing Story Plots To Element Tree For Conquest Empires_End
+Writing AI Player Control To Element Tree For Conquest Empires_End
+Writing Markup Filenames To Element Tree For Conquest Empires_End
+Writing Starting Forces To Element Tree For Conquest Empires_End
+Building Element For Campaign Empires_End_Rebel
+Writing Locations To Element Tree For Conquest Empires_End_Rebel
+Writing Trade Routes To Element Tree For Conquest Empires_End_Rebel
+Writing Home Locations To Element Tree For Conquest Empires_End_Rebel
+Writing Story Plots To Element Tree For Conquest Empires_End_Rebel
+Writing AI Player Control To Element Tree For Conquest Empires_End_Rebel
+Writing Markup Filenames To Element Tree For Conquest Empires_End_Rebel
+Writing Starting Forces To Element Tree For Conquest Empires_End_Rebel
+Building Element For Campaign Empires_End_Pentastar
+Writing Locations To Element Tree For Conquest Empires_End_Pentastar
+Writing Trade Routes To Element Tree For Conquest Empires_End_Pentastar
+Writing Home Locations To Element Tree For Conquest Empires_End_Pentastar
+Writing Story Plots To Element Tree For Conquest Empires_End_Pentastar
+Writing AI Player Control To Element Tree For Conquest Empires_End_Pentastar
+Writing Markup Filenames To Element Tree For Conquest Empires_End_Pentastar
+Writing Starting Forces To Element Tree For Conquest Empires_End_Pentastar
+Building Element For Campaign Empires_End_Teradoc
+Writing Locations To Element Tree For Conquest Empires_End_Teradoc
+Writing Trade Routes To Element Tree For Conquest Empires_End_Teradoc
+Writing Home Locations To Element Tree For Conquest Empires_End_Teradoc
+Writing Story Plots To Element Tree For Conquest Empires_End_Teradoc
+Writing AI Player Control To Element Tree For Conquest Empires_End_Teradoc
+Writing Markup Filenames To Element Tree For Conquest Empires_End_Teradoc
+Writing Starting Forces To Element Tree For Conquest Empires_End_Teradoc
+Building Element For Campaign Empires_End_Zsinj
+Writing Locations To Element Tree For Conquest Empires_End_Zsinj
+Writing Trade Routes To Element Tree For Conquest Empires_End_Zsinj
+Writing Home Locations To Element Tree For Conquest Empires_End_Zsinj
+Writing Story Plots To Element Tree For Conquest Empires_End_Zsinj
+Writing AI Player Control To Element Tree For Conquest Empires_End_Zsinj
+Writing Markup Filenames To Element Tree For Conquest Empires_End_Zsinj
+Writing Starting Forces To Element Tree For Conquest Empires_End_Zsinj
+Building Element For Campaign Empires_End_Eriadu
+Writing Locations To Element Tree For Conquest Empires_End_Eriadu
+Writing Trade Routes To Element Tree For Conquest Empires_End_Eriadu
+Writing Home Locations To Element Tree For Conquest Empires_End_Eriadu
+Writing Story Plots To Element Tree For Conquest Empires_End_Eriadu
+Writing AI Player Control To Element Tree For Conquest Empires_End_Eriadu
+Writing Markup Filenames To Element Tree For Conquest Empires_End_Eriadu
+Writing Starting Forces To Element Tree For Conquest Empires_End_Eriadu
+Building Element For Campaign Empires_End_CSA
+Writing Locations To Element Tree For Conquest Empires_End_CSA
+Writing Trade Routes To Element Tree For Conquest Empires_End_CSA
+Writing Home Locations To Element Tree For Conquest Empires_End_CSA
+Writing Story Plots To Element Tree For Conquest Empires_End_CSA
+Writing AI Player Control To Element Tree For Conquest Empires_End_CSA
+Writing Markup Filenames To Element Tree For Conquest Empires_End_CSA
+Writing Starting Forces To Element Tree For Conquest Empires_End_CSA
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\ArtofWar\Campaigns_EmpiresEnd.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\ArtofWar\Campaigns_Warlords.xml
+Building Element For Campaign Sandbox_Warlords_Remnant
+Writing Locations To Element Tree For Conquest Sandbox_Warlords_Remnant
+Writing Trade Routes To Element Tree For Conquest Sandbox_Warlords_Remnant
+Writing Home Locations To Element Tree For Conquest Sandbox_Warlords_Remnant
+Writing Story Plots To Element Tree For Conquest Sandbox_Warlords_Remnant
+Writing AI Player Control To Element Tree For Conquest Sandbox_Warlords_Remnant
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Warlords_Remnant
+Writing Starting Forces To Element Tree For Conquest Sandbox_Warlords_Remnant
+Building Element For Campaign Sandbox_Warlords_Eriadu
+Writing Locations To Element Tree For Conquest Sandbox_Warlords_Eriadu
+Writing Trade Routes To Element Tree For Conquest Sandbox_Warlords_Eriadu
+Writing Home Locations To Element Tree For Conquest Sandbox_Warlords_Eriadu
+Writing Story Plots To Element Tree For Conquest Sandbox_Warlords_Eriadu
+Writing AI Player Control To Element Tree For Conquest Sandbox_Warlords_Eriadu
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Warlords_Eriadu
+Writing Starting Forces To Element Tree For Conquest Sandbox_Warlords_Eriadu
+Building Element For Campaign Sandbox_Warlords_Teradoc
+Writing Locations To Element Tree For Conquest Sandbox_Warlords_Teradoc
+Writing Trade Routes To Element Tree For Conquest Sandbox_Warlords_Teradoc
+Writing Home Locations To Element Tree For Conquest Sandbox_Warlords_Teradoc
+Writing Story Plots To Element Tree For Conquest Sandbox_Warlords_Teradoc
+Writing AI Player Control To Element Tree For Conquest Sandbox_Warlords_Teradoc
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Warlords_Teradoc
+Writing Starting Forces To Element Tree For Conquest Sandbox_Warlords_Teradoc
+Building Element For Campaign Sandbox_Warlords_Pentastar
+Writing Locations To Element Tree For Conquest Sandbox_Warlords_Pentastar
+Writing Trade Routes To Element Tree For Conquest Sandbox_Warlords_Pentastar
+Writing Home Locations To Element Tree For Conquest Sandbox_Warlords_Pentastar
+Writing Story Plots To Element Tree For Conquest Sandbox_Warlords_Pentastar
+Writing AI Player Control To Element Tree For Conquest Sandbox_Warlords_Pentastar
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Warlords_Pentastar
+Writing Starting Forces To Element Tree For Conquest Sandbox_Warlords_Pentastar
+Building Element For Campaign Sandbox_Warlords_Zsinj
+Writing Locations To Element Tree For Conquest Sandbox_Warlords_Zsinj
+Writing Trade Routes To Element Tree For Conquest Sandbox_Warlords_Zsinj
+Writing Home Locations To Element Tree For Conquest Sandbox_Warlords_Zsinj
+Writing Story Plots To Element Tree For Conquest Sandbox_Warlords_Zsinj
+Writing AI Player Control To Element Tree For Conquest Sandbox_Warlords_Zsinj
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Warlords_Zsinj
+Writing Starting Forces To Element Tree For Conquest Sandbox_Warlords_Zsinj
+Building Element For Campaign Sandbox_Warlords_NewRep
+Writing Locations To Element Tree For Conquest Sandbox_Warlords_NewRep
+Writing Trade Routes To Element Tree For Conquest Sandbox_Warlords_NewRep
+Writing Home Locations To Element Tree For Conquest Sandbox_Warlords_NewRep
+Writing Story Plots To Element Tree For Conquest Sandbox_Warlords_NewRep
+Writing AI Player Control To Element Tree For Conquest Sandbox_Warlords_NewRep
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Warlords_NewRep
+Writing Starting Forces To Element Tree For Conquest Sandbox_Warlords_NewRep
+Building Element For Campaign Sandbox_Warlords_CSA
+Writing Locations To Element Tree For Conquest Sandbox_Warlords_CSA
+Writing Trade Routes To Element Tree For Conquest Sandbox_Warlords_CSA
+Writing Home Locations To Element Tree For Conquest Sandbox_Warlords_CSA
+Writing Story Plots To Element Tree For Conquest Sandbox_Warlords_CSA
+Writing AI Player Control To Element Tree For Conquest Sandbox_Warlords_CSA
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Warlords_CSA
+Writing Starting Forces To Element Tree For Conquest Sandbox_Warlords_CSA
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\ArtofWar\Campaigns_Warlords.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\ArtofWar\Campaigns_Essence.xml
+Building Element For Campaign Essence_Empire
+Writing Locations To Element Tree For Conquest Essence_Empire
+Writing Trade Routes To Element Tree For Conquest Essence_Empire
+Writing Home Locations To Element Tree For Conquest Essence_Empire
+Writing Story Plots To Element Tree For Conquest Essence_Empire
+Writing AI Player Control To Element Tree For Conquest Essence_Empire
+Writing Markup Filenames To Element Tree For Conquest Essence_Empire
+Writing Starting Forces To Element Tree For Conquest Essence_Empire
+Building Element For Campaign Essence_Rebel
+Writing Locations To Element Tree For Conquest Essence_Rebel
+Writing Trade Routes To Element Tree For Conquest Essence_Rebel
+Writing Home Locations To Element Tree For Conquest Essence_Rebel
+Writing Story Plots To Element Tree For Conquest Essence_Rebel
+Writing AI Player Control To Element Tree For Conquest Essence_Rebel
+Writing Markup Filenames To Element Tree For Conquest Essence_Rebel
+Writing Starting Forces To Element Tree For Conquest Essence_Rebel
+Building Element For Campaign Essence_EotH
+Writing Locations To Element Tree For Conquest Essence_EotH
+Writing Trade Routes To Element Tree For Conquest Essence_EotH
+Writing Home Locations To Element Tree For Conquest Essence_EotH
+Writing Story Plots To Element Tree For Conquest Essence_EotH
+Writing AI Player Control To Element Tree For Conquest Essence_EotH
+Writing Markup Filenames To Element Tree For Conquest Essence_EotH
+Writing Starting Forces To Element Tree For Conquest Essence_EotH
+Building Element For Campaign Essence_Pentastar
+Writing Locations To Element Tree For Conquest Essence_Pentastar
+Writing Trade Routes To Element Tree For Conquest Essence_Pentastar
+Writing Home Locations To Element Tree For Conquest Essence_Pentastar
+Writing Story Plots To Element Tree For Conquest Essence_Pentastar
+Writing AI Player Control To Element Tree For Conquest Essence_Pentastar
+Writing Markup Filenames To Element Tree For Conquest Essence_Pentastar
+Writing Starting Forces To Element Tree For Conquest Essence_Pentastar
+Building Element For Campaign Essence_Teradoc
+Writing Locations To Element Tree For Conquest Essence_Teradoc
+Writing Trade Routes To Element Tree For Conquest Essence_Teradoc
+Writing Home Locations To Element Tree For Conquest Essence_Teradoc
+Writing Story Plots To Element Tree For Conquest Essence_Teradoc
+Writing AI Player Control To Element Tree For Conquest Essence_Teradoc
+Writing Markup Filenames To Element Tree For Conquest Essence_Teradoc
+Writing Starting Forces To Element Tree For Conquest Essence_Teradoc
+Building Element For Campaign Essence_Zsinj
+Writing Locations To Element Tree For Conquest Essence_Zsinj
+Writing Trade Routes To Element Tree For Conquest Essence_Zsinj
+Writing Home Locations To Element Tree For Conquest Essence_Zsinj
+Writing Story Plots To Element Tree For Conquest Essence_Zsinj
+Writing AI Player Control To Element Tree For Conquest Essence_Zsinj
+Writing Markup Filenames To Element Tree For Conquest Essence_Zsinj
+Writing Starting Forces To Element Tree For Conquest Essence_Zsinj
+Building Element For Campaign Essence_Eriadu
+Writing Locations To Element Tree For Conquest Essence_Eriadu
+Writing Trade Routes To Element Tree For Conquest Essence_Eriadu
+Writing Home Locations To Element Tree For Conquest Essence_Eriadu
+Writing Story Plots To Element Tree For Conquest Essence_Eriadu
+Writing AI Player Control To Element Tree For Conquest Essence_Eriadu
+Writing Markup Filenames To Element Tree For Conquest Essence_Eriadu
+Writing Starting Forces To Element Tree For Conquest Essence_Eriadu
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\ArtofWar\Campaigns_Essence.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\ArtofWar\Campaigns_ArtofWar.xml
+Building Element For Campaign Art_of_War
+Writing Locations To Element Tree For Conquest Art_of_War
+Writing Trade Routes To Element Tree For Conquest Art_of_War
+Writing Home Locations To Element Tree For Conquest Art_of_War
+Writing Story Plots To Element Tree For Conquest Art_of_War
+Writing AI Player Control To Element Tree For Conquest Art_of_War
+Writing Markup Filenames To Element Tree For Conquest Art_of_War
+Writing Starting Forces To Element Tree For Conquest Art_of_War
+Building Element For Campaign Art_of_War_Rebel
+Writing Locations To Element Tree For Conquest Art_of_War_Rebel
+Writing Trade Routes To Element Tree For Conquest Art_of_War_Rebel
+Writing Home Locations To Element Tree For Conquest Art_of_War_Rebel
+Writing Story Plots To Element Tree For Conquest Art_of_War_Rebel
+Writing AI Player Control To Element Tree For Conquest Art_of_War_Rebel
+Writing Markup Filenames To Element Tree For Conquest Art_of_War_Rebel
+Writing Starting Forces To Element Tree For Conquest Art_of_War_Rebel
+Building Element For Campaign Art_of_War_EotH
+Writing Locations To Element Tree For Conquest Art_of_War_EotH
+Writing Trade Routes To Element Tree For Conquest Art_of_War_EotH
+Writing Home Locations To Element Tree For Conquest Art_of_War_EotH
+Writing Story Plots To Element Tree For Conquest Art_of_War_EotH
+Writing AI Player Control To Element Tree For Conquest Art_of_War_EotH
+Writing Markup Filenames To Element Tree For Conquest Art_of_War_EotH
+Writing Starting Forces To Element Tree For Conquest Art_of_War_EotH
+Building Element For Campaign Art_of_War_Pentastar
+Writing Locations To Element Tree For Conquest Art_of_War_Pentastar
+Writing Trade Routes To Element Tree For Conquest Art_of_War_Pentastar
+Writing Home Locations To Element Tree For Conquest Art_of_War_Pentastar
+Writing Story Plots To Element Tree For Conquest Art_of_War_Pentastar
+Writing AI Player Control To Element Tree For Conquest Art_of_War_Pentastar
+Writing Markup Filenames To Element Tree For Conquest Art_of_War_Pentastar
+Writing Starting Forces To Element Tree For Conquest Art_of_War_Pentastar
+Building Element For Campaign Art_of_War_Teradoc
+Writing Locations To Element Tree For Conquest Art_of_War_Teradoc
+Writing Trade Routes To Element Tree For Conquest Art_of_War_Teradoc
+Writing Home Locations To Element Tree For Conquest Art_of_War_Teradoc
+Writing Story Plots To Element Tree For Conquest Art_of_War_Teradoc
+Writing AI Player Control To Element Tree For Conquest Art_of_War_Teradoc
+Writing Markup Filenames To Element Tree For Conquest Art_of_War_Teradoc
+Writing Starting Forces To Element Tree For Conquest Art_of_War_Teradoc
+Building Element For Campaign Art_of_War_Pirates
+Writing Locations To Element Tree For Conquest Art_of_War_Pirates
+Writing Trade Routes To Element Tree For Conquest Art_of_War_Pirates
+Writing Home Locations To Element Tree For Conquest Art_of_War_Pirates
+Writing Story Plots To Element Tree For Conquest Art_of_War_Pirates
+Writing AI Player Control To Element Tree For Conquest Art_of_War_Pirates
+Writing Markup Filenames To Element Tree For Conquest Art_of_War_Pirates
+Writing Starting Forces To Element Tree For Conquest Art_of_War_Pirates
+Building Element For Campaign Art_of_War_Eriadu
+Writing Locations To Element Tree For Conquest Art_of_War_Eriadu
+Writing Trade Routes To Element Tree For Conquest Art_of_War_Eriadu
+Writing Home Locations To Element Tree For Conquest Art_of_War_Eriadu
+Writing Story Plots To Element Tree For Conquest Art_of_War_Eriadu
+Writing AI Player Control To Element Tree For Conquest Art_of_War_Eriadu
+Writing Markup Filenames To Element Tree For Conquest Art_of_War_Eriadu
+Writing Starting Forces To Element Tree For Conquest Art_of_War_Eriadu
+Building Element For Campaign Art_of_War_CSA
+Writing Locations To Element Tree For Conquest Art_of_War_CSA
+Writing Trade Routes To Element Tree For Conquest Art_of_War_CSA
+Writing Home Locations To Element Tree For Conquest Art_of_War_CSA
+Writing Story Plots To Element Tree For Conquest Art_of_War_CSA
+Writing AI Player Control To Element Tree For Conquest Art_of_War_CSA
+Writing Markup Filenames To Element Tree For Conquest Art_of_War_CSA
+Writing Starting Forces To Element Tree For Conquest Art_of_War_CSA
+Building Element For Campaign Art_of_War_Hapes
+Writing Locations To Element Tree For Conquest Art_of_War_Hapes
+Writing Trade Routes To Element Tree For Conquest Art_of_War_Hapes
+Writing Home Locations To Element Tree For Conquest Art_of_War_Hapes
+Writing Story Plots To Element Tree For Conquest Art_of_War_Hapes
+Writing AI Player Control To Element Tree For Conquest Art_of_War_Hapes
+Writing Markup Filenames To Element Tree For Conquest Art_of_War_Hapes
+Writing Starting Forces To Element Tree For Conquest Art_of_War_Hapes
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\ArtofWar\Campaigns_ArtofWar.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Align\Campaigns_Align.xml
+Building Element For Campaign Sandbox_Align_Pentastar
+Writing Locations To Element Tree For Conquest Sandbox_Align_Pentastar
+Writing Trade Routes To Element Tree For Conquest Sandbox_Align_Pentastar
+Writing Home Locations To Element Tree For Conquest Sandbox_Align_Pentastar
+Writing Story Plots To Element Tree For Conquest Sandbox_Align_Pentastar
+Writing AI Player Control To Element Tree For Conquest Sandbox_Align_Pentastar
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Align_Pentastar
+Writing Starting Forces To Element Tree For Conquest Sandbox_Align_Pentastar
+Building Element For Campaign Sandbox_Align_Empire
+Writing Locations To Element Tree For Conquest Sandbox_Align_Empire
+Writing Trade Routes To Element Tree For Conquest Sandbox_Align_Empire
+Writing Home Locations To Element Tree For Conquest Sandbox_Align_Empire
+Writing Story Plots To Element Tree For Conquest Sandbox_Align_Empire
+Writing AI Player Control To Element Tree For Conquest Sandbox_Align_Empire
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Align_Empire
+Writing Starting Forces To Element Tree For Conquest Sandbox_Align_Empire
+Building Element For Campaign Sandbox_Align_Rebel
+Writing Locations To Element Tree For Conquest Sandbox_Align_Rebel
+Writing Trade Routes To Element Tree For Conquest Sandbox_Align_Rebel
+Writing Home Locations To Element Tree For Conquest Sandbox_Align_Rebel
+Writing Story Plots To Element Tree For Conquest Sandbox_Align_Rebel
+Writing AI Player Control To Element Tree For Conquest Sandbox_Align_Rebel
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Align_Rebel
+Writing Starting Forces To Element Tree For Conquest Sandbox_Align_Rebel
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\Align\Campaigns_Align.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Campaigns_BattleTest.xml
+Building Element For Campaign Sandbox_Battletest_Remnant
+Writing Locations To Element Tree For Conquest Sandbox_Battletest_Remnant
+Writing Trade Routes To Element Tree For Conquest Sandbox_Battletest_Remnant
+Writing Home Locations To Element Tree For Conquest Sandbox_Battletest_Remnant
+Writing Story Plots To Element Tree For Conquest Sandbox_Battletest_Remnant
+Writing AI Player Control To Element Tree For Conquest Sandbox_Battletest_Remnant
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Battletest_Remnant
+Writing Starting Forces To Element Tree For Conquest Sandbox_Battletest_Remnant
+Building Element For Campaign Sandbox_Battletest_Ice
+Writing Locations To Element Tree For Conquest Sandbox_Battletest_Ice
+Writing Trade Routes To Element Tree For Conquest Sandbox_Battletest_Ice
+Writing Home Locations To Element Tree For Conquest Sandbox_Battletest_Ice
+Writing Story Plots To Element Tree For Conquest Sandbox_Battletest_Ice
+Writing AI Player Control To Element Tree For Conquest Sandbox_Battletest_Ice
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Battletest_Ice
+Writing Starting Forces To Element Tree For Conquest Sandbox_Battletest_Ice
+Building Element For Campaign Sandbox_Battletest_Ecumenopolis
+Writing Locations To Element Tree For Conquest Sandbox_Battletest_Ecumenopolis
+Writing Trade Routes To Element Tree For Conquest Sandbox_Battletest_Ecumenopolis
+Writing Home Locations To Element Tree For Conquest Sandbox_Battletest_Ecumenopolis
+Writing Story Plots To Element Tree For Conquest Sandbox_Battletest_Ecumenopolis
+Writing AI Player Control To Element Tree For Conquest Sandbox_Battletest_Ecumenopolis
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Battletest_Ecumenopolis
+Writing Starting Forces To Element Tree For Conquest Sandbox_Battletest_Ecumenopolis
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Campaigns_BattleTest.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\DeepCore\Campaigns_DeepCoreConflict.xml
+Building Element For Campaign Sandbox_DeepCoreConflict_Harrsk
+Writing Locations To Element Tree For Conquest Sandbox_DeepCoreConflict_Harrsk
+Writing Trade Routes To Element Tree For Conquest Sandbox_DeepCoreConflict_Harrsk
+Writing Home Locations To Element Tree For Conquest Sandbox_DeepCoreConflict_Harrsk
+Writing Story Plots To Element Tree For Conquest Sandbox_DeepCoreConflict_Harrsk
+Writing AI Player Control To Element Tree For Conquest Sandbox_DeepCoreConflict_Harrsk
+Writing Markup Filenames To Element Tree For Conquest Sandbox_DeepCoreConflict_Harrsk
+Writing Starting Forces To Element Tree For Conquest Sandbox_DeepCoreConflict_Harrsk
+Building Element For Campaign Sandbox_DeepCoreConflict_Teradoc
+Writing Locations To Element Tree For Conquest Sandbox_DeepCoreConflict_Teradoc
+Writing Trade Routes To Element Tree For Conquest Sandbox_DeepCoreConflict_Teradoc
+Writing Home Locations To Element Tree For Conquest Sandbox_DeepCoreConflict_Teradoc
+Writing Story Plots To Element Tree For Conquest Sandbox_DeepCoreConflict_Teradoc
+Writing AI Player Control To Element Tree For Conquest Sandbox_DeepCoreConflict_Teradoc
+Writing Markup Filenames To Element Tree For Conquest Sandbox_DeepCoreConflict_Teradoc
+Writing Starting Forces To Element Tree For Conquest Sandbox_DeepCoreConflict_Teradoc
+Building Element For Campaign Sandbox_DeepCoreConflict_Delvardus
+Writing Locations To Element Tree For Conquest Sandbox_DeepCoreConflict_Delvardus
+Writing Trade Routes To Element Tree For Conquest Sandbox_DeepCoreConflict_Delvardus
+Writing Home Locations To Element Tree For Conquest Sandbox_DeepCoreConflict_Delvardus
+Writing Story Plots To Element Tree For Conquest Sandbox_DeepCoreConflict_Delvardus
+Writing AI Player Control To Element Tree For Conquest Sandbox_DeepCoreConflict_Delvardus
+Writing Markup Filenames To Element Tree For Conquest Sandbox_DeepCoreConflict_Delvardus
+Writing Starting Forces To Element Tree For Conquest Sandbox_DeepCoreConflict_Delvardus
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\DeepCore\Campaigns_DeepCoreConflict.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\CSA\Campaigns_CSA.xml
+Building Element For Campaign Sandbox_CSA_Rebel
+Writing Locations To Element Tree For Conquest Sandbox_CSA_Rebel
+Writing Trade Routes To Element Tree For Conquest Sandbox_CSA_Rebel
+Writing Home Locations To Element Tree For Conquest Sandbox_CSA_Rebel
+Writing Story Plots To Element Tree For Conquest Sandbox_CSA_Rebel
+Writing AI Player Control To Element Tree For Conquest Sandbox_CSA_Rebel
+Writing Markup Filenames To Element Tree For Conquest Sandbox_CSA_Rebel
+Writing Starting Forces To Element Tree For Conquest Sandbox_CSA_Rebel
+Building Element For Campaign Sandbox_CSA_CSA
+Writing Locations To Element Tree For Conquest Sandbox_CSA_CSA
+Writing Trade Routes To Element Tree For Conquest Sandbox_CSA_CSA
+Writing Home Locations To Element Tree For Conquest Sandbox_CSA_CSA
+Writing Story Plots To Element Tree For Conquest Sandbox_CSA_CSA
+Writing AI Player Control To Element Tree For Conquest Sandbox_CSA_CSA
+Writing Markup Filenames To Element Tree For Conquest Sandbox_CSA_CSA
+Writing Starting Forces To Element Tree For Conquest Sandbox_CSA_CSA
+Building Element For Campaign Sandbox_CSA_Empire
+Writing Locations To Element Tree For Conquest Sandbox_CSA_Empire
+Writing Trade Routes To Element Tree For Conquest Sandbox_CSA_Empire
+Writing Home Locations To Element Tree For Conquest Sandbox_CSA_Empire
+Writing Story Plots To Element Tree For Conquest Sandbox_CSA_Empire
+Writing AI Player Control To Element Tree For Conquest Sandbox_CSA_Empire
+Writing Markup Filenames To Element Tree For Conquest Sandbox_CSA_Empire
+Writing Starting Forces To Element Tree For Conquest Sandbox_CSA_Empire
+Building Element For Campaign Sandbox_CSA_Zsinj
+Writing Locations To Element Tree For Conquest Sandbox_CSA_Zsinj
+Writing Trade Routes To Element Tree For Conquest Sandbox_CSA_Zsinj
+Writing Home Locations To Element Tree For Conquest Sandbox_CSA_Zsinj
+Writing Story Plots To Element Tree For Conquest Sandbox_CSA_Zsinj
+Writing AI Player Control To Element Tree For Conquest Sandbox_CSA_Zsinj
+Writing Markup Filenames To Element Tree For Conquest Sandbox_CSA_Zsinj
+Writing Starting Forces To Element Tree For Conquest Sandbox_CSA_Zsinj
+Building Element For Campaign Sandbox_CSA_Teradoc
+Writing Locations To Element Tree For Conquest Sandbox_CSA_Teradoc
+Writing Trade Routes To Element Tree For Conquest Sandbox_CSA_Teradoc
+Writing Home Locations To Element Tree For Conquest Sandbox_CSA_Teradoc
+Writing Story Plots To Element Tree For Conquest Sandbox_CSA_Teradoc
+Writing AI Player Control To Element Tree For Conquest Sandbox_CSA_Teradoc
+Writing Markup Filenames To Element Tree For Conquest Sandbox_CSA_Teradoc
+Writing Starting Forces To Element Tree For Conquest Sandbox_CSA_Teradoc
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\Conquests\CSA\Campaigns_CSA.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\SaveTest.xml
+Building Element For Campaign TestSet_Rebel
+Writing Locations To Element Tree For Conquest TestSet_Rebel
+Writing Trade Routes To Element Tree For Conquest TestSet_Rebel
+Writing Home Locations To Element Tree For Conquest TestSet_Rebel
+Writing Story Plots To Element Tree For Conquest TestSet_Rebel
+Writing AI Player Control To Element Tree For Conquest TestSet_Rebel
+Writing Markup Filenames To Element Tree For Conquest TestSet_Rebel
+Writing Starting Forces To Element Tree For Conquest TestSet_Rebel
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\workshop\content\32470\1125571106\Data\XML\SaveTest.xml
+Writing Campaign Files Element Tree To File CampaignFiles.xml
+Finished Saving Successfully

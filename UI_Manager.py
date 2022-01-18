@@ -389,19 +389,21 @@ class UI_Presenter:
         gcwindow = CreateNewGCWindow(self.repository)
         if gcwindow.dialogWindow.exec_() == 1:
             if os.path.isdir('xml'):
-                xmlPath = '/xml/'
+                xmlPath = '\\xml\\'
             else:
-                xmlPath = '/XML/'
+                xmlPath = '\\XML\\'
             self.repository.logfile.write(f'Creating new GC Set With Name {gcwindow.location.text()}\n')
-            self.repository.campaign_files.append(gcwindow.location.text())
+            self.repository.campaign_files.append(self.mod_dir+xmlPath+gcwindow.location.text())
 
             setname = gcwindow.setname.text()
 
             template = copy.deepcopy(self.repository.campaigns[gcwindow.template.currentText()])
             #template.copy(self.repository.campaigns[gcwindow.template.currentText()])
-
             template.activeFaction = gcwindow.faction.currentText()
             template.name = setname+'_'+gcwindow.faction.currentText()
+            template.text_name = 'TEXT_CONQUEST_'+template.name.upper()
+            template.desc_name = 'TEXT_DESC_CONQUEST_'+template.name.upper()
+
             template.fileLocation = self.mod_dir+xmlPath+gcwindow.location.text()
 
             self.repository.campaigns[template.name] = template

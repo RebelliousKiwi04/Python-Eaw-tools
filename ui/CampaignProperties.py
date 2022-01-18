@@ -122,8 +122,10 @@ class CampaignPropertiesWindow:
 
         self.repository.logfile.write(f"Collecting Text ID For Campaign {campaign.name}\n")
         self.repository.logfile.flush()
-
-        self.campaignname.setText(repository.text_dict[campaign.text_name])
+        try:
+            self.campaignname.setText(repository.text_dict[campaign.text_name])
+        except:
+            self.campaignname.setText("")
 
         self.layout.addLayout(self.campaignnamelayout)
 
@@ -136,8 +138,11 @@ class CampaignPropertiesWindow:
 
         self.repository.logfile.write(f"Collecting Description ID For Campaign {campaign.name}\n")
         self.repository.logfile.flush() 
-
-        self.campaigndesc.setText(repository.text_dict[campaign.desc_name])
+        try:
+            self.campaigndesc.setText(repository.text_dict[campaign.desc_name])
+        except:
+            self.campaignname.setText("")
+        
 
         self.layout.addLayout(self.campaigndesclayout)
 
