@@ -179,25 +179,30 @@ class ModRepository:
             xmlPath = '\\XML\\'
 
         self.logfile.write('Creating Save Containers For Trade Routes And Campaigns\n')
+        self.logfile.flush()
         #Init Save Containers, for iteration by file
         tradeRoutes = SaveContainer(self.trade_routes)
         campaigns = SaveContainer(self.campaigns)
 
         #Init New Campaign Files Tree
         self.logfile.write('Initialising Element Tree For Campaign Files\n')
+        self.logfile.flush()
         campaignFilesRoot = et.Element('Campaign_Files')
         
         #Compile Dat
         self.logfile.write('Compiling MasterTextFile_ENGLISH.dat\n')
+        self.logfile.flush()
         self.text_handler.compileDat(self.text_dict)
 
         #Build Trade Routes
         for file in self.tradeRoute_files:
             self.logfile.write(f'Building Trade Route Element Tree In File {file}\n')
+            self.logfile.flush()
             routes = tradeRoutes[file]
             fileRoot = et.Element("TradeRoutes")
             for i in routes:
                 self.logfile.write(f'Building Element For Trade Route {i.name}\n')
+                self.logfile.flush()
                 element = et.SubElement(fileRoot, 'TradeRoute')
                 element.set('Name', i.name)
                 pointAElem = et.SubElement(element, 'Point_A')
@@ -218,18 +223,21 @@ class ModRepository:
                 visibleLineElem = et.SubElement(element, 'Visible_Line_Name')
                 visibleLineElem.text = 'DEFAULT'
             self.logfile.write(f'Writing Element Tree To File {file}\n')
+            self.logfile.flush()
             fileTree = et.ElementTree(fileRoot)
             fileTree.write(file,xml_declaration=True, encoding='UTF-8',pretty_print=True)
 
         
         for file in self.campaign_files:
             self.logfile.write(f'Building Campaign Element Tree In File {file}\n')
+            self.logfile.flush()
             fileEntry = et.SubElement(campaignFilesRoot,"File")
             fileEntry.text = file.replace(self.mod_dir+xmlPath,'')
             gcs = campaigns[file]
             fileRoot = et.Element('Campaigns')
             for conquest in gcs:
                 self.logfile.write(f'Building Element For Campaign {conquest.name}\n')
+                self.logfile.flush()
                 gcElem = et.SubElement(fileRoot, 'Campaign')
                 gcElem.set('Name',conquest.name)
                 sortOrderElem = et.SubElement(gcElem, 'Sort_Order')
@@ -254,6 +262,7 @@ class ModRepository:
                 cameraDistanceElem.text = str(1200.0)
 
                 self.logfile.write(f'Writing Locations To Element Tree For Conquest {conquest.name}\n')
+                self.logfile.flush()
                 locationsElem = et.SubElement(gcElem, 'Locations')
                 locationsText = 'Galaxy_Core_Art_Model'
                 for i in conquest.planets:
@@ -261,6 +270,7 @@ class ModRepository:
                 locationsElem.text = locationsText
 
                 self.logfile.write(f'Writing Trade Routes To Element Tree For Conquest {conquest.name}\n')
+                self.logfile.flush()
                 tradeRoutesElem = et.SubElement(gcElem, 'Trade_Routes')
                 routesText = ''
                 for i in conquest.trade_routes:
@@ -268,6 +278,7 @@ class ModRepository:
                 tradeRoutesElem.text = routesText
 
                 self.logfile.write(f'Writing Home Locations To Element Tree For Conquest {conquest.name}\n')
+                self.logfile.flush()
                 for faction, location in conquest.home_locations.items():
                     elem = et.SubElement(gcElem, 'Home_Locations')
                     elem.text = faction+', '+location
@@ -276,19 +287,40 @@ class ModRepository:
                 activePlayerElem.text = conquest.activeFaction
 
                 self.logfile.write(f'Writing Story Plots To Element Tree For Conquest {conquest.name}\n')
+                self.logfile.flush()
                 for faction, plot, in conquest.plots.items():
                     plotElem = et.SubElement(gcElem, 'Story_Name')
                     plotElem.text = faction+', '+plot
                 
                 self.logfile.write(f'Writing AI Player Control To Element Tree For Conquest {conquest.name}\n')
+                self.logfile.flush()
                 for faction, player in conquest.ai_players.items():
                     elem = et.SubElement(gcElem, 'AI_Player_Control')
                     elem.text = faction+', '+player
 
                 self.logfile.write(f'Writing Markup Filenames To Element Tree For Conquest {conquest.name}\n')
+                self.logfile.flush()
                 for faction in self.factions:
                     elem = et.SubElement(gcElem, 'Markup_Filename')
                     elem.text = faction.name+', DefaultGalacticHints'
+
+                self.logfile.write(f'Writing Starting Credits To Element Tree For Conquest {conquest.name}\n')
+                self.logfile.flush()
+                for faction, startingcredits in conquest.starting_credits:
+                    elem = et.SubElement(gcElem, 'Starting_Credits')
+                    elem.text = faction+', '+str(startingcredits)
+
+                self.logfile.write(f'Writing Starting Tech To Element Tree For Conquest {conquest.name}\n')
+                self.logfile.flush()
+                for faction,startingtech in conquest.starting_tech:
+                    elem =et.SubElement(gcElem, 'Starting_Tech_Level')
+                    elem.text = faction+', '+str(startingtech)
+
+                self.logfile.write(f'Writing Max Tech To Element Tree For Conquest {conquest.name}\n')
+                self.logfile.flush()
+                for faction, maxtech in conquest.max_tech_level:
+                    elem = et.SubElement(gcElem, 'Max_Tech_Level')
+                    elem.text = faction+', '+str(maxtech)
 
                 customSettingsElem = et.SubElement(gcElem, 'Supports_Custom_Settings')
                 customSettingsElem.text = 'False'
@@ -303,6 +335,7 @@ class ModRepository:
                 aiWinConditions.text = 'Galactic_All_Planets_Controlled'
 
                 self.logfile.write(f'Writing Starting Forces To Element Tree For Conquest {conquest.name}\n')
+                self.logfile.flush()
                 for planet in conquest.planets:
                     forcestable = conquest.starting_forces[planet]
                     for force in forcestable:
@@ -310,10 +343,12 @@ class ModRepository:
                             forceElem = et.SubElement(gcElem, 'Starting_Forces')
                             forceElem.text = force.owner+', '+force.planet+', '+force.unit
             self.logfile.write(f'Writing Element Tree To File {file}\n')
+            self.logfile.flush()
             fileTree = et.ElementTree(fileRoot)
             fileTree.write(file,xml_declaration=True, encoding='UTF-8',pretty_print=True)
 
         self.logfile.write(f'Writing Campaign Files Element Tree To File CampaignFiles.xml\n')
+        self.logfile.flush()
         campaignFilesET = et.ElementTree(campaignFilesRoot)
         campaignFilesET.write(self.mod_dir+xmlPath+'campaignfiles.xml',xml_declaration=True, encoding='UTF-8',pretty_print=True)
 
