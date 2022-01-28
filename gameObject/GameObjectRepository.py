@@ -306,19 +306,19 @@ class ModRepository:
 
                 self.logfile.write(f'Writing Starting Credits To Element Tree For Conquest {conquest.name}\n')
                 self.logfile.flush()
-                for faction, startingcredits in conquest.starting_credits:
+                for faction, startingcredits in conquest.starting_credits.items():
                     elem = et.SubElement(gcElem, 'Starting_Credits')
                     elem.text = faction+', '+str(startingcredits)
 
                 self.logfile.write(f'Writing Starting Tech To Element Tree For Conquest {conquest.name}\n')
                 self.logfile.flush()
-                for faction,startingtech in conquest.starting_tech:
+                for faction,startingtech in conquest.starting_tech.items():
                     elem =et.SubElement(gcElem, 'Starting_Tech_Level')
                     elem.text = faction+', '+str(startingtech)
 
                 self.logfile.write(f'Writing Max Tech To Element Tree For Conquest {conquest.name}\n')
                 self.logfile.flush()
-                for faction, maxtech in conquest.max_tech_level:
+                for faction, maxtech in conquest.max_tech_level.items():
                     elem = et.SubElement(gcElem, 'Max_Tech_Level')
                     elem.text = faction+', '+str(maxtech)
 

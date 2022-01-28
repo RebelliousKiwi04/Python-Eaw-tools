@@ -412,7 +412,7 @@ class UI_Presenter:
             self.repository.campaign_sets[setname] = campaignset
             self.ui.select_GC.addItem(setname) 
     def create_new_traderoutes(self):
-        window = CreateTradeRouteWindow(self.repository)
+        window = CreateTradeRouteWindow(self.repository, self.selected_campaign)
         if window.show() == 1:
             newRoute = copy.deepcopy(self.repository.trade_routes[0])
             newRoute.name = window.selected_planets[0].name+'_'+window.selected_planets[1].name
