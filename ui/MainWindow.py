@@ -159,9 +159,14 @@ class MainUIWindow:
 
         self.edit_gc_properties= QPushButton("Edit Campaign Properties")
 
+
+        self.planetsSearch = QLineEdit()
+        self.planetsSearch.setPlaceholderText("Search Planets...")
         self.planet_list = PyQtUtil.construct_table_widget(["Planets"])
         self.planet_list.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
 
+        self.tradeRouteSearch = QLineEdit()
+        self.tradeRouteSearch.setPlaceholderText("Search Trade Routes...")
         self.tradeRoute_list = PyQtUtil.construct_table_widget(["Trade Routes"])
 
         self.select_all_planets = QPushButton("Select All Planets")
@@ -236,9 +241,11 @@ class MainUIWindow:
         self.__planetsTradeRoutes.layout().addWidget(self.select_GC)
         self.__planetsTradeRoutes.layout().addLayout(self.faction_layout)
         self.__planetsTradeRoutes.layout().addWidget(self.edit_gc_properties)
+        self.__planetsTradeRoutes.layout().addWidget(self.planetsSearch)
         self.__planetsTradeRoutes.layout().addWidget(self.planet_list)
         self.__planetsTradeRoutes.layout().addWidget(self.select_all_planets)
         self.__planetsTradeRoutes.layout().addWidget(self.deselect_all_planets)
+        self.__planetsTradeRoutes.layout().addWidget(self.tradeRouteSearch)
         self.__planetsTradeRoutes.layout().addWidget(self.tradeRoute_list)
         self.__planetsTradeRoutes.layout().addWidget(self.select_all_tradeRoutes)
         self.__planetsTradeRoutes.layout().addWidget(self.deselect_all_tradeRoutes)

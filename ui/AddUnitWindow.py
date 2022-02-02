@@ -34,8 +34,9 @@ class AddUnitWindow:
         self.UnitTypeSelection.setObjectName(u"UnitTypeSelection")
         self.UnitTypeSelection.setGeometry(QRect(10, 10, 191, 31))
         self.UnitTypeSelection.setLayoutDirection(Qt.LeftToRight)
+        self.searchUnits = QLineEdit()
+        self.searchUnits.setPlaceholderText("Search Units...")
         
-
         self.ownerLayout = QHBoxLayout()
         self.OwnerLabel =QLabel()
         self.OwnerLabel.setFont(font)
@@ -56,6 +57,7 @@ class AddUnitWindow:
         
 
         self.layout.addWidget(self.UnitTypeSelection)
+        self.layout.addWidget(self.searchUnits)
         self.layout.addLayout(self.QuantityLayout)
         self.layout.addLayout(self.ownerLayout)
         self.layout.addLayout(self.buttonLayout)
