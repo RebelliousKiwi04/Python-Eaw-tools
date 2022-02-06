@@ -36,7 +36,7 @@ class AddUnitWindow:
         self.UnitTypeSelection.setLayoutDirection(Qt.LeftToRight)
         self.searchUnits = QLineEdit()
         self.searchUnits.setPlaceholderText("Search Units...")
-        
+        self.searchUnits.returnPressed.connect(self.search)
         self.ownerLayout = QHBoxLayout()
         self.OwnerLabel =QLabel()
         self.OwnerLabel.setFont(font)
@@ -49,6 +49,9 @@ class AddUnitWindow:
         self.addtoall = QPushButton("Add To All Planets")
         self.add = QPushButton("Add")
         self.cancel = QPushButton("Cancel")
+        self.addtoall.setFocusPolicy(Qt.NoFocus)
+        self.add.setFocusPolicy(Qt.NoFocus)
+        self.cancel.setFocusPolicy(Qt.NoFocus)
 
         self.buttonLayout.addWidget(self.addtoall)
         self.buttonLayout.addWidget(self.add)
@@ -67,7 +70,9 @@ class AddUnitWindow:
         self.signal = pyqtSignal(list)
         self.cancel.clicked.connect(self.dialogWindow.reject)
     def update_unit_box(self, unit_list):
+        self.units = []
         for i in unit_list:
+            self.units.append(i.name)
             self.UnitTypeSelection.addItem(i.name)
     def show(self):
         self.dialogWindow.exec()
@@ -75,6 +80,15 @@ class AddUnitWindow:
         quantity = self.Quantity.value()
         unit_name = self.UnitTypeSelection.currentText()
         self.signal.emit(list(quantity, unit_name, self.planet))
+    def search(self):
+        self.UnitTypeSelection.clear()
+        searchString = self.searchUnits.text()
+        if searchString.isspace():
+            pass
+        for i in self.units:
+            if searchString.lower() in i.lower():
+                self.UnitTypeSelection.addItem(i)
+
         
 
 class EditUnitWindow:
@@ -110,7 +124,9 @@ class EditUnitWindow:
         self.UnitTypeSelection.setObjectName(u"UnitTypeSelection")
         self.UnitTypeSelection.setGeometry(QRect(10, 10, 191, 31))
         self.UnitTypeSelection.setLayoutDirection(Qt.LeftToRight)
-        
+        self.searchUnits = QLineEdit()
+        self.searchUnits.setPlaceholderText("Search Units...")
+        self.searchUnits.returnPressed.connect(self.search)
 
         self.ownerLayout = QHBoxLayout()
         self.OwnerLabel =QLabel()
@@ -123,18 +139,23 @@ class EditUnitWindow:
         self.SaveButton = QPushButton("Save Forces Entry")
         self.DeleteButton = QPushButton("Delete Forces Entry")
         self.CancelButton = QPushButton("Cancel ")
+        self.SaveButton.setFocusPolicy(Qt.NoFocus)
+        self.DeleteButton.setFocusPolicy(Qt.NoFocus)
+        self.CancelButton.setFocusPolicy(Qt.NoFocus)
 
-
+        self.units = []
         self.Quantity.setValue(self.obj.quantity)
         for i in self.repository.factions:
             self.OwnerDropdown.addItem(i.name)
         for i in self.repository.units:
+            self.units.append(i.name)
             self.UnitTypeSelection.addItem(i.name)
         self.OwnerDropdown.setCurrentText(self.obj.owner)
         self.UnitTypeSelection.setCurrentText(self.obj.unit)
 
 
         self.layout.addWidget(self.UnitTypeSelection)
+        self.layout.addWidget(self.searchUnits)
         self.layout.addLayout(self.QuantityLayout)
         self.layout.addLayout(self.ownerLayout)
         self.layout.addWidget(self.SaveButton)        
@@ -154,3 +175,11 @@ class EditUnitWindow:
         self.obj.owner = self.OwnerDropdown.currentText()
         self.obj.quantity = self.Quantity.value()
         self.dialogWindow.accept()
+    def search(self):
+        self.UnitTypeSelection.clear()
+        searchString = self.searchUnits.text()
+        if searchString.isspace():
+            pass
+        for i in self.units:
+            if searchString.lower() in i.lower():
+                self.UnitTypeSelection.addItem(i)

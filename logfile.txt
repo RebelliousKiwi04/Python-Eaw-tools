@@ -8830,3 +8830,10 @@ Collecting Starting Forces For Conquest Sandbox_Rebellion_QueliOversector
 Collecting Locations for conquest Sandbox_Rebellion_QueliOversector
 Collecting Trade Routes for conquest Sandbox_Rebellion_QueliOversector
 Deleting Local Variable logfile from campaign Sandbox_Rebellion_QueliOversector
+Updating UI Elements
+Connecting Button Triggers
+Updating Selected Planets For GC Sandbox_RotR_Holdouts
+Updating Selected Trade Routes For GC Sandbox_RotR_Holdouts
+Updating Starting Forces Table For GC Sandbox_RotR_Holdouts
+Updating Starting Forces Table For GC Sandbox_RotR_Holdouts
+Exiting Application....
