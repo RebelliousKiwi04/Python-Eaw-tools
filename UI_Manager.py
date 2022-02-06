@@ -10,7 +10,9 @@ from PyQt5.QtWidgets import *
 from PyQt5 import QtCore
 from PyQt5 import QtGui
 from PyQt5.QtCore import *
-
+import gc
+import inspect
+print(sys.getrecursionlimit())
 class UI_Presenter:
     def __init__(self, ui, mod_dir,logfile):
         self.ui = ui
@@ -22,6 +24,7 @@ class UI_Presenter:
         self.repository.logfile.write(f'Connecting Button Triggers\n')
         self.ui.planet_list.itemChanged.connect(self.planetStatusModified)
         self.ui.tradeRoute_list.itemChanged.connect(self.ontradeRouteCellChanged)
+        self.ui.tradeRouteSearch.returnPressed.connect(self.searchTradeRoutes)
         self.ui.add_unit_to_planet.clicked.connect(self.add_unit_to_starting_forces)
         self.ui.planetComboBox.currentIndexChanged.connect(self.update_starting_forces_table)
         self.ui.select_all_planets.clicked.connect(self.check_all_planets)
@@ -31,6 +34,7 @@ class UI_Presenter:
         self.ui.add_faction.clicked.connect(self.addFactionToCampaign)
         self.ui.newTradeRouteAction.triggered.connect(self.create_new_traderoutes)
         self.ui.saveAction.triggered.connect(self.repository.save_to_file)
+        self.ui.planetsSearch.returnPressed.connect(self.searchPlanets)
         self.ui.deselect_all_tradeRoutes.clicked.connect(self.uncheck_all_tradeRoutes)
         self.ui.select_GC.currentIndexChanged.connect(self.select_GC)
         self.ui.newCampaignAction.triggered.connect(self.create_new_set)
@@ -41,6 +45,8 @@ class UI_Presenter:
     def disconnect_triggers(self):
         self.repository.logfile.write(f'Disonnecting Button Triggers\n')
         self.ui.planet_list.itemChanged.disconnect(self.planetStatusModified)
+        self.ui.tradeRouteSearch.returnPressed.disconnect(self.searchTradeRoutes)
+        self.ui.planetsSearch.returnPressed.connect(self.searchPlanets)
         self.ui.tradeRoute_list.itemChanged.disconnect(self.ontradeRouteCellChanged)
         self.ui.add_unit_to_planet.clicked.disconnect(self.add_unit_to_starting_forces)
         self.ui.planetComboBox.currentIndexChanged.disconnect(self.update_starting_forces_table)
@@ -98,7 +104,7 @@ class UI_Presenter:
 
         campaign = campaignset.getactivecampaign(self.ui.select_faction.currentText())
         self.selected_campaign = campaign
-        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets)
+        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets, self.selected_campaign, self.repository)
 
         self.connect_triggers()
         self.update_selected_planets()
@@ -125,7 +131,7 @@ class UI_Presenter:
         self.update_planets_box()
         self.update_starting_forces_table()
         self.repository.logfile.write(f'Plotting Galactic Map...\n')
-        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets)
+        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets,self.selected_campaign, self.repository)
     def select_faction(self):
         self.repository.logfile.write(f'Playable Faction {self.ui.select_faction.currentText()} selected for set {self.ui.select_GC.currentText()}\n')
         index = self.ui.select_faction.currentText()
@@ -137,7 +143,7 @@ class UI_Presenter:
         self.update_planets_box()
         self.update_starting_forces_table()
         self.repository.logfile.write(f'Plotting Galactic Map...\n')
-        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets)
+        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets,self.selected_campaign, self.repository)
     def update_seleceted_trade_routes(self):
         self.repository.logfile.write(f'Updating Selected Trade Routes For GC {self.selected_campaign.name}\n')
         self.ui.tradeRoute_list.itemChanged.disconnect(self.ontradeRouteCellChanged)
@@ -228,7 +234,7 @@ class UI_Presenter:
             if not addingPlanet:
                 item.setCheckState(QtCore.Qt.Unchecked)
         self.update_planets_box()
-        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets)
+        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets,self.selected_campaign, self.repository)
     def ontradeRouteCellChanged(self, item):
         tradeRoute = self.repository.trade_routes[item.row()]
         campaign = self.selected_campaign
@@ -246,7 +252,7 @@ class UI_Presenter:
         elif currentState == QtCore.Qt.Checked:
             if not addingTradeRoute:
                 item.setCheckState(QtCore.Qt.Unchecked)
-        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets)
+        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets,self.selected_campaign, self.repository)
 
 
     def onPlanetSelection(self, table):
@@ -260,7 +266,7 @@ class UI_Presenter:
         else:
             campaign.planets.remove(planet)
             addingPlanet = False
-        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets)
+        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets,self.selected_campaign, self.repository)
         self.update_selected_planets()
 
     def add_unit_to_starting_forces(self):
@@ -310,9 +316,8 @@ class UI_Presenter:
             owner_index = [x.name for x in self.repository.factions].index(owner_name)
         unit = self.repository.units[unit_index]
         owner = self.repository.factions[owner_index]
-        planet = self.repository.planets[planet_index]
         forces = self.selected_campaign.starting_forces
-        forces.addItem(planet.name, unit.name, owner.name, quantity)
+        forces.addItem(self.repository.planets[planet_index].name, unit.name, owner.name, quantity)
 
 
         rowCount = self.ui.forcesListWidget.rowCount()
@@ -334,47 +339,46 @@ class UI_Presenter:
         campaign = self.selected_campaign
         campaign.planets = self.repository.planets
         self.ui.planet_list.itemChanged.connect(self.planetStatusModified)
-        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets)
+        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets,self.selected_campaign, self.repository)
     def uncheck_all_planets(self):
         self.ui.planet_list.itemChanged.disconnect(self.planetStatusModified)
         rowCount = self.ui.planet_list.rowCount()
         for i in range(rowCount):
             self.ui.planet_list.item(i,0).setCheckState(QtCore.Qt.Unchecked)
-        campaign = self.selected_campaign
-        campaign.planets = []
+        self.selected_campaign.planets = []
         self.ui.planet_list.itemChanged.connect(self.planetStatusModified)
-        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets)
+        self.ui.map.plotGalaxy(self.selected_campaign.planets, self.selected_campaign.trade_routes, self.repository.planets,self.selected_campaign, self.repository)
     def check_all_tradeRoutes(self):
         self.ui.tradeRoute_list.itemChanged.disconnect(self.ontradeRouteCellChanged)
         rowCount = self.ui.tradeRoute_list.rowCount()
         for i in range(rowCount):
             self.ui.tradeRoute_list.item(i,0).setCheckState(QtCore.Qt.Checked)
-        campaign = self.selected_campaign
-        campaign.trade_routes = self.repository.trade_routes
+        self.selected_campaign.trade_routes = self.repository.trade_routes
 
         self.ui.tradeRoute_list.itemChanged.connect(self.ontradeRouteCellChanged)
-        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets)
+        self.ui.map.plotGalaxy(self.selected_campaign.planets, self.selected_campaign.trade_routes, self.repository.planets,self.selected_campaign, self.repository)
     def uncheck_all_tradeRoutes(self):
         self.ui.tradeRoute_list.itemChanged.disconnect(self.ontradeRouteCellChanged)
         rowCount = self.ui.tradeRoute_list.rowCount()
         for i in range(rowCount):
             self.ui.tradeRoute_list.item(i,0).setCheckState(QtCore.Qt.Unchecked)
-        campaign = self.selected_campaign
-        campaign.trade_routes = []
+        self.selected_campaign.trade_routes = []
         self.ui.tradeRoute_list.itemChanged.connect(self.ontradeRouteCellChanged)
-        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets)
+        self.ui.map.plotGalaxy(self.selected_campaign.planets, self.selected_campaign.trade_routes, self.repository.planets,self.selected_campaign, self.repository)
     def show_campaign_properties(self):
-        campaign = self.selected_campaign
         window = CampaignPropertiesWindow(self.selected_set, self.selected_campaign, self.repository)
         i = window.dialogWindow.exec_()
+        del window
     def addFactionToCampaign(self):
         test = AddFactionWindow(self.selected_set, self.repository)
         i = test.dialogWindow.exec_()
         if i ==1:
             self.repository.logfile.write(f'Adding Faction {test.faction.currentText()} To Campaign Set\n')
-            self.selected_set.addFaction(test.faction.currentText())
+            new = self.selected_set.addFaction(test.faction.currentText())
+            self.repository.campaigns[new.name] = new
 
             self.select_GC()
+        del test
     def delete_starting_forces_entry(self):
         row = self.ui.forcesListWidget.currentRow()
         if row < 0:
@@ -411,6 +415,7 @@ class UI_Presenter:
             campaignset.addCampaign(template)
             self.repository.campaign_sets[setname] = campaignset
             self.ui.select_GC.addItem(setname) 
+        del gcwindow
     def create_new_traderoutes(self):
         window = CreateTradeRouteWindow(self.repository, self.selected_campaign)
         if window.show() == 1:
@@ -432,4 +437,55 @@ class UI_Presenter:
                 item.setCheckState(QtCore.Qt.Unchecked)
                 self.ui.tradeRoute_list.setItem(rowCount, 0, item)
                 self.ui.tradeRoute_list.itemChanged.connect(self.ontradeRouteCellChanged)
-            
+        del window
+    def searchPlanets(self):
+        self.ui.planet_list.itemChanged.disconnect(self.planetStatusModified)
+        self.ui.planet_list.clear()
+        self.ui.planet_list.setHorizontalHeaderLabels(['Planets'])
+        self.ui.planet_list.setRowCount(0)
+        gc.collect()
+        searchString = self.ui.planetsSearch.text()
+        if searchString.isspace():
+            pass
+        self.ui.planet_list.clear()
+        self.ui.planet_list.setHorizontalHeaderLabels(['Planets'])
+        self.ui.planet_list.setRowCount(0)
+        planetNames = [x.name for x in self.repository.planets]
+        campaignPlanets = [x.name for x in self.selected_campaign.planets]
+        for i in planetNames:
+            if searchString.lower() in i.lower():
+                rowCount = self.ui.planet_list.rowCount()
+                self.ui.planet_list.setRowCount(rowCount + 1)
+                item= QTableWidgetItem(i)
+                item.setFlags(QtCore.Qt.ItemIsUserCheckable | QtCore.Qt.ItemIsEnabled)
+                
+                self.ui.planet_list.setItem(rowCount, 0, item)
+                if i in campaignPlanets:
+                    item.setCheckState(QtCore.Qt.Checked)
+                else:
+                    item.setCheckState(QtCore.Qt.Unchecked)
+        self.ui.planet_list.itemChanged.connect(self.planetStatusModified)
+    def searchTradeRoutes(self):
+        self.ui.tradeRoute_list.itemChanged.disconnect(self.ontradeRouteCellChanged)
+        self.ui.tradeRoute_list.clear()
+        self.ui.tradeRoute_list.setHorizontalHeaderLabels(['Trade Routes'])
+        self.ui.tradeRoute_list.setRowCount(0)
+        gc.collect()
+        searchString = self.ui.tradeRouteSearch.text()
+        if searchString.isspace():
+            pass
+        planetNames = [x.name for x in self.repository.trade_routes]
+        campaignPlanets = [x.name for x in self.selected_campaign.trade_routes]
+        for i in planetNames:
+            if searchString.lower() in i.lower():
+                rowCount = self.ui.tradeRoute_list.rowCount()
+                self.ui.tradeRoute_list.setRowCount(rowCount + 1)
+                item= QTableWidgetItem(i)
+                item.setFlags(QtCore.Qt.ItemIsUserCheckable | QtCore.Qt.ItemIsEnabled)
+                
+                self.ui.tradeRoute_list.setItem(rowCount, 0, item)
+                if i in campaignPlanets:
+                    item.setCheckState(QtCore.Qt.Checked)
+                else:
+                    item.setCheckState(QtCore.Qt.Unchecked)
+        self.ui.tradeRoute_list.itemChanged.connect(self.ontradeRouteCellChanged)

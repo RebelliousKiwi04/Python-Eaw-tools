@@ -3,6 +3,7 @@ import lxml.etree as et
 import sys
 from gameObject.GameObjectRepository import *
 from gameObject.TextHandler import *
+from PlanetTable import *
 print("Running")
 eawxText = TextFile('''C:\Program Files (x86)\Steam\SteamApps\common\Star Wars Empire at War\corruption\Mods\EmpireAtWarExpanded\Data''', 'dict')
 teststring = '''	<Planet Name="Abregado_Rae">
@@ -134,11 +135,26 @@ import csv
 newPlanets = et.parse('C:\Program Files (x86)\Steam\SteamApps\common\Star Wars Empire at War\corruption\Mods\Chelmod\Data\XML\Planets.xml')
 newPlanetsRoot = newPlanets.getroot()
 
-
 for i in repository.planets:
+	name =i.name
+	try:
+		textID = repository.text_dict[i.text_key]
+	except:
+		print(name)
+		print(i.text_key)
+	for j in planetstable:
+		if j['planet'].lower() in textID.lower():
+			print(j['planet'])
+			i.x = j["x"]
+			i.y = j["y"]
+
+
+
+
+# for i in repository.planets:
 	
-	i.y = float(i.y)*1.4
-	i.x = float(i.x)*1.4
+# 	i.y = float(i.y)*1.4
+# 	i.x = float(i.x)*1.4
 
 for i in newPlanetsRoot:
 	if i.tag == 'Planet':
@@ -147,8 +163,8 @@ for i in newPlanetsRoot:
 			for j in i:
 				if j.tag == "Galactic_Position":
 					j.text = f'{planet.x}, {planet.y}, 10.0'
-	tree= et.ElementTree(newPlanetsRoot)
-	tree.write('C:\Program Files (x86)\Steam\SteamApps\common\Star Wars Empire at War\corruption\Mods\Chelmod\Data\XML\Planets.xml',xml_declaration=True, encoding='UTF-8')
+tree= et.ElementTree(newPlanetsRoot)
+tree.write('C:\Program Files (x86)\Steam\SteamApps\common\Star Wars Empire at War\corruption\Mods\Chelmod\Data\XML\Planets.xml',xml_declaration=True, encoding='UTF-8')
 
 # for x in planetRepoRoot:
 # 	name = x.get('Name').replace(' ','_')

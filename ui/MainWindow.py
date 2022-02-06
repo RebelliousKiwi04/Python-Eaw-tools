@@ -52,7 +52,7 @@ class GalacticMap(QWidget):
         """Update the graph. Necessary, to call after each plot"""
 
         self.mapCanvas.draw()
-    def plotGalaxy(self, planets, tradeRoutes, allPlanets, autoPlanetConnectionDistance: int = 0) -> None:
+    def plotGalaxy(self, planets, tradeRoutes, allPlanets, campaign,repository,autoPlanetConnectionDistance: int = 0) -> None:
         '''Plots all planets as alpha = 0.1, then overlays all selected planets and trade routes'''
         self.axes.clear()
 
@@ -71,7 +71,7 @@ class GalacticMap(QWidget):
             y.append(planet.y)
             self.__planetNames.append(planet.name)
 
-        self.__planetsScatter = self.axes.scatter(x, y, c = 'b', alpha = 0.1,picker = 5)
+        self.__planetsScatter = self.axes.scatter(x, y, c = 'b', alpha = 0.1,picker = 5, zorder=2)
         x1 = 0        
         y1 = 0
         x2 = 0
@@ -84,7 +84,7 @@ class GalacticMap(QWidget):
             x2 = t.points[1].x
             y2 = t.points[1].y
             # plot each route (start, end)            
-            self.axes.plot([x1, x2], [y1, y2], 'k-', alpha=0.4)
+            self.axes.plot([x1, x2], [y1, y2], 'k-', alpha=0.4, zorder=1)
         
         # #Create automatic connections between planets
         # if autoPlanetConnectionDistance > 0:
@@ -100,11 +100,28 @@ class GalacticMap(QWidget):
 
         x = []
         y = []
+        color = []
         for p in planets:
             x.append(p.x)
             y.append(p.y)
+            forces = campaign.starting_forces[p]
+            if len(forces) > 0:
+                index = [x.name for x in repository.factions].index(forces[0].owner)
+                faction = repository.factions[index]
+                color.append(tuple(faction.color))
+            else:
+                index = [x.name for x in repository.factions].index('Neutral')
+                faction = repository.factions[index]
+                color.append(tuple(faction.color))
 
-        self.axes.scatter(x, y, c = 'b')
+        #print(color)
+            #color.append(tuple(f.color))
+
+        # for p in planets:
+        #     x.append(p.x)
+        #     y.append(p.y)
+
+        self.axes.scatter(x, y, c = color,edgecolors = 'black', zorder=4)
         self.mapCanvas.draw_idle()
         self.times = self.times +1
 
