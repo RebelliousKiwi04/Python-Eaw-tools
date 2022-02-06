@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(['main.pyw'],
-             pathex=['C:\\Users\\Christopher\\Desktop\\Python EaW tool'],
+             pathex=['C:\\Users\\Christopher\\Desktop\\Python-Eaw-tools'],
              binaries=[],
              datas=[],
              hiddenimports=[],

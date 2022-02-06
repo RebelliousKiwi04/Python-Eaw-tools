@@ -1,3 +1,4 @@
+from operator import index
 import lxml.etree as et
 import sys
 from gameObject.GameObjectRepository import *
@@ -56,61 +57,98 @@ teststring = '''	<Planet Name="Abregado_Rae">
 
 		<Additional_Population_Capacity>50</Additional_Population_Capacity>
 
-	</Planet>'''
+# 	</Planet>'''
 mod_dir = """C:\Program Files (x86)\Steam\SteamApps\common\Star Wars Empire at War\corruption\Mods\Chelmod\Data"""
 repository = ModRepository(mod_dir, open('logfile', 'w'))
-root = et.Element('Planets')
-for planet in repository.planets:
-	planetroot = et.fromstring(teststring)
-	planetroot.set('Name', planet.name)
-	for i in planetroot:
-		if i.tag == 'Galactic_Position':
-			i.text = f'{planet.x}, {planet.y}, 10.0'
-		if i.tag == 'Max_Space_Base':
-			i.text = planet.max_space_base
-		if i.tag == 'Galactic_Model_Name':
-			i.text = planet.galactic_model
-		if i.tag == 'Destroyed_Galactic_Model_Name':
-			i.text = planet.destroyed_model
-		if i.tag == 'Zoomed_Terrain_Index':
-			i.text = planet.terrain_index
-		if i.tag =='Land_Tactical_Map':
-			if planet.land_map not in os.listdir('''C:\Program Files (x86)\Steam\SteamApps\common\Star Wars Empire at War\corruption\Mods\Chelmod\Data\Art\Maps'''):
-				i.text =='_Land_Planet_AbregadoRae_02.ted'
-		if i.tag =='Space_Tactical_Map':
-			if planet.space_map not in os.listdir('''C:\Program Files (x86)\Steam\SteamApps\common\Star Wars Empire at War\corruption\Mods\Chelmod\Data\Art\Maps'''):
-				i.text == '_Space_Planet_AbregadoRae_01.ted'
-		if i.tag == 'Text_ID':
-			i.text = 'TEXT_OBJECT_STAR_SYSTEM_'+planet.name.upper()
-	root.append(planetroot)
+name = ""
+templateEvent = f"""
+	<Event Name="Select_{name}">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>{name}</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_{name}</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>\n
+"""
 
-campaignFilesET = et.ElementTree(root)
-campaignFilesET.write('testfile2.xml',xml_declaration=True, encoding='UTF-8',pretty_print=True)
+
+
+#CSV File Generation
+import csv
+
+
+# with open('planets.csv', 'w', newline='') as csvfile:
+# 	writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+# 	writer.writerow(['Planet Name', 'Space Base', 'Space Map', 'Land Map', 'Land Slots', 'X Coordinate', 'Y Coordinate', 'Galactic Model', 'Destroyed Model', 'Additional Population', 'Surface Accessible', 'Zoomed Index'])
+# 	for i in repository.planets:
+# 		writer.writerow([i.name, str(i.terrain_index), i.space_map, i.land_map, str(i.land_structures), str(i.x), str(i.y), i.galactic_model, str(i.destroyed_model), str(i.additional_pop), i.land_accessible, '3'])
+# lvl1 = open('level1.txt','w')
+# lvl2 = open('level2.txt', 'w')
+# lvl3 = open('level3.txt','w')
+# with open('planets.csv', newline='') as csvfile:
+# 	reader = csv.reader(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+# 	for row in reader:
+# 		if row[0] != 'Planet Name':
+# 			planet_index = [x.name for x in repository.planets].index(row[0])
+# 			planet = repository.planets[planet_index]
+# 			if row[1] == '1':
+# 				lvl1.write(f'{planet.name},')
+# 			if row[1] =='2':
+# 				lvl2.write(f'{planet.name},')
+# 			if row[1] == '3':
+# 				lvl3.write(f'{planet.name},')
+
+# root = et.Element('Planets')
+# for planet in repository.planets:
+# 	planetroot = et.fromstring(teststring)
+# 	planetroot.set('Name', planet.name)
+# 	for i in planetroot:
+# 		if i.tag == 'Galactic_Position':
+# 			i.text = f'{planet.x}, {planet.y}, 10.0'
+# 		if i.tag == 'Max_Space_Base':
+# 			i.text = planet.max_space_base
+# 		if i.tag == 'Galactic_Model_Name':
+# 			i.text = planet.galactic_model
+# 		if i.tag == 'Destroyed_Galactic_Model_Name':
+# 			i.text = planet.destroyed_model
+# 		if i.tag == 'Zoomed_Terrain_Index':
+# 			i.text = planet.terrain_index
+# 		if i.tag =='Land_Tactical_Map':
+# 			if planet.land_map not in os.listdir('''C:\Program Files (x86)\Steam\SteamApps\common\Star Wars Empire at War\corruption\Mods\Chelmod\Data\Art\Maps'''):
+# 				i.text =='_Land_Planet_AbregadoRae_02.ted'
+# 		if i.tag =='Space_Tactical_Map':
+# 			if planet.space_map not in os.listdir('''C:\Program Files (x86)\Steam\SteamApps\common\Star Wars Empire at War\corruption\Mods\Chelmod\Data\Art\Maps'''):
+# 				i.text == '_Space_Planet_AbregadoRae_01.ted'
+# 		if i.tag == 'Text_ID':
+# 			i.text = 'TEXT_OBJECT_STAR_SYSTEM_'+planet.name.upper()
+# 	root.append(planetroot)
+
+# campaignFilesET = et.ElementTree(root)
+# campaignFilesET.write('testfile2.xml',xml_declaration=True, encoding='UTF-8',pretty_print=True)
 
 # planetRepo = et.parse('testfile2.xml')
 
 # planetRepoRoot = planetRepo.getroot()
 
-# newPlanets = et.parse('testfile2.xml')
-# newPlanetsRoot = newPlanets.getroot()
+newPlanets = et.parse('C:\Program Files (x86)\Steam\SteamApps\common\Star Wars Empire at War\corruption\Mods\Chelmod\Data\XML\Planets.xml')
+newPlanetsRoot = newPlanets.getroot()
 
 
-# for i in planetRepoRoot:
-# 	for j in i:
-# 		if j.tag =='Galactic_Position':
-# 			entry = j.text
-# 			print(entry)
-# 			entry = entry.replace(',',' ')
-# 			entry = entry.split()
-# 			newentry = []
-# 			for i in entry:
-# 				i = float(i)*3
-# 				newentry.append(i)
-# 			print(newentry)
-# 			j.text = f'{newentry[0]}, {newentry[1]}, 10.0'
-# Tree = et.ElementTree(planetRepoRoot)
-# Tree.write('TestingAgain.xml',xml_declaration=True, encoding='UTF-8',pretty_print=True)
+for i in repository.planets:
+	
+	i.y = float(i.y)*1.4
+	i.x = float(i.x)*1.4
 
+for i in newPlanetsRoot:
+	if i.tag == 'Planet':
+		if i.get('Name') != 'Galaxy_Core_Art_Model':
+			planet = repository.planets[[x.name for x in repository.planets].index(i.get('Name'))]
+			for j in i:
+				if j.tag == "Galactic_Position":
+					j.text = f'{planet.x}, {planet.y}, 10.0'
+	tree= et.ElementTree(newPlanetsRoot)
+	tree.write('C:\Program Files (x86)\Steam\SteamApps\common\Star Wars Empire at War\corruption\Mods\Chelmod\Data\XML\Planets.xml',xml_declaration=True, encoding='UTF-8')
 
 # for x in planetRepoRoot:
 # 	name = x.get('Name').replace(' ','_')

@@ -1,0 +1,5920 @@
+
+	<Event Name="Select_GALAXY_CORE_ART_MODEL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GALAXY_CORE_ART_MODEL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GALAXY_CORE_ART_MODEL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_AARGAU">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>AARGAU</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_AARGAU</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_AARGONAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>AARGONAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_AARGONAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ABHEAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ABHEAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ABHEAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ABREGADO_RAE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ABREGADO_RAE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ABREGADO_RAE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ADUMAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ADUMAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ADUMAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SHOLA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SHOLA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SHOLA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GALBORON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GALBORON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GALBORON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NOOLI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NOOLI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NOOLI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_FAHNA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>FAHNA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_FAHNA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TOSSTE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TOSSTE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TOSSTE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_POLUS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>POLUS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_POLUS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_LERITOR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>LERITOR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_LERITOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_AETENII">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>AETENII</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_AETENII</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_AGAMAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>AGAMAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_AGAMAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_AGOMAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>AGOMAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_AGOMAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_AHCH_TO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>AHCH_TO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_AHCH_TO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_AJAN_KLOSS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>AJAN_KLOSS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_AJAN_KLOSS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ALAGON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ALAGON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ALAGON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ALDERAAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ALDERAAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ALDERAAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ALSAKAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ALSAKAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ALSAKAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ALZOCIII">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ALZOCIII</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ALZOCIII</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_AMRAC">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>AMRAC</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_AMRAC</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ANAXES">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ANAXES</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ANAXES</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ANDO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ANDO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ANDO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ANNAJ">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ANNAJ</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ANNAJ</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ANSION">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ANSION</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ANSION</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ANTEMERIDIAS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ANTEMERIDIAS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ANTEMERIDIAS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ANX_MINOR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ANX_MINOR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ANX_MINOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ATCHORB">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ATCHORB</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ATCHORB</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ATRAVIS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ATRAVIS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ATRAVIS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ATZERRI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ATZERRI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ATZERRI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_AXXILA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>AXXILA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_AXXILA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BAKURA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BAKURA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BAKURA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BALAMAK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BALAMAK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BALAMAK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BALMORRA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BALMORRA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BALMORRA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BANDOMEER">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BANDOMEER</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BANDOMEER</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BLACK_BANTHA_NEBULA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BLACK_BANTHA_NEBULA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BLACK_BANTHA_NEBULA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BARAB">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BARAB</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BARAB</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BARLOK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BARLOK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BARLOK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BASILISK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BASILISK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BASILISK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BASSADRO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BASSADRO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BASSADRO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BASTION">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BASTION</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BASTION</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BATUU">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BATUU</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BATUU</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BELDERONE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BELDERONE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BELDERONE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BELGAROTH">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BELGAROTH</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BELGAROTH</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BELKADAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BELKADAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BELKADAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BELSAVIS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BELSAVIS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BELSAVIS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BELSMUTH">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BELSMUTH</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BELSMUTH</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BESCANE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BESCANE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BESCANE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BESPIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BESPIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BESPIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BESTINE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BESTINE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BESTINE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BILBRINGI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BILBRINGI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BILBRINGI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BIMMIEL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BIMMIEL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BIMMIEL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BIMMISAARI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BIMMISAARI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BIMMISAARI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ORD_BINIIR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ORD_BINIIR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ORD_BINIIR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BKNOS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BKNOS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BKNOS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BOGO_RAI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BOGO_RAI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BOGO_RAI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BOMIS_KOORI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BOMIS_KOORI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BOMIS_KOORI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BONADAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BONADAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BONADAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BORLEIAS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BORLEIAS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BORLEIAS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BORMUS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BORMUS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BORMUS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BOROSK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BOROSK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BOROSK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BOTAJEF">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BOTAJEF</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BOTAJEF</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BOTHAWUI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BOTHAWUI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BOTHAWUI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BOZ_PITY">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BOZ_PITY</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BOZ_PITY</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BPFASSH">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BPFASSH</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BPFASSH</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BRENTAAL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BRENTAAL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BRENTAAL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BYBLOS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BYBLOS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BYBLOS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BYSS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BYSS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BYSS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CAAMAS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CAAMAS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CAAMAS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CAL_SETI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CAL_SETI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CAL_SETI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CANTONICA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CANTONICA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CANTONICA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ORD_CANTRELL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ORD_CANTRELL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ORD_CANTRELL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CARIDA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CARIDA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CARIDA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CARRIVAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CARRIVAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CARRIVAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CASFIELD">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CASFIELD</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CASFIELD</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CASTELL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CASTELL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CASTELL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CATLIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CATLIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CATLIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CATO_NEIMOIDIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CATO_NEIMOIDIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CATO_NEIMOIDIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CATTAMASCAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CATTAMASCAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CATTAMASCAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CAULDRON_NEBULA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CAULDRON_NEBULA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CAULDRON_NEBULA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CEJANSIJ">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CEJANSIJ</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CEJANSIJ</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CELANON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CELANON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CELANON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CELWIS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CELWIS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CELWIS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CENTARES">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CENTARES</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CENTARES</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CEREA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CEREA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CEREA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ORD_CESTUS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ORD_CESTUS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ORD_CESTUS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CHAMPALA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CHAMPALA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CHAMPALA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CHANDRILA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CHANDRILA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CHANDRILA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CHARDAAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CHARDAAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CHARDAAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CHARROS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CHARROS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CHARROS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CHARUBAH">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CHARUBAH</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CHARUBAH</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CHASIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CHASIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CHASIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CHAZWA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CHAZWA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CHAZWA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CHORAX">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CHORAX</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CHORAX</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NAM_CHORIOS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NAM_CHORIOS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NAM_CHORIOS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CHRISTOPHSIS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CHRISTOPHSIS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CHRISTOPHSIS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CHRONDRE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CHRONDRE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CHRONDRE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CIRCUMTORE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CIRCUMTORE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CIRCUMTORE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CIUTRIC">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CIUTRIC</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CIUTRIC</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CLAKDOR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CLAKDOR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CLAKDOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_COLLA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>COLLA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_COLLA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_COLUMEX">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>COLUMEX</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_COLUMEX</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_COLUMUS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>COLUMUS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_COLUMUS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_COMKIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>COMKIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_COMKIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_COMMENOR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>COMMENOR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_COMMENOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_COMRA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>COMRA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_COMRA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CONCORD_DAWN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CONCORD_DAWN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CONCORD_DAWN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CONTRUUM">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CONTRUUM</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CONTRUUM</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_COPERO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>COPERO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_COPERO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_COPHRIGIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>COPHRIGIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_COPHRIGIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CORELLIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CORELLIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CORELLIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CORMIT">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CORMIT</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CORMIT</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CORSIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CORSIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CORSIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CORTHENIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CORTHENIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CORTHENIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CORULAG">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CORULAG</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CORULAG</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CORUSCANT">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CORUSCANT</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CORUSCANT</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CORVIS_MINOR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CORVIS_MINOR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CORVIS_MINOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CRAIT">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CRAIT</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CRAIT</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CRAKULL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CRAKULL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CRAKULL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CRUSTAI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CRUSTAI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CRUSTAI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CSAUS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CSAUS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CSAUS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CSILLA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CSILLA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CSILLA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CULARIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CULARIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CULARIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DA_SOOCHA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DA_SOOCHA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DA_SOOCHA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DAGOBAH">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DAGOBAH</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DAGOBAH</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DANTOOINE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DANTOOINE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DANTOOINE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DARKON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DARKON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DARKON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DATHOMIR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DATHOMIR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DATHOMIR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DEKO_NEIMOIDIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DEKO_NEIMOIDIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DEKO_NEIMOIDIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DELACRIX">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DELACRIX</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DELACRIX</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DELLALT">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DELLALT</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DELLALT</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DENON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DENON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DENON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DERRA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DERRA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DERRA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DESEVRO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DESEVRO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DESEVRO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DEVARON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DEVARON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DEVARON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DIOYA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DIOYA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DIOYA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DOLOMAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DOLOMAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DOLOMAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DOORNIK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DOORNIK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DOORNIK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DQAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DQAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DQAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DROMUND">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DROMUND</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DROMUND</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DRUCKENWELL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DRUCKENWELL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DRUCKENWELL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DUBRILLION">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DUBRILLION</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DUBRILLION</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DURACE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DURACE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DURACE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DURO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DURO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DURO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DXUN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DXUN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DXUN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_EADU">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>EADU</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_EADU</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_EBAQ">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>EBAQ</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_EBAQ</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_EIATTU">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>EIATTU</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_EIATTU</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ELROOD">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ELROOD</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ELROOD</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_EMBERLENE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>EMBERLENE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_EMBERLENE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_EMMER">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>EMMER</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_EMMER</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_EMPRESS_TETA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>EMPRESS_TETA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_EMPRESS_TETA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ENARC">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ENARC</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ENARC</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ENDOR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ENDOR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ENDOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ENTRALLA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ENTRALLA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ENTRALLA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_EOLSHA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>EOLSHA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_EOLSHA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ERIADU">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ERIADU</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ERIADU</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ESFANDIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ESFANDIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ESFANDIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ESSION">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ESSION</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ESSION</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ETTI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ETTI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ETTI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_EUCERON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>EUCERON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_EUCERON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_EXEGOL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>EXEGOL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_EXEGOL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_EXOCRON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>EXOCRON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_EXOCRON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_EXPLUME_MINOR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>EXPLUME_MINOR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_EXPLUME_MINOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_FARRFIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>FARRFIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_FARRFIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_FELUCIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>FELUCIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_FELUCIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_FILVE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>FILVE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_FILVE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_FLORRUM">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>FLORRUM</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_FLORRUM</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_FOEROST">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>FOEROST</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_FOEROST</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_FOLESS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>FOLESS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_FOLESS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_FONDOR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>FONDOR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_FONDOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_FORMOS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>FORMOS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_FORMOS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_FRESIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>FRESIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_FRESIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GABREDOR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GABREDOR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GABREDOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GALANTOS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GALANTOS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GALANTOS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GALIDRAAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GALIDRAAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GALIDRAAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GAMORR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GAMORR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GAMORR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GAROS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GAROS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GAROS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GARQI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GARQI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GARQI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GAVRYN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GAVRYN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GAVRYN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GENERIS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GENERIS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GENERIS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GEONOSIS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GEONOSIS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GEONOSIS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GEROON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GEROON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GEROON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GESTRON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GESTRON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GESTRON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GHORMAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GHORMAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GHORMAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GLEE_ANSELM">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GLEE_ANSELM</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GLEE_ANSELM</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GLOM_THO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GLOM_THO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GLOM_THO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GLOVA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GLOVA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GLOVA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GRAVAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GRAVAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GRAVAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ALDERAAN_GRAVEYARD">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ALDERAAN_GRAVEYARD</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ALDERAAN_GRAVEYARD</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GRAVLEX_MED">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GRAVLEX_MED</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GRAVLEX_MED</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GRHO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GRHO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GRHO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GYMELO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GYMELO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GYMELO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GYNDINE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GYNDINE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GYNDINE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_HAKASSI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>HAKASSI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_HAKASSI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_HALANIT">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>HALANIT</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_HALANIT</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_HANDOOINE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>HANDOOINE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_HANDOOINE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_HAPES">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>HAPES</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_HAPES</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_HAST">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>HAST</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_HAST</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_HELSKA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>HELSKA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_HELSKA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_HERDESSA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>HERDESSA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_HERDESSA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_HEWETT">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>HEWETT</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_HEWETT</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_HIJARNA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>HIJARNA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_HIJARNA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_HONOGHR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>HONOGHR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_HONOGHR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_HOSNIAN_PRIME">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>HOSNIAN_PRIME</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_HOSNIAN_PRIME</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_HOTH">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>HOTH</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_HOTH</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_HUMBARINE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>HUMBARINE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_HUMBARINE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_HYPORI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>HYPORI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_HYPORI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_IEGO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>IEGO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_IEGO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PRILDAZ">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PRILDAZ</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PRILDAZ</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ILUM">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ILUM</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ILUM</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_IOL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>IOL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_IOL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_IPHIGIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>IPHIGIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_IPHIGIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_IRIDONIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>IRIDONIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_IRIDONIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ISKADRELL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ISKADRELL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ISKADRELL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ITHOR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ITHOR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ITHOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_JABIIM">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>JABIIM</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_JABIIM</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_JAEMUS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>JAEMUS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_JAEMUS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_JAKKU">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>JAKKU</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_JAKKU</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_JAMINERE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>JAMINERE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_JAMINERE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_JARDEEN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>JARDEEN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_JARDEEN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_JEDHA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>JEDHA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_JEDHA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_JOMARK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>JOMARK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_JOMARK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_JTPTAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>JTPTAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_JTPTAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_FERIAE_JUNCTION">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>FERIAE_JUNCTION</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_FERIAE_JUNCTION</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KAAL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KAAL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KAAL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KAFRENE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KAFRENE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KAFRENE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KAIKIELIUS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KAIKIELIUS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KAIKIELIUS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KALARBA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KALARBA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KALARBA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KALEE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KALEE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KALEE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KALIIDA_NEBULA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KALIIDA_NEBULA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KALIIDA_NEBULA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KALIST">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KALIST</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KALIST</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KALLA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KALLA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KALLA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KAMINO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KAMINO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KAMINO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KAMMIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KAMMIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KAMMIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KAMPE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KAMPE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KAMPE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KARIEK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KARIEK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KARIEK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KASHYYYK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KASHYYYK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KASHYYYK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KATANA_SPACE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KATANA_SPACE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KATANA_SPACE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KAURON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KAURON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KAURON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KEM_STOR_AI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KEM_STOR_AI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KEM_STOR_AI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KESSEL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KESSEL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KESSEL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KETARIS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KETARIS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KETARIS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KHOMM">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KHOMM</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KHOMM</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KINOSS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KINOSS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KINOSS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KLATOOINE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KLATOOINE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KLATOOINE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KOORIVA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KOORIVA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KOORIVA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KORDA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KORDA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KORDA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KORRIBAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KORRIBAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KORRIBAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KORU_NEIMOIDIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KORU_NEIMOIDIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KORU_NEIMOIDIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KOTHLIS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KOTHLIS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KOTHLIS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KRANT">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KRANT</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KRANT</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KUAT">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KUAT</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KUAT</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KWENN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KWENN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KWENN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_LANTILLIES">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>LANTILLIES</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_LANTILLIES</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_LEVIAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>LEVIAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_LEVIAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_LIANNA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>LIANNA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_LIANNA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_LIINADE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>LIINADE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_LIINADE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_LIOAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>LIOAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_LIOAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_LLANIC">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>LLANIC</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_LLANIC</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_LONNAW">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>LONNAW</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_LONNAW</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_LORONAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>LORONAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_LORONAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_LOTHAL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>LOTHAL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_LOTHAL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_LOWN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>LOWN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_LOWN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_LWHEKK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>LWHEKK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_LWHEKK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_LYRAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>LYRAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_LYRAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_M293">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>M293</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_M293</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MAKATAK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MAKATAK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MAKATAK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MALACHOR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MALACHOR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MALACHOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MALASTARE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MALASTARE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MALASTARE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MANAAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MANAAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MANAAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MANDA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MANDA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MANDA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MANDALORE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MANDALORE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MANDALORE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ORD_MANTELL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ORD_MANTELL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ORD_MANTELL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MARIDUN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MARIDUN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MARIDUN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MARYO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MARYO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MARYO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MASSOSS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MASSOSS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MASSOSS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MECHIS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MECHIS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MECHIS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_METALORN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>METALORN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_METALORN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_METELLOS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>METELLOS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_METELLOS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MIMBAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MIMBAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MIMBAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MINDOR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MINDOR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MINDOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MINNTOOINE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MINNTOOINE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MINNTOOINE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MISTONE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MISTONE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MISTONE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MISTTHREE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MISTTHREE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MISTTHREE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MISTTWO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MISTTWO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MISTTWO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MONCALAMARI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MONCALAMARI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MONCALAMARI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MOONUS_MANDEL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MOONUS_MANDEL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MOONUS_MANDEL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MOORJA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MOORJA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MOORJA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MORISHIM">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MORISHIM</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MORISHIM</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MRISST">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MRISST</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MRISST</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MRLSST">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MRLSST</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MRLSST</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MULLAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MULLAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MULLAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MUNLALI_MAFIR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MUNLALI_MAFIR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MUNLALI_MAFIR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MURGO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MURGO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MURGO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MURKHANA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MURKHANA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MURKHANA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MUSTAFAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MUSTAFAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MUSTAFAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MUUNILINST">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MUUNILINST</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MUUNILINST</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MYGEETO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MYGEETO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MYGEETO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MYRKR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MYRKR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MYRKR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MYTUS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MYTUS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MYTUS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NABOO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NABOO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NABOO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NALHUTTA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NALHUTTA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NALHUTTA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NAPORAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NAPORAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NAPORAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NAR_HAASKA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NAR_HAASKA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NAR_HAASKA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NAR_SHADDAA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NAR_SHADDAA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NAR_SHADDAA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NATH_GOORDI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NATH_GOORDI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NATH_GOORDI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NELVAAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NELVAAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NELVAAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NESPIS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NESPIS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NESPIS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NETTEHI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NETTEHI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NETTEHI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NEW_ALDERAAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NEW_ALDERAAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NEW_ALDERAAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NEW_BORNALEX">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NEW_BORNALEX</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NEW_BORNALEX</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NEW_COV">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NEW_COV</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NEW_COV</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NEW_PLYMPTO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NEW_PLYMPTO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NEW_PLYMPTO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NIHIL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NIHIL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NIHIL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NIMBAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NIMBAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NIMBAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NIRAUAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NIRAUAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NIRAUAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NKLLON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NKLLON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NKLLON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NOQUIVZOR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NOQUIVZOR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NOQUIVZOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NUBIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NUBIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NUBIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NZOTH">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NZOTH</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NZOTH</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_OBREDAAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>OBREDAAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_OBREDAAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_OBROA_SKAI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>OBROA_SKAI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_OBROA_SKAI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ODIK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ODIK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ODIK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_OJOM">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>OJOM</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_OJOM</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ONDERON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ONDERON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ONDERON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ORDO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ORDO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ORDO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_OREEN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>OREEN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_OREEN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ORINDA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ORINDA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ORINDA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ORISTROM">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ORISTROM</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ORISTROM</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ORLEON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ORLEON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ORLEON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_OROCCO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>OROCCO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_OROCCO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ORRON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ORRON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ORRON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_OSLUMPEX">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>OSLUMPEX</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_OSLUMPEX</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_OSSERITON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>OSSERITON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_OSSERITON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_OSSUS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>OSSUS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_OSSUS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PAARIN_MINOR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PAARIN_MINOR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PAARIN_MINOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PAKRIK_MINOR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PAKRIK_MINOR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PAKRIK_MINOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PALANHI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PALANHI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PALANHI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PAMMANT">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PAMMANT</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PAMMANT</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PANTOLOMIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PANTOLOMIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PANTOLOMIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ORD_PARDRON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ORD_PARDRON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ORD_PARDRON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PASHVI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PASHVI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PASHVI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PERANN_NEBULA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PERANN_NEBULA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PERANN_NEBULA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PEREGRINE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PEREGRINE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PEREGRINE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PESFAVRI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PESFAVRI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PESFAVRI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PESITIIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PESITIIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PESITIIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PHAEDA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PHAEDA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PHAEDA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PHINDAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PHINDAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PHINDAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PODERIS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PODERIS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PODERIS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_POLIS_MASSA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>POLIS_MASSA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_POLIS_MASSA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_POLNEYE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>POLNEYE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_POLNEYE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PORUS_VIDA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PORUS_VIDA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PORUS_VIDA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PRAESITLYN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PRAESITLYN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PRAESITLYN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PRAKITH">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PRAKITH</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PRAKITH</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PRIMEA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PRIMEA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PRIMEA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_QAT_CHRYSTAC">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>QAT_CHRYSTAC</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_QAT_CHRYSTAC</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_QIILURA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>QIILURA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_QIILURA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_QORIBU">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>QORIBU</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_QORIBU</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_QRETU">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>QRETU</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_QRETU</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_QUELL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>QUELL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_QUELL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_QUELLOR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>QUELLOR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_QUELLOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_QUETHOLD">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>QUETHOLD</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_QUETHOLD</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ORD_RADAMA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ORD_RADAMA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ORD_RADAMA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RAGMAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RAGMAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RAGMAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RAGO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RAGO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RAGO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RAKATA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RAKATA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RAKATA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RAPACC">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RAPACC</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RAPACC</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RATTATAK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RATTATAK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RATTATAK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RAXUS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RAXUS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RAXUS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RAXUS_SECOND">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RAXUS_SECOND</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RAXUS_SECOND</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RDUBA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RDUBA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RDUBA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_REECEE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>REECEE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_REECEE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RENDILI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RENDILI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RENDILI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RENNEK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RENNEK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RENNEK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RHAND">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RHAND</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RHAND</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RHEN_VAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RHEN_VAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RHEN_VAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RHIGAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RHIGAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RHIGAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RIETTE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RIETTE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RIETTE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RINGNELDIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RINGNELDIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RINGNELDIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RINGO_VINDA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RINGO_VINDA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RINGO_VINDA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RINTONNE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RINTONNE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RINTONNE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RISHI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RISHI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RISHI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ROCHE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ROCHE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ROCHE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RODIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RODIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RODIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ROMIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ROMIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ROMIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RONYARDS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RONYARDS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RONYARDS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ROTHANA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ROTHANA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ROTHANA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ROXULI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ROXULI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ROXULI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RUUSAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RUUSAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RUUSAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RYLOTH">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RYLOTH</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RYLOTH</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RYNDELLIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RYNDELLIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RYNDELLIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RYVESTER">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RYVESTER</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RYVESTER</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RZ7">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RZ7</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RZ7</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SACORRIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SACORRIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SACORRIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SAFFALORE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SAFFALORE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SAFFALORE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SAIJO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SAIJO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SAIJO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SALEUCAMI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SALEUCAMI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SALEUCAMI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SALVARA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SALVARA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SALVARA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SANRAFSIX">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SANRAFSIX</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SANRAFSIX</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SARAPIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SARAPIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SARAPIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SARM">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SARM</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SARM</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SARRISH">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SARRISH</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SARRISH</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SARVCHI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SARVCHI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SARVCHI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SCARIF">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SCARIF</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SCARIF</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SCARL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SCARL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SCARL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SCHESA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SCHESA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SCHESA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SCIPIO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SCIPIO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SCIPIO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SELAGGIS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SELAGGIS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SELAGGIS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SERENNO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SERENNO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SERENNO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SERNPIDAL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SERNPIDAL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SERNPIDAL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SEYLOTT">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SEYLOTT</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SEYLOTT</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SIFKRIC">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SIFKRIC</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SIFKRIC</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SISKEEN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SISKEEN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SISKEEN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SKYE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SKYE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SKYE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SLEHEYRON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SLEHEYRON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SLEHEYRON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SLUIS_VAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SLUIS_VAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SLUIS_VAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SNEVU">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SNEVU</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SNEVU</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SOLITAIR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SOLITAIR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SOLITAIR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_STIVIC">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>STIVIC</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_STIVIC</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SULLUST">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SULLUST</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SULLUST</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SVIVREN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SVIVREN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SVIVREN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SY_MYRTH">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SY_MYRTH</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SY_MYRTH</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SYCA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SYCA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SYCA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SYNED">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SYNED</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SYNED</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TALASEA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TALASEA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TALASEA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TALCENE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TALCENE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TALCENE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TALFAGLIO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TALFAGLIO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TALFAGLIO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TALUS_TRALUS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TALUS_TRALUS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TALUS_TRALUS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TANGRENE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TANGRENE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TANGRENE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TAR_MORDEN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TAR_MORDEN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TAR_MORDEN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TARIS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TARIS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TARIS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TARTAGLIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TARTAGLIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TARTAGLIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TATOOINE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TATOOINE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TATOOINE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TELLANROAEG">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TELLANROAEG</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TELLANROAEG</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TELOS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TELOS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TELOS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TELTI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TELTI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TELTI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TENUPE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TENUPE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TENUPE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TEPTIXII">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TEPTIXII</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TEPTIXII</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TEREPHON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TEREPHON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TEREPHON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TETH">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TETH</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TETH</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_THANOS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>THANOS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_THANOS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_THE_MAW">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>THE_MAW</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_THE_MAW</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_THE_REDOUBT">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>THE_REDOUBT</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_THE_REDOUBT</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_THOMORK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>THOMORK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_THOMORK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_THRAGO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>THRAGO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_THRAGO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_THULE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>THULE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_THULE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_THYFERRA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>THYFERRA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_THYFERRA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TIBRIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TIBRIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TIBRIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ORD_TIDDELL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ORD_TIDDELL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ORD_TIDDELL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TIMORA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TIMORA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TIMORA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TOGORIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TOGORIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TOGORIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TOYDARIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TOYDARIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TOYDARIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ORD_TRASI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ORD_TRASI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ORD_TRASI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TRAVAL_PACOR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TRAVAL_PACOR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TRAVAL_PACOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TRIAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TRIAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TRIAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TRITON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TRITON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TRITON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TROUKREE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TROUKREE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TROUKREE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TSOSS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TSOSS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TSOSS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TULPAA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TULPAA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TULPAA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TUSKENS_EYE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TUSKENS_EYE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TUSKENS_EYE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TWILIGHT_VOID">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TWILIGHT_VOID</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TWILIGHT_VOID</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TYAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TYAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TYAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TYNNA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TYNNA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TYNNA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TYTHE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TYTHE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TYTHE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_UBRIKKIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>UBRIKKIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_UBRIKKIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_UKIO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>UKIO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_UKIO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ULICIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ULICIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ULICIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_UMARENK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>UMARENK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_UMARENK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_UMBARA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>UMBARA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_UMBARA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_URCH">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>URCH</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_URCH</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_UTAPAU">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>UTAPAU</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_UTAPAU</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_UTEGETU_NEBULA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>UTEGETU_NEBULA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_UTEGETU_NEBULA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_VAGAR_PRAXUT">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>VAGAR_PRAXUT</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_VAGAR_PRAXUT</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_VAKLIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>VAKLIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_VAKLIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_VALC">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>VALC</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_VALC</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_VASSEK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>VASSEK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_VASSEK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ORD_VAUG">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ORD_VAUG</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ORD_VAUG</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_VERGESSOASTEROIDS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>VERGESSOASTEROIDS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_VERGESSOASTEROIDS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_VEROLEEM">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>VEROLEEM</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_VEROLEEM</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_VOLIK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>VOLIK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_VOLIK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_VONDARC">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>VONDARC</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_VONDARC</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_VORPAYA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>VORPAYA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_VORPAYA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_VROSYNRI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>VROSYNRI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_VROSYNRI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_VULPTER">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>VULPTER</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_VULPTER</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_VUNHANNA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>VUNHANNA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_VUNHANNA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_WAYLAND">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>WAYLAND</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_WAYLAND</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_WISTRIL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>WISTRIL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_WISTRIL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_WOOSTRI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>WOOSTRI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_WOOSTRI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_WOTEBA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>WOTEBA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_WOTEBA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_WROONA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>WROONA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_WROONA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_XAGOBAH">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>XAGOBAH</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_XAGOBAH</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_XERON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>XERON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_XERON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_XO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>XO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_XO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_YAGA_MINOR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>YAGA_MINOR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_YAGA_MINOR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_YAGDHUL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>YAGDHUL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_YAGDHUL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_YASHUVHU">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>YASHUVHU</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_YASHUVHU</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_YAVIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>YAVIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_YAVIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_YINCHORR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>YINCHORR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_YINCHORR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_YLESIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>YLESIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_YLESIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_YOGGOY">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>YOGGOY</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_YOGGOY</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ZAKUUL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ZAKUUL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ZAKUUL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ZANBAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ZANBAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ZANBAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ZFELL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ZFELL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ZFELL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ZONOMA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ZONOMA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ZONOMA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ZONOMA_30BBY">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ZONOMA_30BBY</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ZONOMA_30BBY</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ZOSHA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ZOSHA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ZOSHA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ABRIDON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ABRIDON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ABRIDON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_AGUARL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>AGUARL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_AGUARL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_AKURIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>AKURIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_AKURIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ATURI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ATURI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ATURI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NULAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NULAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NULAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_UDRAY">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>UDRAY</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_UDRAY</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_AX456">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>AX456</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_AX456</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BANNISTAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BANNISTAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BANNISTAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BEGEREN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BEGEREN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BEGEREN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BOMPREIL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BOMPREIL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BOMPREIL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BRESNIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BRESNIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BRESNIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BRIGIA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BRIGIA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BRIGIA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CALONICA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CALONICA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CALONICA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CAROSI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CAROSI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CAROSI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_CRON_DRIFT">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>CRON_DRIFT</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_CRON_DRIFT</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DALRON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DALRON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DALRON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DALUUJ">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DALUUJ</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DALUUJ</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DANUTA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DANUTA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DANUTA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DATAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DATAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DATAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DENTAAL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DENTAAL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DENTAAL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TINGEL_DEEPSPACE_BESH">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TINGEL_DEEPSPACE_BESH</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TINGEL_DEEPSPACE_BESH</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DESPAYRE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DESPAYRE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DESPAYRE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_DONIPHON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>DONIPHON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_DONIPHON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_EJOLUS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>EJOLUS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_EJOLUS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_FARA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>FARA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_FARA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_FESWE_PRIME">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>FESWE_PRIME</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_FESWE_PRIME</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GELGELAR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GELGELAR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GELGELAR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GENDRAH_NARVIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GENDRAH_NARVIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GENDRAH_NARVIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GERRARD">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GERRARD</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GERRARD</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GESTREX">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GESTREX</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GESTREX</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_JAZBINA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>JAZBINA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_JAZBINA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_JESTAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>JESTAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_JESTAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KABAL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KABAL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KABAL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KALAAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KALAAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KALAAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KALINDA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KALINDA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KALINDA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KATTADA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KATTADA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KATTADA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KESKIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KESKIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KESKIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KETAL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KETAL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KETAL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KILE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KILE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KILE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_LATHARRA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>LATHARRA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_LATHARRA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KOSTRA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KOSTRA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KOSTRA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_KRISELIST">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>KRISELIST</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_KRISELIST</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_LAAKTEEN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>LAAKTEEN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_LAAKTEEN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MHAELI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MHAELI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MHAELI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MALDRA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MALDRA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MALDRA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MIZTOC">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MIZTOC</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MIZTOC</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_MOVRIS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>MOVRIS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_MOVRIS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NENTAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NENTAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NENTAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NEZ_PERON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NEZ_PERON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NEZ_PERON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_NOCTO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>NOCTO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_NOCTO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ORION">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ORION</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ORION</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PORCHELLO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PORCHELLO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PORCHELLO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_PRAADOST">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>PRAADOST</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_PRAADOST</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RALLTIIR">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RALLTIIR</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RALLTIIR</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RION">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RION</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RION</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RUDRIG">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RUDRIG</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RUDRIG</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SAGMA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SAGMA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SAGMA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SANJIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SANJIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SANJIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SARKO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SARKO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SARKO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SELLASAS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SELLASAS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SELLASAS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SHADREN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SHADREN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SHADREN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SHAYLIN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SHAYLIN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SHAYLIN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SOLAEST">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SOLAEST</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SOLAEST</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SOLEM">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SOLEM</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SOLEM</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SYNI">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SYNI</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SYNI</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TALAY">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TALAY</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TALAY</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_THILA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>THILA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_THILA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TON_FALK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TON_FALK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TON_FALK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TOPRAWA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TOPRAWA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TOPRAWA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TURAK">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TURAK</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TURAK</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TURCAN">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TURCAN</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TURCAN</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_TURKANA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>TURKANA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_TURKANA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BAJIC">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BAJIC</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BAJIC</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_XA_FEL">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>XA_FEL</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_XA_FEL</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_LAKRA">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>LAKRA</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_LAKRA</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SUNRISE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SUNRISE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SUNRISE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_HOXIM">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>HOXIM</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_HOXIM</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ARDIS">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ARDIS</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ARDIS</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_BORMTER">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>BORMTER</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_BORMTER</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_RELEPHON">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>RELEPHON</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_RELEPHON</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_SHEDU_MAAD">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>SHEDU_MAAD</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_SHEDU_MAAD</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_GALLINORE">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>GALLINORE</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_GALLINORE</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
+
+	<Event Name="Select_ROQOO">
+		<Event_Type>STORY_SELECT_PLANET</Event_Type>
+		<Event_Param1>ROQOO</Event_Param1>
+		<Reward_Type>TRIGGER_AI</Reward_Type>
+		<Reward_Param1>SELECTED_ROQOO</Reward_Param1>
+		<Reward_Param2></Reward_Param2>
+		<Perpetual>true</Perpetual>
+	</Event>
+
