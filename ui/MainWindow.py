@@ -242,18 +242,18 @@ class MainUIWindow:
         self.main_window.setMenuWidget(self.__menuBar)
 
         #Set up left pane tabs
-        self.__leftTabsWidget: QWidget = QTabWidget()
+        self.tabWidget: QWidget = QTabWidget()
         self.__planetsTradeRoutes: QWidget = QWidget()
         self.__startingForces: QWidget = QWidget()
         self.scriptingTab = QWidget()
 
-        self.__leftTabsWidget.addTab(self.__planetsTradeRoutes, "Layout")
-        self.__leftTabsWidget.addTab(self.__startingForces, "Forces")
-        # self.__leftTabsWidget.addTab(self.scriptingTab, 'Scripting')
+        self.tabWidget.addTab(self.__planetsTradeRoutes, "Layout")
+        self.tabWidget.addTab(self.__startingForces, "Forces")
+        # self.tabWidget.addTab(self.scriptingTab, 'Scripting')
         self.__planetsTradeRoutes.setLayout(QVBoxLayout())
         self.__startingForces.setLayout(QVBoxLayout())
         self.scriptingTab.setLayout(QVBoxLayout())
-        self.window_splitter.addWidget(self.__leftTabsWidget)
+        self.window_splitter.addWidget(self.tabWidget)
 
         self.__planetsTradeRoutes.layout().addWidget(self.select_GC)
         self.__planetsTradeRoutes.layout().addLayout(self.faction_layout)

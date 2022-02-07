@@ -8748,6 +8748,77 @@ Adding Trade Route Lyran_Rduba
 Adding Trade Route Gamorr_Ylesia
 Adding Trade Route Rothana_Hypori
 Adding Trade Route Circumtore_Latharra
+Adding Trade Route Agamar_Paarin_Minor
+Adding Trade Route Ithor_Paarin_Minor
+Adding Trade Route Orinda_Ord_Cantrell
+Adding Trade Route Ketaris_Ord_Cantrell
+Adding Trade Route Paarin_Minor_Ketaris
+Adding Trade Route Generis_Ketaris
+Adding Trade Route Ord_Trasi_Generis
+Adding Trade Route Dantooine_Ord_Trasi
+Adding Trade Route Ord_Trasi_Ord_Biniir
+Adding Trade Route Gravlex_Med_Anx_Minor
+Adding Trade Route Bimmiel_Gravlex_Med
+Adding Trade Route Sernpidal_Gravlex_Med
+Adding Trade Route EolSha_Corvis_Minor
+Adding Trade Route EolSha_Telos
+Adding Trade Route Doniphon_Telos
+Adding Trade Route Doniphon_Mytus
+Adding Trade Route Mytus_Atchorb
+Adding Trade Route Bonadan_Atchorb
+Adding Trade Route Dromund_Felucia
+Adding Trade Route Dromund_Thila
+Adding Trade Route Dromund_Bonadan
+Adding Trade Route Ciutric_Taris
+Adding Trade Route Agamar_Ciutric
+Adding Trade Route Felucia_Desevro
+Adding Trade Route Raxus_Desevro
+Adding Trade Route Rudrig_Raxus
+Adding Trade Route Emmer_Raxus
+Adding Trade Route Emmer_Desevro
+Adding Trade Route Emmer_Bonadan
+Adding Trade Route Antemeridias_Orion
+Adding Trade Route Tangrene_Serenno
+Adding Trade Route Tangrene_Vrosynri
+Adding Trade Route EolSha_Tangrene
+Adding Trade Route Orinda_Obredaan
+Adding Trade Route Obredaan_Ord_Mantell
+Adding Trade Route Obredaan_Nentan
+Adding Trade Route Jestan_Ord_Mantell
+Adding Trade Route Tartaglia_Jestan
+Adding Trade Route Polus_Jestan
+Adding Trade Route Tartaglia_Ithor
+Adding Trade Route Tartaglia_Taris
+Adding Trade Route Colla_Balmorra
+Adding Trade Route Chazwa_Colla
+Adding Trade Route Chazwa_Carida
+Adding Trade Route Chazwa_Comkin
+Adding Trade Route Colla_Levian
+Adding Trade Route Comkin_Levian
+Adding Trade Route Comkin_Taris
+Adding Trade Route Levian_Mandalore
+Adding Trade Route Colla_Contruum
+Adding Trade Route Colla_Onderon
+Adding Trade Route Leritor_Druckenwell
+Adding Trade Route Nooli_Druckenwell
+Adding Trade Route Nooli_Shola
+Adding Trade Route Endor_Annaj
+Adding Trade Route Annaj_Cerea
+Adding Trade Route Cerea_Vassek
+Adding Trade Route Vassek_Porchello
+Adding Trade Route Porchello_Abridon
+Adding Trade Route Porchello_Bomis_Koori
+Adding Trade Route Cerea_Ghorman
+Adding Trade Route Endor_Cerea
+Adding Trade Route Annaj_Abridon
+Adding Trade Route Talasea_Galboron
+Adding Trade Route Talasea_Rendili
+Adding Trade Route Commenor_Talasea
+Adding Trade Route Onderon_Kashyyyk
+Adding Trade Route Axxila_Ord_Cestus
+Adding Trade Route Celanon_Ord_Cestus
+Adding Trade Route Ord_Radama_Thila
+Adding Trade Route Ord_Radama_Yavin
 Unpacking Campaigns From File C:\Program Files (x86)\Steam\SteamApps\common\Star Wars Empire at War\corruption\Mods\Chelmod\Data\XML\GalacticConquests\RotRGC\Conquest_RotR.xml
 Adding Campaign Sandbox_RotR_Holdouts
 Collecting Active Player Name for conquest Sandbox_RotR_Holdouts
@@ -8835,5 +8906,780 @@ Connecting Button Triggers
 Updating Selected Planets For GC Sandbox_RotR_Holdouts
 Updating Selected Trade Routes For GC Sandbox_RotR_Holdouts
 Updating Starting Forces Table For GC Sandbox_RotR_Holdouts
-Updating Starting Forces Table For GC Sandbox_RotR_Holdouts
+New GC Set With Name Sandbox_Rebellion Selected
+Disonnecting Button Triggers
+Adding Playable Factions For Set To Combobox
+Connecting Button Triggers
+Updating Selected Planets For GC Sandbox_Rebellion_Empire
+Updating Selected Trade Routes For GC Sandbox_Rebellion_Empire
+Updating Starting Forces Table For GC Sandbox_Rebellion_Empire
+Plotting Galactic Map...
+Planet Bastion Selected On Galactic Plot
+Updating Starting Forces Table For GC Sandbox_Rebellion_Empire
+Adding Unit To Starting Forces At Planet Bastion
+Planet Sernpidal Selected On Galactic Plot
+Updating Starting Forces Table For GC Sandbox_Rebellion_Empire
+Adding Unit To Starting Forces At Planet Sernpidal
+Planet Gravlex_Med Selected On Galactic Plot
+Updating Starting Forces Table For GC Sandbox_Rebellion_Empire
+Adding Unit To Starting Forces At Planet Gravlex_Med
+Planet Gabredor Selected On Galactic Plot
+Updating Starting Forces Table For GC Sandbox_Rebellion_Empire
+Adding Unit To Starting Forces At Planet Gabredor
+Planet Anx_Minor Selected On Galactic Plot
+Updating Starting Forces Table For GC Sandbox_Rebellion_Empire
+Adding Unit To Starting Forces At Planet Anx_Minor
+Creating Save Containers For Trade Routes And Campaigns
+Initialising Element Tree For Campaign Files
+Compiling MasterTextFile_ENGLISH.dat
+Building Trade Route Element Tree In File C:\Program Files (x86)\Steam\SteamApps\common\Star Wars Empire at War\corruption\Mods\Chelmod\Data\XML\TradeRoutes.xml
+Building Element For Trade Route Coruscant_Corellia
+Building Element For Trade Route Corellia_Ryloth
+Building Element For Trade Route Thyferra_Fondor
+Building Element For Trade Route Fondor_Abregado_Rae
+Building Element For Trade Route Abregado_Rae_Sullust
+Building Element For Trade Route Sullust_Eriadu
+Building Element For Trade Route Eriadu_Dagobah
+Building Element For Trade Route Anaxes_Coruscant
+Building Element For Trade Route Coruscant_Corulag
+Building Element For Trade Route Bespin_Hoth
+Building Element For Trade Route Corellia_Kessel
+Building Element For Trade Route Thyferra_Abregado_Rae
+Building Element For Trade Route Bespin_Sullust
+Building Element For Trade Route Coruscant_Abregado_Rae
+Building Element For Trade Route Coruscant_Bespin
+Building Element For Trade Route Coruscant_Tatooine
+Building Element For Trade Route Alderaan_Yavin
+Building Element For Trade Route Abregado_Rae_Coruscant
+Building Element For Trade Route Coruscant_Byss
+Building Element For Trade Route Corellia_NalHutta
+Building Element For Trade Route Geonosis_Bespin
+Building Element For Trade Route Coruscant_Kuat
+Building Element For Trade Route Fondor_Sullust
+Building Element For Trade Route Corellia_Naboo
+Building Element For Trade Route Byss_Wayland
+Building Element For Trade Route NalHutta_Ryloth
+Building Element For Trade Route Corellia_Tatooine
+Building Element For Trade Route Abregado_Rae_Tatooine
+Building Element For Trade Route Carida_Manaan
+Building Element For Trade Route Jabiim_Manaan
+Building Element For Trade Route AlzocIII_Manaan
+Building Element For Trade Route Carida_Abregado_Rae
+Building Element For Trade Route Alderaan_Kashyyyk
+Building Element For Trade Route Bothawui_Eriadu
+Building Element For Trade Route Carida_Jabiim
+Building Element For Trade Route Geonosis_VergessoAsteroids
+Building Element For Trade Route Byss_Corellia
+Building Element For Trade Route Corellia_Kashyyyk
+Building Element For Trade Route Bespin_VergessoAsteroids
+Building Element For Trade Route Dagobah_Hoth
+Building Element For Trade Route Endor_Sullust
+Building Element For Trade Route Corellia_Sullust
+Building Element For Trade Route Tatooine_Kashyyyk
+Building Element For Trade Route Dagobah_Geonosis
+Building Element For Trade Route Kamino_Geonosis
+Building Element For Trade Route Ryloth_VergessoAsteroids
+Building Element For Trade Route Bespin_Dagobah
+Building Element For Trade Route Tatooine_Dagobah
+Building Element For Trade Route Atzerri_Sullust
+Building Element For Trade Route Alderaan_Corellia
+Building Element For Trade Route Alderaan_Kessel
+Building Element For Trade Route Kashyyyk_Kessel
+Building Element For Trade Route Kashyyyk_Naboo
+Building Element For Trade Route Byss_Alderaan
+Building Element For Trade Route Dantooine_Alderaan
+Building Element For Trade Route Endor_Thyferra
+Building Element For Trade Route Coruscant_Alderaan
+Building Element For Trade Route Endor_Bestine
+Building Element For Trade Route Coruscant_Sullust
+Building Element For Trade Route Tatooine_NalHutta
+Building Element For Trade Route Tatooine_Geonosis
+Building Element For Trade Route Corellia_Geonosis
+Building Element For Trade Route Coruscant_Wayland
+Building Element For Trade Route Dantooine_Wayland
+Building Element For Trade Route MonCalamari_Wayland
+Building Element For Trade Route Bothawui_Dagobah
+Building Element For Trade Route Kashyyyk_Coruscant
+Building Element For Trade Route Coruscant_Ilum
+Building Element For Trade Route Jabiim_Dantooine
+Building Element For Trade Route Bestine_Corulag
+Building Element For Trade Route Byss_Sullust
+Building Element For Trade Route MonCalamari_Yavin
+Building Element For Trade Route Dantooine_Yavin
+Building Element For Trade Route Bestine_Atzerri
+Building Element For Trade Route Jabiim_Wayland
+Building Element For Trade Route AetenII_Jabiim
+Building Element For Trade Route Eriadu_Geonosis
+Building Element For Trade Route Bespin_Eriadu
+Building Element For Trade Route Dagobah_VergessoAsteroids
+Building Element For Trade Route Byss_Tatooine
+Building Element For Trade Route Corulag_Taris
+Building Element For Trade Route Coruscant_Dantooine
+Building Element For Trade Route Dantooine_Tatooine
+Building Element For Trade Route Taris_Tatooine
+Building Element For Trade Route Dantooine_Taris
+Building Element For Trade Route Alderaan_Shola
+Building Element For Trade Route Alderaan_Korriban
+Building Element For Trade Route Shola_Yavin
+Building Element For Trade Route Alderaan_MonCalamari
+Building Element For Trade Route Alderaan_NalHutta
+Building Element For Trade Route Naboo_NalHutta
+Building Element For Trade Route MonCalamari_Naboo
+Building Element For Trade Route Ilum_Tatooine
+Building Element For Trade Route Abregado_Rae_Alderaan
+Building Element For Trade Route Geonosis_Sullust
+Building Element For Trade Route Alderaan_Geonosis
+Building Element For Trade Route Byss_Dantooine
+Building Element For Trade Route Byss_MonCalamari
+Building Element For Trade Route Bothawui_Atzerri
+Building Element For Trade Route Coruscant_Eriadu
+Building Element For Trade Route AlzocIII_Dantooine
+Building Element For Trade Route Bespin_Naboo
+Building Element For Trade Route Endor_Hoth
+Building Element For Trade Route Endor_Polus
+Building Element For Trade Route Jabiim_Polus
+Building Element For Trade Route Kashyyyk_Yavin
+Building Element For Trade Route Ryloth_Tatooine
+Building Element For Trade Route AetenII_Coruscant
+Building Element For Trade Route Corellia_Corulag
+Building Element For Trade Route Corellia_Coruscant
+Building Element For Trade Route Corulag_Ilum
+Building Element For Trade Route Abregado_Rae_Fondor
+Building Element For Trade Route Corulag_Coruscant
+Building Element For Trade Route Dagobah_Eriadu
+Building Element For Trade Route Eriadu_Sullust
+Building Element For Trade Route Fondor_Thyferra
+Building Element For Trade Route Alderaan_Eriadu
+Building Element For Trade Route Eriadu_VergessoAsteroids
+Building Element For Trade Route AetenII_AlzocIII
+Building Element For Trade Route Anaxes_Corulag
+Building Element For Trade Route Bonadan_Wayland
+Building Element For Trade Route Corellia_Fresia
+Building Element For Trade Route Corulag_Eriadu
+Building Element For Trade Route Corulag_Jabiim
+Building Element For Trade Route Fresia_Kuat
+Building Element For Trade Route Kessel_Wayland
+Building Element For Trade Route Abregado_Rae_Bestine
+Building Element For Trade Route AlzocIII_Thyferra
+Building Element For Trade Route Anaxes_Byss
+Building Element For Trade Route Bothawui_Geonosis
+Building Element For Trade Route Ilum_Thyferra
+Building Element For Trade Route Korriban_MonCalamari
+Building Element For Trade Route Manaan_Wayland
+Building Element For Trade Route Bestine_Eriadu
+Building Element For Trade Route Bestine_Ilum
+Building Element For Trade Route Byss_Kuat
+Building Element For Trade Route Dantooine_Fresia
+Building Element For Trade Route Dantooine_Manaan
+Building Element For Trade Route Kamino_Yavin
+Building Element For Trade Route Kashyyyk_Ryloth
+Building Element For Trade Route Dagobah_Naboo
+Building Element For Trade Route Dagobah_Sullust
+Building Element For Trade Route Abregado_Rae_Byss
+Building Element For Trade Route Byss_Eriadu
+Building Element For Trade Route Geonosis_Naboo
+Building Element For Trade Route Geonosis_NalHutta
+Building Element For Trade Route Geonosis_Kessel
+Building Element For Trade Route Abregado_Rae_Carida
+Building Element For Trade Route Carida_Dantooine
+Building Element For Trade Route MonCalamari_NalHutta
+Building Element For Trade Route Abregado_Rae_Fresia
+Building Element For Trade Route Fresia_Geonosis
+Building Element For Trade Route Byss_Fresia
+Building Element For Trade Route Byss_Kessel
+Building Element For Trade Route Bothawui_Kessel
+Building Element For Trade Route Bothawui_MonCalamari
+Building Element For Trade Route Bothawui_Dantooine
+Building Element For Trade Route Kessel_Yavin
+Building Element For Trade Route Kashyyyk_Shola
+Building Element For Trade Route Kashyyyk_NalHutta
+Building Element For Trade Route Abregado_Rae_Taris
+Building Element For Trade Route Bestine_Tatooine
+Building Element For Trade Route Alderaan_Dantooine
+Building Element For Trade Route Anaxes_Dantooine
+Building Element For Trade Route Naboo_Sullust
+Building Element For Trade Route Atzerri_Eriadu
+Building Element For Trade Route MonCalamari_Shola
+Building Element For Trade Route Kessel_Korriban
+Building Element For Trade Route Kuat_Kessel
+Building Element For Trade Route Eriadu_Naboo
+Building Element For Trade Route Anaxes_Carida
+Building Element For Trade Route Anaxes_Carida
+Building Element For Trade Route AlzocIII_Carida
+Building Element For Trade Route AlzocIII_Fondor
+Building Element For Trade Route Sullust_Tatooine
+Building Element For Trade Route Alderaan_Sullust
+Building Element For Trade Route Hoth_Naboo
+Building Element For Trade Route Bespin_Bestine
+Building Element For Trade Route Corulag_Fondor
+Building Element For Trade Route Bothawui_Coruscant
+Building Element For Trade Route Wayland_AlzocIII
+Building Element For Trade Route Atzerri_Thyferra
+Building Element For Trade Route Fondor_Anaxes
+Building Element For Trade Route Dagobah_Byss
+Building Element For Trade Route Kuat_Bothawui
+Building Element For Trade Route Atzerri_Taris
+Building Element For Trade Route Atzerri_Hoth
+Building Element For Trade Route Tatooine_Naboo
+Building Element For Trade Route Tatooine_Bothawui
+Building Element For Trade Route Corulag_Bothawui
+Building Element For Trade Route Taris_Sullust
+Building Element For Trade Route Corulag_Hoth
+Building Element For Trade Route Bothawui_Ryloth
+Building Element For Trade Route Hoth_VergessoAsteroids
+Building Element For Trade Route Tatooine_VergessoAsteroids
+Building Element For Trade Route Kashyyyk_NalHutta
+Building Element For Trade Route NalHutta_Ryloth
+Building Element For Trade Route Corellia_NalHutta
+Building Element For Trade Route Ryloth_Shola
+Building Element For Trade Route Fondor_Polus
+Building Element For Trade Route Fondor_Endor
+Building Element For Trade Route Bespin_Endor
+Building Element For Trade Route Bespin_Bothawui
+Building Element For Trade Route NalHutta_Bothawui
+Building Element For Trade Route Kuat_NalHutta
+Building Element For Trade Route AlzocIII_Taris
+Building Element For Trade Route Corulag_Carida
+Building Element For Trade Route Fondor_Carida
+Building Element For Trade Route Fondor_Atzerri
+Building Element For Trade Route Atzerri_Geonosis
+Building Element For Trade Route Hypori_NalHutta
+Building Element For Trade Route Hypori_Mandalore
+Building Element For Trade Route Vergesso_Mandalore
+Building Element For Trade Route Mustafar_Hoth
+Building Element For Trade Route AlzocIII_Dathomir
+Building Element For Trade Route Anaxes_Dathomir
+Building Element For Trade Route Muunilinst_Myrkr
+Building Element For Trade Route Felucia_Byss
+Building Element For Trade Route Bespin_Tatooine
+Building Element For Trade Route Yavin_Saleucami
+Building Element For Trade Route Naboo_Utapau
+Building Element For Trade Route Utapau_Mandalore
+Building Element For Trade Route Wayland_Saleucami
+Building Element For Trade Route Honoghr_NalHutta
+Building Element For Trade Route Byss_Bothawui
+Building Element For Trade Route Hoth_Mustafar
+Building Element For Trade Route Mustafar_VergessoAsteroids
+Building Element For Trade Route Bestine_Fondor
+Building Element For Trade Route AetenII_Anaxes
+Building Element For Trade Route AetenII_Dantooine
+Building Element For Trade Route Bothawui_Corellia
+Building Element For Trade Route MonCalamari_Saleucami
+Building Element For Trade Route Kamino_MonCalamari
+Building Element For Trade Route Kamino_Shola
+Building Element For Trade Route Mandalore_Utapau
+Building Element For Trade Route Bespin_Byss
+Building Element For Trade Route Byss_Coruscant
+Building Element For Trade Route Bothawui_Byss
+Building Element For Trade Route Byss_Felucia
+Building Element For Trade Route Bothawui_Tatooine
+Building Element For Trade Route Bothawui_Mandalore
+Building Element For Trade Route Bothawui_The_Maw
+Building Element For Trade Route Bothawui_Kuat
+Building Element For Trade Route Anaxes_Kuat
+Building Element For Trade Route Felucia_Kuat
+Building Element For Trade Route Korriban_Kuat
+Building Element For Trade Route Honoghr_Korriban
+Building Element For Trade Route Saleucami_The_Maw
+Building Element For Trade Route Bonadan_Saleucami
+Building Element For Trade Route Dathomir_Myrkr
+Building Element For Trade Route Bonadan_Dathomir
+Building Element For Trade Route Bonadan_Muunilinst
+Building Element For Trade Route Mandalore_Naboo
+Building Element For Trade Route Abregado_Rae_Jabiim
+Building Element For Trade Route Bothawui_Honoghr
+Building Element For Trade Route Muunilinst_Wayland
+Building Element For Trade Route Muunilinst_Saleucami
+Building Element For Trade Route Dathomir_Wayland
+Building Element For Trade Route Honoghr_Felucia
+Building Element For Trade Route Honoghr_Kamino
+Building Element For Trade Route Myrkr_Yavin
+Building Element For Trade Route Muunilinst_Yavin
+Building Element For Trade Route Honoghr_Kuat
+Building Element For Trade Route Bothawui_Hypori
+Building Element For Trade Route Hypori_The_Maw
+Building Element For Trade Route Kessel_Kuat
+Building Element For Trade Route Honoghr_Kessel
+Building Element For Trade Route Felucia_Honoghr
+Building Element For Trade Route Felucia_NalHutta
+Building Element For Trade Route Felucia_The_Maw
+Building Element For Trade Route NalHutta_The_Maw
+Building Element For Trade Route Felucia_Kashyyyk
+Building Element For Trade Route Fresia_Wayland
+Building Element For Trade Route NalHutta_Kashyyyk
+Building Element For Trade Route Corellia_Kuat
+Building Element For Trade Route Geonosis_Hypori
+Building Element For Trade Route The_Maw_Yavin
+Building Element For Trade Route Wayland_Yavin
+Building Element For Trade Route Coruscant_Carida
+Building Element For Trade Route Bonadan_Yavin
+Building Element For Trade Route Kuat_Carida
+Building Element For Trade Route Polus_Thyferra
+Building Element For Trade Route Bestine_Endor
+Building Element For Trade Route Naboo_VergessoAsteroids
+Building Element For Trade Route Geonosis_Shola
+Building Element For Trade Route Kashyyyk_Kuat
+Building Element For Trade Route Shola_The_Maw
+Building Element For Trade Route Fondor_Geonosis
+Building Element For Trade Route Fondor_Jabiim
+Building Element For Trade Route Fondor_Myrkr
+Building Element For Trade Route Geonosis_Myrkr
+Building Element For Trade Route Korriban_Myrkr
+Building Element For Trade Route Mandalore_Utapau
+Building Element For Trade Route Saleucami_Yavin
+Building Element For Trade Route Alderaan_Honoghr
+Building Element For Trade Route Bestine_Taris
+Building Element For Trade Route Bestine_Dagobah
+Building Element For Trade Route Bothawui_Kashyyyk
+Building Element For Trade Route Byss_Naboo
+Building Element For Trade Route Carida_Ilum
+Building Element For Trade Route Honoghr_Kashyyyk
+Building Element For Trade Route Honoghr_MonCalamari
+Building Element For Trade Route Honoghr_Wayland
+Building Element For Trade Route Ilum_Taris
+Building Element For Trade Route Mustafar_Utapau
+Building Element For Trade Route Alderaan_The_Maw
+Building Element For Trade Route The_Maw_Kashyyyk
+Building Element For Trade Route The_Maw_MonCalamari
+Building Element For Trade Route The_Maw_Wayland
+Building Element For Trade Route Mandalore_Ryloth
+Building Element For Trade Route TheMaw_Yavin
+Building Element For Trade Route Bothawui_Naboo
+Building Element For Trade Route Carida_Thyferra
+Building Element For Trade Route Kessel_Saleucami
+Building Element For Trade Route Felucia_NalHutta
+Building Element For Trade Route Mandalore_Ryloth
+Building Element For Trade Route NalHutta_Ryloth
+Building Element For Trade Route Vergesso_Mandalore
+Building Element For Trade Route Utapau_Mandalore
+Building Element For Trade Route Tatooine_NalHutta
+Building Element For Trade Route Felucia_Kamino
+Building Element For Trade Route Bespin_Tatooine
+Building Element For Trade Route Kuat_NalHutta
+Building Element For Trade Route Felucia_Kamino
+Building Element For Trade Route Kamino_NalHutta
+Building Element For Trade Route Shola_Naboo
+Building Element For Trade Route Mandalore_Ryloth
+Building Element For Trade Route NalHutta_Ryloth
+Building Element For Trade Route Carida_Kuat
+Building Element For Trade Route Byss_Abregado_Rae
+Building Element For Trade Route Anaxes_Jabiim
+Building Element For Trade Route Utapau_Tatooine
+Building Element For Trade Route Naboo_Byss
+Building Element For Trade Route Anaxes_Muunilinst
+Building Element For Trade Route Tatooine_Saleucami
+Building Element For Trade Route Felucia_Kuat
+Building Element For Trade Route Coruscant_Anaxes
+Building Element For Trade Route Jabiim_Carida
+Building Element For Trade Route Carida_Muunilinst
+Building Element For Trade Route Muunilinst_Wayland
+Building Element For Trade Route Bothawui_Kuat
+Building Element For Trade Route Geonosis_Utapau
+Building Element For Trade Route Geonosis_Ryloth
+Building Element For Trade Route Sullust_Utapau
+Building Element For Trade Route Hypori_Ryloth
+Building Element For Trade Route Eriadu_Mustafar
+Building Element For Trade Route Eriadu_Utapau
+Building Element For Trade Route Ando_Leritor
+Building Element For Trade Route Bothawui_Galboron
+Building Element For Trade Route Leritor_Galboron
+Building Element For Trade Route Galboron_Nooli
+Building Element For Trade Route Druckenwell_Galboron
+Building Element For Trade Route Boz_Pity_Bimmisaari
+Building Element For Trade Route Bimmisaari_Charros
+Building Element For Trade Route Charros_Metalorn
+Building Element For Trade Route Metalorn_Sy_Myrth
+Building Element For Trade Route Jabiim_Sy_Myrth
+Building Element For Trade Route Jabiim_Saleucami
+Building Element For Trade Route Druckenwell_Ando
+Building Element For Trade Route Bothawui_Leritor
+Building Element For Trade Route Leritor_Tatooine
+Building Element For Trade Route Fahna_Mustafar
+Building Element For Trade Route Mustafar_Tosste
+Building Element For Trade Route Mygeeto_Dantooine
+Building Element For Trade Route Mygeeto_AetenII
+Building Element For Trade Route Dantooine_Bimmiel
+Building Element For Trade Route Ciutric_Corvis_Minor
+Building Element For Trade Route Bimmiel_Corvis_Minor
+Building Element For Trade Route Corvis_Minor_Vrosynri
+Building Element For Trade Route Ciutric_Vrosynri
+Building Element For Trade Route Serenno_Vrosynri
+Building Element For Trade Route Vrosynri_Axxila
+Building Element For Trade Route Serenno_Yavin
+Building Element For Trade Route Yavin_Celanon
+Building Element For Trade Route Axxila_Celanon
+Building Element For Trade Route Dathomir_Axxila
+Building Element For Trade Route Taris_Dathomir
+Building Element For Trade Route Ithor_Taris
+Building Element For Trade Route AetenII_Ithor
+Building Element For Trade Route Muunilinst_Mygeeto
+Building Element For Trade Route Taris_Wayland
+Building Element For Trade Route Wayland_Mandalore
+Building Element For Trade Route Yavin_Felucia
+Building Element For Trade Route Celanon_Mandalore
+Building Element For Trade Route Felucia_Centares
+Building Element For Trade Route Ithor_Ord_Mantell
+Building Element For Trade Route AetenII_Ord_Mantell
+Building Element For Trade Route Ord_Mantell_Polus
+Building Element For Trade Route Anaxes_Polus
+Building Element For Trade Route Ord_Mantell_Anaxes
+Building Element For Trade Route Polus_Carida
+Building Element For Trade Route Wayland_Carida
+Building Element For Trade Route Kashyyyk_Manaan
+Building Element For Trade Route Kashyyyk_Charros
+Building Element For Trade Route Centares_Metalorn
+Building Element For Trade Route Saleucami_Jabiim
+Building Element For Trade Route Saleucami_Bimmisaari
+Building Element For Trade Route Kessel_Bimmisaari
+Building Element For Trade Route Saleucami_Kessel
+Building Element For Trade Route Kessel_NalHutta
+Building Element For Trade Route Bothawui_NalHutta
+Building Element For Trade Route Kamino_Hypori
+Building Element For Trade Route Tatooine_Shola
+Building Element For Trade Route Bothawui_Shola
+Building Element For Trade Route Ando_Shola
+Building Element For Trade Route Ando_Tatooine
+Building Element For Trade Route Leritor_Naboo
+Building Element For Trade Route Leritor_VergessoAsteroids
+Building Element For Trade Route Naboo_Enarc
+Building Element For Trade Route Enarc_VergessoAsteroids
+Building Element For Trade Route VergessoAsteroids_AlzocIII
+Building Element For Trade Route Ryloth_AlzocIII
+Building Element For Trade Route AlzocIII_Utapau
+Building Element For Trade Route Sullust_Naboo
+Building Element For Trade Route Atzerri_Galboron
+Building Element For Trade Route Fresia_Coruscant
+Building Element For Trade Route Coruscant_Aargau
+Building Element For Trade Route Fresia_Kampe
+Building Element For Trade Route Abregado_Rae_Kampe
+Building Element For Trade Route Bestine_Thyferra
+Building Element For Trade Route Fahna_Thyferra
+Building Element For Trade Route Bomis_Koori_Fahna
+Building Element For Trade Route Fahna_Ord_Vaug
+Building Element For Trade Route Bomis_Koori_Bespin
+Building Element For Trade Route Hoth_Belsavis
+Building Element For Trade Route Bespin_Belsavis
+Building Element For Trade Route Bespin_Mustafar
+Building Element For Trade Route Tosste_Belsavis
+Building Element For Trade Route Utapau_Dagobah
+Building Element For Trade Route Dagobah_Tosste
+Building Element For Trade Route Atzerri_Naboo
+Building Element For Trade Route Atzerri_Bestine
+Building Element For Trade Route Ord_Vaug_Bestine
+Building Element For Trade Route Ord_Vaug_Sullust
+Building Element For Trade Route Manaan_Galboron
+Building Element For Trade Route Mandalore_Kashyyyk
+Building Element For Trade Route Balmorra_Kuat
+Building Element For Trade Route Commenor_Manaan
+Building Element For Trade Route Balmorra_Commenor
+Building Element For Trade Route Carida_Balmorra
+Building Element For Trade Route Aargau_Alderaan
+Building Element For Trade Route Kuat_Alderaan
+Building Element For Trade Route Carida_Aargau
+Building Element For Trade Route Kampe_Corellia
+Building Element For Trade Route Corellia_Atzerri
+Building Element For Trade Route Ando_Nooli
+Building Element For Trade Route Kashyyyk_Bothawui
+Building Element For Trade Route Dantooine_Ithor
+Building Element For Trade Route Ciutric_Ithor
+Building Element For Trade Route Polis_Massa_Mustafar
+Building Element For Trade Route Polis_Massa_Abridon
+Building Element For Trade Route Abridon_Bespin
+Building Element For Trade Route Hoth_Polis_Massa
+Building Element For Trade Route Bonadan_Thila
+Building Element For Trade Route Telos_Thila
+Building Element For Trade Route Telos_Corvis_Minor
+Building Element For Trade Route Serenno_Telos
+Building Element For Trade Route Thila_Yavin
+Building Element For Trade Route Bonadan_Felucia
+Building Element For Trade Route Bonadan_Hast
+Building Element For Trade Route Hast_MonCalamari
+Building Element For Trade Route Rudrig_Hast
+Building Element For Trade Route Felucia_Rudrig
+Building Element For Trade Route Rudrig_Orion
+Building Element For Trade Route Orion_Jabiim
+Building Element For Trade Route Saleucami_Boz_Pity
+Building Element For Trade Route Felucia_Antemeridias
+Building Element For Trade Route Phindar_Mandalore
+Building Element For Trade Route Bandomeer_Taris
+Building Element For Trade Route Bandomeer_Mandalore
+Building Element For Trade Route Axxila_Bandomeer
+Building Element For Trade Route Sernpidal_Bimmiel
+Building Element For Trade Route Bastion_Sernpidal
+Building Element For Trade Route Bastion_Muunilinst
+Building Element For Trade Route Muunilinst_Gabredor
+Building Element For Trade Route Gabredor_Dantooine
+Building Element For Trade Route Anx_Minor_Dantooine
+Building Element For Trade Route Anx_Minor_Generis
+Building Element For Trade Route Agamar_Generis
+Building Element For Trade Route Agamar_Ithor
+Building Element For Trade Route Ord_Biniir_Generis
+Building Element For Trade Route AetenII_Ord_Biniir
+Building Element For Trade Route Mygeeto_Ord_Biniir
+Building Element For Trade Route Orinda_Nentan
+Building Element For Trade Route Ord_Biniir_Orinda
+Building Element For Trade Route Ithor_Orinda
+Building Element For Trade Route Phindar_Garos
+Building Element For Trade Route Aargonar_Garos
+Building Element For Trade Route Anx_Minor_Bimmiel
+Building Element For Trade Route Anx_Minor_Ciutric
+Building Element For Trade Route Kalaan_AetenII
+Building Element For Trade Route Kalaan_Nentan
+Building Element For Trade Route Bilbringi_Nentan
+Building Element For Trade Route Bilbringi_Borleias
+Building Element For Trade Route Nentan_Ord_Mantell
+Building Element For Trade Route Coruscant_Borleias
+Building Element For Trade Route Metellos_Coruscant
+Building Element For Trade Route Odik_Metellos
+Building Element For Trade Route Onderon_Balmorra
+Building Element For Trade Route Onderon_Contruum
+Building Element For Trade Route Mandalore_Contruum
+Building Element For Trade Route Endor_Abridon
+Building Element For Trade Route Endor_Abregado_Rae
+Building Element For Trade Route Kalist_Abregado_Rae
+Building Element For Trade Route Kalist_Odik
+Building Element For Trade Route Aargau_Coruscant
+Building Element For Trade Route Aargau_Kalist
+Building Element For Trade Route Ralltiir_Carida
+Building Element For Trade Route Chandrila_Ralltiir
+Building Element For Trade Route Anaxes_Chandrila
+Building Element For Trade Route Brentaal_Chandrila
+Building Element For Trade Route Brentaal_Ralltiir
+Building Element For Trade Route Alderaan_Brentaal
+Building Element For Trade Route Brentaal_Kuat
+Building Element For Trade Route Glom_Tho_Leritor
+Building Element For Trade Route Glom_Tho_Chardaan
+Building Element For Trade Route Atzerri_Chardaan
+Building Element For Trade Route Derra_Chardaan
+Building Element For Trade Route Emberlene_Gyndine
+Building Element For Trade Route Kashyyyk_Emberlene
+Building Element For Trade Route Derra_Bormus
+Building Element For Trade Route Bormus_Sanrafsix
+Building Element For Trade Route Naboo_Sanrafsix
+Building Element For Trade Route Sullust_Sanrafsix
+Building Element For Trade Route Sluis_Van_Utapau
+Building Element For Trade Route Tosste_Sluis_Van
+Building Element For Trade Route Belsavis_Tibrin
+Building Element For Trade Route Duro_Bestine
+Building Element For Trade Route Corellia_Duro
+Building Element For Trade Route Corellia_Rendili
+Building Element For Trade Route Alderaan_Rendili
+Building Element For Trade Route Kalist_Corellia
+Building Element For Trade Route Corellia_Galboron
+Building Element For Trade Route Fondor_Tallaan
+Building Element For Trade Route Fondor_Ghorman
+Building Element For Trade Route Thyferra_Tallaan
+Building Element For Trade Route Ghorman_Thyferra
+Building Element For Trade Route Fahna_Moorja
+Building Element For Trade Route Polis_Massa_Saijo
+Building Element For Trade Route Abridon_Saijo
+Building Element For Trade Route Eiattu_Tibrin
+Building Element For Trade Route Eiattu_Sullust
+Building Element For Trade Route Qat_Chrystac_Eiattu
+Building Element For Trade Route Moorja_Qat_Chrystac
+Building Element For Trade Route Qat_Chrystac_Woostri
+Building Element For Trade Route Woostri_Derra
+Building Element For Trade Route Vondarc_Woostri
+Building Element For Trade Route Sullust_Vondarc
+Building Element For Trade Route Sluis_Van_Eriadu
+Building Element For Trade Route Moorja_Bestine
+Building Element For Trade Route Leritor_Nooli
+Building Element For Trade Route Emberlene_Bothawui
+Building Element For Trade Route Kashyyyk_Togoria
+Building Element For Trade Route Ubrikkia_NalHutta
+Building Element For Trade Route Ubrikkia_Nimban
+Building Element For Trade Route Boz_Pity_Nimban
+Building Element For Trade Route Nimban_Sleheyron
+Building Element For Trade Route Kessel_Sleheyron
+Building Element For Trade Route Honoghr_Nar_Haaska
+Building Element For Trade Route Bomis_Koori_Qat_Chrystac
+Building Element For Trade Route Ylesia_Nar_Haaska
+Building Element For Trade Route Ylesia_Circumtore
+Building Element For Trade Route NalHutta_Circumtore
+Building Element For Trade Route Da_Soocha_Ylesia
+Building Element For Trade Route Honoghr_Da_Soocha
+Building Element For Trade Route Da_Soocha_NalHutta
+Building Element For Trade Route Krant_Circumtore
+Building Element For Trade Route Bothawui_Krant
+Building Element For Trade Route Krant_Kamino
+Building Element For Trade Route Shola_Ord_Pardron
+Building Element For Trade Route Ord_Pardron_Tatooine
+Building Element For Trade Route Geonosis_Tatooine
+Building Element For Trade Route Talay_Tatooine
+Building Element For Trade Route Ando_Talay
+Building Element For Trade Route Ando_Nelvaan
+Building Element For Trade Route Talay_Nelvaan
+Building Element For Trade Route Ragmar_Nelvaan
+Building Element For Trade Route VergessoAsteroids_Ragmar
+Building Element For Trade Route Contruum_Lantillies
+Building Element For Trade Route Lantillies_Togoria
+Building Element For Trade Route Togoria_Thanos
+Building Element For Trade Route Thanos_Roche
+Building Element For Trade Route Aargonar_Roche
+Building Element For Trade Route Aargonar_Felucia
+Building Element For Trade Route Centares_Antemeridias
+Building Element For Trade Route Aargonar_Centares
+Building Element For Trade Route Roche_Metalorn
+Building Element For Trade Route Yavin_Phindar
+Building Element For Trade Route Taris_Polus
+Building Element For Trade Route Taris_Onderon
+Building Element For Trade Route Gyndine_Galboron
+Building Element For Trade Route Manaan_Gyndine
+Building Element For Trade Route Ubrikkia_Kashyyyk
+Building Element For Trade Route Entralla_Muunilinst
+Building Element For Trade Route Entralla_Yaga_Minor
+Building Element For Trade Route AetenII_Yaga_Minor
+Building Element For Trade Route Bilbringi_Odik
+Building Element For Trade Route Utapau_Enarc
+Building Element For Trade Route Onderon_Emberlene
+Building Element For Trade Route Kalaan_Orinda
+Building Element For Trade Route Iphigin_Tallaan
+Building Element For Trade Route Iphigin_Duro
+Building Element For Trade Route Kalist_Iphigin
+Building Element For Trade Route Yavin_Maridun
+Building Element For Trade Route Maridun_Aargonar
+Building Element For Trade Route Garos_Lantillies
+Building Element For Trade Route Manaan_Onderon
+Building Element For Trade Route Latharra_Kamino
+Building Element For Trade Route Latharra_Gamorr
+Building Element For Trade Route Latharra_Lyran
+Building Element For Trade Route Gamorr_Rduba
+Building Element For Trade Route Rduba_Rothana
+Building Element For Trade Route Lyran_Rduba
+Building Element For Trade Route Gamorr_Ylesia
+Building Element For Trade Route Rothana_Hypori
+Building Element For Trade Route Circumtore_Latharra
+Building Element For Trade Route Agamar_Paarin_Minor
+Building Element For Trade Route Ithor_Paarin_Minor
+Building Element For Trade Route Orinda_Ord_Cantrell
+Building Element For Trade Route Ketaris_Ord_Cantrell
+Building Element For Trade Route Paarin_Minor_Ketaris
+Building Element For Trade Route Generis_Ketaris
+Building Element For Trade Route Ord_Trasi_Generis
+Building Element For Trade Route Dantooine_Ord_Trasi
+Building Element For Trade Route Ord_Trasi_Ord_Biniir
+Building Element For Trade Route Gravlex_Med_Anx_Minor
+Building Element For Trade Route Bimmiel_Gravlex_Med
+Building Element For Trade Route Sernpidal_Gravlex_Med
+Building Element For Trade Route EolSha_Corvis_Minor
+Building Element For Trade Route EolSha_Telos
+Building Element For Trade Route Doniphon_Telos
+Building Element For Trade Route Doniphon_Mytus
+Building Element For Trade Route Mytus_Atchorb
+Building Element For Trade Route Bonadan_Atchorb
+Building Element For Trade Route Dromund_Felucia
+Building Element For Trade Route Dromund_Thila
+Building Element For Trade Route Dromund_Bonadan
+Building Element For Trade Route Ciutric_Taris
+Building Element For Trade Route Agamar_Ciutric
+Building Element For Trade Route Felucia_Desevro
+Building Element For Trade Route Raxus_Desevro
+Building Element For Trade Route Rudrig_Raxus
+Building Element For Trade Route Emmer_Raxus
+Building Element For Trade Route Emmer_Desevro
+Building Element For Trade Route Emmer_Bonadan
+Building Element For Trade Route Antemeridias_Orion
+Building Element For Trade Route Tangrene_Serenno
+Building Element For Trade Route Tangrene_Vrosynri
+Building Element For Trade Route EolSha_Tangrene
+Building Element For Trade Route Orinda_Obredaan
+Building Element For Trade Route Obredaan_Ord_Mantell
+Building Element For Trade Route Obredaan_Nentan
+Building Element For Trade Route Jestan_Ord_Mantell
+Building Element For Trade Route Tartaglia_Jestan
+Building Element For Trade Route Polus_Jestan
+Building Element For Trade Route Tartaglia_Ithor
+Building Element For Trade Route Tartaglia_Taris
+Building Element For Trade Route Colla_Balmorra
+Building Element For Trade Route Chazwa_Colla
+Building Element For Trade Route Chazwa_Carida
+Building Element For Trade Route Chazwa_Comkin
+Building Element For Trade Route Colla_Levian
+Building Element For Trade Route Comkin_Levian
+Building Element For Trade Route Comkin_Taris
+Building Element For Trade Route Levian_Mandalore
+Building Element For Trade Route Colla_Contruum
+Building Element For Trade Route Colla_Onderon
+Building Element For Trade Route Leritor_Druckenwell
+Building Element For Trade Route Nooli_Druckenwell
+Building Element For Trade Route Nooli_Shola
+Building Element For Trade Route Endor_Annaj
+Building Element For Trade Route Annaj_Cerea
+Building Element For Trade Route Cerea_Vassek
+Building Element For Trade Route Vassek_Porchello
+Building Element For Trade Route Porchello_Abridon
+Building Element For Trade Route Porchello_Bomis_Koori
+Building Element For Trade Route Cerea_Ghorman
+Building Element For Trade Route Endor_Cerea
+Building Element For Trade Route Annaj_Abridon
+Building Element For Trade Route Talasea_Galboron
+Building Element For Trade Route Talasea_Rendili
+Building Element For Trade Route Commenor_Talasea
+Building Element For Trade Route Onderon_Kashyyyk
+Building Element For Trade Route Axxila_Ord_Cestus
+Building Element For Trade Route Celanon_Ord_Cestus
+Building Element For Trade Route Ord_Radama_Thila
+Building Element For Trade Route Ord_Radama_Yavin
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\common\Star Wars Empire at War\corruption\Mods\Chelmod\Data\XML\TradeRoutes.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\common\Star Wars Empire at War\corruption\Mods\Chelmod\Data\XML\GalacticConquests\RotRGC\Conquest_RotR.xml
+Building Element For Campaign Sandbox_RotR_Holdouts
+Writing Locations To Element Tree For Conquest Sandbox_RotR_Holdouts
+Writing Trade Routes To Element Tree For Conquest Sandbox_RotR_Holdouts
+Writing Home Locations To Element Tree For Conquest Sandbox_RotR_Holdouts
+Writing Story Plots To Element Tree For Conquest Sandbox_RotR_Holdouts
+Writing AI Player Control To Element Tree For Conquest Sandbox_RotR_Holdouts
+Writing Markup Filenames To Element Tree For Conquest Sandbox_RotR_Holdouts
+Writing Starting Credits To Element Tree For Conquest Sandbox_RotR_Holdouts
+Writing Starting Tech To Element Tree For Conquest Sandbox_RotR_Holdouts
+Writing Max Tech To Element Tree For Conquest Sandbox_RotR_Holdouts
+Writing Starting Forces To Element Tree For Conquest Sandbox_RotR_Holdouts
+Building Element For Campaign Sandbox_RotR_Empire
+Writing Locations To Element Tree For Conquest Sandbox_RotR_Empire
+Writing Trade Routes To Element Tree For Conquest Sandbox_RotR_Empire
+Writing Home Locations To Element Tree For Conquest Sandbox_RotR_Empire
+Writing Story Plots To Element Tree For Conquest Sandbox_RotR_Empire
+Writing AI Player Control To Element Tree For Conquest Sandbox_RotR_Empire
+Writing Markup Filenames To Element Tree For Conquest Sandbox_RotR_Empire
+Writing Starting Credits To Element Tree For Conquest Sandbox_RotR_Empire
+Writing Starting Tech To Element Tree For Conquest Sandbox_RotR_Empire
+Writing Max Tech To Element Tree For Conquest Sandbox_RotR_Empire
+Writing Starting Forces To Element Tree For Conquest Sandbox_RotR_Empire
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\common\Star Wars Empire at War\corruption\Mods\Chelmod\Data\XML\GalacticConquests\RotRGC\Conquest_RotR.xml
+Building Campaign Element Tree In File C:\Program Files (x86)\Steam\SteamApps\common\Star Wars Empire at War\corruption\Mods\Chelmod\Data\XML\GalacticConquests/RiseOfTheRebellion/Sandbox_Rebellion.xml
+Building Element For Campaign Sandbox_Rebellion_Empire
+Writing Locations To Element Tree For Conquest Sandbox_Rebellion_Empire
+Writing Trade Routes To Element Tree For Conquest Sandbox_Rebellion_Empire
+Writing Home Locations To Element Tree For Conquest Sandbox_Rebellion_Empire
+Writing Story Plots To Element Tree For Conquest Sandbox_Rebellion_Empire
+Writing AI Player Control To Element Tree For Conquest Sandbox_Rebellion_Empire
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Rebellion_Empire
+Writing Starting Credits To Element Tree For Conquest Sandbox_Rebellion_Empire
+Writing Starting Tech To Element Tree For Conquest Sandbox_Rebellion_Empire
+Writing Max Tech To Element Tree For Conquest Sandbox_Rebellion_Empire
+Writing Starting Forces To Element Tree For Conquest Sandbox_Rebellion_Empire
+Building Element For Campaign Sandbox_Rebellion_Rebel
+Writing Locations To Element Tree For Conquest Sandbox_Rebellion_Rebel
+Writing Trade Routes To Element Tree For Conquest Sandbox_Rebellion_Rebel
+Writing Home Locations To Element Tree For Conquest Sandbox_Rebellion_Rebel
+Writing Story Plots To Element Tree For Conquest Sandbox_Rebellion_Rebel
+Writing AI Player Control To Element Tree For Conquest Sandbox_Rebellion_Rebel
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Rebellion_Rebel
+Writing Starting Credits To Element Tree For Conquest Sandbox_Rebellion_Rebel
+Writing Starting Tech To Element Tree For Conquest Sandbox_Rebellion_Rebel
+Writing Max Tech To Element Tree For Conquest Sandbox_Rebellion_Rebel
+Writing Starting Forces To Element Tree For Conquest Sandbox_Rebellion_Rebel
+Building Element For Campaign Sandbox_Rebellion_QueliOversector
+Writing Locations To Element Tree For Conquest Sandbox_Rebellion_QueliOversector
+Writing Trade Routes To Element Tree For Conquest Sandbox_Rebellion_QueliOversector
+Writing Home Locations To Element Tree For Conquest Sandbox_Rebellion_QueliOversector
+Writing Story Plots To Element Tree For Conquest Sandbox_Rebellion_QueliOversector
+Writing AI Player Control To Element Tree For Conquest Sandbox_Rebellion_QueliOversector
+Writing Markup Filenames To Element Tree For Conquest Sandbox_Rebellion_QueliOversector
+Writing Starting Credits To Element Tree For Conquest Sandbox_Rebellion_QueliOversector
+Writing Starting Tech To Element Tree For Conquest Sandbox_Rebellion_QueliOversector
+Writing Max Tech To Element Tree For Conquest Sandbox_Rebellion_QueliOversector
+Writing Starting Forces To Element Tree For Conquest Sandbox_Rebellion_QueliOversector
+Writing Element Tree To File C:\Program Files (x86)\Steam\SteamApps\common\Star Wars Empire at War\corruption\Mods\Chelmod\Data\XML\GalacticConquests/RiseOfTheRebellion/Sandbox_Rebellion.xml
+Writing Campaign Files Element Tree To File CampaignFiles.xml
+Finished Saving Successfully
 Exiting Application....

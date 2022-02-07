@@ -158,9 +158,10 @@ class UI_Presenter:
             selectedPlanets.append([x.name for x in self.repository.trade_routes].index(p.name))
         for p in selectedPlanets:
             item = self.ui.tradeRoute_list.item(p, 0)
-            currentState = item.checkState()
-            if currentState == QtCore.Qt.Unchecked:
-                item.setCheckState(QtCore.Qt.Checked)
+            if item != None:
+                currentState = item.checkState()
+                if currentState == QtCore.Qt.Unchecked:
+                    item.setCheckState(QtCore.Qt.Checked)
         self.ui.tradeRoute_list.itemChanged.connect(self.ontradeRouteCellChanged)
     def update_selected_planets(self):
         self.repository.logfile.write(f'Updating Selected Planets For GC {self.selected_campaign.name}\n')
@@ -175,9 +176,10 @@ class UI_Presenter:
             selectedPlanets.append([x.name for x in self.repository.planets].index(p.name))
         for p in selectedPlanets:
             item = self.ui.planet_list.item(p, 0)
-            currentState = item.checkState()
-            if currentState == QtCore.Qt.Unchecked:
-                item.setCheckState(QtCore.Qt.Checked)
+            if item != None:
+                currentState = item.checkState()
+                if currentState == QtCore.Qt.Unchecked:
+                    item.setCheckState(QtCore.Qt.Checked)
         self.update_planets_box()
         self.ui.planet_list.itemChanged.connect(self.planetStatusModified)
     def update_starting_forces_table(self):
@@ -213,61 +215,50 @@ class UI_Presenter:
         self.ui.planetComboBox.clear()
         for p in self.selected_campaign.planets:
             self.ui.planetComboBox.addItem(p.name)
-        if index in [x.name for x in self.selected_campaign.planets]:
-            self.ui.planetComboBox.setCurrentText(index)
+        # if index in [x.name for x in self.selected_campaign.planets]:
+        #     self.ui.planetComboBox.setCurrentText(index)
         self.ui.planetComboBox.currentIndexChanged.connect(self.update_starting_forces_table)
     def planetStatusModified(self, item):
-        planet = self.repository.planets[item.row()]
+        print(item.text())
+        index = [x.name for x in self.repository.planets].index(item.text())
+        planet = self.repository.planets[index]
         campaign = self.selected_campaign
         if not planet in campaign.planets:
-            addingPlanet = True
             campaign.planets.append(planet)
         else:
             campaign.planets.remove(planet)
-            addingPlanet = False
-
-        currentState = item.checkState()
-        if currentState == QtCore.Qt.Unchecked:
-            if addingPlanet:
-                item.setCheckState(QtCore.Qt.Checked)
-        elif currentState == QtCore.Qt.Checked:
-            if not addingPlanet:
-                item.setCheckState(QtCore.Qt.Unchecked)
         self.update_planets_box()
         self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets,self.selected_campaign, self.repository)
     def ontradeRouteCellChanged(self, item):
-        tradeRoute = self.repository.trade_routes[item.row()]
+        print(item.text())
+        index = [x.name for x in self.repository.trade_routes].index(item.text())
+        tradeRoute = self.repository.trade_routes[index]
         campaign = self.selected_campaign
         if not tradeRoute in campaign.trade_routes:
-            addingTradeRoute = True
             campaign.trade_routes.append(tradeRoute)
         else:
             campaign.trade_routes.remove(tradeRoute)
-            addingTradeRoute = False
 
-        currentState = item.checkState()
-        if currentState == QtCore.Qt.Unchecked:
-            if addingTradeRoute:
-                item.setCheckState(QtCore.Qt.Checked)
-        elif currentState == QtCore.Qt.Checked:
-            if not addingTradeRoute:
-                item.setCheckState(QtCore.Qt.Unchecked)
         self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets,self.selected_campaign, self.repository)
 
 
     def onPlanetSelection(self, table):
         planet = self.repository.planets[table[0]]
         self.repository.logfile.write(f'Planet {planet.name} Selected On Galactic Plot\n')
-        item = self.ui.planet_list.item(table[0], 0)
-        campaign = self.selected_campaign
-        if not planet in campaign.planets:
-            addingPlanet = True
-            campaign.planets.append(planet)
+        print(self.ui.tabWidget.currentIndex())
+        if self.ui.tabWidget.currentIndex() == 1:
+            self.ui.planetComboBox.setCurrentText(planet.name)
         else:
-            campaign.planets.remove(planet)
-            addingPlanet = False
-        self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets,self.selected_campaign, self.repository)
-        self.update_selected_planets()
+            item = self.ui.planet_list.item(table[0], 0)
+            campaign = self.selected_campaign
+            if not planet in campaign.planets:
+                addingPlanet = True
+                campaign.planets.append(planet)
+            else:
+                campaign.planets.remove(planet)
+                addingPlanet = False
+            self.ui.map.plotGalaxy(campaign.planets, campaign.trade_routes, self.repository.planets,self.selected_campaign, self.repository)
+            self.update_selected_planets()
 
     def add_unit_to_starting_forces(self):
         self.addUnitWindow = AddUnitWindow(self.ui.planetComboBox.currentText())
@@ -302,6 +293,7 @@ class UI_Presenter:
         item = QTableWidgetItem(str(quantity))
         self.ui.forcesListWidget.setItem(rowCount, 2, item)
         self.addUnitWindow.dialogWindow.accept()
+        self.ui.map.plotGalaxy(self.selected_campaign.planets, self.selected_campaign.trade_routes, self.repository.planets,self.selected_campaign, self.repository)
     def complete_unit_adding(self):
         planet_name = self.addUnitWindow.planet
         self.repository.logfile.write(f'Adding Unit To Starting Forces At Planet {planet_name}\n')
@@ -329,7 +321,7 @@ class UI_Presenter:
         item = QTableWidgetItem(str(quantity))
         self.ui.forcesListWidget.setItem(rowCount, 2, item)
         self.addUnitWindow.dialogWindow.accept()
-
+        self.ui.map.plotGalaxy(self.selected_campaign.planets, self.selected_campaign.trade_routes, self.repository.planets,self.selected_campaign, self.repository)
     #Check Uncheck all planets/traderoutes, is associated with layout tab
     def check_all_planets(self):
         self.ui.planet_list.itemChanged.disconnect(self.planetStatusModified)
@@ -389,6 +381,7 @@ class UI_Presenter:
         window = EditUnitWindow(obj,self.selected_campaign,self.repository)
         window.dialogWindow.exec_()
         self.update_starting_forces_table()
+        self.ui.map.plotGalaxy(self.selected_campaign.planets, self.selected_campaign.trade_routes, self.repository.planets,self.selected_campaign, self.repository)
     def create_new_set(self):
         gcwindow = CreateNewGCWindow(self.repository)
         if gcwindow.dialogWindow.exec_() == 1:
