@@ -40,52 +40,140 @@ def encode(obj, fileName):
     file.close()
 
 class Planet:
-    def __init__(self, xml_entry, fileLocation):
+    def __init__(self, xml_entry, fileLocation, logfile):
         self.fileLocation = fileLocation
         self.entry = xml_entry
-        self.name = self.get_planet_name()
-        self.land_map = self.get_land_map()
-        self.space_map = self.get_space_map()
-        self.model_name = self.get_model_name()
-        self.x, self.y = self.get_position()
+        self.planet_owners = {}
+        self.name = self.get_planet_name(logfile)
+        self.text_key = self.get_text_key(logfile)
+        self.model_name = self.get_model_name(logfile)
+        self.land_map = self.get_land_map(logfile)
+        self.space_map = self.get_space_map(logfile)
+        self.x, self.y = self.get_position(logfile)
+        self.terrain_index = self.get_terrain_index(logfile)
+        self.land_structures = self.get_land_structures(logfile)
+        self.galactic_model = self.get_galactic_model(logfile)
+        self.destroyed_model = self.get_destroyed_model(logfile)
+        self.additional_pop = self.get_additional_pop(logfile)
+        self.land_accessible = self.get_planet_accessbile(logfile)
+    def get_model_name(self, logfile):
+        for child in self.entry:
+            if child.tag == 'Galactic_Model_Name': 
+                try:
+                    return child.text
+                except:
+                    logfile.write(f'CRITICAL ERROR Failed to return string for Galactic_Model_Name in planet {self.name}')
+                    logfile.flush()
+                    return 0
+    def get_terrain_index(self,logfile):
+        logfile.write(f'Getting Terrain Index for planet {self.name}\n')
+        for child in self.entry:
+            if child.tag == 'Zoomed_Terrain_Index':
+                try:
+                    return child.text
+                except:
+                    logfile.write(f'CRITICAL ERROR Failed To Return string for Zoomed_Terrain_Index of planet {self.name}\n')
+                    logfile.flush()
+                    return 0
+    def get_land_structures(self,logfile):
+        logfile.write(f'Getting Land Slots for planet {self.name}\n')
+        for child in self.entry:
+            if child.tag == 'Special_Structures_Land':
+                try:
+                    return child.text
+                except:
+                    logfile.write(f'CRITICAL ERROR Failed To Return string for Special_Structures_Land of planet {self.name}\n')
+                    logfile.flush()
+                    return 3
+    def get_galactic_model(self,logfile):
+        logfile.write(f'Getting Galactic Model for planet {self.name}\n')
+        for child in self.entry:
+            if child.tag == 'Galactic_Model_Name':
+                try:
+                    return child.text
+                except:
+                    logfile.write(f'CRITICAL ERROR Failed To Return string for Galactic_Model_Name of planet {self.name}\n')
+                    logfile.flush()
+                    return 'W_planet_Temperate01.alo'
+    def get_destroyed_model(self,logfile):
+        logfile.write(f'Getting Destroyed Model for planet {self.name}\n')
+        for child in self.entry:
+            if child.tag == 'Destroyed_Galactic_Model_Name':
+                try:
+                    return child.text
+                except:
+                    logfile.write(f'CRITICAL ERROR Failed To Return string for Destroyed_Galactic_Model_Name of planet {self.name}\n')
+                    logfile.flush()
+                    return 'W_planet_Asteroids.alo'
+    def get_additional_pop(self,logfile):
+        logfile.write(f'Getting Additional Population Capacity for planet {self.name}\n')
+        for child in self.entry:
+            if child.tag == 'Additional_Population_Capacity':
+                try:
+                    return int(child.text)
+                except:
+                    logfile.write(f'CRITICAL ERROR Failed To Return string for Additional_Population_Capacity of planet {self.name}\n')
+                    logfile.flush()
+                    return 50
+    def get_planet_accessbile(self,logfile):
+        logfile.write(f'Getting Surface Accessilbe for planet {self.name}\n')
+        for child in self.entry:
+            if child.tag == 'Planet_Surface_Accessible':
+                try:
+                    return child.text
+                except:
+                    logfile.write(f'CRITICAL ERROR Failed To Return string for Planet_Surface_Accessible of planet {self.name}\n')
+                    logfile.flush()
+                    return 'Yes'
+    def get_text_key(self,logfile):
+        logfile.write(f'Getting Text ID for planet {self.name}\n')
+        for child in self.entry:
+            if child.tag == 'Text_ID':
+                try:
+                    return child.text
+                except:
+                    logfile.write(f'CRITICAL ERROR Failed To Return string for Text_ID of planet {self.name}\n')
+                    logfile.flush()
+                    sys.exit()
     def distanceTo(self, target):
         return sqrt((self.x - target.x)**2 + (self.y - target.y)**2)
-    def get_planet_name(self) -> str:
+    def get_planet_name(self,logfile) -> str:
+        logfile.write(f'Getting Planet Name\n')
         return self.entry.get('Name')
-    def get_land_map(self) -> str:
+    def get_land_map(self,logfile) -> str:
+        logfile.write(f'Getting Land Map For Planet {self.name}\n')
         for child in self.entry:
             if child.tag == 'Land_Tactical_Map':
-                return child.text
-    def get_space_map(self) -> str:
+                try:
+                    return child.text
+                except:
+                    logfile.write(f'CRITICAL ERROR Failed To Return string for Land Map Name of planet {self.name}\n')
+                    logfile.flush()
+                    sys.exit()
+    def get_space_map(self,logfile) -> str:
+        logfile.write(f'Getting Space Map For Planet {self.name}\n')
         for child in self.entry:
             if child.tag == 'Space_Tactical_Map':
-                return child.text
-    def get_position(self):
+                try:
+                    return child.text
+                except:
+                    logfile.write(f'CRITICAL ERROR Failed To Return string for Space Map Name of planet {self.name}\n')
+                    logfile.flush()
+                    sys.exit()
+    def get_position(self,logfile):
+        logfile.write(f'Getting Galactic Position For Planet {self.name}\n')
         for child in self.entry:
-            if child.tag == 'Galactic_Position':    
+            if child.tag == 'Galactic_Position':     
                 entry = child.text     
                 entry = entry.replace(',',' ')
                 entry = entry.split()
                 try:
                     return float(entry[0]), float(entry[1])
-                except Exception as e:
-                    msgBox = QMessageBox()
-                    msgBox.setIcon(QMessageBox.Critical)
-                    msgBox.setText("Critical Error! \n"+str(e)+'\n In planet '+self.name)
-                    msgBox.setWindowTitle("Critical Error!")
-                    msgBox.setStandardButtons(QMessageBox.Ok)
-                    msgBox.exec()
+                except:
+                    logfile.write(f'CRITICAL ERROR Failed To Return float for galactic position of planet {self.name}\n')
+                    logfile.flush()
                     sys.exit()
-    def reset_starting_forces_table(self, campaigns):
-        self.starting_forces = {}
-        for name in campaigns.keys():
-            self.starting_forces[name] = []
-    def add_campaign_to_table(self, name):
-        self.starting_forces[name] = []
-    def get_model_name(self):
-        for child in self.entry:
-            if child.tag == 'Galactic_Model_Name': 
-                return child.text
+        return 0,0
     def reset_position(self):
         self.x, self.y = self.get_position()
 
@@ -314,7 +402,7 @@ class EditPlanetWindow:
         self.plotGalaxy(self.planets)
         self.plotSelectedPlanet(self.planets[planet_index])
         planet = self.planets[planet_index]
-        self.PlanetModelName.setText(planet.get_model_name())
+        self.PlanetModelName.setText(planet.model_name)
 
         self.LandMap.setText(planet.land_map)
         self.SpaceMap.setText(planet.space_map)
@@ -330,7 +418,7 @@ class EditPlanetWindow:
         self.plotSelectedPlanet(self.planets[planet_index])
         self.planetSelection.currentIndexChanged.connect(self.on_index_changed)
         self.resetPosition.clicked.connect(self.reset_position)
-        self.PlanetModelName.setText(planet.get_model_name())
+        self.PlanetModelName.setText(planet.model_name)
         self.LandMap.setText(planet.land_map)
         self.SpaceMap.setText(planet.space_map)
         self.XPosition.setText(str(planet.x))
@@ -517,7 +605,7 @@ class PlanetPlacementTool:
     def __init__(self):
         app = QApplication(sys.argv)
         app.setStyle('Fusion')
-    
+        self.logfile = open('logfile.txt', 'w')
         if os.path.isfile('dataPath'):
             try:
                 self.mod_dir = loadFile('dataPath')
@@ -586,7 +674,7 @@ class PlanetPlacementTool:
         planet = self.planets[planet_index]
         self.window.plotGalaxy(self.planets)
         self.window.plotSelectedPlanet(self.planets[planet_index])
-        self.window.PlanetModelName.setText(planet.get_model_name())
+        self.window.PlanetModelName.setText(planet.model_name)
         self.window.LandMap.setText(planet.land_map)
         self.window.SpaceMap.setText(planet.space_map)
         self.window.XPosition.setText(str(planet.x))
@@ -618,21 +706,24 @@ class PlanetPlacementTool:
             for child in root:
                 if child.tag == 'Planet':
                     if child.get('Name') != 'Galaxy_Core_Art_Model':
-                        self.planets.append(Planet(child, file))
+                        self.planets.append(Planet(child, file, self.logfile))
                         if not file in self.planetFiles:
                             self.planetFiles.append(file)
     def save_to_cache(self):
         planet = self.planets[self.window.planetSelection.currentIndex()]
-        if self.window.PlanetModelName.text() != planet.get_model_name():
+        print(planet.name)
+        if self.window.PlanetModelName.text() != planet.get_model_name(self.logfile):
             planet.model_name = self.window.PlanetModelName.text()
-        if self.window.SpaceMap.text() != planet.get_space_map():
+        if self.window.SpaceMap.text() != planet.get_space_map(self.logfile):
             planet.space_map = self.window.SpaceMap.text()
-        if self.window.LandMap.text() != planet.get_land_map():
+        if self.window.LandMap.text() != planet.get_land_map(self.logfile):
             planet.land_map = self.window.LandMap.text()
         if self.window.XPosition.text() != planet.x:
             planet.x = math.floor(float(self.window.XPosition.text()))
         if self.window.yPosition.text() != planet.y:
             planet.y = math.floor(float(self.window.yPosition.text()))
+        print(planet.x)
+        print(planet.y)
     def save_to_file(self):
         for file in self.planetFiles:
             try:
