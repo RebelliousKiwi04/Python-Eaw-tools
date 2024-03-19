@@ -228,16 +228,19 @@ class MainUIWindow:
         self.__quitAction: QAction = QAction("Quit", self.main_window)
         self.__quitAction.triggered.connect(sys.exit)
         
+        self.editUnitAction: QAction = QAction("Units", self.main_window)
+        self.editPlanetAction: QAction = QAction("Planets", self.main_window)
         
         self.__fileMenu.addAction(self.saveAction)
         self.__fileMenu.addAction(self.setDataFolderAction)
         self.__fileMenu.addAction(self.__quitAction)
         self.__addMenu.addAction(self.newCampaignAction)
         self.__addMenu.addAction(self.newTradeRouteAction)
-        
+        self.__editMenu.addAction(self.editUnitAction)
+        self.__editMenu.addAction(self.editPlanetAction)
         self.__menuBar.addMenu(self.__fileMenu)
         self.__menuBar.addMenu(self.__addMenu)
-        #self.__menuBar.addMenu(self.__editMenu)
+        self.__menuBar.addMenu(self.__editMenu)
         #self.__menuBar.addMenu(self.__optionsMenu)
         self.main_window.setMenuWidget(self.__menuBar)
 

@@ -22,7 +22,7 @@ def validate_datapath(config):
         return False
     else:
         return True
-        
+         
 class Config:
     def __init__(self):
         self.configFile = "config.xml"

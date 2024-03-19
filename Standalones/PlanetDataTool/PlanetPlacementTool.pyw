@@ -174,8 +174,8 @@ class Planet:
                     logfile.flush()
                     sys.exit()
         return 0,0
-    def reset_position(self):
-        self.x, self.y = self.get_position()
+    def reset_position(self, logfile):
+        self.x, self.y = self.get_position(logfile)
 
 
 
@@ -430,7 +430,7 @@ class EditPlanetWindow:
             planet_index = [x.name for x in self.planets].index(planet_name)
         self.plotSelectedPlanet(self.planets[planet_index])
         planet = self.planets[planet_index]
-        planet.reset_position()
+        planet.reset_position(self.parent.logfile)
         self.XPosition.setText(str(planet.x))
         self.yPosition.setText(str(planet.y))
         self.plotSelectedPlanet(self.planets[planet_index])
