@@ -153,6 +153,8 @@ class GalacticMap(QWidget):
                     self.__annotate.set_visible(False)
                     self.mapCanvas.draw_idle()
 
+
+
 class MainUIWindow:
     '''Qt based window'''
     def __init__(self):

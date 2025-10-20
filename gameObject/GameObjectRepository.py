@@ -151,8 +151,11 @@ class ModRepository:
                 if child.tag == 'TradeRoute':
                     self.logfile.write('Adding Trade Route '+child.get('Name')+'\n')
                     route = TradeRoute(child, file)
-                    route.set_point_planets(self.planets)
-                    self.trade_routes.append(route)
+                    try:
+                        route.set_point_planets(self.planets)
+                        self.trade_routes.append(route)
+                    except Exception as e:
+                        self.logfile.write('Error while attempting to set points for trade route '+child.get('Name')+'\n' + str(e)+'\n')
         for file in self.campaign_files:
             self.logfile.write(f'Unpacking Campaigns From File {file}\n')
             try:

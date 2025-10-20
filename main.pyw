@@ -1,13 +1,17 @@
 from PyQt5.QtWidgets import QApplication,QFileDialog,QMessageBox
 import sys, os
-from PyQt5 import QtCore
-from PyQt5 import QtGui
 import lxml.etree as et,atexit
-from UI_Manager import UI_Presenter
+from UI_Manager import InterfaceHandler
 from ui.MainWindow import MainUIWindow
-#sys.setrecursionlimit(10**6)
 
 originalPath = os.path.dirname(sys.argv[0])
+
+
+# Rebuild Intended to work like this
+# Will ideally have 3 main components, Main script, Interface, and Interface Handler
+# Game Object classes will remain largely the same with better error handling and detection
+# Ui windows will all have less action handling implemented in them, will be more separated between UI and action scripts
+
 
 def validate_datapath(config):
     if config.dataPath == None or not config.dataPath.endswith(('DATA', 'Data', 'data')):
@@ -38,7 +42,7 @@ class EaWModTool:
         self.ui = MainWindow
         self.logfile = open('logfile.txt', 'w')
         self.originalPath = originalPath
-        self.presenter = UI_Presenter(self.ui, config.dataPath, self.logfile)
+        self.presenter = InterfaceHandler(self.ui, config.dataPath, self.logfile)
         self.repository = self.presenter.repository
         self.presenter.update_tabs()
         self.ui.setDataFolderAction.triggered.connect(self.set_datapath)
@@ -60,7 +64,7 @@ class EaWModTool:
                 self.ui.tradeRoute_list.setRowCount(0)
                 self.ui.tradeRoute_list.setHorizontalHeaderLabels(["Trade Routes"])
 
-                self.presenter = UI_Presenter(self.ui, self.config.dataPath, self.logfile)
+                self.presenter = InterfaceHandler(self.ui, self.config.dataPath, self.logfile)
                 self.repository = self.presenter.repository
         
                 self.presenter.update_tabs()
@@ -74,6 +78,29 @@ class EaWModTool:
             self.save_current_file()
         self.logfile.write("Exiting Application....")
         self.logfile.flush()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

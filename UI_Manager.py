@@ -8,12 +8,12 @@ from gameObject.campaignset import CampaignSet
 import os, sys, lxml.etree as et, copy
 from PyQt5.QtWidgets import *
 from PyQt5 import QtCore
-from PyQt5 import QtGui
-from PyQt5.QtCore import *
 import gc
-import inspect
+
+
 print(sys.getrecursionlimit())
-class UI_Presenter:
+
+class InterfaceHandler:
     def __init__(self, ui, mod_dir,logfile):
         self.ui = ui
         self.mod_dir = mod_dir

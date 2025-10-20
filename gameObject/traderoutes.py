@@ -8,6 +8,7 @@ class TradeRoute:
         self.point_A, self.point_B = self.get_points()
         self.points = []
     def set_point_planets(self, planetList):
+
         self.points.append(planetList[([x.name.lower() for x in planetList].index(self.point_A))])
         self.points.append(planetList[([x.name.lower() for x in planetList].index(self.point_B))])
 
