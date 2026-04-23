@@ -37,7 +37,7 @@ class Campaign:
     def __init__(self, xml_entry, planets, tradeRoutes, fileLocation, all_factions, logfile):
         self.fileLocation = fileLocation
         self.entry = xml_entry
-        self.name = xml_entry.get('Name')
+        self.name = xml_entry.get('Name') # This is one point where i'm happy not having error handling
         self.activeFaction = self.get_active_faction(logfile)
         
         self.setName: str = self.get_set_name(logfile)
@@ -65,6 +65,9 @@ class Campaign:
             for j in tradeRoutes:
                 if j.name == i:
                     self.trade_routes.append(j)
+
+
+                    
         logfile.write(f'Deleting Local Variable logfile from campaign {self.name}\n')
         logfile.flush()
         del logfile
@@ -110,9 +113,11 @@ class Campaign:
         while len(forces) > 0:
             val = forces[0]
             if len(val) != 3:
-                logfile.write(f'CRITICAL ERROR when reading starting forces for Conquest {self.name}\n')
+                logfile.write(f'CRITICAL ERROR when reading starting forces for Conquest {self.name} Skipping entry\n')
                 logfile.flush()
-                sys.exit()
+                #sys.exit() - NO longer forcing application exit, instead just note the error, and continue on
+                forces = remove_values_from_list(forces, val)
+                continue
             factionIndex = None
             for i in self.all_factions:
                 try:

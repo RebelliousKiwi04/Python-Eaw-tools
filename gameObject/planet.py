@@ -88,7 +88,7 @@ class Planet:
                 except:
                     logfile.write(f'CRITICAL ERROR Failed To Return string for Text_ID of planet {self.name}\n')
                     logfile.flush()
-                    sys.exit()
+                    return "TEXT_PLANET_NAME_MISSING"
     def distanceTo(self, target):
         return sqrt((self.x - target.x)**2 + (self.y - target.y)**2)
     def get_planet_name(self,logfile) -> str:
@@ -113,7 +113,7 @@ class Planet:
                 except:
                     logfile.write(f'CRITICAL ERROR Failed To Return string for Space Map Name of planet {self.name}\n')
                     logfile.flush()
-                    sys.exit()
+                    return "_Space_Planet_Ryloth_01.ted"
     def get_position(self,logfile):
         logfile.write(f'Getting Galactic Position For Planet {self.name}\n')
         for child in self.entry:
@@ -124,9 +124,9 @@ class Planet:
                 try:
                     return float(entry[0]), float(entry[1])
                 except:
-                    logfile.write(f'CRITICAL ERROR Failed To Return float for galactic position of planet {self.name}\n')
+                    logfile.write(f'CRITICAL ERROR Failed To Return float for galactic position of planet {self.name} resetting to galactic origin\n')
                     logfile.flush()
-                    sys.exit()
+                    return 0,0
         return 0,0
     # def get_model_name(self,logfile):
     #     logfile.write(f'Getting Model Name For Planet {self.name}\n')
